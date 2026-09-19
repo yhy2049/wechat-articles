@@ -5,7 +5,7 @@ stage: 已加工
 status: draft
 editable: true
 captured: 2026-05-31
-source: "[[2026-05-31-AI内容生态与平台方向]]"
+source: "[[AI内容生态与平台方向]]"
 created: 2026-05-31
 updated: 2026-06-01
 audience: public
