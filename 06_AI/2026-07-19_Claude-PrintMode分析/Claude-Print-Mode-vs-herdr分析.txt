@@ -1,0 +1,42 @@
+分析：Claude Code Print Mode (-p) 是否能替代 herdr 的核心用途
+
+背景：
+- herdr 是一个 AI agent 终端复用器，用于管理多个 Claude Code 实例、自动检测 agent 状态、socket API 编排。
+- herdr 已被用户卸载。
+- Claude Code 提供了 Print Mode (-p)，用于非交互式、一次性任务。
+
+1. Claude Code Print Mode 的能力：
+   - 非交互式执行：接受一个提示（prompt），执行并输出结果，然后退出。
+   - 无状态：不维护会话历史，每次调用都是独立的。
+   - 适合脚本化：可以通过命令行调用，集成到 shell 脚本或自动化流程中。
+   - 单次任务：适用于批处理、快速查询、代码生成等一次性任务。
+
+2. herdr 的核心用途：
+   - 多 agent 编排：同时管理多个 Claude Code 实例（例如多个 tmux 窗口/窗格）。
+   - 状态监控：实时检测每个 agent 的状态（空闲、忙碌、错误等）。
+   - 会话管理：维护每个 agent 的会话历史，支持会话恢复。
+   - socket API 编排：通过 socket API 向特定 agent 发送命令，实现自动化控制。
+
+3. 对比分析：
+   - 多 agent 编排：
+     * Print Mode：可以通过启动多个 `claude -p` 进程来实现并行任务，但缺乏集中管理和协调。需要编写外部脚本来管理进程生命周期。
+     * herdr：提供内置的多实例管理，可以轻松启动、停止、监控多个 agent。
+   - 状态监控：
+     * Print Mode：没有状态反馈机制。只能等待进程结束获取输出，无法实时了解执行状态。
+     * herdr：提供实时状态检测，可以知道每个 agent 是否空闲、忙碌或出错。
+   - 会话管理：
+     * Print Mode：无状态，不维护会话历史。每次调用都是独立的，无法延续上下文。
+     * herdr：维护会话历史，支持多轮对话和会话恢复。
+   - socket API 编排：
+     * Print Mode：没有 API 接口。只能通过命令行参数传递提示，无法动态发送命令。
+     * herdr：提供 socket API，允许程序化控制 agent，实现复杂的编排逻辑。
+
+4. 结论：
+   - Claude Code Print Mode 无法覆盖 herdr 的核心用途。
+   - Print Mode 适合单次、无状态的任务，而 herdr 专注于多 agent 的管理、监控和编排。
+   - 如果需要 herdr 的功能，必须使用外部工具（如 tmux、screen、自定义脚本或专门的编排工具）来实现类似的能力。
+   - 对于简单的并行任务，可以通过 shell 脚本使用多个 Print Mode 进程，但缺乏状态监控和会话管理。
+
+建议：
+   - 如果需要多 agent 编排，考虑使用 tmux + 脚本（如 Claude Code 的 Option C）来管理多个交互式会话。
+   - 如果需要状态监控和 socket API，可能需要开发或使用其他工具（如消息队列、任务调度器）来实现。
