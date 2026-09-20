@@ -1,3 +1,13 @@
+---
+type: reference
+name: "Frontmatter规范与文件管理学习笔记"
+status: final
+editable: true
+audience: both
+created: 2026-06-12
+updated: 2026-06-12
+---
+
 # Frontmatter规范与文件管理学习笔记
 
 > 学习时间：2026-06-01 19:13

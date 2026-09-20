@@ -1,3 +1,13 @@
+---
+type: draft
+name: "transcript"
+status: draft
+editable: true
+audience: both
+created: 2026-07-25
+updated: 2026-07-25
+---
+
 # 语音转录：2026-07-25
 
 **来源：** 202607250329.mp4

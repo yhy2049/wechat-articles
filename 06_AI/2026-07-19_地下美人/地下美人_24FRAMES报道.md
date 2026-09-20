@@ -1,3 +1,13 @@
+---
+type: draft
+name: "地下美人_24FRAMES报道"
+status: draft
+editable: true
+audience: both
+created: 2026-07-19
+updated: 2026-07-19
+---
+
 # 地下美人：当23号热线接通了母子之间那道沉默的裂缝
 
 > 24FRAMES @ FIRST 青年电影展 · 前线报道

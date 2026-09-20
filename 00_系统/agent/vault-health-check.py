@@ -40,6 +40,14 @@ NO_FM_DIRS = {"05_档案/公众号存档", "00_系统/agent/_archive"}
 NO_FM_FILES = {"AGENTS.md", "README.md", "00_系统/_changelog.md"}
 # wikilink 模板占位符（不视为断链）
 PLACEHOLDER_LINKS = {"wikilink", "会议文件名", "来源文件名", "文件名", "人物名", "项目名", "任务名", "灵感", "内容"}
+# 已知断链白名单（历史记录指向已删/从未创建的文件，保留不修）
+KNOWN_DEBT_LINKS = {
+    "何力长片-等待资料",      # 03_任务 已删，changelog 历史记录
+    "何力长片-赞助方案",      # 03_任务 已删，会议存档历史记录
+    "第二部短片-赞助方案",    # 03_任务 已删，会议存档历史记录
+    "交接简报-20260609",      # agent _archive 历史记录
+    "浮生若丽",                # changelog 旧项目名，已改名为 何力长片-浮生若丽
+}
 
 # 已废弃的路径引用（dataview / 文本中的旧路径）
 STALE_PATHS = ["03_任务", "06_灵感库", "07_档案", "24帧运营库/03_任务"]
@@ -110,7 +118,7 @@ for p, rel in all_md_files():
             continue
         # 去掉路径前缀，取 basename（Obsidian 按 basename 解析）
         base = target.split("/")[-1]
-        if base in PLACEHOLDER_LINKS:
+        if base in PLACEHOLDER_LINKS or base in KNOWN_DEBT_LINKS:
             continue
         if not find_note(base):
             broken.append((rel, target))

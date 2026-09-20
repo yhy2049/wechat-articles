@@ -1,3 +1,13 @@
+---
+type: reference
+name: "北回归线以北-现场执行Checklist-20260609"
+status: final
+editable: true
+audience: both
+created: 2026-06-09
+updated: 2026-06-13
+---
+
 # 《北回归线以北》成都观影团 · 现场执行 Checklist
 
 > 2026/6/10 活动当天使用

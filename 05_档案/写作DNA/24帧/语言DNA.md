@@ -1,3 +1,13 @@
+---
+type: reference
+name: "语言DNA"
+status: final
+editable: true
+audience: both
+created: 2026-07-05
+updated: 2026-07-05
+---
+
 # 语言DNA
 
 > 看了277篇文章（2022.4—2026.5，大概84万字）。记一下说话的习惯。

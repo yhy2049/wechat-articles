@@ -1,3 +1,13 @@
+---
+type: reference
+name: "Writing-DNA"
+status: final
+editable: true
+audience: both
+created: 2026-07-05
+updated: 2026-07-05
+---
+
 # Writing-DNA · 24帧公众号
 
 > 读了277篇文章（2022.4—2026.5）之后捋出来的。写东西前看一遍够用。

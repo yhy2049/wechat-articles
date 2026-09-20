@@ -1,3 +1,13 @@
+---
+type: draft
+name: "痴迷影评-版本B_分析驱动型"
+status: draft
+editable: true
+audience: both
+created: 2026-07-10
+updated: 2026-07-10
+---
+
 # 许愿柳下的深渊：《痴迷》与欲望的不可逆性
 
 > **⚠️ 剧透预警：本文涉及影片全部关键情节，建议观影后再阅读。**

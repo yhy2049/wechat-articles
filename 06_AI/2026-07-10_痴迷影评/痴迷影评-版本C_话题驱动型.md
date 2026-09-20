@@ -1,3 +1,13 @@
+---
+type: draft
+name: "痴迷影评-版本C_话题驱动型"
+status: draft
+editable: true
+audience: both
+created: 2026-07-10
+updated: 2026-07-10
+---
+
 # 「被爱吞噬」为什么成了Z世代最深的恐惧？
 
 ## ——从《痴迷》看当代年轻人的亲密关系焦虑

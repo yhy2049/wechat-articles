@@ -1,3 +1,13 @@
+---
+type: reference
+name: "README"
+status: final
+editable: true
+audience: agent
+created: 2026-06-10
+updated: 2026-09-20
+---
+
 # 04_灵感 · 目录操作规则
 
 > 本文件面向 Agent。规则写成 if-then 决策链，每条可独立解析执行。

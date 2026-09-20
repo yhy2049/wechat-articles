@@ -1,3 +1,13 @@
+---
+type: reference
+name: "语言DNA"
+status: final
+editable: true
+audience: both
+created: 2026-07-04
+updated: 2026-07-04
+---
+
 # 北圩放映 · 语言DNA（L1）
 
 > 基于 12 篇可提取文本的完整文章分析，覆盖 2022-2025 年公号内容。

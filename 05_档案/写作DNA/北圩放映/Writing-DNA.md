@@ -1,3 +1,13 @@
+---
+type: reference
+name: "Writing-DNA"
+status: final
+editable: true
+audience: both
+created: 2026-07-04
+updated: 2026-07-04
+---
+
 # 北圩放映 · Writing-DNA
 
 > 整合版写作风格指南。写作前必读，快速查阅。

@@ -1,3 +1,13 @@
+---
+type: reference
+name: "录音会议存档SOP"
+status: final
+editable: true
+audience: agent
+created: 2026-09-20
+updated: 2026-09-20
+---
+
 # 录音/会议存档 SOP
 
 > 适用场景：收到通话录音、会议转写、访谈记录等需要归档的原始材料时。

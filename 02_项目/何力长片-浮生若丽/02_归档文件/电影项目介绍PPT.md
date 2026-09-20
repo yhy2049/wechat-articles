@@ -1,3 +1,13 @@
+---
+type: reference
+name: "电影项目介绍PPT"
+status: final
+editable: true
+audience: both
+created: 2026-06-13
+updated: 2026-06-13
+---
+
 # 电影项目介绍PPT.pptx
 
 ## Slide 1

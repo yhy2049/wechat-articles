@@ -1,3 +1,13 @@
+---
+type: draft
+name: "Gemini提示词"
+status: draft
+editable: true
+audience: both
+created: 2026-09-20
+updated: 2026-09-20
+---
+
 # 提示词：写一篇FIRST青年电影展攻略文章
 
 ## 任务
