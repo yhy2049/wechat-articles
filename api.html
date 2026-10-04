@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API 文档 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 0;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { opacity: 0.9; font-size: 1.1em; }
+    .nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #e94560;
+      font-size: 0.95em;
+    }
+    .nav a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0e0e0;
+      color: #1a1a2e;
+    }
+    h3 {
+      font-size: 1.3em;
+      margin: 25px 0 15px;
+      color: #16213e;
+    }
+    .api-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 4px solid #e94560;
+    }
+    .api-card .method {
+      display: inline-block;
+      background: #50fa7b;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      margin-right: 10px;
+    }
+    .api-card .endpoint {
+      font-family: 'Courier New', monospace;
+      color: #e94560;
+      font-size: 1.1em;
+      word-break: break-all;
+    }
+    .api-card p {
+      margin: 15px 0;
+      color: #666;
+    }
+    pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    pre .comment { color: #888; }
+    pre .string { color: #ffd866; }
+    pre .keyword { color: #ff79c6; }
+    pre .function { color: #50fa7b; }
+    pre .number { color: #bd93f9; }
+    footer {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+    }
+    footer a { color: #e94560; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔌 API 文档</h1>
+      <p>24帧公众号存档 - 数据接口</p>
+    </header>
+    
+    <div class="nav">
+      <a href="index.html">← 返回首页</a>
+    </div>
+    
+    <h2>📊 统计信息</h2>
+    <div class="api-card">
+      <span class="method">GET</span>
+      <span class="endpoint">https://yhy2049.github.io/wechat-articles/api/stats.json</span>
+      <p>返回文章统计信息</p>
+      <pre>{
+  <span class="string">"total_articles"</span>: <span class="number">294</span>,
+  <span class="string">"total_characters"</span>: <span class="number">893715</span>,
+  <span class="string">"years"</span>: {
+    <span class="string">"2022"</span>: <span class="number">49</span>,
+    <span class="string">"2023"</span>: <span class="number">62</span>,
+    <span class="string">"2024"</span>: <span class="number">70</span>,
+    <span class="string">"2025"</span>: <span class="number">66</span>,
+    <span class="string">"2026"</span>: <span class="number">47</span>
+  }
+}</pre>
+    </div>
+    
+    <h2>📋 文章索引</h2>
+    <div class="api-card">
+      <span class="method">GET</span>
+      <span class="endpoint">https://yhy2049.github.io/wechat-articles/api/index.json</span>
+      <p>返回所有文章列表（标题、日期、URL）</p>
+      <pre>{
+  <span class="string">"total"</span>: <span class="number">294</span>,
+  <span class="string">"articles"</span>: [
+    {
+      <span class="string">"id"</span>: <span class="string">"2026-09-07-xxx"</span>,
+      <span class="string">"title"</span>: <span class="string">"文章标题"</span>,
+      <span class="string">"date"</span>: <span class="string">"2026-09-07"</span>,
+      <span class="string">"url"</span>: <span class="string">"https://yhy2049.github.io/wechat-articles/articles/2026/xxx.md"</span>
+    }
+  ]
+}</pre>
+    </div>
+    
+    <h2>📅 按年份获取</h2>
+    <div class="api-card">
+      <span class="method">GET</span>
+      <span class="endpoint">https://yhy2049.github.io/wechat-articles/api/2026.json</span>
+      <p>返回指定年份的文章列表</p>
+      <pre>{
+  <span class="string">"year"</span>: <span class="string">"2026"</span>,
+  <span class="string">"total"</span>: <span class="number">47</span>,
+  <span class="string">"articles"</span>: [<span class="comment">...</span>]
+}</pre>
+    </div>
+    
+    <h2>📄 单篇文章</h2>
+    <div class="api-card">
+      <span class="method">GET</span>
+      <span class="endpoint">https://yhy2049.github.io/wechat-articles/articles/2026/2026-09-07-xxx.md</span>
+      <p>直接获取 Markdown 原文</p>
+    </div>
+    
+    <h2>🤖 调用示例</h2>
+    <div class="api-card">
+      <h3>JavaScript / Node.js</h3>
+      <pre><span class="keyword">const</span> response = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">'https://yhy2049.github.io/wechat-articles/api/index.json'</span>);
+<span class="keyword">const</span> data = <span class="keyword">await</span> response.<span class="function">json</span>();
+console.<span class="function">log</span>(<span class="string">'文章总数:'</span>, data.total);
+
+<span class="comment">// 获取某篇文章内容</span>
+<span class="keyword">const</span> article = <span class="keyword">await</span> <span class="function">fetch</span>(data.articles[0].url);
+<span class="keyword">const</span> markdown = <span class="keyword">await</span> article.<span class="function">text</span>();</pre>
+      
+      <h3>Python</h3>
+      <pre><span class="keyword">import</span> requests
+
+<span class="comment"># 获取文章索引</span>
+r = requests.<span class="function">get</span>(<span class="string">'https://yhy2049.github.io/wechat-articles/api/index.json'</span>)
+data = r.<span class="function">json</span>()
+
+<span class="comment"># 获取某篇文章</span>
+r = requests.<span class="function">get</span>(data[<span class="string">'articles'</span>][<span class="number">0</span>][<span class="string">'url'</span>])
+markdown = r.text</pre>
+      
+      <h3>cURL</h3>
+      <pre>curl https://yhy2049.github.io/wechat-articles/api/stats.json
+curl https://yhy2049.github.io/wechat-articles/articles/2026/2026-09-07-xxx.md</pre>
+    </div>
+    
+    <footer>
+      <p>生成时间: 2026-10-04 17:29</p>
+      <p>仓库: <a href="https://github.com/yhy2049/wechat-articles" target="_blank">github.com/yhy2049/wechat-articles</a></p>
+    </footer>
+  </div>
+</body>
+</html>
