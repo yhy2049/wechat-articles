@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每个人的童年都会结束每个人的飞船都会离开 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-04-22</div>
+      <h1 class="article-title">每个人的童年都会结束每个人的飞船都会离开</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qlogo.cn/mmbiz_jpg/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4m2yFuvX6v4l4ribT8ed52sEXoqrs1cjprat3pOPJoLBo24icSHluq7hg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>每个人的童年都会结束, 每个人的飞船都会离开</h1>
+<p><strong>写在前面</strong></p>
+<p>一开始是被画风和名字吸引，观看后被剧情折服，没有人物配音，没有精美画风，全篇是简单的带点旧时代复古色调的作品，不带感情的幕后音，用讲故事的方式推动着故事的发展，温柔轻快的ost让人舒服，13分钟很短让人回味无穷。<br>别错过这部动画。<br><strong>《我和吸铁石和一个死去的朋友》</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4rUlfHd3xeU7zSoHICNK0TLVmVMmNMhBPu9EMah2vXEBSmcHV8ykgEg/640?wx_fmt=jpeg" alt=""><br>这是中国传媒大学2018届毕业生刘毛宁的毕业设计。这部作品是2019年内地唯一正式入围法国昂西国际动画电影节官方竞赛学生作品单元的作品。<br>法国昂西国际动画电影节与萨格勒布国际动画电影节、广岛国际动画电影节、渥太华国际动画电影节并称全球最负盛名的四大国际动画电影节。而昂西国际动画电影节在业界享有“动画界奥斯卡”之盛誉，每年都会受到全世界动画爱好者的关注。<br>在这部片子还只有两个完整镜头，其它部分都是线稿的时候，就在毕设答辩的时候让人感动落泪。制作者刘毛宁的班主任在看到这部短片的初稿时说：“<br>你这片子刚开始一分钟我就代入情绪了”。自传性质的动画像一块吸铁石一样，深深地吸引观众走进刘毛宁的内心世界。<br><strong>剧情简介</strong><br>翻  开作者的童年的绘本，吸铁石  、槐花煎饼、废品回收、洞洞奖、和小明的秘密<br>基地……那个时代物质条件的有限，不管是一点一滴的新奇玩意和还是家人的时光都显得格外珍贵。  </p>
+<p>作品以第一人称的视角观察始终，语气波澜不惊，少有清晰的情绪表露，却能透露出无限的浪漫和忧伤。影片采用印象派的画风，故事纯粹而真诚。全片充斥着那个时代共有的童年回忆。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_gif/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4euicWSgpYA2IVMdFmCBXD4WzkB6ogg4M00toRWqMI4YpDoURkmzoIyA/640?wx_fmt=gif" alt=""><br>动画用长叙事的形式演绎了刘毛宁的童年经历。全片的色彩基调来自于作者真实的童年回忆有，麦田的金黄色、天空的深蓝色和松树的深绿色。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4PJ4egOXGvvMrfoskaHkWRYicFJYriaUWdfv3ibobO1IyObVuWKmC1APng/640?wx_fmt=other" alt=""><br>色彩是作者记忆里的斑点，刘毛宁说，“<strong>画风是一个漫长的演变的过程，选择这样的创作方式，是为了能更好的体现童年的质感</strong>”。<br>当他的画笔不停地在调试景物的细节时这些色彩，能浸染单调的画面，让记忆慢慢 衍生开花，浮现在作者荧幕的画面中，那些与他所经历的事物也就被平铺的展开了。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4RwPLR0gYicoOTjyC0TsmH5dp2OVzOvhcnJfcaqWjgORGb3lU2zyAkVQ/640?wx_fmt=other" alt=""><br>长辈们不求回报的爱和付出令人动容，但它也是压在心头的一座大山。这份爱太过绵长，我们可能连回报的机会都少有，一生都难以释怀。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4viauaN3oXT2xs0VDXiajuLmbGQFXWTBNCzu6P5mTWCgicZTNmJNXrF3Pw/640?wx_fmt=other" alt=""><br>拉着吸铁石在没有方向的路口，“我”去了南街，去了北街，还去了伏象山。小明离世的记忆变得沉重，在“我”的心里挥之不去。后知后觉的悲伤加上难以释怀的愧疚，让小明的离世成为了我心里的一根刺。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4SY0DGaaFoxfIGcXHduJ1pS5XrcTniannicX2cf7icNoibe9OlBgHGaeepw/640?wx_fmt=other" alt=""><br>结尾小明的宇宙飞船带着我的一切飞走了，而我梦见和小明乘坐宇宙飞船驶向“塑料小鱼”的肚子里。刘毛宁谈到这次创作想法时，提到他也是想和过去的自己做一次对话：“动画可能就是回应我童年，很多事情，很多情绪的一个方式。我愿意用这种方式去回应那个时候，在那个阶段有很多处理不了的情绪和困惑，那些无人解答的东西就让飞船带走，这也是我的答案”。<br><strong>一次采访</strong><br>结尾小明的飞船带着你童年的一切去向了宇宙，很有超现实主义的色彩，还交织着许多情感和幻想。你觉得这是一个升华还是一个落幕呢？很想听听你的想法<br>刘毛宁：很难界定它是升华还是落幕。<br>我希望这是一个闭环式的故事，就像是电影三幕式的最后一幕，结尾有一定的总结性。剧情里描述了许多小时候的思绪，其中包含了我对奶奶、姐姐和朋友那些无法释怀的情感，这些是我童年真实经历的困惑和忧伤，但当时我并没有找到排解的办法，只能将它们埋在心底。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4ibNf3viaQnibx22RsprI66hmeLzfMYqAPEqH7mrEbicKXIVJuNfEn4tgoA/640?wx_fmt=other" alt=""><br>但困惑其实是埋不住的，就像种子埋在土里会长成花，结成果子，这种困惑一定会在某个时刻被打开。<br>就像弗洛伊德说过，人长大后的行为和童年的记忆有很强的关联性。于是在这部动画里，我想把这些情绪统统放到飞船中，飞船离开了，我的童年也结束了。这没有好坏的界定，因为每个人的童年都会结束，这是一个必然的结果。<br>配图/  《我和吸铁石和一个死去的朋友》  参考/  每个人的童年都会结束, 每个人的飞船都会离开 | 刘毛宁和他的动画短片，  妈妈再打我一次，豆瓣  ，2019-  12-01  <img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4eFBoibwyLHrAz5vYTFdefFSHOt60UWzkgSq5UHjnrraOaHQiaNiaxLoag/640?wx_fmt=png" alt=""> <img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4UtH4pI9wuxRdliaH8uqOO2mRpO6iclI9EWGKFj61omYSNOG0JDYW0BlA/640?wx_fmt=jpeg" alt=""> 少数派主义  <img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4ybeeqD3f39AnUzmpyz2t953XeNMCgrFcIq2AicmXgzZ4gXD0knNzOrw/640?wx_fmt=png" alt=""> 长按左侧二维码关注 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

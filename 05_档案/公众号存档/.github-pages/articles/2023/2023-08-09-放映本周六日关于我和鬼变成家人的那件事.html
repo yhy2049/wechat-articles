@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放映本周六日关于我和鬼变成家人的那件事 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-08-09</div>
+      <h1 class="article-title">放映本周六日关于我和鬼变成家人的那件事</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKAib9OHZh0T8Wgl8P7q8YIV21KfRVqn6mw9dMlXogkPlzhXcYuyENJnZDONTictrxv627JnfT3dmhA/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「放映」本周六日 ·《关于我和鬼变成家人的那件事》</h1>
+<p><strong>写在前面</strong><br>2023年初，《关于我和鬼变成家人的那件事》这部电影的预告片刷遍各大媒体平台，而它的题材也诠释了为什么这么高的关注度：喜剧、悬疑、灵异、同性。<br>故事讲述恐同的直男警察吴明翰无意捡到一个红包，竟阴差阳错与同性恋鬼魂毛毛结了冥婚。而工作上棘手的案子，让吴明翰不得不联手他的鬼魂老公一同追凶。<br>电影笑点密集，泪点也很恰当，喜剧鬼片的题材让人联想到早年的经典港片，而LGBT元素的加入又让该题材变得新颖无比。<br>电影看似塑造了许多刻板印象的形象，但也是一个撕去标签的过程，也在LGBT议题外探讨了女性议题。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKAib9OHZh0T8Wgl8P7q8YIVHboXhhzQoB8JHE2j0oBqs2JKJe1xS4fIdv7NOCmDI89uPyKicuia72tw/640?wx_fmt=jpeg" alt=""><br><strong>中国台湾 | 2023 | 汉语普通话</strong>|<strong>130min</strong><br><strong>放映员说</strong><br>你们好像在拍一种很新的鬼片诶。<br>最初关注到这部电影是在微博上看见博主发布的宣传片，又好笑又好怕。许光汉这张脸在当年《想见你》的时候不知道捕获了多少人的少女心，这一次出演也是让人眼前一亮。<br>顺带一提的是，本片的女主塑造也很不错，一般情况下此类题材的影片里，女性角色往往是被淡化甚至被当做工具人。但女主这个角色意外的非常出彩，让人印象深刻。<br>说点正经的，“都什么时代了，还恐同？”这句话其实有点刺痛人的。台湾作为全亚洲第一个支持同性恋婚姻合法的地区，当年街上庆祝的年轻人们的照片还历历在目。<br>看到这里的时候有一种感觉，好像这句话是在对时代呐喊，同性恋死后变成鬼魂也只是更不完整。很喜欢这种故事，虽然不免俗套，但却俗套得很舒服，像把人包裹起来一样。同志们自我认同，恐同人反而变成少数人。<br>刷豆瓣的时候看见一条短评：对岸真是春风化雨。确实是一部诚意满满又十分不错闪着光的台湾电影，恼羞成怒都是台湾式的娇嗔，可爱得不行。<br>“想捡你只想捡你”<br>多可爱啊。<br><strong>时间</strong><br>**2023年8月12/13日（本周六/日）**13:00<del>13:15入场  13:15</del>15:25放映  15:25  ~16:00映后<br><strong>地址</strong><br><strong>东三环</strong>（报名后获取详细地址）  </p>
+<p><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKhNXMJlgOaDzIfxMWS9BCPCkjgMbPTeDAbW2DicUcoqhmoXTbW29yzkPACbiaO7ZzY6vCHj42dcOuA/640?wx_fmt=jpeg" alt=""></p>
+<p>雀雀<br><strong>票价</strong><br><strong>8月12日</strong><br><strong>￥45（含一张定制票根）</strong><br>_ ‍  <a href=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKAib9OHZh0T8Wgl8P7q8YIV6AtQ0pGNzsq8W3afdF0swNJCMFZPIPhdMLIz9oVyIP2TPd7h9FpFzQ/640?wx_fmt=png" alt="">
+</a> ‍<br>8月13日<br><strong>￥45（含一张定制票根）</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKAib9OHZh0T8Wgl8P7q8YIVeiacX7tdAHpGGXrH2DsjbglHAeBn3WRnte8bSpWMPEItMu9fVg4ibYbA/640?wx_fmt=png" alt=""><br>]()<br><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放映本周日战场上的快乐圣诞牛市口 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-12-17</div>
+      <h1 class="article-title">放映本周日战场上的快乐圣诞牛市口</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyK4hDzsW8icZF5TwiaVgu7NLqwxooqDWWgI7xunUuLxGWVkrk4DiaiazlBfyjVjlNBic7CvfL6CpxFR3DA/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「放映」本周日 ·《战场上的快乐圣诞》· 牛市口</h1>
+<p><strong>写在前面</strong><br>后来，世野井写了首诗寄给了劳伦斯 。<br>In the spring,  Obeying the August spirits,  I went to fight the enemy.  In<br>the Fall,  Returning I beg spirits,  To receive also the enemy.<br>春日里，  顺从先祖的灵魂，  我上阵杀敌。  到秋天，  回归故里，  恳求各位，  接纳我的敌人。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyK4hDzsW8icZF5TwiaVgu7NLqKp0JmEMG4P8RRthXmyoo0pYufRSQO63B6licUF8aO4QmSHznrqXZU2g/640?wx_fmt=jpeg" alt=""><br><strong>放映员说</strong><br>上周日，2022年12月11日，70岁的坂本龙一用60分钟的预录制音乐会，通过线上向我们做了并不漫长的告别。<br>2014年他被确诊为咽喉癌。一年前的2013年，81岁的大岛渚因肺炎去世；两年后的2016年，69岁的大卫鲍伊因肺癌去世。<br>2021年初，教授被确诊为直肠癌，同年10月和12月，因癌细胞转移到双肺做了手术；  2022年6月接受采访透露癌症已到四期即终末阶段；<br>2023年1月17日，坂本龙一将发行新专辑《12》，其中收录了新冠肺炎疫情至今他创作的12首新曲。<br>2010年，在某次民意调查“你最放心把国家交给谁”中，日常打记者、骂首相、爆粗口，婚内出过轨、怼过宫崎骏、醉酒上电视脱裤子险些被封杀的北野武一举打败各路政客，荣获第一。<br>1987年，时任美国总统罗纳德-里根喊话前苏联领导人戈尔巴乔夫，要求他拆除柏林墙。一周之前，大卫-<br>鲍伊特地选择在靠近柏林墙位置的地方进行演出，引发了墙两侧乐迷的重大反响。在他逝世之后，德国外交局官方发推，特别致谢鲍伊—“帮助拆除柏林墙”<br>1976年，大岛渚导演了被日本政府长期封禁的《感官世界》，改编自1936年5月发生于东京的“阿部定事件”，就在三个月前的2月26日，被派往中国东北的世野井将会在身在东京赏早樱的劳伦斯之后得知他的朋友们因参与政变而被处死的消息。<br>当和劳伦斯先生谈到这件事时，他说：“我的朋友都被处死了，留下我一个人在这人世等死。”<br>可我们知道，世野井不仅没有等死，他还用他的一切虔诚和伪装去修行和抗争。<br>正如几位主演电影身上的共同标签—【反叛】，角色和人物以一种独特的方式产生了交汇和映射。像是来自不同平面的光不知怎么，被反射到了同一颗种子上。只是我常常会好奇，那颗在世野井心中种下的种子，那位他所深爱的播种者，会如何面对远隔重洋，来自万里之外的日本神社的祭拜呢？修行漫漫，“每一次告别，都离死亡更近一点”。<br>教授的告别音乐会，似乎每首曲子、每篇章节、每个音符都在低吟、铿锵—“不必告别”。圣诞将至，让我们共同留存住原中士那张憨厚笨拙的“圣诞快乐，劳伦斯先生”。<br><strong>时间</strong><br>**2022年12月18日（本周日）**18:45<del>19:00入场  19:00</del>21:00放映  21  :0  0~21:30映后<br><strong>地址</strong><br>暗房里  ‍(距离2号线牛市口地铁站C口步行900米)<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyK4hDzsW8icZF5TwiaVgu7NLq9ezR7AByr1eIMDZWLu7UA97BN1RRQMoLpZcyLRNLpDt5MRTR1NBkgQ/640?wx_fmt=jpeg" alt=""></p>
+<p>无声<br><strong>￥30</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKnHtPu87V11MUUAM2aRibUJiaaVQC0tDTRUjp3y8JOaMXzGrozFLaJ4kn69ZEXB6auBNyIfsSiayVqg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

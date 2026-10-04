@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨年特别企划跨越时间海REX春台 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-12-27</div>
+      <h1 class="article-title">跨年特别企划跨越时间海REX春台</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKfXatDicrceHnGJFG5gfibLQUw47pclYehmahxRA4z48Mic20MfkJIsoYjWLYpy82KgoCro1y9LJMoQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「跨年特别企划」跨越时间海 · RE:X春台</h1>
+<p><strong>写在前面</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKfXatDicrceHnGJFG5gfibLQUYLibRfAvZ4W4whbNrReGje06yE6Xx6HBKoZpic5dxcjhbUDeIosHsHg/640?wx_fmt=png&amp;from=appmsg" alt=""><br>冬天看电影的时候总是感觉少了些什么，是篝火？是朋友？是一杯烫手的热茶？冬天是最需要氛围的，不然好像怎样都不想挪动一丝，做什么都提不起兴趣来。<br>2024又要在寒冬里来了，今年还没有和朋友一起暖乎乎的看过一场电影的遗憾，现在就要立刻实现。这一次我们特别地注意了场景的搭建，一走进来就置身于梦里童话小森林，脚步踩下去的时候会有树叶的沙沙声，奶茶烫烫地灌进胃里，有幸福感的时候看温情片，我们头脑里的爱会变成总和。<br><strong>放映片单</strong><br>12月28日19：00  《海蒂和爷爷》111 分钟  12月29日19：00  《白日梦想家》114 分钟  12月30日19：00  《ONE<br>DAY》107分钟  12月31日19：00  《三傻大闹宝莱坞》171分钟  2024年1月1日 19：00  《隐藏人物》127分钟<br><strong>地址</strong><br>RE:X春台  二楼露台</p>
+<p><strong>场景呈现参考</strong><br>在电影般的场景中，一片桦树林矗立在静谧的山谷中，展现出一幅美丽的画卷。枯叶在微风中轻轻飘落，宛如秋天的精灵在舞蹈。阳光透过稀疏的枝叶，洒在铺满落叶的地面上，散发出淡淡的松木香。在这片自然的舞台上，我们选了几部深入人心的电影，让它们的故事与这片美景相互映衬。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyLfmnqthoAPFPatic7wgqdlqC6dU95n9acibzibOq1IPibvDeYATQLiaqricwrAARp3d1PevibuzWsMVDFWg/640?wx_fmt=png&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLfmnqthoAPFPatic7wgqdlqaxvZBddIQIwhvo7QkZKDtyOn0uxJ7pNBQUiapyfWic7YYAPBcLlcxfFw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>票价</strong>￥50</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyLfmnqthoAPFPatic7wgqdlqOX24Txjt6qJs3o9ad4wbWMyPDsXOpelmfD903A4QYgaOEY2MlTGUnA/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>每场仅30个席，报名落座（含伴手礼），现场开放式有站位观影区，无伴手礼无需报名，现场前往即可<br>跨年伴手礼：  1、人手一份：李山山茶事（任意一款）  2、每场抽电影贴纸，具体参考下图（数量有限，每场6份，每份10张）<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLfmnqthoAPFPatic7wgqdlqRHHh09KeaDDLoP6Z9OtmbLXxKZQ1H21mqOmXQ4UoKMahXD210ibOcrg/640?wx_fmt=jpeg&amp;from=appmsg" alt="">  </p>
+<p><strong>特别支持</strong> </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKfXatDicrceHnGJFG5gfibLQBkX5xqcoOH8Qk5H9AdfeEyA1Um2mciaNZib7icfZzAXzmXxXNpYicFmVhQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

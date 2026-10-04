@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放映本周六火山挚恋大源 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-12-02</div>
+      <h1 class="article-title">放映本周六火山挚恋大源</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLPt1gdiauBicOc0TzJdM5ib3SGDfMuRzKOsWUSxwZXGxB5SzFAzUrL5b0IcYzINQCbLVibeY7JoW9x9g/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「放映」本周六 ·《火山挚恋》· 大源</h1>
+<p><strong>写在前面</strong><br>开场字幕一出现，就能感受到《火山挚恋》这部纪录片的与众不同。导演Sara Dosa拒绝向大家展示自己或其它主创的名字，而表示这部电影是“Katia,<br>Marice and<br>friends”一起拍摄的——的确，这是一部绝大多数影像都由数十年前的主角们拍摄，或由电视台采访他们的录像、与他们同行的伙伴们的摄影等内容构成的纪录片，由今人原创的大概只有中间插入的几段可爱动画。<br>导演从两位主角留下的大量资料中挑选出精彩的部分剪辑在一起而已，在还原他们的人生轨迹的同时，也通过精巧的叙事设计、跨越时空阻隔的共情和对科学史的了解，出色的传达出了他们的抱负和数十年寻访火山之旅中的思想变化。<br>《火山挚  恋》远不止是烂番茄网站上影评人共识中形容的“一对有着奇异志趣伴侣的故事”或者“摄人自然摄影合辑”（ “Whether as a story of<br>one couple&#39;s quixotic quest or simply a stunning collection of nature footage,<br>Fire of Love burns b  right<br>”），还融入了（既来自于Katia和Marice，也来自于二十一世纪的导演和主创的）对生命与死亡的沉思、对人与自然关系的探求，以及对人类之爱的礼赞。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLPt1gdiauBicOc0TzJdM5ib3S5YoI2I45stAZJf4niatoL3Ul24w7dJicr5FfkHjVlSxZh2vAN4hdzDTQ/640?wx_fmt=jpeg" alt=""><br><strong>放映员说</strong><br>他们身处奇异瑰丽的异世界，寂静而又躁动，一切的存在仅与他们和火山相关联。“我在深渊的边缘沉思”——银色的服装、火红的背景、沉黑的地表，这是一场与火山共舞的流浪记。自由且浪漫、惊奇且无畏。<br>“只有远离人类，才会爱上人类”。住在宇宙原始的边缘，俯瞰生灵才知人类之渺小。即使科学研究拥有着绝对的理性，但在美丽但无情的杀手——火山面前，依旧保持着怜悯与同理心。因此他们选择保护令人失望的人类，这是崇高且伟大的科学精神。<br>“理解是爱的同义词”。在浩瀚的世界里遇见彼此同在火山里流浪的灵魂，貌似有种冥冥中的必然性。始终保持同一步调，使得两个远离尘世的灵魂在异世界从不孤独。能遇到这样理性又浪漫的爱情何其幸运。<br><strong>时间</strong><br>**2022年12月3日（本周六）**18:45<del>19:00入场  19:00</del>20:30放映  20  :3  0~21:00映后<br><strong>地址</strong><br><strong>成都市武侯区天府二街866号</strong>(大源地铁站D口步行450米)<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXr3mXWxR8O9ZCY19B7AZJwO6dTeg81HyUSqlesiblczsxfqIlvkahZI7g/640?wx_fmt=jpeg" alt=""></p>
+<p>「  24帧  观影团  」主理人  最酷的宇航员<br><strong>￥40（含一张定制票根）</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKnHtPu87V11MUUAM2aRibUJiaaVQC0tDTRUjp3y8JOaMXzGrozFLaJ4kn69ZEXB6auBNyIfsSiayVqg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>为什么我们不再叫24帧观影团 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-12-31</div>
+      <h1 class="article-title">为什么我们不再叫24帧观影团</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKIqAy9Mf1bKmRYSwuwls40UTUOKUPOB0Qd9kAicZX4BrQoXDhiban0ibK5TWYKC0rh0tlMsr4f0ibFYw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>为什么我们不再叫24帧观影团</h1>
+<p><strong>写在前面</strong></p>
+<h1></h1>
+<p>这个决定，其实并不是最近才发生的，  只是最近，我们终于愿意把它说清楚。<br>24帧观影团成立于2022年5月。  最开始，我们只是一个电影社群，“观影团”只是为了方便让大家知道我们是谁，在干什么。  </p>
+<p>那时候我们在酒吧、咖啡店、艺术空间放电影。</p>
+<p>没有固定场地，也没有什么规划，更多考虑的是——</p>
+<p>这周有没有一部想看的电影？</p>
+<p>有没有人愿意一起来？</p>
+<p>如果只停在那一步，“观影团”这个名字会一直存在。</p>
+<p>但事情慢慢变了</p>
+<p>三年多，我们放过院线电影，也放过独立电影和短片；</p>
+<p>做过单场放映，也做过围绕作者、主题、影展线索展开的策划。</p>
+<p>有些场次有导演来现场，</p>
+<p>有些导演来  不了，我们就想办法连线，</p>
+<p>电影放完以后，大家坐下来聊，</p>
+<p>有时候聊得很认真，有时候只是闲聊，<br>但至少有一个共识：<br><strong>电影不是看完就结束的东西。</strong></p>
+<p>另一个变化，是人。</p>
+<p>一开始选片几乎都由我来做，</p>
+<p>但在一次次合作中，越来越多策展朋友加入进来。</p>
+<p>有人提出一个主题，</p>
+<p>有人想做一个单元，</p>
+<p>有人带来一组他们非常在意的短片。</p>
+<p>很多项目并不是“被安排的”，</p>
+<p>而是在讨论中自然成形的。</p>
+<p>到后来你会发现：</p>
+<p>我们真正做的，</p>
+<p>已经不是“组织大家一起看电影”，</p>
+<p>而是<strong>把一个个策划想法变成现实</strong>。</p>
+<p>也是从那时候开始，<br>我意识到「观影团」这个名字，<br>已经有点装不下正在发生的事情了。</p>
+<p>如果一定要用一句话形容现在的24帧，<br>那我们大概是一个<br><strong>以电影放映为起点，不断发生策展与创作的项目。</strong></p>
+<p>我们把电影从“被观看”，变成一件<br>可以被讨论、被组织、被更多人参与的事情。</p>
+<p>对我们来说，放映只是起点，<br>策展、讨论和共创，才是事情继续发生的方式。</p>
+<p>所以我们决定对外使用新的名字：<br><strong>24FRAMES PROJECT</strong></p>
+<p>这个名字没有太多修辞，<br>它只是更准确地描述了我们现在在做的事情——<br>一次一次被发起、被完成、被复盘的项目。</p>
+<p>24帧仍然是我们的起点，PROJECT则是我们继续向前的方式。</p>
+<h2></h2>
+<h2>[ 关于策展这件事</h2>
+<p>](<a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNzExMw==&amp;mid=2247488704&amp;idx=1&amp;sn=796fcc80888e1edcffcd090ffccbfea5&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNzExMw==&amp;mid=2247488704&amp;idx=1&amp;sn=796fcc80888e1edcffcd090ffccbfea5&amp;scene=21#wechat_redirect</a>)</p>
+<p>后来参与策展的人，<br>很多一开始也只是观众。</p>
+<p>他们坐在放映厅里，被某一部电影触动，<br>慢慢开始提问、表达不同意见。</p>
+<p>再后来，他们意识到一件事：  </p>
+<p>原来我们不只可以呈现银幕上的故事，  也可以将这份触动传递给更多人。</p>
+<p>在24FRAMES PROJECT，<br>策展并不是在证明你懂电影，<br>而是把一次观看，<br>变成一个可以被他人理解和回应的现场。</p>
+<p>如果你只是来看电影，这一切并不影响你；<br>但如果你不满足于只坐在观众席，<br>策展这件事，可能会慢慢靠近你。<br>至少对我们来说，很多事情，都是从这里开始的。</p>
+<h2></h2>
+<h2>接下来，我们还想继续做的两件事</h2>
+<h3></h3>
+<p> 短片创作<br>](<a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNzExMw==&amp;mid=2247488892&amp;idx=1&amp;sn=fd1215c6f98ba7f00ae0361d98450884&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNzExMw==&amp;mid=2247488892&amp;idx=1&amp;sn=fd1215c6f98ba7f00ae0361d98450884&amp;scene=21#wechat_redirect</a>)<br>，是我们已经全面启动的方向。</p>
+<p>很多人并不是没有表达欲，<br>而是从来没有被认真邀请过。</p>
+<p>我们更在意创作的过程本身：<br>想法如何被整理，<br>在有限条件下如何完成，<br>以及一群人如何通过协作，<br>把个人经验转化为影像。</p>
+<p>另一个我们会长期投入的方向，是  电影公益  。</p>
+<p>在合适的阶段，<br>我们希望走进山区和资源相对匮乏的地方，<br>为留守儿童和当地的孩子们放电影。</p>
+<p>电影未必能改变现实，<br>但它可以成为一次<br><strong>认识世界、想象世界的开始。</strong></p>
+<h2></h2>
+<h2>写在最后</h2>
+<p>不管是电影放映、策展实践，<br>还是短片创作与电影公益，<br>对我们来说，都不是扩张，<br>而是同一条路径在不同阶段的延伸。</p>
+<p>接下来一段时间，<br>我们会继续做放映、策展和创作。<br>有些事情已经在发生，<br>有些还在路上。</p>
+<p>感谢你看到这里，<br>我们就快互相抵达了。</p>
+<p>在2026年初，</p>
+<p>我们第一次策划了<a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNzExMw==&amp;mid=2247488937&amp;idx=1&amp;sn=789dd7a5dd4706c98ae31df93839e9aa&amp;scene=21#wechat_redirect"> 24帧年会
+</a><br>。</p>
+<p>说是年会，其实更像一场大型的&quot;聚会&quot;，从短片放映到沙龙交流再到跳舞的派对。  </p>
+<p>年会的意义，就是让所有散落的星光重新聚拢，流浪的孩子，欢迎回家。</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

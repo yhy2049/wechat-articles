@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023年文章 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #333;
+      --text-light: #666;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --border: #e0e0e0;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 25px 30px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    .header a {
+      text-decoration: none;
+      color: white;
+      opacity: 0.9;
+      font-size: 0.9em;
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      transition: opacity 0.3s;
+    }
+    .header a:hover { opacity: 1; }
+    .search-box {
+      width: 100%;
+      padding: 14px 20px;
+      margin-bottom: 25px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .search-box:focus {
+      outline: none;
+      border-color: var(--highlight);
+    }
+    .count {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+    .article-list { list-style: none; }
+    .article-item {
+      padding: 20px;
+      margin-bottom: 12px;
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: all 0.3s;
+      border-left: 4px solid transparent;
+    }
+    .article-item:hover {
+      background: var(--highlight);
+      color: white;
+      transform: translateX(5px);
+      border-left-color: rgba(255,255,255,0.5);
+      box-shadow: 0 4px 15px rgba(233,69,96,0.3);
+    }
+    .article-item:hover .date { color: rgba(255,255,255,0.9); }
+    .article-item .date {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .article-item .title {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📅 2023年文章</h1>
+      <a href="index.html">← 返回首页</a>
+    </div>
+    
+    <p class="count">共 62 篇</p>
+    
+    <input type="text" class="search-box" placeholder="🔍 搜索文章标题..." onkeyup="filterArticles(this.value)">
+    
+    <ul class="article-list" id="articleList">
+      <li>
+        <a href="articles/2023/2023-12-27-跨年特别企划跨越时间海REX春台.html" class="article-item">
+          <div class="date">2023-12-27</div>
+          <div class="title">跨年特别企划跨越时间海REX春台</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-12-22-重映本周六爱乐之城杜比厅.html" class="article-item">
+          <div class="date">2023-12-22</div>
+          <div class="title">重映本周六爱乐之城杜比厅</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-12-14-新片专场首映日狗神双店路.html" class="article-item">
+          <div class="date">2023-12-14</div>
+          <div class="title">新片专场首映日狗神双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-12-11-回顾一次新的探索制造一场诗与信的雪.html" class="article-item">
+          <div class="date">2023-12-11</div>
+          <div class="title">回顾一次新的探索制造一场诗与信的雪</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-12-07-ARTBAY电影诗冬日放映情书麓湖.html" class="article-item">
+          <div class="date">2023-12-07</div>
+          <div class="title">ARTBAY电影诗冬日放映情书麓湖</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-11-22-点映本周五涉过愤怒的海学府影城.html" class="article-item">
+          <div class="date">2023-11-22</div>
+          <div class="title">点映本周五涉过愤怒的海学府影城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-11-16-新片专场本周六红猪东光.html" class="article-item">
+          <div class="date">2023-11-16</div>
+          <div class="title">新片专场本周六红猪东光</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-10-20-路演超前点映一个和四个太古里百丽宫.html" class="article-item">
+          <div class="date">2023-10-20</div>
+          <div class="title">路演超前点映一个和四个太古里百丽宫</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-10-18-新片专场本周六河边的错误双店路.html" class="article-item">
+          <div class="date">2023-10-18</div>
+          <div class="title">新片专场本周六河边的错误双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-10-13-独立放映本周日巢川大望江.html" class="article-item">
+          <div class="date">2023-10-13</div>
+          <div class="title">独立放映本周日巢川大望江</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-09-05-重映本周六红色恋人双店路.html" class="article-item">
+          <div class="date">2023-09-05</div>
+          <div class="title">重映本周六红色恋人双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-31-新浪潮月电影是二十四格的真理大源.html" class="article-item">
+          <div class="date">2023-08-31</div>
+          <div class="title">新浪潮月电影是二十四格的真理大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-30-新片专场本周六奥本海默双店路.html" class="article-item">
+          <div class="date">2023-08-30</div>
+          <div class="title">新片专场本周六奥本海默双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-18-路演本周日野蛮人入侵建设路.html" class="article-item">
+          <div class="date">2023-08-18</div>
+          <div class="title">路演本周日野蛮人入侵建设路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-17-新片专场本周五火山挚恋双店路.html" class="article-item">
+          <div class="date">2023-08-17</div>
+          <div class="title">新片专场本周五火山挚恋双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-09-放映本周六日关于我和鬼变成家人的那件事.html" class="article-item">
+          <div class="date">2023-08-09</div>
+          <div class="title">放映本周六日关于我和鬼变成家人的那件事</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-04-放映本周日蓝色大门大源.html" class="article-item">
+          <div class="date">2023-08-04</div>
+          <div class="title">放映本周日蓝色大门大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-08-03-放映本周六鲭鱼罐头大源.html" class="article-item">
+          <div class="date">2023-08-03</div>
+          <div class="title">放映本周六鲭鱼罐头大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-06-25-新片专场本周日记忆双店路.html" class="article-item">
+          <div class="date">2023-06-25</div>
+          <div class="title">新片专场本周日记忆双店路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-06-15-一周年特别放映本周六一一大源.html" class="article-item">
+          <div class="date">2023-06-15</div>
+          <div class="title">一周年特别放映本周六一一大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-06-09-点映成都首映街娃儿.html" class="article-item">
+          <div class="date">2023-06-09</div>
+          <div class="title">点映成都首映街娃儿</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-06-07-影展浪影像24帧冥王星时刻.html" class="article-item">
+          <div class="date">2023-06-07</div>
+          <div class="title">影展浪影像24帧冥王星时刻</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-25-我们的麦芒.html" class="article-item">
+          <div class="date">2023-05-25</div>
+          <div class="title">我们的麦芒</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-24-一周年独立放映成都首映失语镇.html" class="article-item">
+          <div class="date">2023-05-24</div>
+          <div class="title">一周年独立放映成都首映失语镇</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-19-一周年特别放映本周日24帧大源.html" class="article-item">
+          <div class="date">2023-05-19</div>
+          <div class="title">一周年特别放映本周日24帧大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-12-预约放映母亲节妈妈大魔方.html" class="article-item">
+          <div class="date">2023-05-12</div>
+          <div class="title">预约放映母亲节妈妈大魔方</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-07-回顾2023FIRST主动放映附近的消逝.html" class="article-item">
+          <div class="date">2023-05-07</div>
+          <div class="title">回顾2023FIRST主动放映附近的消逝</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-04-昆汀系列要FUCK不要优雅川大望江.html" class="article-item">
+          <div class="date">2023-05-04</div>
+          <div class="title">昆汀系列要FUCK不要优雅川大望江</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-01-放映本周日请以你的名字呼唤我大源.html" class="article-item">
+          <div class="date">2023-05-01</div>
+          <div class="title">放映本周日请以你的名字呼唤我大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-05-01-昆汀系列专场属于昆迷的狂欢.html" class="article-item">
+          <div class="date">2023-05-01</div>
+          <div class="title">昆汀系列专场属于昆迷的狂欢</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-04-25-FIRST主动放映成都24帧站附近的消逝.html" class="article-item">
+          <div class="date">2023-04-25</div>
+          <div class="title">FIRST主动放映成都24帧站附近的消逝</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-04-19-预约放映本周六山河故人大魔方.html" class="article-item">
+          <div class="date">2023-04-19</div>
+          <div class="title">预约放映本周六山河故人大魔方</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-04-06-侯麦系列本周六秋天的故事金科北路.html" class="article-item">
+          <div class="date">2023-04-06</div>
+          <div class="title">侯麦系列本周六秋天的故事金科北路</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-04-03-新片专场本周三宇宙探索编辑部CGV.html" class="article-item">
+          <div class="date">2023-04-03</div>
+          <div class="title">新片专场本周三宇宙探索编辑部CGV</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-24-北野武系列只有一次的人生大源.html" class="article-item">
+          <div class="date">2023-03-24</div>
+          <div class="title">北野武系列只有一次的人生大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-23-我们永远不要相互遗忘.html" class="article-item">
+          <div class="date">2023-03-23</div>
+          <div class="title">我们永远不要相互遗忘</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-22-放映本周日鲸大源.html" class="article-item">
+          <div class="date">2023-03-22</div>
+          <div class="title">放映本周日鲸大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-15-成都特别放映主创见面3月19日迷你剧平原上的摩西.html" class="article-item">
+          <div class="date">2023-03-15</div>
+          <div class="title">成都特别放映主创见面3月19日迷你剧平原上的摩西</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-14-放映本周六时时刻刻大源.html" class="article-item">
+          <div class="date">2023-03-14</div>
+          <div class="title">放映本周六时时刻刻大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-13-侯麦系列本周六春天的故事世纪城.html" class="article-item">
+          <div class="date">2023-03-13</div>
+          <div class="title">侯麦系列本周六春天的故事世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-10-我是布莱克为一无所有之人呐喊.html" class="article-item">
+          <div class="date">2023-03-10</div>
+          <div class="title">我是布莱克为一无所有之人呐喊</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-09-嘉宾映后本周六完美的世界渡口.html" class="article-item">
+          <div class="date">2023-03-09</div>
+          <div class="title">嘉宾映后本周六完美的世界渡口</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-08-是她们撑起了电影的半边天.html" class="article-item">
+          <div class="date">2023-03-08</div>
+          <div class="title">是她们撑起了电影的半边天</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-03-01-放映本周日廊桥遗梦大源.html" class="article-item">
+          <div class="date">2023-03-01</div>
+          <div class="title">放映本周日廊桥遗梦大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-28-联名本周六女性主义剧本围读amp妇女参政论者暗房里.html" class="article-item">
+          <div class="date">2023-02-28</div>
+          <div class="title">联名本周六女性主义剧本围读amp妇女参政论者暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-25-年度最佳女导演作品解构湿滑记忆.html" class="article-item">
+          <div class="date">2023-02-25</div>
+          <div class="title">年度最佳女导演作品解构湿滑记忆</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-24-放映本周六小说家的电影暗房里.html" class="article-item">
+          <div class="date">2023-02-24</div>
+          <div class="title">放映本周六小说家的电影暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-23-随机放映20.html" class="article-item">
+          <div class="date">2023-02-23</div>
+          <div class="title">随机放映20</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-22-影展本周六ANOTHER电影展短片联展川大望江.html" class="article-item">
+          <div class="date">2023-02-22</div>
+          <div class="title">影展本周六ANOTHER电影展短片联展川大望江</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-17-放映本周六回归暗房里.html" class="article-item">
+          <div class="date">2023-02-17</div>
+          <div class="title">放映本周六回归暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-13-点映本周三拨浪鼓咚咚响太平洋影院金沙.html" class="article-item">
+          <div class="date">2023-02-13</div>
+          <div class="title">点映本周三拨浪鼓咚咚响太平洋影院金沙</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-09-放映本周六孤味暗房里.html" class="article-item">
+          <div class="date">2023-02-09</div>
+          <div class="title">放映本周六孤味暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-08-侯麦系列本周六夏天的故事世纪城.html" class="article-item">
+          <div class="date">2023-02-08</div>
+          <div class="title">侯麦系列本周六夏天的故事世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-03-放映本周六时空恋旅人暗房里.html" class="article-item">
+          <div class="date">2023-02-03</div>
+          <div class="title">放映本周六时空恋旅人暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-02-03-放映本周日巴黎夜旅人暗房里.html" class="article-item">
+          <div class="date">2023-02-03</div>
+          <div class="title">放映本周日巴黎夜旅人暗房里</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-28-影评流浪地球1amp2不敢说名垂影史至少看过的人不会忘.html" class="article-item">
+          <div class="date">2023-01-28</div>
+          <div class="title">影评流浪地球1amp2不敢说名垂影史至少看过的人不会忘</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-24-影评无名程耳在路上.html" class="article-item">
+          <div class="date">2023-01-24</div>
+          <div class="title">影评无名程耳在路上</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-24-影评满江红若此诗非岳飞所作那秦桧就能赢了.html" class="article-item">
+          <div class="date">2023-01-24</div>
+          <div class="title">影评满江红若此诗非岳飞所作那秦桧就能赢了</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-21-新年平安喜乐.html" class="article-item">
+          <div class="date">2023-01-21</div>
+          <div class="title">新年平安喜乐</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-12-放映本周六午夜巴黎世纪城.html" class="article-item">
+          <div class="date">2023-01-12</div>
+          <div class="title">放映本周六午夜巴黎世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-06-放映本周六兹山鱼谱市二医院.html" class="article-item">
+          <div class="date">2023-01-06</div>
+          <div class="title">放映本周六兹山鱼谱市二医院</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2023/2023-01-06-放映本周日关于莉莉周的一切市二医院.html" class="article-item">
+          <div class="date">2023-01-06</div>
+          <div class="title">放映本周日关于莉莉周的一切市二医院</div>
+        </a>
+      </li>
+    </ul>
+    
+    <div class="empty" id="emptyState" style="display: none;">
+      <p>😕 没有找到匹配的文章</p>
+    </div>
+  </div>
+  
+  <script>
+    function filterArticles(query) {
+      const items = document.querySelectorAll('.article-item');
+      const q = query.toLowerCase();
+      let visible = 0;
+      
+      items.forEach(item => {
+        const title = item.querySelector('.title').textContent.toLowerCase();
+        const match = title.includes(q);
+        item.parentElement.style.display = match ? 'block' : 'none';
+        if (match) visible++;
+      });
+      
+      document.getElementById('emptyState').style.display = visible === 0 ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生于浪涌成都站香港浸会大学第19届MFA青年电影展映 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-12-30</div>
+      <h1 class="article-title">生于浪涌成都站香港浸会大学第19届MFA青年电影展映</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNj3YMDjH7PhYW0UBBknda9ib712pHfBjV8Hia8Pl5BkJ33krZOAibUA5Yw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>生于浪涌｜成都站！香港浸会大学第19届MFA青年电影展映</h1>
+<p>2024</p>
+<p>MFA青年电影展映</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aXSM6Awkc7aCGP5mch6N4BQytLbTxXs1VbPMVvpEwBtMBLPH6hEqdZXFMjntRlQJdIPOAKtZ6EtA/640?wx_fmt=jpeg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>前言</p>
+<p>Fore  word</p>
+<p>停滞的夜晚，他们握住键盘，反而真正清醒，在若干个一刻，写下潜藏、闪烁。变化向前，心绪冲刷长岸。怀疑的迷雾里，重新触摸轨迹、拽住泄气的帆，鼓起箭在弦上的志与气。</p>
+<p>越过海湾，全部的身体都在翻涌影像的路：山川、平原、北国...触碰电影，把光变回电影。硬盘封存，幻觉具现，多了一种存在之外的备份，而已？</p>
+<p>时间急流，新奇也竟变古旧，于是按下录制键，不再寻找第二种路。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>预告片</p>
+<p>Trailer</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>成都站展映日程</p>
+<p>Screening Schedule of Chengdu</p>
+<p><strong>时间：2025/01/04 - 2025/01/05</strong>（周六-周日）</p>
+<p><strong>地点：紧急入口·Emergency Drink</strong></p>
+<p>（四川省成都市锦江区红星路35号附1号(自编号A1区4-101B)二楼 ）</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aXSM6Awkc7aCGP5mch6N4Bg6hqohI2nfBEY6g1y4iaeOtN8CTIyCcicuwCdtibxJymPZhVUIf07BSng/640?wx_fmt=jpeg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>报名入口</p>
+<p>Registration</p>
+<p>*成都放映单场售价为25元，单天通票40元。此活动不以盈利为目的，所有费用将用于场地维护。 </p>
+<p>请微信**扫码报名，**并填写相关信息进行线上购票  </p>
+<p>根据自己的兴趣和时间选择场次</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aXSM6Awkc7aCGP5mch6N4BE1F5IR1pFxGpYAFQK25TTGtZkHKxmJ1OxfG6ibEnMJwehcnowjk4ibbw/640?wx_fmt=jpeg" alt="">  </p>
+<p>如有疑问欢迎扫码或添加客服  微信号</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aTl3EwG2edgicvLkmhrxgfoLub2PBMSnQicibPA05Cc3IJsN3Wg3pv3CxND7dI0icBE2QtRQnfkY2pCA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>场地信息</p>
+<p>Location</p>
+<p><strong>四川省成都市锦江区红星路35号附1号(自编号A1区4-101B)二楼</strong></p>
+<p>紧急入口·Emergency Drink</p>
+<p>协办方</p>
+<p>Co-organizer</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>现场福利</p>
+<p>Merchandise</p>
+<p>参与映后有机会获得</p>
+<p><strong>生于浪涌定制帆布袋&amp;冰箱贴</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNpVa5zFDicLcA9ibRGkickeLWQg1Jlk2zTCBhNchovp3CgvWo2Iib7Jrvnw/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNjkClh8kt8e1qWzpxmOA0NlTaeQ7iaSvKztLsX8w3UL7flQHurfrze1Q/640?wx_fmt=jpeg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>展映预告</p>
+<p>Screening timetable</p>
+<p>2025/01</p>
+<p>青岛</p>
+<p>北京</p>
+<p>*请持续关注公众号，获取日后各站影展具体举办时间及报名方式。 </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/kMfLLeqTR8aA1F99z40o8wNTFnVcHjBNHVqg2AIqNRcviawKCmBicMZkleRZxvLUicIxJAiaq2ZgBJHsF0DC4ZEwww/640?wx_fmt=png" alt=""></p>
+<p>结语</p>
+<p>Conclusion</p>
+<p>生于浪涌，摇摆起伏，学会流动，学会在不完美的境况中自处。世界复杂，稀疏平常的涌动，也来自亿万水珠。所以，需要被看见，应该来自更强的发光和更复杂的反射，来自能量的积蓄和恢复，感情的平和与赤诚。</p>
+<p>涌动之后，再次沉淀。</p>
+<p>创作，不是倾泻情绪；创作，本身就是在寻找勇气。有时候，可以重复，别人活过的、做过的，也不代表就要绕过。除开那些似乎与你无关的痛苦喜悦，还有历史的、未来的、永恒的问题，它们浪漫又疯狂，刺穿时间。</p>
+<p>多数的思考和结语，只是在整理狭隘的偏见，顿悟可能来自一切，所以我们相信一切。相信此刻，这无数个映射，就是世界的圆融、相逢和奇点，相信自由，在严肃的时刻，也保持微笑。</p>
+<p>欢迎收藏关注浸大影业</p>
+<p>获取展映详细信息</p>
+<p>总策展｜季千玉</p>
+<p>联合策展｜张升愚 李一锋 张琪敏 隋宇健</p>
+<p>分站策展｜闫怡帆 于音 何欣言 邹柔逊</p>
+<p>陈嘉怡 李嫣然 何文韬</p>
+<p>视觉物料｜张琪敏 闫怡帆 邹宇灵 张译夫 邹柔逊</p>
+<p>文案｜李一锋</p>
+<p>预告片｜张升愚</p>
+<p>财务｜张译夫</p>
+<p>责编｜张琪敏</p>
+<p>公众号编辑｜李嫣然</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

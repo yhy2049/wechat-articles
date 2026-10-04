@@ -25,8 +25,9 @@ from playwright.sync_api import sync_playwright
 
 UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
       "AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.38")
-ARCH = "/Users/haishangyinghuo/Documents/OH-WorkSpace/24帧运营库/05_档案/公众号存档"
-DEFAULT_ARTS = "/tmp/wxmp/articles.json"
+ARCH = "/Users/haishangyinghuo/Documents/24帧运营库/05_档案/公众号存档"
+# articles.json 由公众号后台 appmsgpublish 接口生成（需扫码登录），不入库
+DEFAULT_ARTS = os.environ.get("WXMP_ARTICLES", "")
 NOISE = ("pic_blank.gif", "video_player_tmpl", "blank.gif", "qrcode", "wx_qrcode")
 # 频控/风控时微信返降级页：标题还在、正文被抽空，极易漏判
 BLOCKED = ("环境异常", "去验证", "安全验证", "请在微信客户端打开")
@@ -123,6 +124,9 @@ def main():
     ap.add_argument("--since", default="2026-05-15")
     ap.add_argument("--fast", action="store_true")
     a = ap.parse_args()
+    if not a.articles:
+        print("未指定 articles.json（用参数传入，或设环境变量 WXMP_ARTICLES）")
+        return 1
     arts = [x for x in json.load(open(a.articles)) if x.get("date_str", "") > a.since]
     if not arts:
         print(f"无 >{a.since} 的文章，退出")

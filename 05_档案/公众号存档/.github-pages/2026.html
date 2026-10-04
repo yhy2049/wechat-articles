@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年文章 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #333;
+      --text-light: #666;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --border: #e0e0e0;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 25px 30px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    .header a {
+      text-decoration: none;
+      color: white;
+      opacity: 0.9;
+      font-size: 0.9em;
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      transition: opacity 0.3s;
+    }
+    .header a:hover { opacity: 1; }
+    .search-box {
+      width: 100%;
+      padding: 14px 20px;
+      margin-bottom: 25px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .search-box:focus {
+      outline: none;
+      border-color: var(--highlight);
+    }
+    .count {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+    .article-list { list-style: none; }
+    .article-item {
+      padding: 20px;
+      margin-bottom: 12px;
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: all 0.3s;
+      border-left: 4px solid transparent;
+    }
+    .article-item:hover {
+      background: var(--highlight);
+      color: white;
+      transform: translateX(5px);
+      border-left-color: rgba(255,255,255,0.5);
+      box-shadow: 0 4px 15px rgba(233,69,96,0.3);
+    }
+    .article-item:hover .date { color: rgba(255,255,255,0.9); }
+    .article-item .date {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .article-item .title {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📅 2026年文章</h1>
+      <a href="index.html">← 返回首页</a>
+    </div>
+    
+    <p class="count">共 47 篇</p>
+    
+    <input type="text" class="search-box" placeholder="🔍 搜索文章标题..." onkeyup="filterArticles(this.value)">
+    
+    <ul class="article-list" id="articleList">
+      <li>
+        <a href="articles/2026/2026-09-07-川渝院线电影浮生若丽计划9月16日开机.html" class="article-item">
+          <div class="date">2026-09-07</div>
+          <div class="title">川渝院线电影浮生若丽计划9月16日开机</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-08-19-当我们谈论牛来时我们究竟在谈论什么.html" class="article-item">
+          <div class="date">2026-08-19</div>
+          <div class="title">当我们谈论牛来时我们究竟在谈论什么</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-08-12-24帧×方所特别放映迟来的人杨一欣短片智齿飞天大王放映映后谈创作者交流.html" class="article-item">
+          <div class="date">2026-08-12</div>
+          <div class="title">24帧×方所特别放映迟来的人杨一欣短片智齿飞天大王放映映后谈创作者交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-08-10-成都路演流河无边远人有岸冬旅人导演鲁丹现场交流.html" class="article-item">
+          <div class="date">2026-08-10</div>
+          <div class="title">成都路演流河无边远人有岸冬旅人导演鲁丹现场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-08-02-西宁之后我们选择再次相信电影.html" class="article-item">
+          <div class="date">2026-08-02</div>
+          <div class="title">西宁之后我们选择再次相信电影</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-30-FIRST评审会大奖地下美人导演夏昊专访在禁忌的边缘拍出华语片罕见的孤独与欲望.html" class="article-item">
+          <div class="date">2026-07-30</div>
+          <div class="title">FIRST评审会大奖地下美人导演夏昊专访在禁忌的边缘拍出华语片罕见的孤独与欲望</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-24-24帧联合制片晚上十点收工每周休息一天.html" class="article-item">
+          <div class="date">2026-07-24</div>
+          <div class="title">24帧联合制片晚上十点收工每周休息一天</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-17-影迷福利快收下这份超优惠的饭映计划美食地图.html" class="article-item">
+          <div class="date">2026-07-17</div>
+          <div class="title">影迷福利快收下这份超优惠的饭映计划美食地图</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-10-被爱吞噬为什么成了Z世代最深的恐惧.html" class="article-item">
+          <div class="date">2026-07-10</div>
+          <div class="title">被爱吞噬为什么成了Z世代最深的恐惧</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-08-四年银幕遥望二十四帧即将赴约西宁为你带来第20届FIRST影展全景指南.html" class="article-item">
+          <div class="date">2026-07-08</div>
+          <div class="title">四年银幕遥望二十四帧即将赴约西宁为你带来第20届FIRST影展全景指南</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-08-独立放映海影节最佳华语贡献奖不久前的夏天成都首映导演叶镇朋到场交流.html" class="article-item">
+          <div class="date">2026-07-08</div>
+          <div class="title">独立放映海影节最佳华语贡献奖不久前的夏天成都首映导演叶镇朋到场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-07-03-征片开启Nowhere短片展2万元奖金等你来投.html" class="article-item">
+          <div class="date">2026-07-03</div>
+          <div class="title">征片开启Nowhere短片展2万元奖金等你来投</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-06-21-这走向对头不开放麦招募.html" class="article-item">
+          <div class="date">2026-06-21</div>
+          <div class="title">这走向对头不开放麦招募</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-06-19-24帧组讯院线电影浮生若丽演员招募.html" class="article-item">
+          <div class="date">2026-06-19</div>
+          <div class="title">24帧组讯院线电影浮生若丽演员招募</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-06-12-路演0613火遮眼谢苗到场交流.html" class="article-item">
+          <div class="date">2026-06-12</div>
+          <div class="title">路演0613火遮眼谢苗到场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-05-29-24帧组讯第二部剧情短片弄死一条过.html" class="article-item">
+          <div class="date">2026-05-29</div>
+          <div class="title">24帧组讯第二部剧情短片弄死一条过</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-05-18-在九襄的两天我们重新理解了陪伴.html" class="article-item">
+          <div class="date">2026-05-18</div>
+          <div class="title">在九襄的两天我们重新理解了陪伴</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-05-15-四周年独立放映中国底层的跨性别悲歌纪录片二毛导演贾玉川连线交流.html" class="article-item">
+          <div class="date">2026-05-15</div>
+          <div class="title">四周年独立放映中国底层的跨性别悲歌纪录片二毛导演贾玉川连线交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-05-09-回顾2026FIRST主动放映成都24帧站直到出边.html" class="article-item">
+          <div class="date">2026-05-09</div>
+          <div class="title">回顾2026FIRST主动放映成都24帧站直到出边</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-28-FIRST主动放映24帧站片单与映后嘉宾介绍.html" class="article-item">
+          <div class="date">2026-04-28</div>
+          <div class="title">FIRST主动放映24帧站片单与映后嘉宾介绍</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-24-FIRST主动放映24帧站Freakyboom直到长出毛边.html" class="article-item">
+          <div class="date">2026-04-24</div>
+          <div class="title">FIRST主动放映24帧站Freakyboom直到长出毛边</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-22-路演0422燃比娃主创现场映后交流.html" class="article-item">
+          <div class="date">2026-04-22</div>
+          <div class="title">路演0422燃比娃主创现场映后交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-18-告别场0418翠湖卞灼导演线上交流.html" class="article-item">
+          <div class="date">2026-04-18</div>
+          <div class="title">告别场0418翠湖卞灼导演线上交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-13-像素之外24帧短片展2026影片介绍.html" class="article-item">
+          <div class="date">2026-04-13</div>
+          <div class="title">像素之外24帧短片展2026影片介绍</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-13-路演0413如父如母导演现场交流.html" class="article-item">
+          <div class="date">2026-04-13</div>
+          <div class="title">路演0413如父如母导演现场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-12-路演0412植物学家主创现场映后.html" class="article-item">
+          <div class="date">2026-04-12</div>
+          <div class="title">路演0412植物学家主创现场映后</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-07-像素之外24帧短片展2026在像素之外在囚笼之上归于无声又重新升起.html" class="article-item">
+          <div class="date">2026-04-07</div>
+          <div class="title">像素之外24帧短片展2026在像素之外在囚笼之上归于无声又重新升起</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-04-2026FIRST主动放映24帧站志愿者招募.html" class="article-item">
+          <div class="date">2026-04-04</div>
+          <div class="title">2026FIRST主动放映24帧站志愿者招募</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-04-联合放映我许可阳光女子合唱团.html" class="article-item">
+          <div class="date">2026-04-04</div>
+          <div class="title">联合放映我许可阳光女子合唱团</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-04-03-24帧组讯我们要拍短片了.html" class="article-item">
+          <div class="date">2026-04-03</div>
+          <div class="title">24帧组讯我们要拍短片了</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-28-24帧成都路演0328长夜将尽主创现场映后交流.html" class="article-item">
+          <div class="date">2026-03-28</div>
+          <div class="title">24帧成都路演0328长夜将尽主创现场映后交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-25-宇编三周年重映现代西游一部献给理想主义者的荒诞诗篇.html" class="article-item">
+          <div class="date">2026-03-25</div>
+          <div class="title">宇编三周年重映现代西游一部献给理想主义者的荒诞诗篇</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-21-成都路演重逢不是为了答案是为了好好告别时间旅馆导演翟义祥现场交流.html" class="article-item">
+          <div class="date">2026-03-21</div>
+          <div class="title">成都路演重逢不是为了答案是为了好好告别时间旅馆导演翟义祥现场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-11-超前点映在你好爱美丽的水彩梦境里重拾儿时的纯粹.html" class="article-item">
+          <div class="date">2026-03-11</div>
+          <div class="title">超前点映在你好爱美丽的水彩梦境里重拾儿时的纯粹</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-10-加场放映法官席上的母亲非穷尽列举中那些无法切割的身份困局.html" class="article-item">
+          <div class="date">2026-03-10</div>
+          <div class="title">加场放映法官席上的母亲非穷尽列举中那些无法切割的身份困局</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-09-你还记得大象席地而坐吗.html" class="article-item">
+          <div class="date">2026-03-09</div>
+          <div class="title">你还记得大象席地而坐吗</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-03-06-她秩序与混沌非穷尽列举暗黑新娘.html" class="article-item">
+          <div class="date">2026-03-06</div>
+          <div class="title">她秩序与混沌非穷尽列举暗黑新娘</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-02-25-马年第一跳凌空腾起瑰丽绝伦SOARINGANDGORGEOUS爱乐之城Letsdance.html" class="article-item">
+          <div class="date">2026-02-25</div>
+          <div class="title">马年第一跳凌空腾起瑰丽绝伦SOARINGANDGORGEOUS爱乐之城Letsdance</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-02-08-关于我们为什么选择24小时退票.html" class="article-item">
+          <div class="date">2026-02-08</div>
+          <div class="title">关于我们为什么选择24小时退票</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-02-02-在南宁我们闯入了一场野生电影的桃花源.html" class="article-item">
+          <div class="date">2026-02-02</div>
+          <div class="title">在南宁我们闯入了一场野生电影的桃花源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-29-乙巳蛇年封箱放映花与长枪爱国少女杀死紫罗兰成都首映导演南雅琅张钰连线交流.html" class="article-item">
+          <div class="date">2026-01-29</div>
+          <div class="title">乙巳蛇年封箱放映花与长枪爱国少女杀死紫罗兰成都首映导演南雅琅张钰连线交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-20-成都路演万玛才旦监制藏地新浪潮月光里的男孩导演达杰丁增现场交流.html" class="article-item">
+          <div class="date">2026-01-20</div>
+          <div class="title">成都路演万玛才旦监制藏地新浪潮月光里的男孩导演达杰丁增现场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-19-24帧专场排片仅01但这部国产片不该被埋没再团圆导演高临阳连线交流.html" class="article-item">
+          <div class="date">2026-01-19</div>
+          <div class="title">24帧专场排片仅01但这部国产片不该被埋没再团圆导演高临阳连线交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-18-年会回顾在下一帧开始之前我们这样相聚.html" class="article-item">
+          <div class="date">2026-01-18</div>
+          <div class="title">年会回顾在下一帧开始之前我们这样相聚</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-16-成都路演一场跨越半生的友情对话我的朋友安德烈导演董子健现场交流.html" class="article-item">
+          <div class="date">2026-01-16</div>
+          <div class="title">成都路演一场跨越半生的友情对话我的朋友安德烈导演董子健现场交流</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-12-成都路演半城湖水半城家翠湖在昆明的波光里看见家的千万种模样.html" class="article-item">
+          <div class="date">2026-01-12</div>
+          <div class="title">成都路演半城湖水半城家翠湖在昆明的波光里看见家的千万种模样</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2026/2026-01-06-沙龙嘉宾一场关于电影的灵魂拷问听听创作者们怎么说.html" class="article-item">
+          <div class="date">2026-01-06</div>
+          <div class="title">沙龙嘉宾一场关于电影的灵魂拷问听听创作者们怎么说</div>
+        </a>
+      </li>
+    </ul>
+    
+    <div class="empty" id="emptyState" style="display: none;">
+      <p>😕 没有找到匹配的文章</p>
+    </div>
+  </div>
+  
+  <script>
+    function filterArticles(query) {
+      const items = document.querySelectorAll('.article-item');
+      const q = query.toLowerCase();
+      let visible = 0;
+      
+      items.forEach(item => {
+        const title = item.querySelector('.title').textContent.toLowerCase();
+        const match = title.includes(q);
+        item.parentElement.style.display = match ? 'block' : 'none';
+        if (match) visible++;
+      });
+      
+      document.getElementById('emptyState').style.display = visible === 0 ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

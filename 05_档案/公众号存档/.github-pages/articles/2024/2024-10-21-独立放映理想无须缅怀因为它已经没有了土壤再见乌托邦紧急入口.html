@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映理想无须缅怀因为它已经没有了土壤再见乌托邦紧急入口 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-21</div>
+      <h1 class="article-title">独立放映理想无须缅怀因为它已经没有了土壤再见乌托邦紧急入口</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKQhlSuhFltcAqbibKIAHL5SZz5Z5HsDytuTPQH5Pmbu57prl4HK6QLYtt487DlPmBg8eFyt5wt8yg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「独立放映」理想无须缅怀，因为它已经没有了土壤《再见，乌托邦》· 紧急入口</h1>
+<p><strong>写在前面</strong><br>这是一部对中国摇滚十年做了一次大回顾的纪录片。《再见，乌托邦》由三条故事线索组成。<br>做梦乐队的吉他手吴珂，执着追求自己的摇滚梦想，1990年在北京轰动一时，却在1996年吞服过量安眠药离世。<br>第二条线索是有关“魔岩三杰”的前世今生。这三位在大陆摇滚乐坛中举足轻重的乐手，创造出了一个理想年代。<br>第三条线索跟随17岁在录音棚打工的男孩小畅，在普遍的商业和网络抹杀摇滚精神的认知中，小畅却利用商业和网络平衡了现实与理想。<br>“由一无所有，到冷暖自知，到黑色梦中，大陆的第一代摇滚乐手创造出如流星闪耀的理想年代，旋即遇上MP3和商业主义的大环境，超女也来了，第一代也成为被背弃的一代。但崔健、窦唯、何勇、张楚这群孤独的人一点也不可耻，经历了理想破灭，过来人道出时代的精神状貌；他们如今还是不折不扣完整的音乐家，走在上帝保佑吃饱了饭的人民之前。”<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKQhlSuhFltcAqbibKIAHL5SXUoNS6XqVNNg1jXia2icYSdAmpAOLfeW9vsYcHBOUx6axAqVodhxISnw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>导演简介</strong><br>盛志民，曾多次组织策划摇滚乐队、实验戏剧等文艺活动的演出活动。<br>1997 年开始从事电影拍摄工作，参与多部影视剧作的策划和创作。2002 年，拍摄独立制作<br>影片《心·心》，成为内地新晋导演之一，影片入选柏林电影节青年论坛。2005 年执 导影片《浮生》，获瑞士洛迦诺国际电影节的亚洲最佳电影<br>NETPAC奖。2008 年拍 摄中国摇滚乐纪录片《再见 乌托邦》。2009<br>年拍摄中国当代艺术纪录片《中国，艺术的帝国?》。2015年与宁浩导演共同开启坏猴子七十二变计划，成为七十二变计划核心制片人，致力于发掘与培养年轻、<br>新锐的中国电影人才，并推出《我不是药神》，2018年作为策划，参与制作《疯狂的外星人》。2018年作为导演拍摄电影《冲撞》，成为中国首部以冰球为题材的电影。<br><strong>放映员说</strong><br>这部电影看上去像是对中国“出道即巅峰”的摇滚精神做了一次祭奠，无论是展现出摇滚梦未完全绽放就已枯萎的小珂，还是在夹缝中成长的中国摇滚十年，还是商业机制与互联网对“摇滚精神”的摧残。但在悲观的外表下，多年后我们再次拿出这部电影，却能从中挖掘到理想主义还在熠熠生辉地闪着光芒。<br>小珂的故事里，14岁的他想要玩摇滚的时候遭到父母的反对，没有激烈地抗战，也没有放弃。他遵从父亲的想法练书法，却在达到一定程度后毅然决然选择了做音乐，那时他练琴把手指磨出茧、磨出血，一向反对他的父亲被打动了。然而在24岁来临之前，这个少年因服用过量安眠药失去了他年轻的生命——他这辈子都没有24年。<br>虽然他的生命很短暂，“做梦”的时间很短，可他从未浪费时间，把自己所有的热忱和爱全部奉献给了他的理想，这种纯粹在当今显得弥足珍贵。<br>另外，影片中没有提及的是，在做梦乐队解散后，小柯接受采访表示有打算再组一个乐队，在慢慢等待机会——他从未放弃自己的理想。<br>同时，可能是由于“魔岩三杰”的光芒太过耀眼，第三条线索中小畅的故事显得暗淡，但影片最后，回到家乡的小畅与伙伴们弹唱beyond的《真的爱你》的时候，你会突然在整部电影的灰色基调里看到一丝理想主义的火苗还在微弱但鲜活地跳动着。他所处的环境才是我们这一代人面对的处境，艺术被高速发展的商业经济所吞噬裹挟，摇滚乐的发展被严重扼杀。然而小畅却学会在现实里挖掘出最有利于自己实现理想的东西。<br>回到进入二零年代的当下，越来越多的乐队组建了起来，摇滚又重新回归了大众的视野当中，疫情结束后演出也如雨后春笋般冒了出来，网络和流媒体在今天为各个乐队发出自己的声音和展现提供了迅猛的传播力。<br>虽然影片叫再见乌托邦，但在这个人心中废墟般的世界里，摇滚乐依旧可以为大家在心里的一个小小的角落提供乌托邦。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKQhlSuhFltcAqbibKIAHL5Sc9iaIrmcsES1hV3EoG3QpI4AkEUIPib6EzxEbqH7zWQGxVq6tregnYYA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKQhlSuhFltcAqbibKIAHL5Svy2VqzmibIqa0gBxNLUCMrNWgibQ3NUibcR1ickHVkmJsibiaF0D1BgTAtbg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>时间</strong><br><strong>2024年10月25日（本周五）<strong>20:00<del>21:30放映  21:35</del>22:05映后交流</strong>连线嘉宾：导演盛志民</strong><br><strong>地址</strong><br>紧急入口·Emergency Drink<br><strong>购票链接</strong><br>_ ‍<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKQhlSuhFltcAqbibKIAHL5SKiblgjqmMOn9Nw329QfIicW2MlVibgojTuFXfibaym54lJYdIgolEBzVaA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>联合举办</strong><br>“紧急入口”——坐标成都｜主营精酿：一个属于幸存者们的精神洞穴，情绪自由，容纳一切。“紧急入口”这个名字有好几层含义，一方面是希望在精神世界、情绪状态临近坍塌的那刻，可以像冲进避难所那样来到这里；一方面“入口”也有“喝进嘴里”的含义，紧急入口的别名也叫应急酒精，或许有的时候我们真的很需要大灌一口放松或麻痹一下思绪。<br>当你感到疲惫，过不下去的时候，请紧急进入这里，这里永远接纳包容你！<br><strong>社群</strong> </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

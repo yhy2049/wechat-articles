@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映本周日巢川大望江 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-10-13</div>
+      <h1 class="article-title">独立放映本周日巢川大望江</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKRIOQxrHGUia75qZKTZHZ2NsmQuuNks5laPUBj2t8ic2Cb7Ox3kaef6Jb2s4E9eeV1WzttBRFV0fQw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「独立放映」本周日 ·《巢》· 川大望江</h1>
+<p><strong>写在前面</strong><br>郁郁不得志的人生是怎样形成的？是精神与物质的固有矛盾，还是个体在时代中的浮沉无奈？影片以主人公追求丰富精神世界与身处困境的冲突，呈现家庭之于个体，社会之于家庭下，是温暖的巢穴，也是束缚的窠臼的刺痛。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKRIOQxrHGUia75qZKTZHZ2NWh3iax9c4VgtCSh6nCQ2ZwqCkjW45DHoS1qicH4Cvnt64HoSCUYqSvDA/640?wx_fmt=jpeg" alt=""><br><strong>放映员说</strong><br>《巢》作为第17届FIRST青年电影展<br>(2023)最佳纪录长片，拍摄了一段郁郁不得志的人生。其实不过是些平凡得不能再平凡的片段，放在荧幕上却有些刺眼。大部分揭露苦难的片段在观众看来或许有些轻飘飘，引起共鸣抹掉眼泪之后又被轻易抛在脑后。<br>这一部让人难受的点或许不是轻而易举被调动起来的共情，而让无数人产生一种“是啊，多难啊，可我不配同情他”<br>蜗居陋室又不甘平淡，喜欢买书又很少阅读，渴望爱情又认定爱情的虚伪，满腹不满却只能吵嚷两句。<br>你看，事实就是这么的刺人又恶心。想要的太多又做的太少，想说的太多能表达的却太少。人像跳蚤一样无力地蹦哒，又困在温暖的皮毛根蜷缩睡着。<br>看《巢》的感觉是窒息的，一步一步，好像身下的座位也长出了干草的触感，空气凝成渐热的温水，我也长成青蛙的模样，比男主还要丑陋。  </p>
+<p><strong>剧情介绍</strong><br>一个立志做文物修复的三十岁上海青年房君睿，在一次纪录片放映会后，邀请导演进入家里拍摄他郁郁不得志的心路历程，却被父亲在镜头前打击教育。父亲认为，懒惰又不愿接受现实才是导致儿子人生越来越失败的真正原因。没有理想的工作，也交不到女朋友，房君睿抱怨命运的不公，甚至开始质疑他的宗教信仰。<br>镜头成为他倾诉内心痛苦的一个出口，也记录了一家人的痛苦纠葛。父亲的祖辈是当年通过买办生意发家，母亲的家族也曾风光一时，与如今一家三口蜗居在市中心30多平米老公房的生活形成鲜明对比。教友杨光的介入，让房君睿又看到生活的希望。他去相亲、办展览、买经适房……当有一个摄影机出现在你的生活里，奋力一搏，能否改变命运？<br><strong>导演阐述</strong><br>在上海放映《世界与我》的时候，我遇到了《巢》的主人公。他在放映结束后走到我面前，跟我讲他的理想是做文物修复相关的工作。但他受限于家境和行业⻔槛，不得不游离于各种不适合自己的工作，过着郁郁寡欢的生活。他有口吃，涨红着脸，急于表达自己的样子，多多少少让我产生了一些想要通过拍摄他，帮助他找到潜在工作的想法。<br>而我第一次走进这个家时，也没料想到，自己会陷入一个无能为力，又无处可逃的境地。无法实现的理想，包裹着来自原生家庭的深深的痛。它像是一个黑洞，让人陷入痛苦的循环。信仰和欲望不能彼此救赎，这互相折磨的一家三口，是这个剧烈变化的社会的一面镜子。照着我们每个人内心深处的伤痛。<br><strong>宣传片</strong><br><strong>时间</strong><br>**2023年10月15日（本周日）**18:45<del>19:00入场  19:0  0</del>20:30放映  20:30  ~21:00映后<br>导演秦潇越映后连线交流  </p>
+<p><strong>地址</strong><br><strong>川大望江</strong><br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXr3mXWxR8O9ZCY19B7AZJwO6dTeg81HyUSqlesiblczsxfqIlvkahZI7g/640?wx_fmt=jpeg" alt=""></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>导演</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKv0KEEQgjYRsHJwtaPkJrzNicYW1QdotpL5x4U26icpLrFiaqX2krXRgiaNLTPMKEdoIBeiaXAnfYB3Yg/640?wx_fmt=jpeg" alt=""></p>
+<p>秦潇越<br><strong>票价</strong><br><strong>￥50（含一张定制票根）</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKRIOQxrHGUia75qZKTZHZ2N6rYR1eib5cWdNMC7HYUAWfF6Q6NzrSjBqcTqibFBQjYyVarpLCfkgIeg/640?wx_fmt=png" alt=""><br>]()</p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

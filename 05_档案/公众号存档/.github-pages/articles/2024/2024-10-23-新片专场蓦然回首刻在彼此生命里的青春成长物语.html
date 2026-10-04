@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新片专场蓦然回首刻在彼此生命里的青春成长物语 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-23</div>
+      <h1 class="article-title">新片专场蓦然回首刻在彼此生命里的青春成长物语</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCG6PprSop646gc6pSH6LDViaIX50v4Z2NrKqL2beysVg1Ex12dAsMepg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「新片专场」《蓦然回首》刻在彼此生命里的青春成长物语</h1>
+<p><strong>写在前面</strong><br>高口碑动画电影《蓦然回首》改编自日本知名漫画家藤本树的同名人气作品，即将于10月26日全国上映，<br>因对漫画共同的痴迷，两个性格迥异的小镇女孩意外产生了交集，同行之路总要面对未知的终点，见证对方成长的友情却篆刻进彼此的人生，   点击此处即可预约购票</p>
+<p>电影凭借独一无二的画风、细腻温柔的青春故事，给每个观众治愈抚慰，曾连续两周登上日本票房榜首。自定档以来，全网热度高涨，粉丝翘首以盼，等待共同见证今年大银幕最细腻纯粹的青春成长物语。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCV0zqxah6bPyib8F73H1Huf2vRSkxfvyBghxJUibkhJ5JLLd3Z8Zog9PQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>相遇之后的携手并进是友情的具像化 让成长之路不再是孤单旅程<br>在校报上连载四格漫画的藤野沉浸在同学们声声称赞之中，在对自己的“漫画家”之路进行畅想之际，从老师口中得知了“家里蹲选手”京本，宿命般的相遇改变了两个女孩的人生轨迹。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCKnuVyupZAplz5cwmf3wn2gPnqzXvpCjuoQMdhvGiawBUCeazibbutzEA/640?wx_fmt=jpeg" alt=""><br>将藤野视为”漫画天才”的京本，也追随着她的背影，踏进了创作的世界，因为对画漫画共同的痴迷，女孩们一起度过了无可替代的少年时光。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCiaeuThNhabJWb4yddLeibxCnF6PJ5Jgdd62fCP07Nd4WMEjFKZrncwKQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>成长的过程有欢笑也有眼泪，开心时有人分享，难过时有人分担，面对质疑时有人理解，时间的小川缓慢流淌，不知不觉间，在藤野心中提笔作画的初心逐渐模糊，而身旁一直支持自己的京本已然成为了那个“为什么要画”的理由。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCriazLupEH1nmSRcop48KcEvBel8AuMvjFO5iaGKkPGricthzBckm5XMKA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>随着音乐的起落，观众在藤野和京本的视角中不断切换，一直追随着藤野脚步的京本，无形中也成为了好友的人生向导，将京本“带出房间”的藤野也在对方的助力下走向了更广阔的世界。因为有更好的朋友，所以她们得以探寻更好的自己，相同的爱好是好友间交流的桥梁，也是少年人想要证明自己的共同信仰，藤野和京本一起实现梦想的过程，让银幕外的观众看到了友情的具像化。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCxpUbpIV4tuzVib0FtXI9rlxQjPwASQvWmlvDib0SmGic6nTu9LcrZu4hQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>时间</strong><br>**2024年10月26日（本周六）**18:45<del>19:00签到  19:00</del>20:15  放映  20:15~20:45映后<br><strong>地址</strong><br>太平洋影城NaMi纳米巨幕(九方店) 1号线地铁站高新C口步行500米<br><strong>票价</strong><br><strong>￥40</strong>人手（1-100名）：官方A4海报<em>1、官周锯齿纪念票</em>1、官周明信片一套多张<em>1<br>额外赠送（1-50名）：饭制四季胶片书签</em>1、饭制吧唧（58mm，亮膜）<em>1、饭制A4文件夹</em>1<br>**_ <em>**额外赠送（50-90名）:拍立得小卡、珠光纸明信片、亚克力钥匙扣，3选2</em><br>额外赠送（90名）后：艺术工艺海报*1<br>_<br><strong>_ _ _</strong>_ 映后互动抽奖： _ 艺术工艺海报<br>_<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicC6ycqcGg0Tk4ry7UrW9TVFHFTcfAHpmKnFxf5MecRrBbKKeey1NOfog/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>_ ‍  <a href=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIE5M9xlTbVcaT5Vt2l5CicCZjXfMXF4iaypNzDiaibG9Blke6t7WhrfXFl9m44nY2BcNaqib2Y9A7CULg/640?wx_fmt=png&amp;from=appmsg" alt="">
+</a><br><strong>策展团队</strong><br><strong>文案：熊猫船长  平面设计：Everglow</strong><br><strong>社群</strong> </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生很多大事电影最好只取一瓢 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-06-27</div>
+      <h1 class="article-title">人生很多大事电影最好只取一瓢</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="http://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojuibcfYwZBsAQicnoib0v47VmWdH0UsZVficJ9TyH53q68gVAbm4mkhkm5SQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>人生很多大事，电影最好只取一瓢</h1>
+<p>以下文章来源于雨苔的小作坊  ，作者雨苔思音</p>
+<p><img referrerpolicy="no-referrer" src="http://wx.qlogo.cn/mmhead/UsichrXlnR9IrTfUxKZ7icfl1E0YtVNicialPT3bB9mbc9ImEcZwQRsREmTXFa4kicMwg4pjYjTcsGFM/0" alt=""><br><strong>雨苔的小作坊</strong>.  这里是雨苔思音写字的地方，有我对电影的见解与解读，也有我的一些随笔小故事。</p>
+<p>《人生大事》是一部好电影，至少在今年羸弱的电影市场中，能得见这样质量规整的影片已实属不易，然而相比于前期的诸多期待，《人生大事》终究距离那类令人充满惊喜的作品差了一步。</p>
+<p>在“殡葬”这样一个很有潜力题材的加持之下，本片尝试着加入了不少其余的元素，比如<br>朱一龙和小女孩辗转的“父爱”，比如充满着城乡气息的武汉背景，但显然，导演未能很好地将这些剧情编排出感人至深的效果，剧情的发展是程式化，且可被预料的。  </p>
+<p>但好在题材的加分和剧情本身也算非常工整，固然影片没能达到直击灵魂那种深度，也足以称得上讲了一个好故事，并能带给大部分观众足够的愉悦与享受。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojucOevLHYbV6XqD6xkbsvPMqLm9L5y1MrTdptnxHDKzjx4lgMLOaKjBg/640?wx_fmt=jpeg" alt=""></p>
+<p>“殡葬”题材，确实是很容易出彩的题材，就如同片中父亲所言，死亡，是人生的头等大事。而基于这种永恒的逝去，倘若愿意挖掘，那么无论美丽，丑陋，欣慰，伤感的题材，都能在生死两别的故事中寻到一席之地。  </p>
+<p>而更重要的，便是身为殡葬行业之人，对于生死的态度，作为守在黄泉路上为死者送上最后一程的人们，他们在复现每个死人生前神采的历程中，对人生便能有更深的理解。  </p>
+<p>《人生大事》既然讲述这个题材，自然或多或少触及了生死的内核，但本片说起生命的体悟，更像是主角在一桩桩迥异葬礼后成长的故事，孩童的葬礼，情敌的葬礼，一直到最后，把自己父亲射到天上，剧作处理毫无疑问有偷工减料的瑕疵，但总体而言，角色的成长刻画得还算完整。  </p>
+<p>然而剧作者显然并不满足局限于“殡葬”，小文的加入便算是对整个压抑氛围的一种调剂，从收养小文，莫三妹和小文从不对付到亲同父女，到收养，到狠心放弃，最后还是寻回小文生活在一起，这条故事线同样非常完整，也占据了全片1/2的剧情。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojuU4T2XfrnjebrOm7yfclibBYUJl68xgT89YZ9B1xvJ9sXqblqSCYWjAA/640?wx_fmt=jpeg" alt=""></p>
+<p>于是男主的成长，便不仅于一场场葬礼中接触死亡而获得的生的感悟，更是在照料淘气孩子的历程中，和自己，和孩子，和长辈彼此和解的一段历程，从这个角度上来说，编排得还算不错。  </p>
+<p>只是从剧情的转折来看，依旧过于随意，小文的几次离去和归返几乎是可以预见的，而男主看到亲生母亲便以一种“绑架”的手段送走小文的剧情便也显得过于刻意。  </p>
+<p>从结果来看，两条线索的叠加并未能达到1+1大于2的效果，固然其中交汇在小文对姥姥的怀念，但殡葬和养女儿两段剧情彼此交缠，互相削弱了每条故事线的力度，而每条故事的收束，父亲的死和小文送离与回归，又因为把爸爸炸上天和亲生母亲的死而复生而显得怪异，这在很大程度上破坏了剧情的可信度。  </p>
+<p>其实，一部电影并非不能包罗万象，我比较喜欢的导演杨德昌的几部作品，《一一》，《海滩的一天》，《牯岭街少年杀人事件》，《恐怖分子》等，都试图描绘多线剧情彼此缱绻的复杂故事，尤其是其最知名的《一一》，从少年，青年，壮年，中年，老年，几乎全景覆盖了人生每一个阶段，并让一个个故事聚焦于“人的后脑勺”的这一中心思想，呈现给我们那些不属于我们，但又真实存在的“人的一生”。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojuATgyY2cmdfMuSOEW2H1f3ynH6QzF23iaoWgIvVUw56eo9LSjvyKAM8A/640?wx_fmt=jpeg" alt=""></p>
+<p>当然，这样的作品往往需要非常精细的编排，每一条故事线都需要足够令人置信，否则任一线索的崩坏，都会让整个故事走向混乱与无趣的结局。  </p>
+<p>《人生大事》显然没有这样的剧作功底，全片作为题眼的“大事”，在父亲口中缓缓念出来“人生除去死亡没有大事”之时确乎能让人心潮澎湃一下，然而回过头来细想，这个主题真的是本片所要陈述的吗，怕是只能算一句好听的格言而已吧，莫三妹转手就抢过父亲骨灰，炸到天上，大概也显出了这所谓的“大事”，只是一句玩笑而已，我们并不求主角真的有多么“尊重生命，敬畏死亡”，但“人生大事”加上遗言里“有创意”的需求，得出的竟然是江滩的漫天烟花，未免过于冲动且武断了一点。  </p>
+<p>剧情中同样过分随意的便是亲生母亲的突然出现，这几乎像是剧情上强行圆回来的一个补丁，毕竟对于小文这条剧情线，必然会有一波离别的高潮，但为了硬凑这段剧情，从国外监狱里拎出来一位母亲，又让莫三妹降智般把孩子绑架打包带走，就实在有些让人难以接受了。  </p>
+<p>于是，这些剧情上让人难受的点，让本片的剧情流动变得不那么流畅自如，观众大概也会在某些时刻感受到一些无趣，换句话说，本片最关键的节点缺少那么一些让人心满意足的“设计感”，而“设计感”正是能让影片脱颖而出的关键。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojuNN58OnibRGuiaOiaG3cv3SCbSM6SLAHk07XMibyGpLFpqWGkicNHFWqD1ZQ/640?wx_fmt=jpeg" alt=""></p>
+<p>于是本片未能让我足够满意，但总体而言，无论主题还是角色的成长，《人生大事》的完成度还是可圈可点，最后给小文带回姥姥的声音也算有一点励志的小感动，武汉话与汉口城市的背景倒也让本片蛮接地气（当然也不经意间降低了丧葬的庄重肃穆之感）。  </p>
+<p>诚然，人生一辈子都会走向死亡，死亡或许也就成为了每个人都避不过的“大事”，然而在死亡来临之前，我们还有很多时间，去爱，去恨，去经历离别与重逢，感受欣悦与悲伤，这些感受与经历，又怎能称作“小事”呢？  </p>
+<p>只是，人生事太多，电影短短一两个小时往往无法讲个透彻，毕竟很多人活一辈子都还活不明白呢，所以还不如撷取三千诸事中的一瓢，把故事讲细，把故事讲透，或许也能比这样试图大而全的题材更能让人感同身受。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/jrVRrh877S2CJfRCk5ibPvEQIwElibwojunEibV8DuMJJhxVyu87DGYVBBZz9t87ia7DXbYHicoOUQD1OInQa2QsVXw/640?wx_fmt=jpeg" alt=""></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

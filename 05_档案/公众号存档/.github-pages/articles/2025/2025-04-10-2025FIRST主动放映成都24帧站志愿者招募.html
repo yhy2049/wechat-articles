@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025FIRST主动放映成都24帧站志愿者招募 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-04-10</div>
+      <h1 class="article-title">2025FIRST主动放映成都24帧站志愿者招募</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL4rmUhuJeqfbgMNBQWVMXcC4Vw4jVxyTxwksic9U43slsFoLX4U7aSUIvkRJEkSYliab1ibHjTa0muA/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「2025 FIRST主动放映·成都24帧站 」志愿者招募</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyL4rmUhuJeqfbgMNBQWVMXcCVNBUX0sueZ4CbBfGpJibJKEDalmN1bDcl2mWxDBAn6YfEHLYKzPy9A/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p> 24FRAMES  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_svg/sTJptKvBQLKDMSkXWicEFRA4hSGzjHjIzZLXWPg3YMicSkwSoozkaTLF5FdsGUVmRmwSBKhIxzR8icAG79KNJzsf46MHQy2pdzN/640?wx_fmt=svg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_svg/sTJptKvBQLKDMSkXWicEFRA4hSGzjHjIzjHlrs9UOO5fiaI1qjicWL9StgLIRvR5302wb53GLENYfq6IXaSVzoLvibn6MBBhVzQM/640?wx_fmt=svg&amp;from=appmsg" alt=""></p>
+<p><strong>04:11</strong></p>
+<p><strong>04：18</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyL4rmUhuJeqfbgMNBQWVMXcoPicke15b7B1CjZiaQbdT0fZgOKoiaNKhC5Gjibbq4FV3KewWiaic9SViacCA/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><strong>电影的宿命是被观看</strong></p>
+<p><strong>01</strong></p>
+<p>想对你我说</p>
+<p><strong>她说：</strong></p>
+<p>我们是策展团队娜娜和靓靓，这是24帧的第三次，也是我们的第一次。很感谢24帧给予我们机会，勇气，信任。前期已经完成了选片，排片，主题选定，接下来会有海报设计，片单设计，以及现场执行的工作。</p>
+<p>我问靓靓，为什么我叫你来，你这么快就答应了。靓靓说，因为是我。我们代表了24帧观影团参加了海影节，已经有了默契。</p>
+<p>我说我很佩服靓靓的一件事，是在放映厅没有招募的情况下，她会主动留言询问是否需要人。她说我并没有考虑那么多，而是想着他们才开始，应该是需要人的。而且我想去看看电影放映。</p>
+<p>她问我当24帧组建团队，你为什么会答应？我说如果是几年前的我，我可能会拒绝，因为我认为我做不好，没有资格，但是这次我答应的很快。</p>
+<p>“当电影的24帧画面连接起来时，一切都将发生。”</p>
+<p>去年在FIRST主动放映观众席的我怎么也没想到，一年后，我成为了策展团队的一员。</p>
+<p>在24帧，所有你能想到的都存在。</p>
+<p>在这里的收获不仅是技能和经历，还有围绕在身边创造着美好的人。TA们生猛，相信着一切。</p>
+<p>所以我告诉自己“亲爱的，请允许一切发生”</p>
+<p>不用想那么多，只是做着自己想做的。</p>
+<p>现在我也希望和你们一起，共同  步入这场发生着的。过去存在的，未来更新着的“发生”中。</p>
+<p><strong>02</strong></p>
+<p>把心跳装进信封</p>
+<p>如果你想加入这次放映，请认真阅读以下的内容：</p>
+<p><strong>报名方式</strong>：邮箱投递简历</p>
+<p><strong>简历投递时间</strong>：</p>
+<p>1.视觉媒体岗位：即日起至2025年4月11日</p>
+<p>我们将在12-13日完成邮件回复</p>
+<p>2.其他岗位：即日起至2025年4月16日</p>
+<p>我们将在17-18日完成邮件回复</p>
+<p>**工作时间：**非视觉媒体岗位为2025年5月2-4日</p>
+<p>**投递邮箱地址：**<a href="mailto:frames24@126.com">frames24@126.com</a></p>
+<p><strong>邮件标题命名</strong>：2025 FIRST主动放映·成都24帧站 部门姓名</p>
+<p>（简历＋平面/视频作品/证明材料以PDF或Word格式以附件形式上传）</p>
+<p><strong>正文内容</strong>：请附上个人联系方式，如个人电话号码或社交媒体账号</p>
+<p><strong>请注意</strong>：邮件名需标清你所投递的部门，一个人最多可以投递两个部门，请尽情展示你的特长吧~</p>
+<p>只需投一份简历。投递结果我们将以邮件结果告知，请注意查收你的邮箱~</p>
+<p><strong>03</strong></p>
+<p>成为彼此的枝蔓</p>
+<p>以下是招募的岗位和一些职能要求：</p>
+<p><strong>一、视觉设计</strong></p>
+<p>工作内容：</p>
+<p>1、平面设计工作-2名：主要负责放映场地、宣传物料及其他和活动相关的设计工作</p>
+<p>2、室内／舞台设计-1名：主要负责方所活动现场的观影氛围打造。</p>
+<p>岗位要求：</p>
+<p>①具有独立的审美能力和较强的设计功底；</p>
+<p>②认真负责，思维开阔，具有团队意识；</p>
+<p>③熟练使用相关设计软件；(Photoshop,Illustrator,InDesign等） 具有平面设计经验；</p>
+<p>④能够合理安排时间，及时完成设计。</p>
+<p><strong>ps：请在简历中附上相关作品集链接</strong></p>
+<p><strong>二、活动执行</strong></p>
+<p>工作内容：</p>
+<p>1、现场执行工作-4名：活动前配合设计师进行场地组织与布置、活动期间为观众提供咨询答疑服务，以及安排观影等事宜。</p>
+<p>岗位要求：</p>
+<p>①工作细致高效、责任心强，善于与他人沟通，统筹能力强；</p>
+<p>②能快速应对突发情况；</p>
+<p>③热爱电影，对电影有自己的独特理解。</p>
+<p><strong>三、宣传企划</strong></p>
+<p>工作内容：</p>
+<p>1、映后速记-1名：负责记录映后的对谈和文字撰写</p>
+<p>2、新媒体编辑工作-2名：负责活动前期的宣传工作，包括微信公众号以及其它社交账号内容的编辑、排版、发布及运营维护。</p>
+<p>岗位要求：</p>
+<p>①热爱电影，对影像语言有基本的敏锐度；</p>
+<p>②有阅读行业新闻及公众号的习惯；</p>
+<p>③热爱阅读，具备较好的文字功底，熟练文案排版，具备一定的策划创新能力；</p>
+<p>④善于沟通，具有团队合作精神；</p>
+<p>⑤有新媒体运营、文案策划、人物特稿编辑、新闻采写工作经验者优先。</p>
+<p><strong>四、影像摄制</strong></p>
+<p>工作内容：</p>
+<p>1、摄像师-1名：主要负责活动影像记录；本届影展所需宣传视频的策划、拍摄，剪辑。</p>
+<p>2、老式录像带摄影师-1名</p>
+<p>岗位要求：</p>
+<p>①具备摄影摄像基础，具有较好拍摄能力和一定拍摄经验，具备基础的摄影灯光知识；</p>
+<p>②熟练运用影视视听语言，具备影视思维、策划、剪辑能力；</p>
+<p>③有极强的责任心、较强的沟通理解能力，团队合作意识强；</p>
+<p>④自带拍摄设备者优先考虑；（老式录像带现场会提供）</p>
+<p>⑤对视频剪辑有一定的审美能力和节奏感；</p>
+<p>⑥能够合理安排时间，及时完成活动工作；</p>
+<p>⑦熟练PR、Finalcut、AE等（至少一款）后期剪辑／包装软件的基本操作。</p>
+<p><strong>志愿者权益</strong></p>
+<p>1、获得24帧XFIRST志愿者证书、定制工牌及官方限定周边折扣；</p>
+<p>2、优先参与影人交流、创作分享等内部活动；</p>
+<p>3、 结识全国青年导演、策展人与同频影迷；</p>
+<p>4、你的名字将出现在活动特别鸣谢名单中。</p>
+<p><strong>总有一部电影让我们相遇.</strong></p>
+<p><strong>期待在黑暗中，与你共享第一束光.</strong></p>
+<p>文字丨熊猫船长 最酷的宇航员 娜娜 哇啦鱼</p>
+<p>排版丨哇啦鱼</p>
+<p>审核丨娜娜 最酷的宇航员 熊猫船长</p>
+<p>24FRAMES //</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

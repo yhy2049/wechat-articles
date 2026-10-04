@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演俱往矣不回头风流一代贾樟柯到场交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-11-15</div>
+      <h1 class="article-title">成都路演俱往矣不回头风流一代贾樟柯到场交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZHic8OWy9RgGTXn8rdWpUOWSFMvzLFZ2FgB9sRuxTUR7SW1oqgzjWgVAsK1d23x2OibeRhDu3Zppw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「成都路演」 俱往矣，不回头《风流一代》贾樟柯到场交流</h1>
+<p><strong>写在前面</strong><br><strong>纪宇《风流歌》之一</strong>什么是风流<br>风流哟，风流，什么是风流？  _ _ 我心中的情思像三春的绿柳；  _ _ 风流哟，风流，谁不爱风流？  _ _ 我思索的果实像仲秋的石榴。  _<br>_ 我是一个人，有血，有肉，我有一颗心，会喜，会愁；  _ _ 我要人的尊严，要心的颖秀，不愿像丑类一般鼠窃狗偷！  _<br>我爱松的高洁，爱兰的清幽，决不学苍蝇一样追腥逐臭；  _ _ 我希望生活过得轰轰烈烈，我期待事业终能有所成就。  _<br>我年轻，旺盛的精力像风在吼，我热情，澎湃的生命似水在流。  _<br>_ 风流呵，该怎样把你理解？  _ _ 风流呵，我发誓把你追求；  _ _ 清晨——我询问朝阳，夜晚——我凝视北斗……  _<br>遐想时，我变成一只彩蝶：“呵，风流莫非指在春光里嬉游？”  _ _ 朦胧中，我化为一只蜜蜂：“呵，风流好似是在花丛中奔走。”  _<br>我飘忽的思潮汇成大海，大海说：“风流是浪上一只白鸥。”  _ _ 我幻想的羽翼飞向明月，明月说：“风流是花下一壶美酒。”  _<br>_ 于是，我做了一个有趣的梦，梦见人生中的许多朋友——  _ _ 他们都来回答我的问题，争辩着，在八十年代谁最风流。  _<br>理想说：“风流和成功并肩携手。”  _ _ 青春说：“风流和品貌不离左右。”  _ _ 友谊说：“风流是合欢花蕊的柱头。”  _<br>爱情说：“风流是并蒂莲下的嫩藕。”  _ _ 道德说：“风流是我心田的庄稼。”  _ _ 时代说：“风流是我脑海的金秋。”……  _<br>_ 风流哟，风流，请你回答：这样的理解是不是浅陋？  _ _ 风流哟，风流，请你开口：你有没有不变的标准让我恪守？<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZHic8OWy9RgGTXn8rdWpUOD6kB154QRRzprBrfTWXjxRaNaXR5OflScwHeWKBSTnrARO4lF9Dlug/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>10月28日，贾樟柯携透露这部历经22年时间拍摄的影片从11月22日正式公映起，将只在大银幕上映22天。“我们经过深思熟虑，最终做出了一个不太艰难但充满意义的决定。这部影片历经22年时间拍摄，凝聚了我们团队的心血与情感。因此，我们决定用22天的时间，来告别这22年的时光，”<br>贾樟柯说，“我希望，通过这22天的仪式感的观影，我们一起 跟这个世纪‘俱往矣’的20多年时光，跟‘风流一代’的过往，做一个深情的告别。”<br>贾樟柯还透露，影片下映后应该也不会进行大规模复映。但他相信，对于想看《风流一代》<br>的观众朋友们来说，22天的上映时间已经足够让他们与这部影片相逢，并共同感受那段难 忘的岁月。<br>《风流一代》讲述了女主人公巧巧从千禧年代开始，跨越21年、直到当下的情感历程，是女性的成长、觉醒与改变的过程，也绘就了“变革一代”的命运曲线。<br>推介会上，影片发行人刘歌介绍，这影片是“最具话题性、最具沉浸感，最有中国梦核的时代巨作”。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZHic8OWy9RgGTXn8rdWpUOXCnzf1zr1ofvOwUZkLw1pfylGYGzXRIdbfxhJGtCic2b4ZUhibibkdBcw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>时间地址</strong><br><strong>2024年11月19日（周二）</strong><br><strong>第一场</strong><br>**开场时间：19:00-20:51  映后见面会：20:51-21:21  （以实际到场为准）**导演：贾樟柯、总发行人：刘歌<br>地址：锦江区锦华路一段68号万达广场3层365号<br><strong>第二场</strong><br>**开场时间：20:05-21:56  映后见面会：21:56-22:25  （以实际到场为准)**导演：贾樟柯、总发行人：刘歌<br>地址：锦江区总府路15号太平洋影城王府井店8楼<br><strong>票价</strong><br><strong>￥50.5（含手续费）</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJZHic8OWy9RgGTXn8rdWpUOj43A87G8yjk6WmTg3g5XApOfGlIhZus3Gmtt98VC5RsfaSTC4gm4zg/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

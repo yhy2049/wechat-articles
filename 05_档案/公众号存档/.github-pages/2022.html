@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2022年文章 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #333;
+      --text-light: #666;
+      --bg: #f8f9fa;
+      --card: #fff;
+      --border: #e0e0e0;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 25px 30px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    .header a {
+      text-decoration: none;
+      color: white;
+      opacity: 0.9;
+      font-size: 0.9em;
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      transition: opacity 0.3s;
+    }
+    .header a:hover { opacity: 1; }
+    .search-box {
+      width: 100%;
+      padding: 14px 20px;
+      margin-bottom: 25px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .search-box:focus {
+      outline: none;
+      border-color: var(--highlight);
+    }
+    .count {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+    .article-list { list-style: none; }
+    .article-item {
+      padding: 20px;
+      margin-bottom: 12px;
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: all 0.3s;
+      border-left: 4px solid transparent;
+    }
+    .article-item:hover {
+      background: var(--highlight);
+      color: white;
+      transform: translateX(5px);
+      border-left-color: rgba(255,255,255,0.5);
+      box-shadow: 0 4px 15px rgba(233,69,96,0.3);
+    }
+    .article-item:hover .date { color: rgba(255,255,255,0.9); }
+    .article-item .date {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .article-item .title {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-light);
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📅 2022年文章</h1>
+      <a href="index.html">← 返回首页</a>
+    </div>
+    
+    <p class="count">共 49 篇</p>
+    
+    <input type="text" class="search-box" placeholder="🔍 搜索文章标题..." onkeyup="filterArticles(this.value)">
+    
+    <ul class="article-list" id="articleList">
+      <li>
+        <a href="articles/2022/2022-12-31-随机放映不确定性与可能性.html" class="article-item">
+          <div class="date">2022-12-31</div>
+          <div class="title">随机放映不确定性与可能性</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-30-电影是什么他们有话说.html" class="article-item">
+          <div class="date">2022-12-30</div>
+          <div class="title">电影是什么他们有话说</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-29-放映本周日大鱼大源.html" class="article-item">
+          <div class="date">2022-12-29</div>
+          <div class="title">放映本周日大鱼大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-28-侯麦系列本周六冬天的故事世纪城.html" class="article-item">
+          <div class="date">2022-12-28</div>
+          <div class="title">侯麦系列本周六冬天的故事世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-24-放映本周六卡罗尔大源.html" class="article-item">
+          <div class="date">2022-12-24</div>
+          <div class="title">放映本周六卡罗尔大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-17-放映本周日战场上的快乐圣诞牛市口.html" class="article-item">
+          <div class="date">2022-12-17</div>
+          <div class="title">放映本周日战场上的快乐圣诞牛市口</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-14-放映本周六悲情三角大源.html" class="article-item">
+          <div class="date">2022-12-14</div>
+          <div class="title">放映本周六悲情三角大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-12-坂本龙一异步人生.html" class="article-item">
+          <div class="date">2022-12-12</div>
+          <div class="title">坂本龙一异步人生</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-06-放映本周六红辣椒世纪城.html" class="article-item">
+          <div class="date">2022-12-06</div>
+          <div class="title">放映本周六红辣椒世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-06-放映本周六苦月亮牛市口.html" class="article-item">
+          <div class="date">2022-12-06</div>
+          <div class="title">放映本周六苦月亮牛市口</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-02-放映本周六火山挚恋大源.html" class="article-item">
+          <div class="date">2022-12-02</div>
+          <div class="title">放映本周六火山挚恋大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-12-01-放映本周六东京教父世纪城.html" class="article-item">
+          <div class="date">2022-12-01</div>
+          <div class="title">放映本周六东京教父世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-11-16-放映本周六风柜来的人大源.html" class="article-item">
+          <div class="date">2022-11-16</div>
+          <div class="title">放映本周六风柜来的人大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-11-09-放映本周六燃烧女子的肖像大源.html" class="article-item">
+          <div class="date">2022-11-09</div>
+          <div class="title">放映本周六燃烧女子的肖像大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-11-04-影展本周六Fadein非定青年电影展试映会大源.html" class="article-item">
+          <div class="date">2022-11-04</div>
+          <div class="title">影展本周六Fadein非定青年电影展试映会大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-11-01-放映本周六天使爱美丽大源.html" class="article-item">
+          <div class="date">2022-11-01</div>
+          <div class="title">放映本周六天使爱美丽大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-31-有史以来最棒的啤酒运送绿皮书导演拍了一部粉红主旋律.html" class="article-item">
+          <div class="date">2022-10-31</div>
+          <div class="title">有史以来最棒的啤酒运送绿皮书导演拍了一部粉红主旋律</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-21-阿凡达2要来了全片3个小时多.html" class="article-item">
+          <div class="date">2022-10-21</div>
+          <div class="title">阿凡达2要来了全片3个小时多</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-19-映后过期的只有船票对吗.html" class="article-item">
+          <div class="date">2022-10-19</div>
+          <div class="title">映后过期的只有船票对吗</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-18-放映本周六苏州河世纪城.html" class="article-item">
+          <div class="date">2022-10-18</div>
+          <div class="title">放映本周六苏州河世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-13-刀下留人王家卫电影之消失的演员们.html" class="article-item">
+          <div class="date">2022-10-13</div>
+          <div class="title">刀下留人王家卫电影之消失的演员们</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-10-专场本周六过期的船票川大望江.html" class="article-item">
+          <div class="date">2022-10-10</div>
+          <div class="title">专场本周六过期的船票川大望江</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-04-放映本周五闪灵世纪城.html" class="article-item">
+          <div class="date">2022-10-04</div>
+          <div class="title">放映本周五闪灵世纪城</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-03-再谈奈飞的亚洲野心.html" class="article-item">
+          <div class="date">2022-10-03</div>
+          <div class="title">再谈奈飞的亚洲野心</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-10-02-国庆档十四年之变从百花齐放到中国特色.html" class="article-item">
+          <div class="date">2022-10-02</div>
+          <div class="title">国庆档十四年之变从百花齐放到中国特色</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-09-28-导演映后本周六方舟锦城湖.html" class="article-item">
+          <div class="date">2022-09-28</div>
+          <div class="title">导演映后本周六方舟锦城湖</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-09-13-绝佳的视听语言戛纳最佳导演的实至名归.html" class="article-item">
+          <div class="date">2022-09-13</div>
+          <div class="title">绝佳的视听语言戛纳最佳导演的实至名归</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-08-16-放映本周六薄荷糖锦城湖.html" class="article-item">
+          <div class="date">2022-08-16</div>
+          <div class="title">放映本周六薄荷糖锦城湖</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-08-13-24帧观影团今晚招募.html" class="article-item">
+          <div class="date">2022-08-13</div>
+          <div class="title">24帧观影团今晚招募</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-08-10-放映本周六日分手的决心锦城湖大源.html" class="article-item">
+          <div class="date">2022-08-10</div>
+          <div class="title">放映本周六日分手的决心锦城湖大源</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-07-18-东亚导演双生子是枝裕和amp贾樟柯.html" class="article-item">
+          <div class="date">2022-07-18</div>
+          <div class="title">东亚导演双生子是枝裕和amp贾樟柯</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-07-13-放映本周日咒HOME空间.html" class="article-item">
+          <div class="date">2022-07-13</div>
+          <div class="title">放映本周日咒HOME空间</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-07-12-披着韩片外衣仍旧是枝裕和.html" class="article-item">
+          <div class="date">2022-07-12</div>
+          <div class="title">披着韩片外衣仍旧是枝裕和</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-07-05-放映本周六掮客HOME空间.html" class="article-item">
+          <div class="date">2022-07-05</div>
+          <div class="title">放映本周六掮客HOME空间</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-07-04-老乌你的故事讲到了哪.html" class="article-item">
+          <div class="date">2022-07-04</div>
+          <div class="title">老乌你的故事讲到了哪</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-29-放映本周六爱情神话HOME空间.html" class="article-item">
+          <div class="date">2022-06-29</div>
+          <div class="title">放映本周六爱情神话HOME空间</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-28-执雪之手银翼杀手2049影评.html" class="article-item">
+          <div class="date">2022-06-28</div>
+          <div class="title">执雪之手银翼杀手2049影评</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-27-人生很多大事电影最好只取一瓢.html" class="article-item">
+          <div class="date">2022-06-27</div>
+          <div class="title">人生很多大事电影最好只取一瓢</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-22-放映本周六银翼杀手2049HOME空间.html" class="article-item">
+          <div class="date">2022-06-22</div>
+          <div class="title">放映本周六银翼杀手2049HOME空间</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-19-你遇见我我遇见你这就是意义.html" class="article-item">
+          <div class="date">2022-06-19</div>
+          <div class="title">你遇见我我遇见你这就是意义</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-14-放映本周六爱在黎明前HOME空间.html" class="article-item">
+          <div class="date">2022-06-14</div>
+          <div class="title">放映本周六爱在黎明前HOME空间</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-13-侏罗纪世界3退退退.html" class="article-item">
+          <div class="date">2022-06-13</div>
+          <div class="title">侏罗纪世界3退退退</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-06-10-还好有一个秘密.html" class="article-item">
+          <div class="date">2022-06-10</div>
+          <div class="title">还好有一个秘密</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-05-25-24帧xHOME放映计划不能说的秘密.html" class="article-item">
+          <div class="date">2022-05-25</div>
+          <div class="title">24帧xHOME放映计划不能说的秘密</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-05-14-爱乐之城我想起爱上电影的最初.html" class="article-item">
+          <div class="date">2022-05-14</div>
+          <div class="title">爱乐之城我想起爱上电影的最初</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-05-09-书影音没法支撑恋爱建议豆瓣把该片挂在开屏.html" class="article-item">
+          <div class="date">2022-05-09</div>
+          <div class="title">书影音没法支撑恋爱建议豆瓣把该片挂在开屏</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-05-02-主流语境下的伪颠覆性叙事.html" class="article-item">
+          <div class="date">2022-05-02</div>
+          <div class="title">主流语境下的伪颠覆性叙事</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-04-22-每个人的童年都会结束每个人的飞船都会离开.html" class="article-item">
+          <div class="date">2022-04-22</div>
+          <div class="title">每个人的童年都会结束每个人的飞船都会离开</div>
+        </a>
+      </li>
+      <li>
+        <a href="articles/2022/2022-04-14-为什么我.html" class="article-item">
+          <div class="date">2022-04-14</div>
+          <div class="title">为什么我</div>
+        </a>
+      </li>
+    </ul>
+    
+    <div class="empty" id="emptyState" style="display: none;">
+      <p>😕 没有找到匹配的文章</p>
+    </div>
+  </div>
+  
+  <script>
+    function filterArticles(query) {
+      const items = document.querySelectorAll('.article-item');
+      const q = query.toLowerCase();
+      let visible = 0;
+      
+      items.forEach(item => {
+        const title = item.querySelector('.title').textContent.toLowerCase();
+        const match = title.includes(q);
+        item.parentElement.style.display = match ? 'block' : 'none';
+        if (match) visible++;
+      });
+      
+      document.getElementById('emptyState').style.display = visible === 0 ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

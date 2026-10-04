@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影展本周六Fadein非定青年电影展试映会大源 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-11-04</div>
+      <h1 class="article-title">影展本周六Fadein非定青年电影展试映会大源</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJu5ZWLW61Wyw1gqIOicDlckQCPHVxNXsZvnRSLYEUpOgJicibBWj6myicPzwaQ3vjQhlT5lIPgAEboMA/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「影展」本周六 ·《Fade-in非定青年电影展试映会》· 大源</h1>
+<p><strong>Fade-in</strong></p>
+<p>在影像中，由一个场景接到另一个场景的转场技法，  将隐藏的样式通过改变其「透明度」让其显示出来，场景由全黑「渐明」而后，极致影像出现在银幕上。</p>
+<p><strong>非定义</strong><br>9月底，最惨国庆档尚在排片预热期，有人看到了哀鸿遍野，有人笃定了无片生还，而有的人直接问出了令人吞声的话题：华语电影，你还活着吗？  </p>
+<p>还活着吗？</p>
+<p>太犀利了，刀锋般的字眼</p>
+<p>寸寸割痛了一些热爱，一些期盼，  还有一群</p>
+<p>在暗夜里奔着点点萤红、埋头前行的电影人</p>
+<p>或许应该问的一句是：你还在坚持吗？</p>
+<p>类型片、商业片、大IP、大制作...</p>
+<p>看似宏大，但每每抬头</p>
+<p>能够望见的那片天空却好像愈发的狭小</p>
+<p>曾几何时的同路比肩，如今看来仿佛天外来物</p>
+<p>看着他们在更宽广的题材领域中翻飞、跃进</p>
+<p>看着他们在更多奖项中交流、角逐</p>
+<p>而我们之所求 甚至只是一方荧幕</p>
+<p> <strong>前浪尚艰，“后浪”们呢？</strong> </p>
+<p><strong>太多的局促没能拥有一个发挥的空间</strong></p>
+<p>太多的迷茫没能拥有一张定格的毕业相片</p>
+<p>**对于他们来说，**甚至连一个毕业典礼都没有</p>
+<p>彼此还没好好告别，就已经各奔前程</p>
+<p>那张或许青涩、粗粝</p>
+<p>却是凝结了数万万分热忱、心思的毕业作品</p>
+<p>只能静默而又孤寂地独自攀附着网路</p>
+<p>投入一个冰冷的邮箱地址</p>
+<p>被开启过一次，被评判过一次</p>
+<p>而后永久的成为一份躺在硬盘里的某几个GB</p>
+<p>热爱是不会毕业的</p>
+<p>这里准备了一方荧幕</p>
+<p>Fade-in淡入</p>
+<p>希望你愿从这方荧幕开始投射一些未竟的梦</p>
+<p>Fade-in非定义</p>
+<p>希望你愿意从这次荧幕开始表达一些未尽的真诚</p>
+<p>这是我们的初衷</p>
+<p>也是有关于电影影像的一个美好愿景</p>
+<p>希望能帮助青年电影人步入行业的星辰大海</p>
+<p>跃入其中，而后各有风雨灿烂</p>
+<p>前言铺叙，希望你来</p>
+<p>......  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJu5ZWLW61Wyw1gqIOicDlckJMAOKKdWC9xbI9rdSxicqAvZjPq2DupasrsOc5POFTiaEk5ZNt4ACWvA/640?wx_fmt=png" alt=""></p>
+<p><strong>时间</strong><br>**2022年11月05日（本周六）**15:00-17:00  </p>
+<p><strong>影展片单</strong><br><strong>《秋游路上》时长65min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLyzTWIhBn0vNZj08TTicVyqurDDP9tfxlLJmTe31GfhHKkQPqRXVPfRQRXbF4r2QM4KR6LMBFURVg/640?wx_fmt=jpeg" alt="">  </p>
+<p>导演李泓翰，男，独立导演、影视摄影师、剪辑师与调色师。2016年开始入门摄影，2018年转型导演，同年开始《城市日记》人文纪实短片系列，训练并探索短片视听风格的更多可能性。2020年7月完成了第一部个人独立短片《视界之外》，同年8月参与制作剧情短片《马凡》并担任摄影师和调色师。2021年至2022年期间完成了第一部个人独立长片《秋游路上》，担任导演、编剧、摄影指导、剪辑与调色。2022年3月参与制作纪录片《雅罗米尔在成都》担任摄影、剪辑，5月参与独立短片《虾线》并担任剪辑与调色师。代表作《秋游路上》于2021年6月开始制作，并于次年6月完成。截止同年10月已获得“中国好创意暨全国数字艺术设计大赛”微电影单元全国一等奖。《秋游路上》之后也将开启系列作品，续作《春分那天》将于2023年底开始制作。</p>
+<p>故事简介：本片讲述了高中生李步言在朋友离去、父亲酗酒的压力下离家出走，前往稻城寻求舅舅的庇护。途中与大城市辞职来追寻自由的司机延旭、同样出走的富家女黎冉相识，并逐渐被两人的真诚带出泥沼，勇敢起来，选择直面自己的现实生活。这是我在自我表达和普适性之间挣扎的结果，最终倒向偏重自我意识输出的散文式公路片。本片由司机延旭的口吻讲述，希望他们三个间纯粹的友谊能够让你静下来，听司机延旭慢慢讲完这段故事。所以，欢迎走进一段名叫秋游路上的故事，这是我和我的朋友们的一场关于勇气、浪漫主义、友谊与爱的一场梦。</p>
+<p><strong>《比比》时长16min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLyzTWIhBn0vNZj08TTicVyqMCsmG3KFceKhFiczZjXD0hTibNoFBQykHicoKDypHr33skibPNELu4xFmw/640?wx_fmt=jpeg" alt="">  </p>
+<p>导演潘居怡，21岁，香港人，普通话一般，一个意外读上电影的普通人，没有什么特别，拍片子的动机是因为屁股痒</p>
+<p>故事简介：第五波疫情期间，政府因为仓鼠染疫问题，强烈要求市民交出仓鼠进行人道毁灭。比比是杨浩漩的爱鼠，已经养了两年，母亲却因为担心染疫问题，私下将比比送去人道毁灭，引发母女之间的矛盾。这是一个充满奇迹的夏天，我完成了一次完全的自我表达。欢迎你来到我在香港的导演处女作——《比比》。</p>
+<p>**《少年梦之夏》**时长40min<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLyzTWIhBn0vNZj08TTicVyqA9jJMYmdmgrZgF7lmBmEUZic45CLI3lrw8px40Tz61wHbtVONw4FhmA/640?wx_fmt=jpeg" alt=""></p>
+<p>导演王琪雯，女，27岁，就读于四川师范大学影视与传媒学院广播电视编导专业硕士，曾是健美操国家二级运动员，根据自身经历创作了《少年梦之夏》，该片是导演的处女作。</p>
+<p>故事简介：《少年梦之夏》影片讲述了六个没有梦想的“闲鱼”少年为消除处分被凑成一支健美操队参加比赛，比赛前夕有人退出、有人起争执，最后他们如愿完成比赛，在过程中逐渐发现自我、收获友谊。</p>
+<p><strong>地址</strong>  </p>
+<p><strong>成都市武侯区天府二街866号</strong></p>
+<p><strong>(大源地铁站D口步行450米)</strong></p>
+<p><strong>主创团队</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJu5ZWLW61Wyw1gqIOicDlckT8MDD1zNYeT0SLZSw7MnPchwvXl8vnnXbAVNwGC1RErVrm6bR5d24w/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>免费试映场</strong><br><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

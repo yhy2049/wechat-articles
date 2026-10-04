@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影评无名程耳在路上 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-01-24</div>
+      <h1 class="article-title">影评无名程耳在路上</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGHqA0hQCS03xicAgPTibYg6k9b0M5aOWXAXlW7CH7KEw5frycqollPqUg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「影评」《无名》：程耳，在路上</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGLf31JaMeNuqUQf9ibpwyUiaMELWEqt2Dx9eq9TtYTtibzp9ZSpwJQ7bLw/640?wx_fmt=png" alt=""></p>
+<p>有人说，过年这样的日子，不适合《无名》这样过于严肃，又“见血”的电影。</p>
+<p>但我却觉得，在春节这样的日子里，见证那一段曾经真实存在过的，值得被人记住的历史，见证那些舍生取义者的信仰，也是一种选择。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWG6znjLbJCwPT3VuxMHddGqtySjXjl3X3F2aKvIMWB8bbgvzGFD4BpCw/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>高级感</strong></p>
+<p>有人说，这一部**《无名》精致，脱俗且迷人**。诸多影评中，**“高级感”**一词频频出现。</p>
+<p>那么什么叫电影的高级感？很简单，做到极致。</p>
+<p>这样听上去可能很虚，但在程耳的作品里，不会。因为程耳在电影美学上的造诣，早就有所体现。</p>
+<p>**《罗曼蒂克消亡史》**里，就有很多单看画面就能让人顿觉脱离脂粉气的高级感的，更不用说电影里那一段大胆又惊艳的长镜头。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGtPMCwJ0u7xDBnsQxyH0GF6sico3CFjwltHHuJE4t7dzXa2QOEhFrjcg/640?wx_fmt=jpeg" alt=""></p>
+<p>《罗曼蒂克消亡史》剧照</p>
+<p>而这一次，程耳有了更大的突破。《无名》使用了堪称“地表最强”的<strong>摄影机阿莱65</strong><br>进行拍摄，它不仅能拍出明亮里的反差,暗下来以后有不同层次的暗,暗里面还有反差。</p>
+<p>就像在发布会上程耳导演自己所说，他把光用到了极致，同时也收获了最好的效果。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGqn6MLC2scyibYIUPjdnzNNqiaFveZWg8HMnnyeZ9qhNibV0oVGxufp9HA/640?wx_fmt=jpeg" alt=""></p>
+<p>气氛压抑的上海；</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGXEH45YzITInDGr96hGUBwToo3OCGsAh9mev0mXXzsoNewL64IibDGmA/640?wx_fmt=jpeg" alt=""></p>
+<p>明里暗中的人物；</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGHN03lwZ3ibuyxTgGz7Ypk8zSo26xPvYbJIicQFwic90Qib47wgNeyuB64g/640?wx_fmt=jpeg" alt=""></p>
+<p>被困于井底的劳工；  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGayUibdc1OaC8rtUUkFIok7ZBibvJNRF3sSf5PS8cYeqPp8gTyf1XbhDQ/640?wx_fmt=png" alt=""></p>
+<p>这次程耳把<strong>镜头语言</strong>同样玩到了极致。</p>
+<p>常用对称构图；</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGjicdF5xRXGPd7an2TRxsibw07G6ibibUUxkSfmZAs3R9eDLlkDg5pWsia2A/640?wx_fmt=jpeg" alt=""></p>
+<p>巧妙通过镜像来丰富构图，传递更多信息；</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGCL1wyE36AG71dHz4aicnaiavRlRYpicUBL3iboBzomab3PrbljMYvglQBg/640?wx_fmt=jpeg" alt=""></p>
+<p>这个梁朝伟出现在画面中间的构图，一明一暗的对比，横竖交叉的窗映衬着打火机的火光，让这个角色看起来有种非真实感，暗示了其背后一定有故事。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGAIbmYl0dlNhwSFY2aicHS0VKNkG0QwZY6XSeqynum2LWTdDh5g226ug/640?wx_fmt=jpeg" alt=""></p>
+<p>高级感可不是光有好看的画面就行的，就像博纳老板于冬在发布会上说的：“《无名》的构思缜密，危机感和悬念感做的很好，看三遍都还能看出新细节。”</p>
+<p>《无名》始终秉承着<strong>此时无声胜有声</strong><br>的原则将神秘进行到底。无论出场几个人，无论换了几个场景，很多信息都没有文本明示，却通过画面和镜头传递出来的信息却不低。营造出了一种不到最后一分钟，无法解开人物身上的谜团的氛围。</p>
+<p><strong>对于一部谍战片来说，能够把悬念感藏到最后，就成功了一大半。</strong></p>
+<p>它归根结底是一部主旋律电影，一部出自追求古典美学的导演脂手拍出的主旋律电影，所以《无名》更确切的应该被叫做**“古典商业片”**。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGpliaXRkgwZFbXEJWqib1JeonfgdChkUy0icnZxQApSQCHd3xohmIYq76A/640?wx_fmt=jpeg" alt=""></p>
+<p>究竟何为“无名”？</p>
+<p>无名不是二十多年前那个要刺杀秦王的李连杰，也不是天剑无名、残而不废的漫画人物。</p>
+<p>抗战时期的上海，鱼龙混杂的乱世，有很多隐蔽战线的地下党，在为了最后胜利做着努力。他们是与魔鬼打交道的人，死者无名，生者亦无名。</p>
+<p><strong>《无名》的英文名直译为“袖剑（Hidden Blade）”，是贾樟柯所取。</strong></p>
+<p>平日里须时时藏锋，凡用时必一击命中。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGF7h0cK15SjdsXA9HghTwS3TsibHH1kKDQxy6IibFovFt1Np4faaqUQlg/640?wx_fmt=jpeg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWG6znjLbJCwPT3VuxMHddGqtySjXjl3X3F2aKvIMWB8bbgvzGFD4BpCw/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>程耳的倔强与探索</strong>  </p>
+<p>暴龙兽个人感觉《无名》是不如《罗曼蒂克消亡史》的，但<strong>依然是好片子，可未必适合大部分观众群体</strong>，尤其是春节期间的观众。</p>
+<p>《无名》注定只属于那一部分喜欢研究剧情逻辑的观众群体以及程耳/资深影迷，因为这片子确实不适合用来休闲放松。</p>
+<p>譬如本片比《罗曼蒂克消亡史》更细碎的叙事剪切，开头莫名其妙出现的点脚，跟前后剧情都接不上，你都不知道这段画面出现是什么意思，一直要憋到结局才知道这是咋回事。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_gif/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGHB8sfpcWOGZHgXibkFmGP2VhyLBC0MDNHvJAcu38snU5jsCnHkRrG6g/640?wx_fmt=gif" alt=""></p>
+<p><strong>《无名》的这种“混乱”剪辑手法几乎是直接撞在了大多数观众的枪口上。</strong></p>
+<p>说白了，工作一年那么累，好不容易过个节，看一眼手机或上个厕所就跟不上剧情，我看个电影比上班还累？再加上有些血腥，阴暗的画面确实不太适合新年的气氛，所以受到这方面的批评倒是在预料之中。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_gif/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGqyLu30496cCwhPhtqMJKGfph0mp4npna8TibJhL97UoXh90YSicz3R6w/640?wx_fmt=gif" alt=""></p>
+<p>另外，<strong>王一博</strong>也是本片一大看点和卖点。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_gif/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGIHuR7HW4aKWTXxYVx9eC4DO6Pmcp92R3dCqiafHjDibAPoOabKItI4ng/640?wx_fmt=gif" alt=""></p>
+<p>我自认为不是一个对演技很苛刻的观众，但是看完全片，<strong>很少能从王一博的脸上看到“第二种表情”</strong>，永远是一副眉头微蹙的样子。</p>
+<p>而且不知道是不是我的问题，总觉得某些时候王一博的正脸像刘浩然，侧脸像易烊千玺，就是不像王一博？？</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_gif/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGtfuwP9NWLjcDpNTWWmUtbFMfdHncr85Q3kyuhrCMruwueZw4lIUogg/640?wx_fmt=gif" alt=""></p>
+<p>这些年流量明星转战大银幕是大趋势，但失败的显然更多，如李现的《赤狐书生》、肖战的《诛仙》、鹿晗的《上海堡垒》等。</p>
+<p>目前转型成功且能扛票的流量明星目前只有易烊千玺（朱一龙作品还太少），王一博如果真的决心成为下一个，还是请多花些心思在表演、角色理解上而不是营销吧。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_gif/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGSfMA4RS7q9XCTQDWicute4Oc6XutfHgVMBvLibRPsGKgian5bMrlBNEWA/640?wx_fmt=gif" alt=""></p>
+<p>不管电影如何，我最关心的是<strong>程耳</strong>这个人。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGPialk2G2TrTdaMgibDKTwaOcv7Hib3QiaoXC3PelnmtpzNX2gpEUibHLNZQ/640?wx_fmt=jpeg" alt=""></p>
+<p>程耳</p>
+<p>程耳是<strong>中国少有的同时兼具商业性和作者性的中生代导演</strong>。他并不高产，毕业至今20年，只有4部长篇作品，还总喜欢在大型档期与观众见面。</p>
+<p>六年前，<strong>《罗曼蒂克消亡史》<strong>携豪华的卡斯和很高的业内口碑上映，横跨圣诞档、元旦档，然而1.22亿的票房</strong>无法覆盖成本</strong><br>（投资成本约1.5亿）。</p>
+<p>再往前倒，2012年，2922.5万人民币票房的**《边境风云》<strong>，在七夕节当日拿下9100万票房的七夕档几乎</strong>成了看客**。</p>
+<p>也许这就是程耳的宿命？</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGqaQPNc7A5ZTicdO35ufmDwKcjSOia1FVke5RuFhkpQbkx9KRbBojZvMw/640?wx_fmt=jpeg" alt=""></p>
+<p>不过幸好，古典派的程耳还依然在追求自己的极致美学，他也完全没有埋怨观众的意思，甚至还说“不要小看观众”。</p>
+<p>至于在预告片中高调将《无名》定性为**“超级商业片”**的做法，无非是他执拗的一个小倔强。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGKic1WR3e5jfias9icZthw5Mv1bKaVDda0Marmo9FmSeq4LHib9P7APJasg/640?wx_fmt=jpeg" alt=""></p>
+<p>毕竟选择加入这波春节档大混战，<strong>《无名》的票房成败关系着程耳的前途命运</strong><br>：他的个人风格是独树一帜还是昙花一现，他是否有驾驭商业电影的能力，乃至日后得到的投资多少，《无名》对于程耳是关键一役。</p>
+<p>这是一个巨变的时代，一个作者型导演该如何找准自己的位置，在这条路上，究竟要付出哪些代价，又能收获哪些回馈。</p>
+<p>这是程耳选择的路，也是一个人等待、探索、妥协以及保持自我的故事。</p>
+<p>编辑  摸鱼暴龙兽</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/GGbib8NguJ7rzdNicVTrTKhfJKYhu02Y7iagqV1TWBQO2dPfpjMqurobsAEe5alzhzN0fVhYSPASvuvJYDQGbHIzQ/640?wx_fmt=png" alt=""><br>](<a href="http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247489781&amp;idx=1&amp;sn=72b5440c88a5fe12e6e1d7253041b6e7&amp;chksm=cf45f6cef8327fd88b20a5d549250a0799fdbd4e739e0d500b5a3da1c3b470606f2b30a834d8&amp;scene=21#wechat_redirect">http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247489781&amp;idx=1&amp;sn=72b5440c88a5fe12e6e1d7253041b6e7&amp;chksm=cf45f6cef8327fd88b20a5d549250a0799fdbd4e739e0d500b5a3da1c3b470606f2b30a834d8&amp;scene=21#wechat_redirect</a>)</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/GGbib8NguJ7pKvRys4ZhQJyGZwKZ0DKWGmCwpB8WjT9R2Q7vlb9y5VeicMugVDRX6elxJibKibRJVsw4ud3K8rLQZg/640?wx_fmt=png" alt=""><br>](<a href="http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247489849&amp;idx=1&amp;sn=0873078618c654b9278499b83e2e6293&amp;chksm=cf45f702f8327e140fe85da466b62057706958bac5c70e15d1a3873cec7a748b4fccb23ee899&amp;scene=21#wechat_redirect">http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247489849&amp;idx=1&amp;sn=0873078618c654b9278499b83e2e6293&amp;chksm=cf45f702f8327e140fe85da466b62057706958bac5c70e15d1a3873cec7a748b4fccb23ee899&amp;scene=21#wechat_redirect</a>)</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/GGbib8NguJ7omR0mytu9XWgQAm8AJdRJ3xSe5RVM60iaBwTufceRHjO34RYtsB0juLcv8T2p4iaswmV1bBzJqAvBw/640?wx_fmt=png" alt=""><br>](<a href="http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247485428&amp;idx=1&amp;sn=5998bc647d44959376287c4dc6328d79&amp;chksm=cf45e9cff83260d98321069f75bbb67955438fdad08c4abfeef0293fa07d8e5b823d11118349&amp;scene=21#wechat_redirect">http://mp.weixin.qq.com/s?__biz=Mzg4MzYyMDY5Mg==&amp;mid=2247485428&amp;idx=1&amp;sn=5998bc647d44959376287c4dc6328d79&amp;chksm=cf45e9cff83260d98321069f75bbb67955438fdad08c4abfeef0293fa07d8e5b823d11118349&amp;scene=21#wechat_redirect</a>)</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

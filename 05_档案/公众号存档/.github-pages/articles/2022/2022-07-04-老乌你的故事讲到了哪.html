@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>老乌你的故事讲到了哪 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-07-04</div>
+      <h1 class="article-title">老乌你的故事讲到了哪</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="http://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydhDb4q0BUXP19v7wbKZWENgVuZleBsXFAC4oENZ5lULUjJhrLxPUusg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>老乌，你的故事讲到了哪</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydTumGaeLXIlqPOPuuenAvO6MD6B5c0QPklAGaSlvYlIBic33Gcc3MxdA/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>爱情神话</strong>  </p>
+<p><strong>B for Busy</strong></p>
+<p>导演: 邵艺辉</p>
+<p>编剧:  邵艺辉</p>
+<p>语言: 汉语普通话 / 沪语</p>
+<p>上映: 2021-12-24</p>
+<p>观影片长: 112分钟</p>
+<p>片中最“神话”的情节莫过于是老乌讲述的他与索菲娅·罗兰在1990年的罗马大街上亦真亦幻的露水情缘。</p>
+<p>一个中国留学生和一个世界级影星的一日恋爱，这怎么想都是瞎编的，但随着摄影机从老乌的特写开始，沿着桌子向后拉，待到从中年到少年皆纷纷垂泪，男人话锋一转：</p>
+<p>“编的。”</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydSDTCzwm4PTvMiaQGGTlxf5y9kfdM8CanvT6ibn2gMmMo5MoIic5czygRg/640?wx_fmt=jpeg" alt=""></p>
+<p>其实老乌在饭桌上讲起的故事和主线并没有太大关系，算是旁逸斜出的一笔，但这一笔却浓缩了我最喜欢和最困惑的部分。</p>
+<p>不管是意淫抑或奇遇，老乌与索菲亚•罗兰的情缘既是《甜蜜的生活》喷泉戏的续写，又有杜拉斯小说东方情节的萦绕。就当我以为，老乌讲完故事就差不多剧终之时，画风骤变，老乌溘然离逝，后续还安排了神秘人物带来的房产证件，再三强化故事的“真”（同时保留能作“假”的余地），坐在椅子上的我和后排刚刚擦完眼泪的女孩一样困惑。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydTvsrYeibqVmJkHeTJmiaUiaSdIXslptib51kXpygdlo6fRap1GEa2Mk73w/640?wx_fmt=jpeg" alt=""></p>
+<p>要解开困惑就必须从老乌聊起。</p>
+<p>作为白老师的“参照物”，这个讲派头懂生活、自诩女友遍及欧亚的老克腊就像男版的格洛瑞亚，真真假假，浑身透露着故事。</p>
+<p>自封的“策展人”老乌，从出场到结束都在操心老白的画展，可惜到头来也没能看到白辛苦变成不辛苦的那天。就像你以为满嘴跑火车的他风流成性，谁知最后竟死于殉情，偏偏想要殉的那位又抢救回来了，一段本可歌可泣的爱情神话变成了现世生活里格格不入的黑色幽默。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydtkAUhMSpZv93sHicOIJiczBf87uCsEucibH2CGqFlzX70dINEhqUE6xHg/640?wx_fmt=jpeg" alt=""></p>
+<p>两人组成的黑白拍档，是最懂彼此的人</p>
+<p>1989年出国，有过很多外国女友，其中最重要的三个分别来自苏联、德国、意大利。</p>
+<p>这个生平如迷的男人说自己是在编故事，那我们不妨沿着故事的思路来做一个脑洞——如果我们还记得娄烨那部不可言说的文艺青年禁忌曲，再与象征着1990年代感伤与迷惘的《苏州河》做对比，那么《爱情神话》或许可理解为《苏州河》之后文艺青年怎么走的一个解答。所不同的是，《苏州河》刻画的是贾宏声这种永远留在90年代的悲剧人物，《爱情神话》给出的则是当现实已成定局，一批有点钱，有点闲的文艺青年（中年）在追忆中走向时代旁落者的忧愁。</p>
+<p>这种亦舒式的解法，虽会遭到的嘲讽，却又是当宏大层面的困境无法解决时聊以自慰的无奈之举。繁花似锦的金句交织，堆的是如人饮水冷暖自知的生活，在这一基础上，所谓《爱情神话》固然是吴侬软语中透着烟火气的精致，却也在某时某刻击中了这个时代兼具“世俗主义者”与“虚无主义者”的人群的特质，因为虚无，才亟需物质或个体情感的慰藉。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wyd75gmp1ocI2pM80z1u0Zer5mmUfy4v02dF2ZsdEecVdq5gzMLHBDTxQ/640?wx_fmt=jpeg" alt=""></p>
+<p>正如饰演老乌的演员周野芒表示：“对于一段情感的追恋，是否存在是不重要的，重要的一个人心里住有希望，就有很大的能动力。老乌他有两个寄托，他的友情根基和感情根基。也许那个神话是虚构的，但正是这种依恋让老乌把自己的爱情变成了神话。”</p>
+<p>是啊，“神话”都是骗人的。你见过几个中年人聚餐的时候讨论爱情？还是在这么混乱的人物关系下，所谓的爱情在这里显得很不真实，但也恰好点了题：爱情嘛，神话呀。</p>
+<p>但，人们从来都无法脱离对神话的向往。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydurlXy7VJo4A9t2sfibqbXt9gJeI3J0nYv4icNvBOVFPJmkN5mEQokhcw/640?wx_fmt=jpeg" alt=""></p>
+<p>对于老乌而言，别人信与不信无所谓，女人是不是大明星也不重要，他爱她，她就是这个世界上最大的明星，这段爱情神话里永远的女神。</p>
+<p>于是，用了一生的时间去守候他心中的爱情神话的老乌，喝完酒便死了。</p>
+<p>然后，这群活了半生的中年男女在决定以看费里尼的《爱情神话》追悼老乌以及随他一同消散的爱情时，却一个个被银幕里的故事搞得瘫在沙发上，睡觉的睡觉，刷手机的刷手机——神话果然难看，爱情也并不动人。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/GGbib8NguJ7rXb1S189iaczYtkbbzf6wydZgUEHzWiclUxyxWFUiaibV9oTPmlLurbtcazAHpXQSD6yPFtHlTtFg14w/640?wx_fmt=jpeg" alt=""></p>
+<p>老乌之所以一直没有去看《爱情神话》，想必是因为他想永远留住人生若只如初见的一瞬吧。</p>
+<p>也许，“爱情神话”仅仅是人生的浪漫版，是暂时抛开压力后的激情与天真。散场后各自继续的生活才是现实版的“爱情神话”的序幕。它是在时间无涯的荒野里，一次流星般的美丽邂逅，也是始终相信爱情的你我之间的磕磕绊绊，柴米油盐。</p>
+<p>电影最后，去乌留白，不禁叹息。在我看来，除了老乌，其他人物间的所谓爱情都只是惯性的暧昧罢了，就像生活中许多混淆了爱情和暧昧的人。神话真假又如何，故事可以自己来写嘛。虽然我不认识画家、嗲小姐、老克腊，也没有看得见风景的房间，但是我有你无需开口，便和天地万物通通奔向你的俗气。</p>
+<p>参考：</p>
+<p>[1]《爱情神话》里被忽略的隐喻，宗城的读书笔记，豆瓣，2021-12-26</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4eFBoibwyLHrAz5vYTFdefFSHOt60UWzkgSq5UHjnrraOaHQiaNiaxLoag/640?wx_fmt=png" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4UtH4pI9wuxRdliaH8uqOO2mRpO6iclI9EWGKFj61omYSNOG0JDYW0BlA/640?wx_fmt=jpeg" alt=""><br>24帧观影团<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4ybeeqD3f39AnUzmpyz2t953XeNMCgrFcIq2AicmXgzZ4gXD0knNzOrw/640?wx_fmt=png" alt=""><br>长按左侧二维码关注</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

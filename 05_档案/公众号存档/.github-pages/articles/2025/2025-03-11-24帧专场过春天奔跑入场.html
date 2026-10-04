@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧专场过春天奔跑入场 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-03-11</div>
+      <h1 class="article-title">24帧专场过春天奔跑入场</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzVffKrHQibgBld1lkTrqH3XiccXYvms9CvLUic4xjW4icXpAvLOepjEib9zg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧专场」《过春天》，奔跑入场！</h1>
+<p><strong>写在前面</strong><br>“过春天”原意是粤港两地偷渡客的行话，指的是水客带货过关。16岁的佩佩就像她托运的手机、手表，一遍遍地穿梭于深圳与香港，找寻属于自己的归属感。<br>《过春天》是一部独特的青春片——它没有小清新的滤镜，而是笼罩在湿热的霓虹色里，带着不安与欲望。它不只是一个女孩的成长故事，更是深圳与香港这一特殊地理空间里，一个游走在身份缝隙间的年轻人，对自由与归属的渴望。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzSRJ80w3414W3MsxBH5DCvibibhNIuSc05ScKm06zpIrUa4jHf3cTFJfw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>2019年，这部电影在香港电影节备受追捧，导演白雪凭借极具个人风格的叙事手法，精准描绘了一代“港深孩子”的成长困境。电影配乐以电子乐为主，既营造出紧张感，又有淡淡的忧伤，非常值得在影院大银幕上沉浸式感受。<br><strong>放映员说</strong><br>青春是漂浮的，欲望是湿漉漉的。  佩佩在深圳上学，在香港有家，既是本地人，又像个外来者。她不属于某一边，只能靠一次次的闯关来证明自己“可以”。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzTKPsjsicre0funtibhr5WnWYmUSPVPRvQiaoaoiaIzSGWFpGic8J3mia9ayQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>白雪的叙事风格冷静克制，但故事本身却炽热滚烫。她让佩佩在深圳的逼仄出租屋和香港的繁华夜景之间来回穿梭，让观众在她的凝视里，看见青春的边界感。镜头跟随佩佩的奔跑，夜色中的霓虹光影映在她的脸上，音乐轰鸣，世界躁动，而她的归宿却始终飘忽不定。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzVeybbnHpO1Eq8mExGdPoCQiba2MibchEwUJv6feCu2u4jNwmOKwhGqCg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>电影的配乐极具特色，电子合成音符与传统旋律混搭，像极了佩佩的青春——既有荷尔蒙的冲动，也有无处安放的迷惘。它时而让人紧张得屏住呼吸，时而又在最意想不到的时刻，带来一丝温柔，像夜里闪烁的微光。如果你曾经也在身份的缝隙中挣扎过，如果你也曾渴望逃离又无处可去，那这场放映值得你来。我们一起，在光影里漂流，在音乐中渡海。<br><strong>预告片</strong><br><strong>时间</strong><br>**2025年3月15日（周六）**18:30<del>19:00签到  19:00</del>20:39放映  20:39~21:09映后<br><strong>地址</strong><br>**保利万和国际影城(招商花园城购物中心店)**7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥40</strong>周边：  预约放映版双面编号A3海报（人手一份）<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzcO8wX6Xnmq0VrNuyINQDTH3lUfvbXasTJqSb359IbZcunLBiahSib2Jg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKp2ct8hpmwlXUrbHsfQGUzAHItb76TJetZO4u5PnK4Xatq12FgjS17SXICNdeCSp83ZicPibX0W4jg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>品牌支持</strong>社群<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

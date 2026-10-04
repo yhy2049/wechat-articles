@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>西宁之后我们选择再次相信电影 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-08-02</div>
+      <h1 class="article-title">西宁之后我们选择再次相信电影</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHP6wibv7YSEHofZkWibwXYP5YOiam8TyUIyhxvMfaC3KoicrwiaSgibOeWemDia8AFNliaj3ycy35at1wNK9dD07OgSQmZOdUribcZIt1o/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>西宁之后，我们选择再次相信电影</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQEX72mKfwaCueU5iasETyzmbgV1KibyYicJNJZaUkjal9CSUUn9Qc5VCwmqVwq5sVNMiaxicfXeibWQIyKKAdrLj5ImvaNjowGBx6cl4/640?wx_fmt=jpeg" alt="">FIRST西宁的夜现场</p>
+<p>我常常反复确认，这个世界上是否还有人在替我做我想做的事。</p>
+<p><strong>今年，我来到了西宁，我再次得到了肯定的答案。</strong></p>
+<p>短短几天，看电影，聊电影，听别人谈电影，日程被填得满满当当，而我的思绪也一样。</p>
+<p>有人想要把自己悬挂起来，和天一样高；</p>
+<p>有人想放一把火，但一直没找到合适的空地，于是把手里的柴火换成了摄影机；</p>
+<p>有人说他和电影这辈子分不开了，也有人坦言电影给她带来了很大的创伤，但她也许仍会继续创作。</p>
+<p>我看到了很多可以被称之为“幸运”的作品，那是偶然、想象与真诚的相遇。</p>
+<p><strong>电影之神，真的显灵了！</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQGK6TLcxW6jFujnuMIPQE0icLXyTh4cCn9A01JrWLyF6YdZURjueS7ymoyczK2t0qwzoLq39ibic2tQXARMPdtWyCop1EUy7JlONU/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>FIRST开幕式现场</p>
+<p>| 24帧的选择</p>
+<p><strong>________________________________</strong></p>
+<p>每天晚上，我们都在表达自己沉浸于电影院里的兴奋感，谈论西宁的日与夜，争论人物是否足够立体，分享那些与创作者之间心照不宣的瞬间。</p>
+<p>我们各执一词。</p>
+<p><strong>于是，有了这些分数差距巨大的场刊。</strong></p>
+<p>但在此之前，还是想先说明：</p>
+<p>1、以下评价带有强烈的个人观看经验。</p>
+<p>2、我们相信每一次创作的发生都有它的意义，也始终对创作者保持尊重与鼓励。</p>
+<p>3、分数并不能代表一部作品的全部，它只是记录着这一次观看、这一个当下的观点。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQGwpyE9jqxYzM4kLiaJjurib7nBPr7ia0ic6YKlDoIvkQZs5YFJur2uusrM54icdtDibHB4Nvlatoc9vpUvpLvjDp6bACjgMnuLgq9wM/640?wx_fmt=png&amp;from=appmsg" alt=""><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQES7lIDdbicGibhyFt82Wg0siaS6CJuCuS6biaZtgt2S2EVtbTNsdibx5yku7ColrykwyHtPBp2iber8iazfVM9gLMLD0ZFMdk7XGqu8s/640?wx_fmt=png&amp;from=appmsg" alt=""><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQFNa5C1rUtvicCUjZJZ66xrs5nBCLU1zhud6fdOumNazMdibGrMotUAEPSHGGHKxzmd4RmKGkmDWTSCEr4RdADpicHsSylgoia29cI/640?wx_fmt=jpeg" alt=""><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHibyTLmPfVcXxuPLO9ecCubRbicmia4xExqRSKJPZqDdWnYhiaxXrQ1Y22AAHxpWhDBnBDr1WttUjRsM6fJ7SiaKj4BSB3OuJPcW2s/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>| FIRST的选择</p>
+<p><strong>________________________________</strong></p>
+<p><strong>电影从来不只有一种答案。</strong></p>
+<p>以下是本届FIRST青年电影展官方公布的获奖名单：</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQELTjv6ItUUQUGSE2uOhSMVEgtbQr4NDwPbaXIZBUT4WkfkqDngAbkftgOLkYN4CYRkmfRIZ9xdkUsDkFvbgILiaZthxwaCibOibw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>| 她的选择</p>
+<p><strong>________________________________</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQHboVWkOicAia6xkg49Gu4DGAEOnZjPnZFDtVTsPnKkuCboIBF7cVOUgUsDQeicVlfxgcFPDdo3yUgpTWBKsl4XjicRWhHiby0ezJd8/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>FIRST FRAME她的一帧短片集映后现场</p>
+<p>除了评分，我们也基于当下的创作环境对本届FIRST FRAME她的一帧单元进行了简要的观察：</p>
+<p><strong>今年FIRST FRAME“她的一帧”中的人物，都站在人生某个转折的时刻。</strong></p>
+<p>她们正在离开某个地方，进入另一种人生；</p>
+<p>正在挣脱某种关系，寻找新的自我；</p>
+<p>正在传统、家庭、身份与欲望之间，重新确认自己的存在。</p>
+<p>相比于寻找一个关于“她”的统一答案，今年的作品更像是在记录不同个体面对人生时所做出的选择。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQG2eHS194Olyib3epDGgrhWto5vQSAAtrp7TdXFwRfC0OuTdIww6Y9WFnYWhyMxVNWHqeFYtAHWoZX1yYvbDkkdCXBbZem3FQGw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>《搁浅》剧照</p>
+<p>这些选择并不总是明确的，也不一定意味着离开或反抗。</p>
+<p>有时候，是在既定关系中重新理解自己；</p>
+<p>有时候，是在无法改变的环境里寻找新的可能；</p>
+<p>有时候，是承认自己的欲望，并尝试回应内心真正的声音。</p>
+<p><strong>她们的选择，首先是关于如何成为自己。</strong></p>
+<p>**一、****角色的选择：**<strong>在既定世界中寻找自身位置</strong></p>
+<p>今年片单中的许多人物，都处于某种被给予的位置之中。</p>
+<p>《刹那河》中，母亲面对孩子即将成为活佛、即将远离自己的未来。在信仰、亲情与分别之间，她重新理解爱与拥有的关系。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQG9hQZfACKJ6AIOk11HRtTDVAY8MN8OPZiabqw1CeCzWz65tbE1F9utibzoQM7N0kZ7Nas1J3ribUUHDcdJ3wTARFMhmOCqQnt5Hk/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>《刹那河》剧照</p>
+<p>《椰林空地》中，生活在广州的柬埔寨新娘Sina，在婚姻和生育之外寻找属于自己的出口。她通过针线、舞蹈与身体表达，重新确认自己的存在。</p>
+<p>《诞辰日》中，少女李妍面对身体突然出现的变化，在成长、环境与未知之间经历一场关于自我的确认。</p>
+<p>《蚕》中，女性代际之间传递的不只是爱，也包含规训、伤痕与难以摆脱的影响。</p>
+<p>《一颗痣的自白》中，返乡后的谭墨重新面对家庭关系。一颗被赋予“厄运”意义的痣，成为她回望家庭、命运与自我的入口。在旧有关系与新的自我之间，她寻找重新理解彼此的可能。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQHsgETXVugHvRTgT2iapXtzxQstGXjhbicib8sOz4svCvCCQSBNcCibJgxFic7m0uBialFqNBdCx03ma0DObUrZXtYWmpIhUvkLw5zn0/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>《一颗痣的自白》剧照</p>
+<p>这些人物并不一定能够完全改变自己的处境，但她们仍然在有限的空间里寻找回应世界的方式。</p>
+<p><strong>选择，在这里并不是一个结果，而是一种持续发生的过程。</strong></p>
+<p>**二、****创作者的选择：**<strong>如何观看“她”</strong></p>
+<p><strong>如果说角色的选择，是关于如何面对自己的生命，那么创作者的选择，则是关于如何观看这些生命。</strong></p>
+<p>今年“她的一帧”的作品延续了对于女性经验的关注：</p>
+<p>家庭关系、亲密关系、身体变化、代际影响、身份困境，这些仍然是许多创作者持续探索的方向。</p>
+<p>这些表达本身具有重要价值，只有足够多的声音被听见，足够多不同的生命经验被看见，我们才有机会进一步讨论其中的问题，以及未来可能抵达的方向。</p>
+<p>但与此同时，我们也能看到，部分作品仍然延续了过去女性叙事中较为熟悉的表达路径。</p>
+<p>一些故事虽然从女性经验出发，但最终仍然回到了传统的亲密关系之中，人物的成长与困境也更多围绕与他人的关系展开。</p>
+<p>这并不是说这样的表达不成立，</p>
+<p><strong>因为爱与关系本身，就是女性生命经验中真实且重要的部分。</strong></p>
+<p>只是，当作品进入“她的一帧”这样一个关注女性及多元个体表达的单元，被选择呈现给更多观众时，它也承担着进一步拓宽观看边界的期待。</p>
+<p>“她”不只可以作为某种关系中的角色存在。</p>
+<p>她也可以是一名创作者、一名劳动者、一名行动者，一个拥有独立欲望、复杂经验与完整生命的人。</p>
+<p>今年令人欣喜的是，一些作品开始尝试打开这样的可能。</p>
+<p>《首镜》将视角转向女性创作者自身，关注她们如何面对创作理想与现实压力；</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQETIPnOuHTRhdPuL4DYodywthw77sGjgOSdkAK1LWpXyzhJltD0X56CvX2ibg1MXFukgYgymzpwzMK3MQ77WJxVgkL7iculwSAUg/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>《首镜》剧照</p>
+<p>《溺婴》中，导演通过影像重新夺回家庭叙事的主动权，让电影成为重新理解过去、重新组织经验的方式；</p>
+<p>《蚕》则通过具象的痛感与隐喻，探索那些无法被简单言说的代际经验。</p>
+<p>这些作品让我们看到：</p>
+<p>“她的一帧”并不只是关于女性经历了什么，更关于女性如何观看世界，以及如何创造属于自己的观看方式。</p>
+<p>影像的意义，首先在于呈现，它不一定需要立即回答问题，但需要不断拓展问题可以被提出的边界。</p>
+<p>“她的一帧”让我们看到人物正在选择自己的人生，创作者也正在选择如何呈现这些人生。</p>
+<p><strong>而每一次选择，都是一次重新确认自身存在的过程。</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQETvNMXPbicibNUlxx3xaCVFJ9I65QZ8GIjVRAFBr6QwKLVtmZe1KVv36nAHu9jo9j6UolU3Cce4b3hdgrlZSBV5CQlu9G4q7GyI/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>FIRST闭幕现场</p>
+<p>真好。</p>
+<p>祝我们未来不管在何处，</p>
+<p>都可以席地而坐，都有再次拿起摄影机的冲动，</p>
+<p>都可以暂时抛下所有，只谈电影与自己的心。</p>
+<p>图源网络</p>
+<p>如有侵权请联系删除</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

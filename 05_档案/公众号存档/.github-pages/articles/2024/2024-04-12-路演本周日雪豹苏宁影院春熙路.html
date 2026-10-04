@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>路演本周日雪豹苏宁影院春熙路 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-04-12</div>
+      <h1 class="article-title">路演本周日雪豹苏宁影院春熙路</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJYX40vgEb0Mbu7eFd521IEAVFFMGDib8CjaRcugxVLUMVNIyoxGyiap9dl5ic29aZibMCcXHQ1VXnAGQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「路演」本周日 ·《雪豹》· 苏宁影院春熙路</h1>
+<p><strong>写在前面</strong><br>藏地和藏民，总是与高原和白雪联系在一起，雪豹也是。提起万玛才旦导演，影迷们总有说不完的赞美之词，可以说很多人都受他影响爱上了藏地电影，而他的作品在对藏族文化输出的同时亦充满了对人性的剖析。藏语与汉语、文学与电影，精神雪原上，双子座高峰在近二十年的时间内拔地而起，留下皑皑白雪与呼呼寒风供人们眺望。<br>《雪豹》是万玛才旦导演的第八部藏语电影，创作灵感源自导演偶然听说的真实事件——藏区高原上，一只雪豹咬死牧民家的羊，众人因“惩罚”还是“放生”发生激烈分歧。这个故事始终萦绕在万玛才旦心中挥之不去，于是他花费三年时间将其呈现在银幕之上，用影像传递着隐匿在他温暖目光里的藏地图景。影片延续了万玛才旦导演贴近日常生活的真切叙事风格，同时打破传统叙说方式，以人豹矛盾为视点，延伸出现实与超现实两个空间的故事，它们看似无关却有着不可分割的内在联系，带领每一位观众走进万玛才旦导演的内心世界，感受他对于人的关怀、对生命议题的关切。<br>影片拍摄于青海省玛多县三江源国家湿地公园，取景地藏语名为“冬格措纳湖”，意为一千座山围成的湖。从《静静的嘛呢石》到《雪豹》，万玛才旦导演在近二十年的藏语电影创作生涯中形成了鲜明的影像风格。他习惯于将镜头对准辽阔高原上的自然万物——漫无目的的羊群、缓缓飘动的云朵、圣洁巍峨的雪山……此外，他也热爱讲述这片土地上意趣与严肃交融的日常生活，以省察的姿态注视着现代文明和边地文化不断融合的边界。<br>正如万玛才旦导演所说，我渴望以自己的方式讲述故乡的故事,一个更真实的被风刮过的故乡。如今，他粗砺浪漫的影像里流动着隽永的灵性与诗意，那个万玛才旦导演了然于心的“被风刮过的藏地”以一股沉静汹涌的力量治愈每一位观众。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJYX40vgEb0Mbu7eFd521IEzEEfQS3yqqmllUhUkFRbFApgde6mBicNfnb5cMp7fhic4A5aYKCZqibrg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>电影的开头，一个喇嘛快死了，看着不远处饥肠辘辘的雪豹，他说，等自己死后，雪豹就可以吃了，它就当他在这个时间所做的最后一次施舍。<br>作为藏地艺术绕不开的代表——万玛才旦，在他的身上，总能感觉到一种文人的气质，锋利但充满慈悲，如此也就不难理解为何他眼中的藏地是如此的充满生机。<br>正如他自己，03年开始电影编导工作，05年凭借《静静的嘛呢石》引起关注后的二十年时间内包括《雪豹》、《陌生人》在内拍出9部电影长片，还积极投身青年电影人扶持事业，监制了《八月》（张大磊）《旺扎的雨靴》（拉华加）等一系列杰出独立影片。除去第一印象中寡言少语、手执导筒的万玛才旦以外，20多年的时间里小说创作、电影编剧、独立制片、艺术指导、电影节评委、青年训练营、影片路演犹如高原上的大雪——一刻不停……而这，还是他扛着早已罹患慢性疾病的身体之下的产出。高原与雪山的生命力似乎正是从被这样一个个不屈的生命踏足与攀登中得以体现。<br>久美成列记得在威尼斯国际电影节首映结束后，剧组走在街道上，有些老人向他们恭喜拍出这么好的作品，“听到这句话的时候，我很感动，也很欣慰，我知道这部片子走到他们的心里面，而不是一种客套和恭维”<br>豆瓣搜索万玛才旦，可见一系列早已标注的项目，影片名字后的年份与其下的讨论构成一种莫名的荒凉与萧索，一如夏季以外的藏地。09年编译出版西藏民间文学经典《说不完的故事》；22年出版个人短篇小说集《故事只讲了一半》。一个创作者的生命力和遗憾就这样呈现在我们眼前。<br>“我相信父亲虽然离开了，但他还是在保佑着我们，我要继续把他的片子做下去，让更多人看到。”<br>幸而还有久美导演，作为看过他那阵容豪华且品质上佳的处女作《一个和四个》的我，颇有信心。<br><strong>宣传片</strong><br><strong>时间</strong>  </p>
+<p>**2024年4月14日（本周六）**14:45-15:00入场  15:00-16:49  放映  17:00-17:30  映后<br>嘉宾：执行导演久美成列，主演金巴、才丁扎西<br><strong>地址</strong><br>苏宁影城(春熙路店)<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyK4hDzsW8icZF5TwiaVgu7NLq9ezR7AByr1eIMDZWLu7UA97BN1RRQMoLpZcyLRNLpDt5MRTR1NBkgQ/640?wx_fmt=jpeg" alt=""></p>
+<p>无  声<br><strong>票价</strong><br><strong>￥45</strong>（含一张官方海报+明信片）  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJYX40vgEb0Mbu7eFd521IEVunADFVicKjQSXjyKcvhqlWaIlHosMMGkdMgaVYrd0WsMFv6zsgxnuA/640?wx_fmt=png&amp;from=appmsg" alt=""><br>]()</p>
+<p><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>映后过期的只有船票对吗 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-10-19</div>
+      <h1 class="article-title">映后过期的只有船票对吗</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="http://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBoDHaqI95qIPpylgMJKdXIM6FP1kJiaic93YqQIF8VBgBd7pGeozWOJ22g/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>映后 | 过期的只有船票，对吗</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBov26tsypqQ7icRZGmYWzTFJumoSBQibK7QRCHbQenMEENeUgiaAP2Iia3og/640?wx_fmt=jpeg" alt=""><br>​  </p>
+<p><strong>@电影搬运工</strong> </p>
+<p>终于等到了这场王家卫的线下影迷观影会——<strong>过期的船票，一起倾听王家卫的电影秘密。</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBozbNkYPzvia3iaYR17xGaexNjM7TU1cWicwtt4nFGlVVPYpKJL1UtLib4Nw/640?wx_fmt=jpeg" alt=""><br>​</p>
+<p>**“过期”**呼应的是《重庆  森林  》中金城武这段  台词。</p>
+<p>我们用过期的票看了一场暂时都没有公映的电影，本身就很难得，电影不会过期，也希望一切美好的事物都不会过期，如果非得加上一个期限的话，我希望是一万年。</p>
+<p>**“船票”**则代表了《花样年华》中的遗憾。</p>
+<p>不管是周慕云的“如果有多一张船票，你会不会跟我一起走？”，亦或是苏丽珍的“如果有多一张船票，你会不会带我一起走？”，都是两人无法逾越时代的枷锁的遗憾。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnMYmVsaHKnyzTP0XxThY72TOEUjI33uuGBVeGmKJfGMd2iaRV2OWW9Ew/640?wx_fmt=png" alt=""></p>
+<p><strong>“秘密”</strong><br>是取自梁朝伟在《花样年华》中在吴哥窟留下的秘密，我们不用知道他说了些什么，只需要知道它是周慕云的秘密，是王家卫的秘密，也是喜欢电影的你我的秘密。</p>
+<p>从活动准备到映后分享，每一位影迷的参与，都是构成本次放映活动的一部分。</p>
+<p><strong>感谢我们一起完成了这次放映，感谢电影让我们相遇，总有一部电影会让我们相遇。</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnZuz2j4xBFQSRD8y31hAqYeLmretv4eW7dc1QRxUd5u86Q9hzBE529Q/640?wx_fmt=png" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVn9hsg0MgvrUnfNbAzU9SZxOKkHCTkCjnAibwNeeJHZjWE93F6zB88VNw/640?wx_fmt=png" alt=""><br><strong>@yeyecheng：</strong> </p>
+<p>我觉得用**“偷情”<strong>来描述苏和周的感情是极其不恰当，甚至可以说是对美好爱情的</strong>“玷污”**。</p>
+<p>因为他们的开始接触就是纯粹的。</p>
+<p>我们应该反思的是：</p>
+<p>“ 为什么明明清清白白的苏要畏惧流言；</p>
+<p>为什么明明什么都不知情且自己就是出轨渣男的老板要对苏翻白眼和瘪嘴；</p>
+<p>包括周说：我知道你不会离开你老公。”</p>
+<p>这都是在任何一个时代对于女性的偏见和物化的表现，墨镜也是想让我们看到，这种恶臭的行为和表现，从而有点改变吧。</p>
+<p><strong>希望我们这个社会不要再是以“女人”“男人”来待己对人，而是以“人”一个独立美丽坚强的人。</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnBUFuZyEM6Kic8aZ75ZNQJqaWiaWe5Oq0a8ic7J3uy1ibOHNGmdnCaedEfg/640?wx_fmt=png" alt=""></p>
+<p><strong>@平原督邮：</strong> </p>
+<p>我不太确定自己是否有资格谈论“中年”这个话题，但我今天第二次看完《花样年华》后，却开始思考<strong>这个离我还有二三十年的事</strong>。  </p>
+<p>从苏丽珍几次转过头也在不断克制的哭泣，</p>
+<p>到周慕云不愿告诉友人的直到去到吴哥窟才悄悄说出的秘密;</p>
+<p>从滞留在了幻想中的缠绵，</p>
+<p>到拨号后的沉默……</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnCqAmC6Cb3UQuSibqdnmfn0zYgRA3iatbgciahxrCDkohI1tOLpvN6ovhA/640?wx_fmt=png" alt=""></p>
+<p>克制的情绪、克制的情感。</p>
+<p>这种  克制  贯穿了整部影片，迂回的楼梯、时刻存在的门框窗框、不肯有丝毫张扬的服饰、街坊邻居们的闲言碎语……</p>
+<p>这种克制不仅是对于爱情的，更是社会、时代加之于人的。  </p>
+<p>顺着这个思路想下去，我发现自己很难想象一个身份平凡的中年人淋着雨奔跑、呐喊，为心爱的人大声歌唱，为大大小小的事哭得歇斯底里。</p>
+<p>那些张扬的情绪、那些刻骨铭心的爱与恨、那些溢于言表的欣喜或悲伤，似乎都被社会的偏见和人的阅历留在了还称得上是“一张白纸”的青春。</p>
+<p>想到中年，我会联想到家庭、责任、沉稳等等有重量的词汇，我不清楚这些词汇究竟是如何将我心中的“中年”形容得如此之贴切。</p>
+<p>当然也可能是我并不深刻的思想只能理解并记忆的印象了。</p>
+<p>我的想法不能代表所有人，更不能代表角色，但当我看清了自己对中年人的形象的成见后，我似乎更理解了苏丽珍最终没有和周慕云一起走的纠结与痛苦，理解了她将自己的花样年华留在了香港的挣扎与无奈一内心的爱意已经被唤醒，</p>
+<p><strong>但自己的阅历与社会加之于女性的道德感却将这连自己都不肯承</strong>认的爱给扑灭了；但有因为是爱，所以哪怕是火苗的灰烬也值得细嗅和珍藏、铭记。</p>
+<p>不知道究竟是怎样的主被动关系，让克制显得如此自然，自然到好像遗憾才是理所当然的。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnIvFu4jpOjEzP2k1MeiaIcN1K8BAiafgViaSmdRUSJNBV3M6afJ8zN6p4A/640?wx_fmt=png" alt=""></p>
+<p>在我们常说的“生老病死”里，中年的概念似乎被抹除了，但不知为何我今天却觉得它存在于一切变化中。</p>
+<p>对于生命，中年是年轻与老的过渡，那对干被人类赋予了生命的事物，中年是否意味着另一种被动的克制呢？</p>
+<p>今天来电影院前，我去了一趟锦里。</p>
+<p>疫情中的旅游业似乎就是一种中年”景区的设施建筑依旧却没有了旅游业“年轻”时蓬勃发展时的热闹与喧嚣，地方特色与文化遗产都显得有些过于冷淡与牵强了，但有似乎不至于“老年”，毕竟还没有到江河日下结局可见的程度。</p>
+<p>小时候我喜欢买吹出的糖人，那时我矮，只能垫着脚尖费力的看卖糖人的师傅吹糖人的样子，拿到的则是一只活灵活现晶莹剔透的小动物。但走在熙攘的人群中。糖人一不小心就碎了一地。</p>
+<p>近十年没回成都了，所以今天是我第一次如此清晰我目睹了师傅吹糖人的全过程，但不知是不是因为发现今日的锦里远不如曾经热闹后强烈的心理暗示，我总在觉得遗憾，遗憾于此时的糖似乎没了曾经的晶莹，更少了一份灵性，而今天的人流也不足矣将吹出的糖人撞碎。</p>
+<p>离开后，我第一次吃掉了我的糖人，连同童年的理想主义一起嚼碎。原来人和事都一样，没有什么会永远年轻，哪怕是没有生命的巷子，哪怕是曾经无比繁华的巷子。</p>
+<p>我明白我的遗憾也许没资格去类比电影中的情感，但他们似乎在告诉我，无论是燃起过的爱情还是繁华过的街区，不是两厢情愿就可以让一切圆满。</p>
+<p>王家卫老师的电影总会给我一种疏离感，一种目睹了高潮却也看清了退潮的疏离感，一种曾触摸到海水因此不愿等到海水转凉的疏离感。</p>
+<p><strong>因为克制与遗憾美得有价值，所以只有一张船票，对吗?</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnqJybdt0Cr2GbVc1APRs6QXUjSo4syBDPOkDsYJmHic9FkbKfovlicEbw/640?wx_fmt=png" alt=""></p>
+<p><strong>@24帧观影团的影迷朋友</strong> </p>
+<p>想和大家分享一下我的一些想法吧。</p>
+<p>首先是关于之后大家一直再讨论的关于出轨偷情的问题吧。</p>
+<p>王家卫之前提到过他是希望张梁两人来分别扮演不露面的周太太和陈先生的，但是因为实操的调度问题没有实现。我觉得对于男女主角来说，和对方的原配是此方与彼方的关系。</p>
+<p>电影里喜欢拍两人不露脸的交谈戏，以及相互扮演对方的爱人(还有希望知道对方的爱人喜欢吃什么)都是在<strong>消解掉身份关系来制造错觉和暧昧。</strong></p>
+<p>就像断背山不止是同性之爱，我觉得王家卫是想讲更普世大众的东西，时代动荡中无数的痴男怨女因为这样或那样的历史落下来的尘埃而无法终成眷属的故事。</p>
+<p>他们更像是一对普通的爱侣因为各种阻碍不被接纳，这样的阻碍可以是封建的思想对女性的偏见要求、既定规则下的伦理道德，也可以是其他或许宏大或许庸俗的东西。</p>
+<p>男人和女人，人和人之间的无法被定义关系和被复杂社会左右的命运或许一直是王家卫在探讨的吧。<strong>太有道德的人一般都没什么幽默感。</strong></p>
+<p>然后是我看完电影一直在想的事情，对比下午的重庆森林，为什么这部更能带动观众的情绪，让人更容易沉浸于其中  (两个人吃饭相互试探那里开始我就开始激动了)  。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVne5Al4DSRSAasZiaWfdHpoQKNzUXcS6ZBEHhuaKC86WicxGZz0cib3cuDQ/640?wx_fmt=png" alt=""></p>
+<p>除去王家卫惯有的个人风格，我觉的这部的镜头语言是有别于他其他的电影的。有别于其他的大部分第三人称视角的讲述，这部有太多的背影和窥视镜头。</p>
+<p>不恰当地来说，在希区柯克的后窗里，作为观众的我们偷窥男主偷窥对面，是更有带入感的。</p>
+<p>我们从背后看着苏和周走进又淡出，像是跟在故事后的幽灵沉浸地跟随着，以及最后那个特别明确的小僧人，窥私一切的第四面墙之外的我们。</p>
+<p><strong>天赋型导演掌控观众的炫技啊。</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBoiaOW8tC6yiaOHaW2VuxVVBia4TPwuWoTUCxMTeKFiaWeB8BtqPfJ54mleA/640?wx_fmt=jpeg" alt=""><br>​</p>
+<p>最后我想给大家卖个安利。我个人觉得和这部很像的电影，同样是带着戈达尔影子的炫技爱情故事:卡拉克斯的《坏血》。  </p>
+<p>欢迎大家探讨吧。谢谢。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVn4qLjdxoC6DY6aE22Mys7eSzl884QicLPHjCkAiaKnJzzlGSmSCiaSrvMg/640?wx_fmt=png" alt=""></p>
+<p><strong>@24帧观影团的影迷朋友</strong> </p>
+<p>出影院之后，眼前的一切，骑自行车的人，走路的人，一个雕塑牌，变成抽帧的一幕幕，甚至同样提着海报的影友，彼此也变成对方的人生里短暂的一瞬。</p>
+<p>“我跟她最近的时候，只有0.01公分”。</p>
+<p>有个男孩子分享说，这些台词表达着，尽管人与人之间物理距离如此之近，心理距离却是很远很远，大家锁着自己那扇门。  </p>
+<p>有个女孩儿分享说，这部电影中“便利店”空姐”“警察”等意向，都给人一种不稳定的感觉，王家卫的电影用这些意向，用抽帧的一瞬瞬，象征着人与人的相遇别离，<br><strong>就像此刻的我们坐在这里</strong>。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/uJbiabugHwxahVgTTpWy4ltWnSHIAKeVnfR1AYlhHhQpgmRUjEmnUOdXzgVqMYhXfMhGxZ2sGA1LB6ATibib4ibdow/640?wx_fmt=png" alt=""></p>
+<p>之前老不懂阿菲最后为什么让梁朝伟等了一年，为什么梁朝伟不看信，刚好有朋友分享了自己的看法：</p>
+<p>有一个男孩说觉得阿菲很矫情，现实中如果一个女孩要她等一年他会很痛苦，应该不会等的；</p>
+<p>另一个男孩说在阿菲去加州后，梁朝伟与前女友相遇后，还是看得出来梁朝伟其实心里还是放不下的，所以阿菲的离开是要给彼此一个认清自己的机会，而梁朝伟一直没看前女友留下来的信是一种逃避，后来又捡起阿菲的信是对自己内心的承认。</p>
+<p>一开始阿菲去到梁的家，最后梁来到了阿菲打工的便利店，一开始梁让阿菲把收音机里的声音关小点，最后阿菲要梁把声音关小点，<strong>人与人在交往时慢慢成为彼此</strong>。</p>
+<p>这次线下观影真的收获好多，以前自己看的时候，错过了好多细节，<strong>自己看的时候并不会笑的台词，因为周围人闷闷地发笑也变更加有趣。</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBopFVsfj6Zibpd0cjZFB6NtNAFaZHJJg9Kpxr6TXIreuO5OibUvDmvd2HQ/640?wx_fmt=jpeg" alt=""><br>​**@小鱼小鱼**<br>_ ​24帧的朋友们，大家好呀，悄悄在这里和大家打个招呼。<br>我是24帧观影团的野生票根设计师  （大家目前拿到的《闪灵》和《方舟》，已经最新会拿到的《苏州河》的票根都是我设计的喔）  以及不定期flash的小编辑。<br>特别想发这期的原因是，王家卫专场结束以后在群里看到大家发的小纸条或者大段的观后感。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBohhlibwx883lkjCNS9WvSI22jrOY17Zr2aY7h4tkenib4D0fEDgicbEXRQ/640?wx_fmt=jpeg" alt=""><br>​<br>当下就觉得，大家说的太棒了，这么好的东西，这些属于我们的共同记忆应该被聚起来，如果就这样丢在群聊或者备忘录里，就太可惜了。<br>就像我设计的票根会有一些手写的部分，虽然有时候技术不太到位  （但我已经在努力啦哈哈哈哈哈！），  但我觉得这是属于我们24帧的东西。<br>就像看了《花样年华》以后想到锦里会有些不一样，就像“太有道德的人一般都没什么幽默感<br>”，“因为克制与遗憾美得有价值，所以只有一张船票，对吗?”以及“台词因为周围人闷闷地发笑也变更加有趣”<br>这样的话，是我们一起在成都的秋天的某个晚上，用过期的票根看了《花样年华》和《重庆森林》的产物，是不会再有的此刻了。<br>下次见，影院见，常相见。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIPbXqU4nLQTYicCuUDeVNBoFsJLcaTMoqr60hDtZY5wXia5kXGVsBSYmqmkyeSg4YNXlSQj7abeV4g/640?wx_fmt=jpeg" alt=""><br>​</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

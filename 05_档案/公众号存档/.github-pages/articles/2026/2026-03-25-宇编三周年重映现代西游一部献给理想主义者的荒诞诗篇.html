@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇编三周年重映现代西游一部献给理想主义者的荒诞诗篇 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-03-25</div>
+      <h1 class="article-title">宇编三周年重映现代西游一部献给理想主义者的荒诞诗篇</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQENLuLzjiaYns8GLB7ClkIq2nKSGrq2f5hhYLPAGtS7JCFjHPNbtUDNgIicevmUtX7vhibvpv06jXXH0YgYT8SIGXrVgL61uXsYiao/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「宇编三周年重映」现代西游：一部献给理想主义者的荒诞诗篇</h1>
+<p><strong>前言</strong>  </p>
+<p>“这个不是普通的雪花点，这是宇宙诞生时的余晖。”</p>
+<p>《宇宙探索编辑部》，这部让无数影迷“笑着笑着就哭了”的国产电影，即将在上映三周年之际重映。它不酷、不炫、不燃，甚至有些土，但它用一本正经的荒诞，讲述了一个理想主义者最极致浪漫的故事。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQFRK1tNJ6icGnJJ73V6XEWyoia3SKdGmFxLk6WZ64JkznM0ZhhyTyGIwIDk8ic6HeR0mln12EU96PP8icg42bcXYdnzLG4JnibjCZ4M/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong>  </p>
+<p>荒诞诗学：伪纪录片下的真实震颤</p>
+<p>如果你熟悉伪纪录片的影像语法，就会知道这部电影如何用“真实”来建构“虚幻”。</p>
+<p>《宇宙探索编辑部》采用了一种独特的视听语言：手持摄影的晃动质感、跳切带来的粗粝感、采访式的直面镜头，将唐志军的追寻过程具象化为一场神经末梢的共振。而孙一通那些似是而非的诗句，与西南深山的雾气交织在一起，构建出一个介乎现实与幻觉之间的精神图景。</p>
+<p>一群人的西游：谁不是取经人？</p>
+<p>电影表面上是关于寻找外星人的科幻公路片，实则是对理想主义者的深情凝视，也是对“意义”本身的温柔解构。</p>
+<p>在电影里，唐志军无疑是这部“现代西游”的“唐僧”——那个穿着褪色宇航服、四处化缘寻找外星人的民科主编。但如果你只看到他，你就错过了整片星空。</p>
+<p>秦彩蓉是这个团队的“八戒”。她嘴上骂骂咧咧说唐志军“神经病”，却一次次跟着他上山下乡、自掏腰包。她的理想藏在务实的面具之下：她想保护这个破编辑部，让这群疯子不至于饿死。</p>
+<p>那日苏是沉默的“沙僧”。这个气象站的气象员迷恋着那些“不科学”的东西，把酒当作通往另一个世界的入口。他追随唐志军不是因为相信外星人，而是只有在这样的旅程里，他才觉得自己是个“活人”。</p>
+<p>晓晓是最年轻的“白龙马”。她跟着编辑部踏上旅程，只为了寻找答案：关于父亲为何消失、宇宙为何存在。对她来说，外星人或许就是那个能让一切变得合理的解释。</p>
+<p>而孙一通则是“孙悟空”，他用诗歌代替日常对话，头顶着锅盖等待外星人的召唤。他既是唐志军追寻的对象，也是这群人集体理想投射出来的镜像。</p>
+<p>五个人，五种理想，一种底色。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQFlMmJV0Uib7sscMKXh2YCc6WuLxAyzascnwQCicNnURPbZ4WW8FcZO71fMyWh2mO0KtSWdflBviar0Vck8VicQlDncVXDkAQHCWw0/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<h3></h3>
+<p><strong>最后</strong></p>
+<p>电影的高明之处在于它拒绝给出答案，当唐志军最终面对那头消失的驴子，当孙一通的诗只剩下一句模糊的“把麦穗摔打成灰”，我们才恍然大悟：追问本身就是意义。</p>
+<p>走进影院，和那个还在发问的自己见一面。</p>
+<p><strong>预告片</strong><br><strong>时间</strong><br>**2026年3月29日（周日）**14:30-15:00 签到  15:00-16:58 放映<br><strong>地址</strong><br>**保利万和国际影城(招商花园城店)**7/8/18号地铁：  理工大学站<br><strong>票价及周边</strong><br><strong>￥35</strong><br>**1、官方海报（数量有限，先到先得）**2、24帧纪念票根（人手一份）<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQFQgBgeJYyIUNomLTg97OIzR79FGmnDUd17Z5SkYKZiczRuFLRoOic35QibXMWGmux1LttFbe2IYTrWhadqkRg3Tpibj0jxCHmN2tM/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>报名方式</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQFF6DN65LO2UhET2UaebvGUoTewhBWr2jNwTn7gWUV0kJBnsR6Y3OAhfxxVGhkjoDjxe5icgk90ib4SVDInaTibSrF0icHzWnhIQVQ/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>添加小助手微信了解更多信息</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHXAicdmn1TbwV2oeUfwYcHEiasgxBwtLP0CQlnCeJTGueibpupeLJT5yFAjz0MgUNOazt0ibjJTamKqA8gbnYWV0s3r7dXk4YiaZuQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

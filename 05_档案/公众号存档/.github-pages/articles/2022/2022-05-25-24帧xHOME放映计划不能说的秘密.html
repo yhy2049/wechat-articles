@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧xHOME放映计划不能说的秘密 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-05-25</div>
+      <h1 class="article-title">24帧xHOME放映计划不能说的秘密</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qlogo.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqXic9RZ1ibkNToml2eK0Gp1dWMUzSy1kWXzcRFcdMicichcPI3rH53TMBxrQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>24帧 x HOME+放映计划·《不能说的秘密》</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqX92VNtTFGE3aflwibEuNjqumib0mwqchCKm0WdCB8HibPlYSqVtvSq8G7A/640?wx_fmt=jpeg" alt=""></p>
+<p>“你好像很喜欢从背后吓人喔。”  </p>
+<p>“因为我喜欢你的背影啊。”</p>
+<p>——《不能说的秘密》  </p>
+<p><strong>片·缘</strong></p>
+<p><strong>故事梗概</strong></p>
+<p>叶湘伦是淡江艺术高中的一名插班生，某天他来到了学校的旧琴房，本身弹得一首好曲的他被某处传来的一首钢琴曲吸引住了。他来到其中一间旧琴房，遇到了路小雨，爱情的火花由此萌生。<br>一直以来，叶湘伦都觉得小雨充满了神秘，却无法进一步了解她。一次误会让二人产生隔阂，小雨消失不见，叶湘伦到处寻找小雨，发现了那个小雨所说“不能说的秘密”的全部真相。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqXEfYsEFH0MicxsqXZQMDveDooH0ZhhHMuJPozxibzs2YaJgd5mIuwCr0Q/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqX3hsrTwe2HnTwKGnW06yqliaq0Gc1ic4ofX1m8icNNoGKYrerGiajnc9bpA/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqXcKsULwvDvicKIs7jJqKHjoyOX7G0dpgvS82iaTxb8oqnGGM7KwRaKIGg/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJpxFdagU3sria4tvk4tJsqXRb1Y4Pd6icS37QicicG5ro7icAC7SWNIdCDkWHHmnSfkaXZ0ayJc6JlmgA/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>放映员说</strong></p>
+<p>我在未来与过去徘徊，只为再次与你相遇。  如果你喜欢  《想见你》，那你大概也会喜欢《不能说的秘密》。<br>如果你喜欢周杰伦，那你一定不能错过他首次导演的《不能说的秘密》。<br>音乐、单车、夕阳、青春与爱情，一切好像都很俗，却又都俗得刚刚好。<br>指  尖滑过钢琴块，一曲曲美妙的旋律  ，是献给时光与青春的赞歌。</p>
+<p>——最酷的宇航员</p>
+<p><strong>影·映</strong></p>
+<p>**地址：**Home+空间  （瞪羚谷数字文创产业基地，武侯区盛通街88号2栋112）<br>**时间：**2022年5月28日（本周六）  18:30——映前短片  19:00——正式放映  映后至21:30——观影交流<br>**主持：**最酷的宇航员<br><strong>票价：30元</strong>（用于场地支持）<strong>转发朋友圈可享受半价！</strong>（先原价购买，到场后出示朋友圈即可返现。）<br><strong>报名链接：</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIayEVykwJibsORGQfdoDStHR1hicQVA9pK7ruYY0icMvuIsLibnwMKwrVz5J0DRK5YiaYqfMF2E4lh1Yw/640?wx_fmt=jpeg" alt=""><br>**社群：**欢迎扫码加入“<strong>24帧观影团</strong>”！！！  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIayEVykwJibsORGQfdoDStH3fXHZZ3jVXtjKpicGfPSI75bShHKdkFia8iaTDSQ3K4haWYlPIuNe84gA/640?wx_fmt=jpeg" alt=""></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

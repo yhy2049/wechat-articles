@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧超前点映一次颠覆感官的美学实验死钻倒影邀你沉浸钻石切割般的视觉万花筒 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-11-21</div>
+      <h1 class="article-title">24帧超前点映一次颠覆感官的美学实验死钻倒影邀你沉浸钻石切割般的视觉万花筒</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTA6SbYFBZ1PoDbWx4qMyIHYicoJbmHGax23j3S6ZBSGQo6HlybpbQ6bVw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧超前点映」一次颠覆感官的美学实验《死钻倒影》邀你沉浸钻石切割般的视觉万花筒</h1>
+<p><strong>写在前面</strong>  </p>
+<p>在柏林电影节上，《死钻倒影》堪称一部引发最多讨论的“争议之作”。其最显著的特征，便是陷入了冰火两重天的评价漩涡：在权威的英国《国际银幕》场刊中，它以<br>1.7  分垫底；而在华语媒体场刊里，却以  2.8<br>分高居第一。同时，《综艺》杂志、《好莱坞报道》等媒体不吝赞美，“这才是纯粹的电影”“每一帧都在冲击感官”，而英国《国际银幕》认为其“是奢华而支离破碎的故事版”。这种巨大的评分、评价的鸿沟，使得影片的解读方式也变得空前多元。</p>
+<p>无疑，这是一部风格极致、评价两极的作品，它拒绝平庸，也挑战着观众的固有期待，唯有在电影院的沉浸氛围里，才能领略其完整魅力。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTABI5KpmRGAxfR00WPCib07xcKLice3KFNRTryq9wHzqdphDkiaJft0fRUQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong></p>
+<p>本片最突出的优点在于其极致的视觉特效冲击力和镜头色彩美学——<br>“彭罗斯结构的万花筒”视觉美学，“密不透风”的剪辑与声音设计，浓烈色彩与通感体验相结合。从此次定档发布的定档预告和定档海报中可感受到电影鲜明而锐利的视觉冲击力<br>。</p>
+<p>影片融合了欧普艺术与漫画分镜，营造出如钻石般闪耀、油画般精致的画面。无论是  60<br>年代的复古谍战氛围，还是现实与幻觉交织的迷离场景，都为大银幕观众带来一场强烈而独特的革命性视听盛宴，非常适合在影院沉浸感受。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTAcnU5VhdQuIZ0hZQ7KNYkhQNRF24b00tWMDmB27gXFQrjFANicB7GlQQ/640?wx_fmt=png&amp;from=appmsg" alt=""><br>其颠覆性的魅力令这部电影成为不容错过的年度争议性焦点之作，  同时，  也引发了罕见的口碑两极的现象。“火焰宣言派”电影注重以视听<br>叙事，以形式建构电影，不同于常规类型化电影语言，令一些观众产生理解上的困惑。<br>但也正是由导演这种打破了传统的线性叙事，采用快速跳跃和碎片化的剪辑，将过去与现在、真实与想象交织在一起的电影手法，令喜欢的观众如同在经历一场感官漫游。而习惯清晰直白的故事线的观众，可能会觉得剪辑有些混乱，情节难以跟上。<br><strong>预告片</strong><br><strong>时间</strong><br>**2025年11月22日（周六）**18:45<del>19:00签到  19:00</del>20:26放映  20:26~21:00映后<br><strong>地址</strong><br><strong>6/8号地铁东光站</strong><br><strong>票价</strong><br><strong>￥40</strong><br>随票官方周边<br>1）《死钻倒影》A3海报（人手一份）<br>2）《死钻倒影》票根（人手一份）（*图示为票根正反面）  </p>
+<p>抽奖特典<br>1）《死钻倒影》报纸<br>2）《死钻倒影》冰箱贴<br>（分为菱形款和钻石款款式随机发放）<br>3） 《死钻倒影》徽章<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTA38v2p5MTW9uqXj0QPlJQm3yy5U095AShs4r4GpycCc7TViajesXAUPA/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>报名方式</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTAnxPriaJClKcXdVUNHOKBG2bl3aEmEr4Cvribwg2TLjzMEw7RBZxibtGLg/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>社群</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJcUHCsoDEExnicnQjVE8tTAPp3SUKqgIgqBDziayoZicevrQVjZNJ9QzoqVRzGmbYQy5ibkdzIWpTqhQ/640?wx_fmt=jpeg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<ul>
+<li>现场签到领取周边，进入按照座位落座    </li>
+<li>观影过程勿屏摄、勿吃东西    </li>
+<li>片尾也是影片的一部分，请完全结束后再离场    </li>
+<li>映后非强制参与，有事可先离场    </li>
+<li>检票将在电影开场时结束，迟到的观众请向影院前台出示购票页面入场，周边将在活动全部结束后发放</li>
+</ul>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

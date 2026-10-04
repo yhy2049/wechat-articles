@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>回顾24帧三周年特别放映情书化雪的时刻 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-05-21</div>
+      <h1 class="article-title">回顾24帧三周年特别放映情书化雪的时刻</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5loqelrcBQTACUVvg1oulFicMUcnOsBSERvzC4LkgdiaYXHGriapcazQcbw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>回顾 | 24帧三周年特别放映《情书：化雪的时刻》</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lSqHVebGWHUyXSURm6WanxA0DUZWHTQgDK6rXx9bMCtmrJJJdhm1BcA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5ljA7FCvjmfqWtdSv7K1hoeAice8q0BZObbqMUMiaCLNm7AsQiblibYenic4w/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lpkniaJZ1Sfjzv9wffsJMIaAkicjzmp6u0tay1icpxibP2JaXkfslkokWsQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lyibQ5ibT1lzHmLAucFtz4a3T5iciaeibsfsRticH5Kv33vsk6AyPWfGmFPdQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5l6ibuibfLibNicLsJYNDXXUfKLjFYXe9x7MqSFSjNfw3aTkDPKG0rUFBJrQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>5月17日，我们在夏天的电影院下了一场小小的雪。在活动快结束的时候，雪花在地上落了厚厚一层，靠近仔细听，能听到窸窸窣窣气泡挥发的声音，好像有什么也跟着随之飘走了。就像《情书》里，角色们总是唱着“我的爱，随南风而去了。”</p>
+<p>随着活动结束，也就到了化雪的时刻。</p>
+<p><strong>活动回顾</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5l0vjp6RMX2fG4tsS4d1GwUzjicFtb9yaYoRKZ7sibadk5yNF9purY5Libw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lNEr2JTNMJEKOQmf9p2OYrolZkIjenuiat6yJZDkC0yKlfs0JlQkaReQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lzeicG5mGNUjl2wiaoMvwkLlNqggxtRsXHNPDyCsCTQYnKuKI7IPrzErQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lX1IhZsicM0TZllbbcXc3baA0ic7CgaC9qLmfnLhiasGSrQcKG7pw91ktw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>距离《情书》1995年上映已经过去三十年了，三十年不仅是在电影之外快速流逝的时间，也具有巨大的密度，裹挟了大量的人事变化。正如在影片之外的现实，30年的时间足够一个人从青年到中年，经历中山美穗老师的离世，再次感到时间流转的重量，窥到死亡的一隅；而在影片之内，如在场观众所说“这部影片包含了人各个阶段的爱”，也部分探讨了生与死，在某种程度上和现实形成了互文。</p>
+<p>这场放映的映后分享来自不同阶段的，第一次观看或已看过多次《情书》的观众朋友。在看《情书》的第一眼很容易注意到明线上的暗恋，感受到影片镜头里的光影美、物哀美和细腻的音乐表达，想到自己曾经的爱恋；再次观看，发现明线之下有各种各样的课题和情感：面对遗憾，失落又释然，又紧紧攥住念念不忘，这种矛盾情绪就像古文里用“恨”来表示“憾”；博子和树两位主角，以及他们的朋友家人，都是穿越重要之人的生死，得到自我成长和解脱；影片里包含了少年的，中年的，老年的爱，在什么阶段观看《情书》，就能感受到对应的课题……</p>
+<p>这些由不同经历产生的不同分享出现在同一场映后交流里，也正如一个人整理了在不同阶段看到《情书》得到不同感受，又再一次与影片形成了互文。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lIqUNnPHicZJqVykPABEm1BUUYibqvo2EIehfDCIV5D7Jic1MUcesgoPkA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lcRiaLpGTvF8j5yvsL8VGdnQnSgu9rSDC0OJ1WJtasMX86C0LRibqCgxw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lDyiatrzXCiaM0q7LH7K4cxuib9lBYKbPfk9mc11NYAI1Ijf33Cr4PuOsQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lbrfbiaH2tP0crKQ5ictVxSAnlLSukmZ4FCZzXdCebGzTNR9ibiaTD713qg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>“拝啓、藤井樹様。あなたは誰ですか？”</p>
+<p>这是打卡墙上的标语，来自博子给树寄的一封信，意为“敬启者，藤井樹先生。请问您是谁？”。</p>
+<p>参与信件交换的观众朋友也不知道手中交换的信来自谁，自己的信件又会被谁拿走。当我们把遗憾写出来，这份遗憾具象化在一张纸上，可能就会变为一段特别的回忆，以一种温柔的方式安放在这里，既是完成了一种“整理”，也完成了一次“道别”。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5ly1ibOo7W5nlYJXM0zuHgZziazln1A78L9z1pWPG8uHR1eJ0Wy4gZrRNA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5liapQh1MXwiaP9tkmZuV0xqzgubIEyBGUlBo7CicwVjkZ8AHJOFFAwK1Fw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lACcwXk5XAHWMTJm1WLLPjehm827mQMU5hgqoeYrz5MvslexAnosibeg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>我们征集了五十四份来自观众朋友推荐的书影音作品，希望你抽取到了喜欢的作品。以下是部分征集内容，我们在这里分享给大家。</p>
+<p>z：</p>
+<p>想推荐电影《怦然心动》，故事的开始是初见时女主被男主海洋一般的眼睛所吸引，一见钟情。后来在相处中，女孩知道了整体大于部分，看清了男主，明白自己想要什么，收获了成长。很喜欢里面的台词“有些人浅薄，有些人金玉其外而败絮其中，有一天，你会遇到一个彩虹般绚丽的人，当你遇到这个人后，会觉得其他人都只是浮云而已。”我觉得最好的暗恋是让你成为更好的自己</p>
+<p>xxxxcut.：</p>
+<p>想推荐《背着善哉跑》里的歌曲《春雪》，这个故事也讲青春、暗恋，虽然这种乌托邦式的故事架构看起来很不现实，但他确实很温暖人心，那种具象化的纯粹的爱，本质上应该和情书里的暗恋是一样的吧。第一次听这个歌的时候刚好赶上毕业季，忙得焦头烂额，但一听这个歌就会平静下来，在跳蚤市场卖自己破烂的时候，平板正好放到这首，抬起头刚好吹过一阵风，卷起地上的杨树毛，像漫天飞雪，但又有很温暖的阳光，我想大概这就是春雪。</p>
+<p>三：</p>
+<p>我会选具岛直子的《台風の夜》。听着这首歌，我就会想到：夕阳下，在海边，两个刚认识的人感受着海风与暧昧混杂的气息。两个人或许今晚才认识，他们的遇见或许是“一期一会”的，他们的爱或许只属于今晚，但是他们在一起的时刻，已经构成了永恒的瞬间；就如同渡边博子和藤井树那往来的书信一样，成为了回想那一段光阴的注脚。</p>
+<p>大飞叔叔：</p>
+<p>紫雨林的《스물다섯,<br>스물하나（二十五,二十一）》，这首歌是出自一部老韩剧，我没有看过这部剧，但是通过这首歌好像也能看到一个关于青春年少的爱情故事。在风吹花落的季节，仿佛依然牵着你的手，那时我还不太明白花朵是如此的美丽。</p>
+<p>Strand：</p>
+<p>The Bird Song (with Em Beihold)</p>
+<p>鸟儿死去的时候，</p>
+<p>它身上疲倦的子弹也在哭泣，</p>
+<p>那子弹和鸟儿一样，</p>
+<p>它唯一的希望也是飞翔。</p>
+<p>我似乎就是一支利箭，我很热情地靠近她，但也给她带来了痛苦</p>
+<p>ardilla：</p>
+<p>《味噌汁とバター》，听这首歌的时候就像吃到了一颗热腾腾的溏心蛋，想着奶乎乎的蛋液完美地裹在米饭上被我一口吃下去，我当即一边振臂高呼，一边就发了条朋友圈：“我要去吃好吃的！”。这首歌让我感到完满、雀跃，我想这种的心情也叫幸福吧。</p>
+<p>ardilla：</p>
+<p>Haruna的《夜に浮かぶ（浮于夜色）》。有一段时间忙到很晚才休息，一个人走在路上就会放这首歌，回家的路上灯光星星点点的，在夜色里我和它们好像一起漂在宇宙里，头上有飞机飞过，就像星河水手划起一道波浪，而我走在路上被浪潮裹着浮浮沉沉往前推。</p>
+<p>剪刀手悟空：</p>
+<p>不看滨口龙介的《夜以继日》不懂文艺片的滋味！大银幕看《夜以继日》将是你终生难忘的生命体验！</p>
+<p>花花：</p>
+<p>推荐书籍《尼尔斯骑鹅旅行记》。这本书是我小时候看的，现在回想起来还记得这本书带来的治愈。我想这本书虽然属于儿童文学，但是成年人看也刚刚好。</p>
+<p>佚名：</p>
+<p>推荐歌曲，旺福的《珍珠芋圆》，特别可爱的歌，听的呵呵直乐。</p>
+<p>“亲爱的珍珠 为你写情书</p>
+<p>阿姨洗爹炉 I Love U</p>
+<p>我不会日文 也看无英文</p>
+<p>只有知道乎你笑纹纹</p>
+<p>妳是珍珠 我是芋圆</p>
+<p>咱是珍珠跟芋圆“</p>
+<p>偷瓜猹：</p>
+<p>纯音乐，鷺巣詩郎的《THANATOS》，这首曲子是《新世纪福音战士》的插曲，出现在“三无少女”凌波丽和使徒殊死搏斗的时候。前半段酸涩又壮烈，两分钟左右响起空灵清脆的铃响，像是一颗水晶心翩然破碎，丽在告别世界的时候也怀揣着刚刚萌芽的情谊诗意地离去了，<br>这个看起来没有自主意识和情感的机器其实是有血有肉的少女。</p>
+<p>佚名：</p>
+<p>歌曲《月とあたしと冷蔵庫（月亮和我和冰箱）》。深夜，月亮，虫鸣。凝视着勺中一点点在融化的冰淇凌，忽然心中一颤，从何时起自己装出了另一个自己呢？没勇气关上冰箱门，不安的思绪，刺痛这毫无起色的岁月。透过窗看到黄澄澄的圆月，总有一天我也要超越优柔寡断的自己。把冰淇淋轻轻地放到唇边，慢慢地关上了冰箱门。</p>
+<p>Sia：</p>
+<p>歌曲《shan-lila shan-<br>lula》。我至今也不知道歌词是什么意思，只是空耳很像有人在耳边念叨“想你啦想你啦”，我总觉得听这首歌的时候有成群的小鱼围着我转圈圈，咕噜咕噜的很可爱。</p>
+<p>佚名：</p>
+<p>歌曲《Savage Daughter》。</p>
+<p>I am my mother&#39;s savage daughter</p>
+<p>我是我母亲的野蛮的女儿</p>
+<p>The one who runs barefoot Cursing sharp stones</p>
+<p>赤着脚奔跑 咒骂割脚的尖石</p>
+<p>I will not cut my hair</p>
+<p>我绝不会剪短我的头发</p>
+<p>I will not lower my voice</p>
+<p>我绝不会停止高歌</p>
+<p>佚名：</p>
+<p>杨英格版的《夏夜晚风》。法语念白，湿漉漉的脚印，松软的沙砾，一下一下踏出不轻不重的脚步声，像心跳深一拍浅一拍。这一版的改编空灵，悠远，像海面上飘来一个晶莹剔透的漂流瓶，贮藏了一团夏夜晚风。</p>
+<p>佚名：</p>
+<p>&amp;team的《Firework》。我并不关注kpop，这首歌是偶然刷到的，&amp;team这个组合好像有一套自己的世界观，和这首歌对应的编舞也特别好看。想到猎人的一枪子弹是狼人的烟花，听着这首kpop竟然有点酸涩。</p>
+<p>佚名：</p>
+<p>《Age of Aggression》。来自游戏上古卷轴的插曲，好像坐进了某个小酒馆，听到带着斗篷的吟游诗人的哼唱。</p>
+<p>就吃工业辣：</p>
+<p>《Rainy Day》。特别特别喜欢下雨天，下雨天会发生什么，都在这首歌里</p>
+<p>It&#39;s a rainy day！</p>
+<p>雨从云的怀里掉下来</p>
+<p><strong>今天就应该放假！</strong></p>
+<p>我猜太阳公公也这么想</p>
+<p>我们来懒洋洋地过完这24小时</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lZ2iaGdQM4WbqtAPZTDbicIa5P7sksDSen2J9Lj0dtibrPSVC3hpJegG5A/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lBxjVvxLMX2yE0KL3KuDNBdZJ4q2iaJibCb2YaNUOD77gjyibGTINvANCg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5l4BzE6BD0qOq2xsFguyhepaQwh0vJfkQgygYGpt4AuePceOhdsQCDsQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>《追忆似水流年》第七卷是影片反复出现的书籍，而第七卷的标题正是《重现的时光》。</p>
+<p>藤井树（男）的暗恋就藏在这本书的借书卡上从图书馆，再到树的手中，树再次收到这本书失神的片刻，作为观众的我们脑袋里也会情不自禁的闪现旧日时光。</p>
+<p>我们在现场用造雪机制造了雪景，希望打破荧幕的屏障，让小樽的雪延续到影院外，用相机记录下雪中的场景，愿大家很久后也能通过这样的相片重现当下的心情。</p>
+<p>感谢你来到现场，和我们淋了一场雪。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>文案：叉叉</p>
+<p>策划：叉叉、熊猫船长</p>
+<p>排版：叉叉、熊猫船长</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJLKRzibNk8MmMxhSIyOeia5lRpxvsPRAVozsyP2HBxFIFa51cnC2EJicvkjQmJdgerozTonPK00Pe6g/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放映本周日巴黎夜旅人暗房里 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-02-03</div>
+      <h1 class="article-title">放映本周日巴黎夜旅人暗房里</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIUSxnoTickfKvt5AJppvWyfibpWwR6hfP9uFa1Wjk4Ne1uQgehmuZ1M8iclibXbAR2gMxezc4jxM3ictQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「放映」本周日 ·《巴黎夜旅人》· 暗房里</h1>
+<p><strong>写在前面</strong><br>“会有别人眼中的我们  那些碎片我们曾以为瞥见的  我们的碎片  会由我们的梦来滋养  我们从来都不是相同的  每一次，我们都只是外来者<br>是夜旅人，是他们的想象  就像被留在房间里的旧镜子上的  那些脆弱的阴影”<br>本片中的巴黎是静谧祥和、是我见犹怜、是包容典雅，是天真前卫、是超然而不出世、是迷离而不疏远，是摩登而又复古，是电影中的电影。<br>本片的音乐是奶油焦糖、是气泡薄荷、是丰腴鹅肝、是深海扇贝、是一个人清醒的夜晚威士忌、是为它狠心拽起睡梦中家人，伴着清晨第一缕阳光出炉的法棍。盛宴尾声，敬有你们的快乐。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIUSxnoTickfKvt5AJppvWyfC314koc3sonvtxbauaHAfXeMlaJRbMKSd41KHhrcT8IHyHwYnPYUEg/640?wx_fmt=jpeg" alt=""><br><strong>放映员说</strong><br>1981的巴黎，五月的夜风在地铁的轰鸣声中与霓虹起舞，勾勒出妙龄少女的憧憬与懵懂。她是巴黎，也是巴黎收留的夜旅人。<br>晦暗老旧的街区，象征革命浪漫主义的红玫瑰被别到出租车里，左翼的联盟将法兰西最后一位政治家送入长达十四年的任期。<br>1984，Talulah、Matthias、Judith三人起初想看艾伦帕克《鸟人》，被影院经理告知“影片开场五分钟后不得入场”后趁放映结束观众立场溜进了影院，等待他们的是埃里克·侯麦的《月满巴黎》。而影院外墙的海报里，还有维姆·文德斯的《德州巴黎》。<br>遇见Talulah之后的Matthias又一次遇见了那个倾心于他的女同学，只是那一眼对视后的故事，通过母亲Elisabeth的男同事之口说了出来“你很漂亮，真的，不只是漂亮。只是我刚结束一段感情，我还不想重新开始，是我的问题。”<br>我认为影片只着墨于两位主角——母亲Elisabeth和儿子Matthias，姐姐Judith和少女Talulah更多代表着电影故事之外的部分。<br>1988，“我的小妈妈” “你们曾经很相爱吧” “是的，我爱过他，当然” “但你们没什么共同点，不是吗？” “我们有你们啊。”<br>“好吧，但是这更像是附加伤害吧。”  “我没有一片属于自己的地方，我也不属于任何地方。  ”  是的，这很可悲，除非你立刻把他和自己都当成大傻逼。<br>是的，电影人不应该演烂片，即使只是作为群演路人甲。  是的，Talulah不是卢浮宫前的夺目水晶，她要成为Elisabeth那样内心深处住着母狮子的铁娘子。<br>只是，救赎之路，从来就只容得下一人独自行走。  </p>
+<p>巴黎的夜  环抱孤独的旅人  孤独的旅人们  在夜的巴黎拥吻  </p>
+<p><strong>时间</strong><br>**2023年2月5日（本周日）**18:45<del>19:00入场  19:00</del>21:00放映  21  :0  0~21:30映后<br><strong>地址</strong><br>暗房里  ‍(距离2号线牛市口地铁站C口步行900米)<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyK4hDzsW8icZF5TwiaVgu7NLq9ezR7AByr1eIMDZWLu7UA97BN1RRQMoLpZcyLRNLpDt5MRTR1NBkgQ/640?wx_fmt=jpeg" alt=""></p>
+<p>无声<br><strong>票价</strong><br><strong>￥30（含一张定制票根）</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKnHtPu87V11MUUAM2aRibUJiaaVQC0tDTRUjp3y8JOaMXzGrozFLaJ4kn69ZEXB6auBNyIfsSiayVqg/640?wx_fmt=jpeg" alt=""><br>]()<br><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

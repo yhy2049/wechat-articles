@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影展浪影像24帧冥王星时刻 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-06-07</div>
+      <h1 class="article-title">影展浪影像24帧冥王星时刻</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqLag0vjCbMrLb6xbgNNhbLt8OuXsYAcn2s2DaL1iaEu6Wg6iaeECWkrdg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「影展」浪影像×24帧 · 冥王星时刻</h1>
+<p><strong>写在前面</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyI0mzq28aU1DZxnriasWV96ibXVOoXJQ7Cp7xxPgJLAiaDLLnC9QiaTErTVQKjwtIibEJiblGdE3kMMW6Vw/640?wx_fmt=jpeg" alt=""><br>冥王星时刻，是占星学中的一个重要概念，也是电影史上的一个关键词。电影作为一种社会和文化的历史见证，不仅反映了时代的变迁，也影响了社会的变革。<br>在每一个冥王星时刻，电影都扮演了不同的角色，或者是挑战权威和传统，或者是宣扬理想和信念，或者是探索自我和真相，或者是创造美好和幻想。<br>本次电影展旨在通过不同类型、不同风格、不同主题的电影作品，展现我们如何面对这个变化的时代的挑战，如何用影像语言表达我们对冥王星时刻的理解和感受。这些电影作品或许会让你震撼、惊悚、感动、启发，或许会让你思考、质疑、反抗、超越。<br>无论如何，我们希望你能从这些电影作品中找到自己与冥王星时刻相连的那一点火花，并用它点燃自己内心深处的那一团火焰。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyI0mzq28aU1DZxnriasWV96ibkKq3KyRZB8iadjdqPaRc7j22G1VgsJzJpQOjkQ5Feg9JhpviczzmwLzQ/640?wx_fmt=png" alt=""><br><strong>排期表</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqodppkyHN3TSCdORibDicxAqRiacIpkEcX09MjUz0UfibuJicWmhHju9m4jw/640?wx_fmt=png" alt=""><br><strong>单元一</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqy4PBzzQReahf03A2s3HJjQz6FiabhguJicCDK0el5icbCBcXdicHtRXKmg/640?wx_fmt=jpeg" alt=""><br>《野猫》<br>导演｜谈诗菡 时长｜29min38s ｜剧情<br>以女性视角出发，探讨女性身份意识...<br>所获奖项：入围75届戛纳短片角、Reel Sisters<br>国际女性电影节（奥斯卡认证）、获得第十届中国国际女性影展国内短片竞赛奖，入围上海（国际）短片周短片奖主竞赛、澳门国际电影节、海南新浪潮青年影展等<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqfbxYnrqUDwKhH5V1q10jnzv7mhD0evaZ1DqBzzBlAPViaAK3q2SHRCQ/640?wx_fmt=jpeg" alt=""><br>《蓝色毛球》<br>导演｜钱柠 时长｜5min13s｜剧情<br>女孩面对着像病毒一样繁衍的毛球，被迫面对自己的内心...<br>所获奖项：入选金穗奖、西宁 first 电影节、捷克 Brno16 等影展<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqialPXk0lUe4HuAic7PKJmKlwzqa4lCNVUibOmVnLtlwVNicBnGMh73K3XA/640?wx_fmt=jpeg" alt=""><br>《无人接听》+映后交流30min<br>导演｜刘江勇 时长｜13min44s｜剧情<br>陈红独自在宾馆生下孩子，她的男友却早已消失得无影无踪...<br>导演曾获：曼海姆艺术电影节“BEST纪录片”奖；光明国际电影节“BEST叙事纪录片”（主要类别）奖；提名瑞典国际电影节“BEST叙事纪录长片”（主要类别）；入围英国电影节“BEST叙事纪录片”等<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqpic5Q6wicJSCHW8iau8xbibvHia5oAibu7sqPoozVyxXfwQQKsl2WMYASic0w/640?wx_fmt=jpeg" alt=""><br>《轻巧而冷淡的对谈：大西洋，算法与可见性》<br>导演｜杨君陶 时长｜13min11s｜单屏高清彩色影像<br>上世纪末，底特律音乐制作人团队虚构了水下种族 Drexciyans...<br>导演毕业于武汉大学艺术学院，致力于诉诸言说（有时是歇斯底里的）以拮抗意识形态的沉默力量与普遍存在的政治冷感症，重点研究影像再现中的异国想象，数字基础设施，剧场建筑意识形态等。<br><strong>单元二</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRq1HeJJHbteQMK4PiaZ7292ibhteibqIXOeWHic8icHpiaNHejoX4iaOg6eGKww/640?wx_fmt=jpeg" alt=""><br>《乡老》+映后交流30min<br>导演｜王韪甲 时长｜43min45s｜纪录<br>山东省某地农村的老人群体的真实生活状态.. 所获奖项：入围第十三届北京国际电影节-ReelFocus 真实影像计划纪录短片竞赛单元。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqaNryQaohSxw7mcB2GGY5IhX60MHtUXt65m62pDgun4hhN5l2aUCWlQ/640?wx_fmt=jpeg" alt=""><br>《烈日》<br>导演｜洪宁 时长｜5min54s｜艺术影像<br>当代中国社会极速不安变化下的同性恋人有着说不出口的秘密..<br>影片以5分 54 秒的固定长镜头影像，从家庭群像入手，刻画时间流逝。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqp2a5ZhTgYCyk3v6LBgtsf4vAP2OnAyzzFClQtia4gchfmsIpFDBBcKA/640?wx_fmt=jpeg" alt=""><br>《隔离清洁计划》<br>导演｜吴筝 时长｜12min｜艺术影像<br>行为艺术家齐磊，在新冠病毒的影响下，进⾏自我隔离14天..<br>导演曾在好莱坞参与多部短片制作，作品多涉及实验影像，装置艺术与剧情短片，曾获得学生奥斯卡银奖。<br><strong>单元三</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqfTHuq1DjibQTrDcRkv3uwJPfzfDLNvpJmJ8QnICv9OKGZgIAwAPn5ww/640?wx_fmt=jpeg" alt=""><br>《万事如意》+映后交流30min<br>导演｜兰天 时长｜89min｜剧情<br>除了龋坏的牙齿隐隐作痛，老马稳定的退休生活并无波澜。可平静的湖面下暗流涌动..<br>所获奖项：第 9 届重庆青年电影展长片主竞赛单元入围；第 26 届罗德岛国际电影节半决赛semi-finalist入围等。<br><strong>单元四</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqqNAdM1ib0uNicryH9br1FiaZoQwzfVe8tCMlNcv9HuSibYcWYDhicEvWeZQ/640?wx_fmt=jpeg" alt=""><br>《永恒和一日》+映后交流30min<br>导演｜徐简明 时长｜20min｜剧情<br>冬晨，一个神秘的男人从森林走出，他带着令人费解的目的来到...<br>所获奖项：入围 2021 年意大利 Festival Alto Vicentino 國際電影展、英国 First-Time Filmmaker<br>Sessions 电影节等，获得BEST影片奖；入围第九届丝绸之路国际电影节西部电影周特别单元，西影·春光青年短片展，获“最具艺术探索奖”。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqNuE4RjR4oFiaF3KfO8EXv20wDMqOOI1Mr2C3b4tdy60gH9OejP3ykFw/640?wx_fmt=jpeg" alt=""><br>《寻找大凶女孩》<br>导演｜陈家豪 时长｜29min43s｜剧情<br>一个正值拼搏年纪，前途无量的年轻人，被分配到了一座与世隔绝的岛上..<br>影片描述：一种“创作者”对戏里人物的调侃，尝试打破第三面墙进行更有趣的观感。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqeObqWQ0fvxtPGXbB3vjb6Eic08zOdAaurnhgv3sibQwIKRX6o2Lc85bA/640?wx_fmt=jpeg" alt=""><br>《头脑警察》<br>导演｜林秉翰 时长｜5min13s｜实验<br>故事发生某个死寂冰冷的未来都市，初来乍  到  的头脑警察Rita..<br>导演曾入围法国克莱蒙费朗国际短片电影节、柏林短片电影节、澳门国际电影节，获得2022木兰国际电影节观众BEST选择奖，贾樟柯艺术中心第四届86358电影短片交流周评审团大奖，获得2020HiShorts!厦门短片周成长单元BEST作品。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqzw97G5vZqvL9icUmBRIeczgGFZ33O6ia9NicdF2TFJiaPcpW6T9LvP5uZg/640?wx_fmt=jpeg" alt=""><br>《异乡记——杀死那个外星人》<br>导演｜綦霁 时长｜10min42s｜实验<br>纪念我的外星朋友。他在地球客居数年，直到收到通知..<br>导演曾获获第二届博问影像论坛，BEST超短片，BEST实验短片；参与第二、三届 VCD 影展放映。<br><strong>时间</strong><br><strong>2023年6月10日/11日（本周六/日）<strong>单元一13  :  00  单元二15  :  00  单元三13  :  00  单元四15<br>:  30</strong>部分为现场映后交流</strong>  </p>
+<p><strong>地址</strong><br>渡口Ferry 成都市锦江区水碾河路6号院32栋3单元对面白色楼梯  </p>
+<p><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRqQPXnqnDlR42D9ECNwDG6JMV7lm6bP2NfgDDVvmy3qs9sdFNbzicUEpA/640?wx_fmt=jpeg" alt=""></p>
+<p>陆熙樾<br><strong>票价</strong><br><strong>￥35（含一张影展票根）</strong><br>‍<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJUL3cUmLy0KyNzLHblQkRq5LnWpnx1HvbhUWVAabIZYWAyJaiaLFYJCkMdOeiacYu9vBcSMWvhaEzQ/640?wx_fmt=jpeg" alt=""><br>‍<br><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

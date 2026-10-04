@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧专场阿隆索帕拉西奥斯执导厨房后厨里聚集人间百态的微缩世界 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-02-27</div>
+      <h1 class="article-title">24帧专场阿隆索帕拉西奥斯执导厨房后厨里聚集人间百态的微缩世界</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa8dOia3kFaCa6bj79Z3R6wiaNzOJibFfPgFc0PiaUh3Mo0ibIEKYXEv5xnP9A/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧专场」阿隆索·帕拉西奥斯执导《厨房》：后厨里聚集人间百态的微缩世界</h1>
+<p><strong>写在前面</strong><br>纽约曼哈顿时代广场霓虹璀璨，游客匆匆，一家墨西哥餐厅藏在这里。在食客品味热气腾腾的食物背后是汹涌暗潮。<br>在这里，后厨是存集丰富食材的场所，亦是聚集人间百态的微缩世界<br>。电影《厨房》是由斩获第68届柏林国际电影节银熊奖及第64届柏林国际电影节最佳首作奖的导演阿隆索·帕拉西奥斯执导，由劳尔·布里奥内斯、戛纳影后及两次奥斯卡影后提名女演员鲁妮·玛拉、安娜·迪亚斯、莫泰尔·福斯特主演的影片，入围第74届柏林国际电影节主竞赛单元。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa8oPDzCicsdF1sluOVc8VsH8bPAec2MLcmIxnocC1iat6icIAibNereJzNeQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>影片讲述了年轻气盛的墨西哥厨师佩德罗（劳尔·布里奥内斯 饰）怀揣梦想来到了纽约的一家餐厅工作，却成了麻烦制造者。佩德罗爱上了女服务员朱莉娅（鲁妮·玛拉<br>饰），却因为被指控偷钱给朱莉娅堕胎，面临失业危机。佩德罗在异国他乡的追梦之旅被迫中断，一切开始朝着不可收拾的地步发展。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa86L5FEBrD14aCyV3t7iaXaDSia2icL2ic2GLxDAfjTOCXDpeaibBQf7S3e0g/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>作为墨西哥传奇导演，阿隆索·帕拉西奥斯将酣畅淋漓地运用了多种镜头语言，厨房这一平凡空间在影片里是群像舞台，微观与宏观、光影与运动、景深与层次。大量直线式构图美学的镜头将人与物禁锢在条条框框中，拉满了压迫感，不同阶级之间的分明也被凸显。在同样的黑白画面下，这些来自世界各地的不同人种肤色的的差异被弱化了，移民们各自承载着的不同欲望与感情，却也呈现出特别的共性，都共同是受到压迫与剥削的劳工。<br><strong>放映员说</strong><br>这个故事改编自英国剧作家阿诺德·韦斯克1957年同名戏剧，当导演阿隆索·帕拉西奥斯在伦敦一家咖啡馆当洗碗工时，他萌生了创作《厨房》的想法：“我当时是一名戏剧系学生，刚读完阿诺德·韦斯克的《厨房》，为了让这份既艰难、单调，又非常辛苦的工作变得可以忍受，我会通过戏剧的创造性视角来看待它。如果你了解厨房是如何运作的，你就会意识到它很像这个世界，就像社会是如何运作的。韦斯克说，对莎士比亚来说，整个世界就是一个舞台，而对我来说，<br>整个世界就是一个厨房  。”<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa8JfRgayCErldlBuWx8v4hhGkECZkPaWZGq0lmz7C8bAVcia9JEj3QhdQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>在狭小的厨房，移民劳工忙碌而疲惫的来来往往，高温之下，油烟弥漫，厨具碰撞，小票机不停运作，操作台紧密又冷酷的金属框架无形中框住每个人的自由，情感与欲望也被关在这个空间不断升腾，交织，碰撞，群像的故事就此展开，在这样一个浓缩了世界的厨房，我们可以从中探讨爱与欲望、剥削与反抗。<br><strong>预告片</strong><br><strong>时间</strong><br>**2025年2月28日（周五）**19:00<del>19:30签到  19:30</del>21:48放映  21:48~22:18映后<br><strong>地址</strong><br><strong>保利万和国际影城(招商花园城购物中心店)<strong>7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥40</strong>人手一张：A4海报、手绘票根、明信片</strong>映后赠送或抽奖：帆布袋</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa8v4sl3aHV64vEND1O2gbCa2jjgfCAQy3AzlPticfZ90JXsCkjnev07tg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJ9u1fFAxubGfPjkB02gOa8JJrFwxLOV2Mlerl0IJ9lJxTXFL869qPHYuiazichljZAtIQy41WToPLg/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>品牌支持</strong>社群<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

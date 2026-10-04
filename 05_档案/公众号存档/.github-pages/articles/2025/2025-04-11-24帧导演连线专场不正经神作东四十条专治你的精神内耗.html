@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧导演连线专场不正经神作东四十条专治你的精神内耗 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-04-11</div>
+      <h1 class="article-title">24帧导演连线专场不正经神作东四十条专治你的精神内耗</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXCSSAObtWibmOCbwsqnXk7yw8bgXb3ZoD2icfuYqHzpfJePDkRouT1M4g/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧导演连线专场」“不正经神作”：《东四十条》专治你的精神内耗！</h1>
+<p><strong>写在前面</strong><br>听说两个小年轻用20万拍电影，还拿了平遥电影节大奖？是的，导演覃牧秋和詹涵淇，两位“不工作焦虑症候群”患者，为了对抗躺平危机，直接抄起摄影机开干。剧组穷到刮彩票定预算（结果血亏），夜戏全靠路灯打光，道具全靠捡（比如冰里冻耳机这种神操作）。演员是朋友凑的，流程是完全随缘的，用他们的话说：“凡事想到20%就开干，快乐才是正经事！”<br>这哪是拍电影，分明是胡同版《乐队的夏天》。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXefrK9C5HFY05GPyCzt9llaaTXq4vV4L4YS2GCAULEgea4GR0lKVG0w/640?wx_fmt=webp&amp;from=appmsg" alt=""><br>影片情节性不强，几乎以东四、十条看似意识流的对话撑起全片，有点像胡同版的“等待戈多”。他们坐在蔓蔓野草上发呆，在河边垂钓、澡堂泡澡，甚至在厕所对面边喝汽水边探讨如何给这些厕所做“大众点评”。他们的闲谈中充满当代文艺青年的奇思妙想，也不无讽刺。在之前的放映里，全场笑声不断，生活在大城市年轻人的漂泊感和自由随性的状态引发共鸣。<br><strong>放映员说</strong><br>故事从一张“重金寻鸽”启事开始，两位北漂青年东四和十条开启了一场“已读乱回”式CityWalk。你以为他们在找鸽子，不，他们在找自己。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXmFpGGw01Vk5u8iaBz5hYHjM0f4tx8NIm5yicv3zYYUuoF1eP3Pia7L8xQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>影片用“精神漫游”的荒诞对话，戳破打工人的焦虑泡沫：鼓楼的四季风景里藏着年轻人的“卡住”哲学——不卷不躺，只是晃晃悠悠地活着<br>。没有工业糖精，只有冰镇汽水味的脑洞金句；没有宏大叙事，只有厕所点评和冰面耳机这种“无用浪漫”  。看完你会懂：原来迷茫也可以很可爱，焦虑也能被幽默腌入味。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXsqosiaibjluD4BhSuLfhcXv2aJv3ex0Raa0XUGpBItWibvicMG2endKBicA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>预告片</strong><br><strong>时间</strong><br>**2025年4月19日（周六）**18:30<del>19:00签到  19:00</del>20:33放映  20:33~21:00映后<br>映后连线嘉宾<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXNH1BXhUeWTHCPdLmNic9fosenVr7mUqDibzxySz72tsyhp9wJYXclQuQ/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXqX0Zictzru4CR4LFItiavKrFXoYWgxZYibeDIWWt7cxia9X3wIf8PXk9JQ/640?wx_fmt=jpeg" alt=""><br>覃牧秋  （导演）  詹涵淇  （导演）<br>具体连嘉宾线以实际情况为准<br><strong>地址</strong><br>**保利万和国际影城(招商花园城购物中心店)**7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥45</strong>前50报名周边：人手官方A4海报、24帧定制明信片、定制种子纸票根、鸽子贴纸（一套10张）<br>映后交流赠送及抽奖：官方NFC唱片冰箱贴、瓶起子<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGXeKrWZugFJeN8u8muqiacffgdDIIY5gWd2WWlyXM5X1Meek7ibLxiatvdQ/640?wx_fmt=jpeg" alt=""><br><strong>报名小程序</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIA4mL9e2sXe2UicJTSWznGX9NV5Cq8H6u5wicicKW9PypzM3xVoxU3nPqolGnS5sN11F50xM7IAQNHQ/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>社群</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

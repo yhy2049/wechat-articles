@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>回顾一次新的探索制造一场诗与信的雪 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-12-11</div>
+      <h1 class="article-title">回顾一次新的探索制造一场诗与信的雪</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOGhHJg8icd8LlrU2fAoficYZ6PqT4uXzEmrykbrCMJjfYP0Hiau4xzqavnw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「回顾」一次新的探索，制造一场诗与信的雪</h1>
+<p>受邀  参与麓湖首期ART BAY艺湾后，我们一直在思考如何以更直观、更具艺术感染力的形式呈现电影文化，并让路人与我们共同参与其中。<br>尽管我们考虑过快闪舞、爵士乐队以及cosplay，但当我们了解到最终呈现形式将聚焦于艺术集市的一个摊位时，我们决定将所有计划推翻，选择使艺术呈现变得扁平但生动。  </p>
+<p>最后，我们选择了拼贴诗。通过切割、打乱和重新排版经典影片的电影名，让路过我们的人与我们一同用碎片的字创作独一无二的诗。创作的成品，既可以选择带走留念，也可以留给我们，成为回忆的载体，供所有路人欣赏。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOGrPZrgREJYpcQib15GaTAJ5AXdZjhB8yOxKuURbMAYH00GKRIaBChvcQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>完成创作后，我们将为每位创作者盖上代表“24帧”的打卡印章，标志着电影拼贴诗创作之旅的结束，也是参与整个ART<br>BAY艺湾的重要一环。整个电影拼贴诗活动的效果超乎我们的预期，参与活动的人络绎不绝。大家积极地创作属于自己的诗，与我们分享对电影的热爱，并展示了各自的精神世界。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOG0EtNgoRVESJx5ZgtKPV49QP7eZ3pfAHQialhkm8W6L3Tp4QVTic78pNw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOGU33l457C30gGibicmvnBoGgqibMnaL6fQcNe9X3NnI27KqpoRIbY52nqA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>晚上18:00，在学术报告厅内，我们进行了电影《情书》的放映。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOGoBGfgMwTleR6SalnVqxO91rSmuD1KiaskfKIbaj3icGRotsfL2O9OCOw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>映后交流分为以下三个主题：  1. 关于爱情：我们深入探讨了暗恋、替身文学以及那个时代的爱情观。  2.<br>关于生死：我们讨论了“真正的死亡不是肉体的死亡，而是被彻底遗忘”。  3. 特殊环节：<br>我们为在场的观影人准备了明信片和信封，让每个人都有机会写下自己的“情书”并寄出，无论是给爱人、亲人、暗恋对象，还是给远方的人或自己。我们将代替大家寄出这份心意。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOG1qcvYiaMyofsDFDWmvXP2XgEKuaYxqsMIHFwlvZRvSvWok53Pn1oKibA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>在活动的尾声，我们在放映厅里制造了一场“雪”。观影者在雪中投递写满心意的“情书”，在雪花飘落的瞬间，爱意得以传达。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOGnhXWjv2rsKItT8sSDI6odHkQcibH6M3IjSPAOic6ic30I7JboP4DssPmQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>写在最后</strong><br>摊位前的每一个人都在剪下片名文字的那一刻成为了诗人，当创作不再拘泥于形式，拼贴间便迸发出无限的创意。期间，大家畅所欲言地聊起电影，说起诗歌。有孩子、有电影学者也有六旬老者，电影是流动的诗，也是通向人类精神天国的巴别塔。<br>书信和雪成为电影里情感的外延，当大家在雪花飘下那一刻把亲手写好的信装进信封投入信箱，他们每一个人的故事便超越了电影。<br>总有一部电影会让我们相遇，期待下次见面！  </p>
+<p><strong>特别感谢</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIE2jMgDiapSm2LLMndFyoOG2wrq1gmP3MpekB0tfbT23LA1eqfZON3Wic4UJ9CFGJPhI0uRVS7QQtA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>电影诗策划：韩颖</p>
+<p>放映策划：杨慧平</p>
+<p>现场拍摄：隋永俊</p>
+<p>视频拍摄与剪辑：桂瑜修</p>
+<p>文案编写：韩颖、杨慧平、隋永俊、徐尔灿</p>
+<p>映后主持：忻沛垚</p>
+<p>场务执行：小鱼</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

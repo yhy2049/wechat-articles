@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演单单命运陡峭的人灵魂里都有一座悬崖 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-11-04</div>
+      <h1 class="article-title">成都路演单单命运陡峭的人灵魂里都有一座悬崖</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1hxmY43vwFHPS3UhCMH0ztoZSbVuhA0fC54F11odWLkoEYOzgAm1weA/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「成都路演」《单单》命运陡峭的人，灵魂里都有一座悬崖</h1>
+<p><strong>写在前面</strong><br>《单单》由导演宋川编剧并执导，也是他首部在国内大银幕公映的电影。出生于云南高原的他，第一次将镜头对准故乡的人和事。《单单》是宋川导演的第三部电影，也是他潜心多年的诚意之作，先后入围第25届上海国际电影节，第67届科克国际电影节、第10届丝绸之路国际电影节等。由获平遥国际电影展最佳影片《妈妈和七天的时间》的制片人池清波鼎力加入；获威尼斯国际电影节银狮奖电影《人山人海》的摄影师陈镜方任摄影指导。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1GEVeAvICLtIEa95dHoEQIZQyVicTSr9MzGIiaqfibVEhWOF684mqMBPeQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>整部影片，场景始终在“云里雾里”展开。它取景于云南镇雄的大山里的一个乡镇，冬季的枯叶之下，群山的层峦之中……云里雾里，是实景：无论是小镇上，还是在或崎岖蜿蜒或宽阔笔直的高速公路，都是被随风飘荡的水雾所弥漫。但，我还认为，这部影片想表达的主旨，似乎让更多的有思想的“哈姆雷特”解析出种种意味。<br>借助楚布花羯纯真深情的本色演绎，却让我们看到了“云里雾里”所呈现的一切社会缩影：金钱与欲望、寒冷与燥热、奋争与死亡、真诚与威胁、乡村教育与留守儿童、女人的多舛与男人的孤独、乡村的闭塞与网海的浩渺、传统文化的消失与现代文明的撞击……而这一切，便借助于主人公单单与他身边的三个女人作为躯壳，被赋予了极其丰厚的生活思考……<br>三个女人，本想能从“单单”的躯体中得到灵魂的慰藉，但，孤独的单单，却因为莫名的孤单，却没有让女人的世界变得美好。而单单，并非没有爱，当他念想失联的大哥时，会为他的大哥指明回家的路：竹林边有一条回家的路。<br>然，“故园沧桑，人心荒芜”（《单单》台词），这又怎么能够让人们寻找到回家的路呢？<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1p1sYxmPBq9HQ1iaUiahXicVhxoYx2IGRicn5b9iaC4mXVTrrzQ3c8wG4wNw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>影片将云南烟雾弥漫的山野图景、一男三女的情感勾连与云南诗人王单单的诗词作品浑然一体，将带给观众充满诗意的情感想象，以及充满哲思的人物命运。宋川导演表示，“每个生命个体都有过梦想和困境，电影只是抓取了命运河流里一丝浮光掠影”。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1uh1Ivyv4qR7ibUlQduKEqtrEZTA2ciaTQzs7xSVf51lBZbFDrYKHUtOw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>这对极具反差的组合在点滴相处间，逐渐感受到前所未有的温暖，本以为能重新开始灿烂人生的两人，还是被变态反派和不公命运痛下了杀手。<br>在这样极具冲突感的故事剧情衬托下，人物身上超越生死的救赎，才更让观众觉得温暖感动。<br><strong>预告片</strong><br><strong>时间</strong><br>**2024年11月10日（本周日）**19:00<del>19:15签到  19:15</del>20:53放映  20:53~21:23映后<br>到场嘉宾：宋川（导演）、楚布花羯（男主）<br><strong>地址</strong><br>保利万和国际影城(招商花园城购物中心店) 7/8号线地铁站理工大学B2口<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKfSgzntzg0Bdr9MrOmibMXl2ibV9mJ9ur8uDtVFzT17xp7rTeib5CnWiaxzIEdIRLHebY6xYnQ2CTZwg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>熊猫船长<br><strong>票价</strong><br><strong>￥40（人手一张官方海报）</strong><br><strong>紧急入口：应急酒精计划</strong>参与者在核销时可随票根获赠一张【紧急入口·Emergency<br>Drink】酒馆的八折优惠券，在放映即日起一周内，可在紧急入口享受整单折扣优惠价  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1RegWxl9w7O79qHvA7D0M4a2eI2oTDibdRicibKibaNrfCuqiatw9SWjB3Jg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p><strong>联合招募</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIHKn4ibNFgdEsQruuSno5c1EEo6U0ssIkM4cHyiaibDErS7I0CtesneVSbSyxDjEnj5qW6rVvfWD8TQ/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>酒馆联动</strong><br>“紧急入口”——坐标成都｜主营精酿：一个属于幸存者们的精神洞穴，情绪自由，容纳一切。“紧急入口”这个名字有好几层含义，一方面是希望在精神世界、情绪状态临近坍塌的那刻，可以像冲进避难所那样来到这里；一方面“入口”也有“喝进嘴里”的含义，紧急入口的别名也叫应急酒精，或许有的时候我们真的很需要大灌一口放松或麻痹一下思绪。<br>当你感到疲惫，过不下去的时候，请紧急进入这里，这里永远接纳包容你！<br><strong>社群</strong> </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+<p>（文案源自影评豆瓣网友@汉斯）</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

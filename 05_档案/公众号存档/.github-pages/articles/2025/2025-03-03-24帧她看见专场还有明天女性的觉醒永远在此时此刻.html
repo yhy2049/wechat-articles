@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧她看见专场还有明天女性的觉醒永远在此时此刻 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-03-03</div>
+      <h1 class="article-title">24帧她看见专场还有明天女性的觉醒永远在此时此刻</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj0nZwq072MaYDJo7pq1qpsoLEKKystf8cRE7fKicBy6KShULXN7zdD6ibg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧 · 她看见专场」《还有明天》女性的觉醒永远在此时此刻</h1>
+<p><strong>写在前面</strong><br>在社会思潮不断演进的当下，女性主义议题逐渐从边缘走向中心，引发广泛的讨论与关注。《还有明天》正是在这样的时代浪潮中诞生的一部极具代表性的意大利女性主义电影。它以独特的视角、深刻的内涵，为我们呈现了一幅关于女性觉醒与抗争的生动图景。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj0FbFmOIoNcibia8icXQ3VZbBg7FcicN0W9Np2aNkKjISmfjpibeNbwsgrccQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>影片故事背景设定在二战后的意大利，一个传统观念根深蒂固、女性权益受限的时代。罗马的一个底层贫困家庭里，在收到一封神秘的信件后，迪莉娅试图打破传统的家庭模式，并渴望拥有一个不同的未来。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj0VFJiaQcszrE7aJvXofWtl2HQ2sFrvG94kuJRZPia2siblumfjda4b2Bjg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>这部电影不仅是对那段历史的生动还原，更是对当下社会性别平等问题的深刻反思。兼具电影艺术的它同时斩获了包括第69届意大利电影大卫奖最佳新导演、最佳原创剧本和最佳女主角等六项大奖，还荣获第8届平遥国际电影展首映单元最受欢迎影片奖。同时以9.1的高分登顶豆瓣2024年度冷门佳片第一名，成为众多影迷心中的年度必看之作。<br><strong>放映员说</strong><br>1908年3月8日，15000多名服装厂女工走上纽约街头，以象征着经济保障和良好生活质量的“面包与玫瑰”为口号，提出要求：提高劳动报酬、改善工作条件、争取投票权等，妇女节由此由来。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj0OdqRFenUg9iaNc2HrjNwISHexCRbVg6ME07GeTvezBXQxILYUAicEfAg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>2025年的今天，女性处境虽已获得很大进步，但仍面临着诸多困境。我们需要做点什么。不是所有女性生来就是女性主义者，但女性天然具备重构规则的本能。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj09He4VbLfdIL5kpXx6j2BgvogsXagYGia3ug8AWAQhAU2mRJcO5XmicUA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>3月8日国际妇女节，我们想邀请你来参加这场  Female Only爱女特别企划  。<br><strong>映前</strong><br><strong>随票赠送观众一张主题物料，鼓励媎妹们在上面填出自己对理想世界的期望。</strong><br><strong>时间</strong><br>**2025年3月8日（本周六）**14:30<del>15:00签到  15:00</del>17:00放映  17:00~18:00映后<br>映后  </p>
+<p>**Part 1：  电影相关交流，我们想听到的妳的声音！**Part 2：<br>邀请有丰富婚姻类案件经验的李律师做婚姻财产、家暴等相关内容分享。Part 3：<br>请发声！邀请观众读出自己对理想世界的憧憬。一句期望或许不能立刻出现可量化的作用，但大家相聚在《还有明天》的全女乌托邦，我们想让女性能看到自己发声的力量。所以，每有一位媎妹发言，我们将为山区贫困女童捐赠一片卫生巾。女性的每一次表达，都是是理想世界的重要组成部分，你的发声自有万钧之力。<br><strong>地址</strong><br>**保利万和国际影城(招商花园城购物中心店)**7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥50</strong>人手一份：官方工艺海报+24帧纪念票根+oddsome卫生棉条<br>映后抽奖：官方周边，参考如下具体以实际收到为准~<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj010v2tvO1wF2ULWzjPqIZKENJHkEIKWiacZRVMqna0ErfLcC3qnaWqrg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL3ZjEhrhyibyRJbj8uxCRj0914wfx4olLyqSeRia58qGia0CJL6yYiavlgQTBv6CvDVdw1iatc6gmXkFw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>社群</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

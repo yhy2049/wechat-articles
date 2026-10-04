@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRST主动放映成都24帧站附近的消逝 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-04-25</div>
+      <h1 class="article-title">FIRST主动放映成都24帧站附近的消逝</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJeSIvQIrw8D5fjicGGJsGwKWgt4nCO08SL5XOwr58xNgmBInibZjCB4gw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>FIRST主动放映·成都24帧站 | 附近的消逝</h1>
+<p><strong>FIRST</strong></p>
+<p><strong>@24帧站</strong>  </p>
+<p><strong>2023主动放映</strong></p>
+<p><strong>附近的消逝</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg0gezQwDDcdT7GKLDTYDWzoaYiaE4icdc46z3fLKDQyialW45jhAbcMicVg/640?wx_fmt=png" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/ldzjOWpWfJFhYGtRabt1pzcy8rD2lLeXTjB1O1CGX3GQqhBcJeHpxCMdrapiaC2hEL8Krvwjl6ltwuqtGJqBwgA/640?wx_fmt=png" alt=""></p>
+<p><strong>“  电影的宿命是被观看”</strong></p>
+<p>主动放映是FIRST影展常设的电影文化交流厂牌，以非盈利性的线下公益放映为形式，提供主流视野外的青年电影人作品矩阵，将具备独立创造精神、不同美学范式的作品投射于更开阔的银幕，主动接近、寻找新的观众，复兴迷影文化，建构更多元的电影讨论现场。  </p>
+<p>/以主动的姿态，行放映之使命/  </p>
+<p>/拂去蒙尘，摆好座椅/</p>
+<p>/点亮银幕，太阳照常升起/</p>
+<p>/电影重新开场/  </p>
+<p>FIRST主动放映和春天一同归来</p>
+<p>期待相遇</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJerVzIw56NiaI2ibHaOTHVYibWjj4q1Ug4wibRdCuT8ot6YfcHfxicMjsguA/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/0f4HLNcpDp6oKqzoVuic3Oia9OTsrDh69gxjHGUsTxEA058ZPlsb6Mt6uhUiaflEiaXFuDQibDbibLsHz9QAWnaInBYw/640?wx_fmt=png" alt=""></p>
+<p>“在消逝中相遇”  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/bgzHTgQxJ8gFzDqZptQdtmXn9Gic7jbqibClstVDVGZdRxKfJP4MN9BE7b6Ve1XgE8zTf2SWYwzEn09qzA9ibTkPw/640?wx_fmt=png" alt=""></p>
+<p>置身于现代化洪流当中的我们，</p>
+<p>是否真的明了自我存在的意义。</p>
+<p>或许这深刻的奥义并不属于每个现代人，</p>
+<p>但它的缺失似乎的确侵蚀着我们，</p>
+<p>消耗着我们，</p>
+<p>以致于我们被迫选择吞下孤独。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJ4ZglvYsn2JCictdWeo7ib49HO5sNtaeicLiaK7OZHEsdrOFV9p6Ab1IicAw/640?wx_fmt=jpeg" alt=""></p>
+<p>当附近逐渐消逝，</p>
+<p>越来越多的人选择成为旁观者，</p>
+<p>人与人之间建立起无形的屏障，</p>
+<p>建立孱弱的连接成为社交的</p>
+<p>普遍的方式。  </p>
+<p>当我们回到近处，</p>
+<p>看看身边被忽视的人与事。</p>
+<p>关注身边的细节，</p>
+<p>如果有心，</p>
+<p>你能重构自己的复杂，</p>
+<p>发现全新的世界。</p>
+<p>在附近消逝的瞬息中，</p>
+<p>总有一部电影会让我们相遇。</p>
+<p>2023/05</p>
+<p>放映排期表</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg3svE5cS4y7iab5zHNXAwnFHwLKj8bUWSVqMN3NswCUUyDeMYKx6AqdA/640?wx_fmt=png" alt=""></p>
+<p><strong>展映信息</strong></p>
+<p><strong>回声单元</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJv6ic2f6ZXEGKRsU8JmFnPfj0SJVateE239kqiaVwI91bWOCA1Tt3rcNw/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>《旷野歌声》</strong>  </p>
+<p>导演：陈东楠</p>
+<p>类型：纪录片</p>
+<p>片长：98分钟</p>
+<p>剧情简介：大山荒野中的苗族村寨合唱团，因为一个外来人的出现，他们的歌声一举成名。《旷野歌声》跟随两个苗族青年一起探寻，在外来的喧嚣中权衡对信仰、身份和爱情的追求。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJxNYY1Ap4QgDbPwc3J9wuXofV4ibxk5c6Zyuz77Rb8LaHvKF9zENw5EA/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>陈东楠｜映后交流</strong></p>
+<p>陈东楠是一名独立纪录片导演。《声音的颜色》，描述一位盲人对纽约的探索，获艾美奖提名，在加拿大Hot<br>Docs电影节首映。《偷》讲述三个流浪街头的新疆小伙的故事，获纽约亚美国际影展最佳纪录短片，并在Hot Spring, Big<br>Sky等中国和美国的多个电影节、大学与博物馆放映。她联合剪辑的影片《无尽的航程》（赵琦导演）入围韩国釜山电影节。东楠曾参<br>与美国中文电视纪录片部门的创建，也曾担任纽约亚美国际电影节短片竞赛单元终审评委。她的作品发表于PBS、NBC、纽约电视台、中央电视台、VICE和腾讯网等等。陈东楠毕业于纽约大学纪录片专业  </p>
+<p><strong>地衣单元</strong></p>
+<p>&lt;&lt;左右滑动查看影片信息&gt;&gt;</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJCJic5q7icFoDoBjte8lldfjlm2yIg5ePMNJrNRUtylaDJUFk5CcnYBmw/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>1</strong></p>
+<p><strong>《大桥遗犬》</strong></p>
+<p>导演：汤厉昊  </p>
+<p>类型：动画短片</p>
+<p>片长：12分钟</p>
+<p>剧情简介：以“犬”之视角诙谐轻快地展现了“我”所遇所见的人们与生活不断龃龉的无奈。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJuaQGmpxUMrtGWW5pygcrUNQPbXvnrekJTicKUiaPKnbpBlxVIIthAXYQ/640?wx_fmt=png" alt=""></p>
+<p>2</p>
+<p><strong>《有羽毛的东西》</strong></p>
+<p>导演：徐天琳  </p>
+<p>类型：剧情短片</p>
+<p>片长：20分钟</p>
+<p>剧情简介：电影透过人物的手，讲述了一个生活在德国的伊朗-<br>阿富汗家庭的一天。两年前伊朗籍医生Maryam带着她的家人来德国申请难民身份。为了能够尽快重新开始工作，她为自己制定了严格的学习计划。而她的丈夫Hossain则在家照顾他们1岁的小女儿。这一天，Hossain得到了一家照相馆的面试机会，Maryam需要独自照顾孩子，她不得不改变当天的节奏。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJA0nTcyXnqyowxmczHYZ8zerGofhEvrKmqfIHGxIWWbIvRp9Taia1zYQ/640?wx_fmt=jpeg" alt=""></p>
+<p>3</p>
+<p><strong>《莉莉》</strong></p>
+<p>导演：黎静  </p>
+<p>类型：剧情家庭儿童</p>
+<p>片长：30分钟</p>
+<p>剧情简介：一座南方热带海滨小城，一个 11<br>岁少女的秘密心事，埋藏在汹涌的海面之下。中国二胎政策放开后，独生女莉莉在自己生日那天突然得知父母瞒着她怀了二胎，而且私下性别鉴定是个男孩。“ 邪恶”<br>的念头在夏日的潮湿闷热中悄然滋生，莉莉开始了她的一场“ 杀弟” 计划……</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJDX6icibib8xyMRZBfg6BYuY2b3lvVQ4toEppwp2iaoEtK09YMXWqloichPw/640?wx_fmt=jpeg" alt=""></p>
+<p>4</p>
+<p><strong>《南方午后》</strong></p>
+<p>导演：蓝天  </p>
+<p>类型：剧情短片</p>
+<p>片长：15分钟</p>
+<p>剧情简介：在南方生活的维族父亲沙拉木，无意间发现 14<br>岁的大女儿收到了一封疑似情书的信。为了解答心中疑虑与不安，不认识汉字的他只能向自己的小女儿寻求帮助，请她念出信里的内容。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJWvEYafjSsmSgNs1AtZ7s0DiavqATsMuQR0vlibWicn8xEr6A1KVFnHnibQ/640?wx_fmt=jpeg" alt=""></p>
+<p>5</p>
+<p><strong>《木官木才》</strong></p>
+<p>导演：蔡源青 /黄厚植  </p>
+<p>类型：动画短片</p>
+<p>片长：5分钟</p>
+<p>剧情简介：一个男人回到住宿处想要睡觉，但是却被吵闹的室友影响。这是一个拥挤的中国南方城市的故事。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJPLhNP7aiatY2M6ZTqbTnT46jQVxTbu7vB2uf5cevPFxFLjYlCUygygQ/640?wx_fmt=jpeg" alt=""></p>
+<p>6</p>
+<p><strong>《盘中餐》</strong></p>
+<p>导演：谢承霖  </p>
+<p>类型：动画短片</p>
+<p>片长：7分钟</p>
+<p>剧情简介：在一个地方，人会逐渐变成自己最爱吃的食物。他们长出鱼的尾巴，猪的鼻子，牛羊的角，所谓“人如其食”。一个外来者的到访似乎将要带来改变，然而事态却逐渐失控。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJ8KXwhOia7icHET6yfsRIB36eJsHt30U9qTNP5QiaXg6dXZTzPMFtXvfBg/640?wx_fmt=jpeg" alt=""></p>
+<p>7</p>
+<p><strong>《白露》</strong></p>
+<p>导演：陈莲华/安旭  </p>
+<p>类型：动画短片</p>
+<p>片长：5分钟</p>
+<p>剧情简介：男人、女人和仙鹤，还有六个重复的场景。</p>
+<p><strong>磐石单元</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJxKVmb0cjgMavyguWKva6Qop0biab6x6Vwgw0icZPcDic3v3H5RX9eccCw/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>《废物故事》</strong></p>
+<p>导演：郑仪飞</p>
+<p>类型：纪录片</p>
+<p>片长：97分钟</p>
+<p>剧情简介：大海绵是一个生活在中国西部小城的少年，他早早脱离了体制教育，离开父母，独自生活。他在街头四处游荡，漫无目的地度过一个又一个漫长的夜晚，兴致来时即兴而唱，生活自由而孤寂。大海绵热爱说唱音乐，有极高的音乐天赋，他用音乐回应对生活的感悟和不满，但现实并不能让他有所作为，他在网络上喜欢了一个女孩，女孩嫌弃他肥胖，追求总是遭拒。<br>游荡的生活终于脱轨，他无意中参与了一起盗窃案，惹上了官司，法院的压力和生活的困局使他再也无法忍受，为了给自己的人生赢得机会，他尝试做出改变......</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJ178UvoWrzN7lH5LLA1KZnFufettk9cicwloOaxSAkUYX3c7dYEM8SrQ/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>郑仪飞｜映后交流</strong></p>
+<p>纪录片工作者，曾参与多部纪录电影及纪录短片的拍摄、后期工作。首部纪录长片《废物故事》获得2019年西湖国际纪录片大会创投项目“最具潜力发展计划”、2021年东京国际纪录片大会COA入选单元。</p>
+<p><strong>星燎单元</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJXDgwL48X7KN8IogaAJKSjAkl4HDeSv7KPRlGIrF0WatzG1p2pwRrSA/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>《义乌闯客》</strong></p>
+<p>导演：杨皓</p>
+<p>类型：纪录片</p>
+<p>片长：85分钟</p>
+<p>剧情简介：2020 年“ 短视频 + 直播” 的电商新态势异常火爆。浙江义乌，这里没有顶流的网红明星，却因“ 9.9 元，包邮到家”<br>的报价模式一时间吸引了无数草根底层，也被誉为“ 草根逆袭的天堂”。“ 不仅带您走进品的源头，更要通过品带您走进中国 小人物精神世界的源头”<br>——源头哥。源头哥是一位在义乌拍摄短视频带货的“ 草根导演”。与义乌当地主流的“ 9.9 元，包邮到家” 短视频风格不同，他怀揣着成为“ 中国抖音界周星驰”<br>的梦想 , 立志要通过短视频展现中国小人物的精神世界。<br>然而，随着时间推移，理想的蓝图在资本的大肆入侵下几近渺茫。彷徨之下，他重启了一条寻觅之路。在精神追求与爆单变现的徘徊之中，他究竟该何去何从？</p>
+<p><strong>杨皓｜映后交流</strong></p>
+<p>杨皓，青年纪录片导演，1997年出生，山东潍坊人，浙江师范大学电影专业硕士。代表作品《野生导演》《义乌闯客》。作品曾获中国纪录片学院奖最佳大学生纪录片奖、第16届FIRST青年电影展最佳纪录长片荣誉推介。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJ1bMdJyt5XrrSgDyuRwIibQSP1gTtHp2UgOn2XXPNWMFicw9h65aGaZ3g/640?wx_fmt=jpeg" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg3svE5cS4y7iab5zHNXAwnFHwLKj8bUWSVqMN3NswCUUyDeMYKx6AqdA/640?wx_fmt=png" alt=""></p>
+<p><strong>报名方式</strong></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJe6aq6DqZWrdx0r6ygnl57Tt1UOsZSyNicicCtuAVibPEY1qN1W5XCVZmA/640?wx_fmt=jpeg" alt=""></p>
+<p>本次活动免费一饮一座</p>
+<p>凭报名预约信息入场</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg3svE5cS4y7iab5zHNXAwnFHwLKj8bUWSVqMN3NswCUUyDeMYKx6AqdA/640?wx_fmt=png" alt=""></p>
+<p><strong>主办方</strong></p>
+<p>「24帧观影团」</p>
+<p>成立于2022年5月，至今已举办线下观影50余场次，目前是成都最活跃的观影团之一。24帧是最初的电影里，一秒钟所包含的全部图像；也是最初的光影中，投身于电影艺术的每个人的一切动力。</p>
+<p>24帧观影团不止步于电影本身的传播，更关注每一部电影艺术分享和交流。我们与证明24帧存在过的每一场电影放映，以及上千观众共同相信——自由意志的唯一客观证明便是步履不停。  </p>
+<p>当电影照进现实，总有一部电影让我们相遇。  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg3svE5cS4y7iab5zHNXAwnFHwLKj8bUWSVqMN3NswCUUyDeMYKx6AqdA/640?wx_fmt=png" alt=""></p>
+<p><strong>场地合作</strong></p>
+<p>「渡口」</p>
+<p>一个藏在居民楼里，</p>
+<p>既热闹又寂寥的地方。  </p>
+<p>仿佛混沌世界中的神秘入口，</p>
+<p>在这里你可以抛开所有顾虑，</p>
+<p>沉下心来，</p>
+<p>好好享受这些自由之作。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJia80EBTP1LiaJrACB5yFHxcXwPalsSEF9hvCcWKmjUYUFxFLvdjBkDHQ/640?wx_fmt=jpeg" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKdAyUsGowqrwq95pAsmnRJdxpqMscIASBlDzx6hCIePtP9SYCujI0ftRIy8fegicKq3WbCPBTtEHQ/640?wx_fmt=jpeg" alt=""></p>
+<p>坚持下去就会有希望</p>
+<p>追逐光奔跑，驱散黑暗，光明终将到来</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/bu1U2OLR7EibezCsgob8SZ1I2kDsLrQUg3svE5cS4y7iab5zHNXAwnFHwLKj8bUWSVqMN3NswCUUyDeMYKx6AqdA/640?wx_fmt=png" alt=""></p>
+<p><strong>官方支持</strong></p>
+<p>「FIRST 青年电影展」</p>
+<p>FIRST 青年电影展是国内一个专注发掘、推广青年电影人及其作品的电影节形态服务平台。以电 影节、电影市场、制作培育、公共文化建设四大板块共同构成了<br>FIRST 的生态系统以及迥异于主 流印象的华语电影图景。自 2006 年创办伊始，经过十七年的耐心探索与积极尝试，FIRST 以电<br>影节形态介入当下中国青年电影事业，确定其重点发掘电影人处女作及早期作品的发展方向。 FIRST<br>倡导青年电影文化介入当代生活，亦是世界电影流域内一处泊岸码头。在当代电影史记忆 形成机制中，为世界提供中国青年电影的多义样本。  </p>
+<p>策划｜最酷的宇航员、陆熙樾、雀雀</p>
+<p>文案｜王琪雯、  周子禹</p>
+<p>图片｜  何春黎</p>
+<p>海报设计｜  罗诗雅</p>
+<p>排版｜王琪雯</p>
+<p>让我们在消逝中相遇…</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/FwNNHgcaBWOy3TfoYsciaEeVibGvZaoVG7YeUib0IK7dvNWnYmibycol7nu85iaoMIrv7bat6tjqrK9BiaibvBq69CrlA/640?wx_fmt=png" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/0f4HLNcpDp6oKqzoVuic3Oia9OTsrDh69gxjHGUsTxEA058ZPlsb6Mt6uhUiaflEiaXFuDQibDbibLsHz9QAWnaInBYw/640?wx_fmt=png" alt=""></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

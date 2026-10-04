@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新片专场浪漫的断章一场对电影艺术的极端挑战 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-08-14</div>
+      <h1 class="article-title">新片专场浪漫的断章一场对电影艺术的极端挑战</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZia0h5oibqF6Ic31FWfoA8QPNPpQzdV29DuiapWyznAme0CFSG8KeaVvDAKSdneZBH92D43tocZ0Hg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「新片专场」《浪漫的断章》一场对电影艺术的极端挑战</h1>
+<p><strong>写在前面</strong><br>“想打六颗星但没办法打，只好打溢出来的那一颗星”<br>8月13日，由杨平道执导的电影《浪漫的断章》将在全国上映。目前成都0排片，于是我们组织了一场，我很欢迎猎奇的伙伴来看这部电影，但也希望不太了解的伙伴慎重参与，这并不是一部两极分化的电影，也不是一部你理解的文艺片——敢挑在这样一个“热恋”的季节，用一部喜剧电影来“讽刺”两性关系，我想也只有杨平道了。<br>在去年第七届平遥国际电影展上，一部名为《浪漫的断章》的电影引发了前所未有的争议与反思。这部由杨平道导演执导的爱情喜剧片，本意或许旨在通过幽默与夸张的手法讲述一段追求爱情的故事，但实际效果却截然相反，成为了一场观众与影评人共同声讨的“史诗级灾难”。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZia0h5oibqF6Ic31FWfoA8QBOecfS5jO3YV2kwNNCrEia4G7ERnyZpUb1KqPc33PfKqv2OiaJeK0ZxA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>电影讲述情感作家苏冬和前女友赵盈最后一次旅行，试图挽回5年的感情。赵盈虽然同意了却带上了未婚夫老顾。旅行过程中苏冬发现老顾没那么简单，并在绝望中掐死了赵盈。然而一个电话成为转折点，原来这一切都来自苏冬的小说《浪漫的断章》。因为电影演技尴尬、叙事凌乱，而且对女性角色的塑造让人心里很不舒服，去年在平遥电影节放映之后的互动环节中，就引发不小的争议。<br>有观众发言说“我觉得这是一部真正意义上的抽象喜剧电影，就是让我觉得中国没了郭敬明，没了小时代之后，还有没有电影就是能这么让我忘记自己是谁，忘记了所有这些背景，沉浸到导演构筑的这个抽象世界里。这就是一种，虎哥再也做不出第二个东北往事了，郭敬明也拍不出第二个小时代系列了，但是导演拍出了这个电影我就觉得太牛逼了。就是你们懂吗，在电影里面我会纠结苏东是傻子，还是老顾是傻子，我现在明白了，原来我是那个傻子。我不知道在座有没有领导，我觉得这个电影真的应该送投奥斯卡，应该让国外友人看看我们的审美趣味有多么高级，看看我们的导演在做什么东西，”这种明褒暗贬、讽刺入骨的评价，导演似乎没听出来，反倒是感谢他给电影创造出了“抽象喜剧”这个全新定义。<br>而后面的交流就越来越不可控了。第二位观众表示他看出来电影是在广东阳江取景，他给电影打五星，但五星都给阳江，言外之意是电影给0分。并用希望电影能和阳江“切割”这句话来表达愤怒。导演尴尬的说“你是对我在阳江拍电影很不满对吧？这个问题我不知道该怎么回答你，你为什么要出生在阳江呢？”这句话显然有了互怼的火药味。此时台下已经有不少拿不到麦克风的观众开始怒斥导演了。<br>翻看豆瓣，会发现《浪漫的断章》充斥着大量差评，首页随机显示的五条评论均为一星。有观众说“提前走的朋友们，你们一定无法想象后来发生了什么”，还有观众写道“坐立难安，我为什么不去签吕克贝松，八十块钱我为什么不去江湖儿女多点三个菜。”还有观众调侃“群里有人说这个片子龙标是剪映下载的。”<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJZia0h5oibqF6Ic31FWfoA8Qu2aC7Nc30lFMgBhHkP93ngWJd9hyia6ft3Jf3nP0VicKT664aOTiaBYzw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>电影《浪漫的断章》定档海报“三人行，必有一伤”，伤的是谁，不言而喻。<br><strong>宣传片</strong><br><strong>时间</strong><br>**2024年8月16日（本周五）**19:45<del>20:00入场  20:00</del>21:37放映  21:37  ~22:07映后<br>导演杨平道连线交流<br><strong>地址</strong><br>保利国际影城(奥克斯广场) 1/9/18号线地铁站孵化园A口<br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXr3mXWxR8O9ZCY19B7AZJwO6dTeg81HyUSqlesiblczsxfqIlvkahZI7g/640?wx_fmt=jpeg" alt=""></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>票价</strong><br><strong>￥35</strong>（含一张定制票根）<br>_ ‍  [<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJZia0h5oibqF6Ic31FWfoA8QfF1Y2ISxPK8MMHHuib92JqSW5KdKwHcRqTLgq2yvpJ6PQMVpNskmUNQ/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p><strong>社群</strong> </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*不想看可以提前离场 </p>
+<p>*现场签到领取票根 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*映后强制参与，锁门交流 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧导演连线专场上影节最佳纪录片胡阿姨的花园在时代洪流中守护一座花园就是守护一个世界 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-10-29</div>
+      <h1 class="article-title">24帧导演连线专场上影节最佳纪录片胡阿姨的花园在时代洪流中守护一座花园就是守护一个世界</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKTlk9p6Y6RpJlwaRedRiatTZUFOib8qR2ibHImWeBibqib1wwxiatljauft1e8XDksUtyhBMibnUKXzHGSw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「24帧导演连线专场」上影节最佳纪录片《胡阿姨的花园》在时代洪流中，守护一座花园，就是守护一个世界</h1>
+<p><strong>写在前面</strong><br>影片关注小人物苦乐参半的生活：重庆胡阿姨靠经营价格极其低廉的小旅馆为生，日子虽然清贫但她有时还会替住客解围，她还用废弃垃圾建造了一个缤纷花园，以这个诗意空间实现自我救赎并抚慰患病儿子。片中影像内容跨越9年，真实反映了一对母子的精神世界和生活韧性。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKTlk9p6Y6RpJlwaRedRiatT6Pcia2OrZUswXGkaEADwjD6krSjcmosxJ4vrZ5PibiarYicLEeNn5KkYCg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong></p>
+<p><strong>#26SIFF  金爵奖最佳纪录片，一部值得静心观看的时代日记。</strong><br>一座即将因拆迁而消失的花园，一位固执守护记忆的胡阿姨。  九年时光沉淀，镜头记录下的，远不止是变迁，更是我们每个人心中的“故土”。<br>第26届上海国际电影节<strong>金爵奖最佳纪录片</strong>获奖作品——《胡阿姨的花园》，终于迎来线下专场。这不仅仅是一场观影，更是一次与自我内心的对话。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKTlk9p6Y6RpJlwaRedRiatTIziaHYbb16pDJvv3B2F8uOnk66gqGHTqRZM1oE6Hq8ZiatdS41EfaeOg/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>时间的重量，真实的厚度：导演潘志琪自2012年偶遇胡阿姨，镜头静静跟随9年。这不仅是对一个人物的记录，更是对一座城市变迁（十八梯旧城改造）以及一个时代片段的珍贵存档。<br>在“手工制作”中看见生活本真：导演将纪录片创作比作“手工制作”，主张“故事就在人物的生活里”。影片摒弃了过度的技术干预，让观众能自然而然地进入胡阿姨的生活，感受其强大的精神世界。<br>一种超越悲悯的生存哲学：胡阿姨的故事并非简单的“底层励志”。正如观众所言：“底层人的生活就是没有奇迹。”影片的可贵在于它不刻意煽情，而是平静地展示了一种如何在有限条件下，为自己创造“圆满”的生命韧性。<br><strong>预告片</strong><br><strong>时间</strong><br>**2025年11月2日（周日）**18:45<del>19:00签到  20:00</del>20:43放映  21:45~21:15映后<br><strong>映后连线嘉宾</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKTlk9p6Y6RpJlwaRedRiatTAURd3VXBoIZnTQC9HMB8GG191fjGGAAVPjJWPWQH1kLCTUcZZBJ7bw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>潘志琪纪录片导演,浙江传媒学院副教授。创作纪录片作品：《迷藏》《24号大街》《逐花人》《胡阿姨的花园》。《24号大街》长片入选30届IDFA荷兰阿姆斯特丹国际纪录片节长片主竞赛单元、55届台北金马奖最佳纪录片提名、第二届西湖纪录片节最佳纪录长片等。<br><strong>地址</strong><br><strong>保利万和国际影城(招商花园城店)</strong><br><strong>7/8号地铁理工大学站</strong><br><strong>票价</strong><br><strong>￥35</strong><br>含一张官方海报<br><strong>报名方式</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyKTlk9p6Y6RpJlwaRedRiatTEy0REuqXIvU1ib7ZCgmODfCDIk614gYzNxwyuErQEFX4OMmGR5JkMdQ/640?wx_fmt=png&amp;from=appmsg" alt=""><br><strong>社群</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<ul>
+<li>现场签到领取周边，进入按照座位落座    </li>
+<li>观影过程勿屏摄、勿吃东西    </li>
+<li>片尾也是影片的一部分，请完全结束后再离场    </li>
+<li>映后非强制参与，有事可先离场    </li>
+<li>检票将在电影开场时结束，迟到的观众请向影院前台出示购票页面入场，周边将在活动全部结束后发放</li>
+</ul>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

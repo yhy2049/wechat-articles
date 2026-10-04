@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映FIRST主竞赛入围作品洗头记借童趣审视成人世界的隐藏视角 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-02-26</div>
+      <h1 class="article-title">独立放映FIRST主竞赛入围作品洗头记借童趣审视成人世界的隐藏视角</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicL2tibC1q9SCVhQKBHFpicthlmNmjVYibiag7qwSmkfMNT6O3mUafw7lsibZg/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「独立放映」FIRST主竞赛入围作品《洗头记》：借童趣审视成人世界的隐藏视角</h1>
+<p><strong>写在前面</strong><br>这部电影讲述了新冠疫情期间，一位被困家中的父亲为改善与儿子的关系，主动为儿子洗澡洗头的故事。3岁儿子有“俄狄浦斯情结”的情结，对母亲过于依恋，而对父亲莫名抗拒，致使父亲有些嫉妒。疫情为他们提供了一个修复亲情的机会，在日常的琐碎中，偶尔的争吵、短暂的分离、给儿子吃药、带儿子做核酸检测等生活细节，两人的关系变得逐渐牢固。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicLQ5XxDX54DnCe1oK6UbuGPK2GdRGKjXG8SnYhBW81YSezdI1HXy0lsA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>与此同时，这位具有深厚中国传统观念的父亲慢慢意识到在教育儿子方面的缺陷。如男性沙文主义的面子观，将儿子视为自己虚荣心的表现，偶尔的情绪爆发，都使他在家庭伦理及自我成长的反思中深刻觉醒。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicLRxaPT4AbrwlQDebNUOICgjicyiaub76ibPWQkiab3g3tJ7zVcfr25dcziaQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>放映员说</strong><br>导演康世伟在采访中坦言，私纪录片应该介入公共语境，否则就是家庭录像，自己放在硬盘里等老了悄悄拿来回忆的。并不是说家庭录像没有价值，而是另一种价值。私纪录片的第一关键词是“纪录”，而纪录片本身就有公共传播的性质，加上“私”这种限制性的意蕴，就有些自相矛盾的味道。然而，这也正是私纪录片的魅力，因为它比公共题材的纪录片具有更多猎奇性，有一种欲语还休、欲擒故纵的诱惑力。<br>此外，拍《洗头记》除了解决父子关系这个“私”问题之外，还想分享一种价值观和教育观。我认为“教育”不过是想让受教育者按照教育者设计的思路成长。因此在某种意义上，这种规训行为是一种自我意淫，是不存在的，存在的只是互相影响，共同成长的两个人。如果二者之间带着爱的话，便有了珍贵的情感纠葛。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicLPAf8qAJlKMaEadjp6MRqsgcibEugiculkwFbzUI5PU5hJibfRrh1A4ftA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>《洗头记》向观众表达着：平时简单的记录，即使是单纯的孩童，也可以发现出值得我们关注的问题。  ----豆瓣热评<br><strong>《洗头记》片花</strong><br><strong>时间</strong><br>**2025年2月28日（周五）**19:15<del>19:30签到  19:30</del>20:50放映  20:50~21:20映后<br>映后连线嘉宾<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicL0NHKgxU4BfF7ia8uCyKgAbBPjrfL9RQg1B9HibVTTl6hibkMkWDJWwzGA/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br>康世伟  （导演/出品人/摄影/剪辑/出镜）<br>康世伟，文学博士，纪录片导演，日本铁木真电视公司（东京）中方制片人，现任教于厦门理工学院。纪录片代表作包括《轮回情》《广场上的舞蹈》《暴走风尘》等。作品曾获欧洲国际电影节最佳纪录片奖、华盛顿华语电影节最具社会价值奖、中国（广州）国际纪录片节金红棉奖提名、华语音乐影像志最佳导演奖等。执导的纪录片在加拿大CBC电视台，日本NHK广播协会，香港凤凰卫视等媒体播出。2024年纪录片《洗头记》获第18届FIRST青年电影展主竞赛单元最佳纪录长片提名。<br><strong>地址</strong><br><strong>紧急入口·Emergency Drink</strong>3/4号线地铁站市二医院步行600米<br><strong>票价</strong><br><strong>￥41</strong>（含一张定制票根）<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJMLphz8ia4XIpQUZQxhAnicLwlNvYqrnVGNQ2KvCLtticIyKqLMyukfliaalfVbt5ZPI8HwI3B034yJw/640?wx_fmt=jpeg" alt=""><br><strong>社群</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyKzyOWhZcCng6Jpvz4uo1y9QPIsxl9l0pLwDw6pUvr5OiaFKDUZcCr4NiaJHp7QdtXVFhKlwMSzc8pw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""><br><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

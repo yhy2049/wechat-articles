@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>披着韩片外衣仍旧是枝裕和 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-07-12</div>
+      <h1 class="article-title">披着韩片外衣仍旧是枝裕和</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qlogo.cn/mmbiz_jpg/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAw7dibWjrsf8oib5ulAhdibfpqpTeLZB6EL3N8CR4B396hBlS1hbgiaiaxo3A/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>披着韩片外衣，仍旧是枝裕和</h1>
+<p><strong>写在前面</strong><br>看的时候不停想起《小偷家族》和《东京教父》<br>主角都是“被抛弃的人” 洗车房 ——《小偷家族》去海边的戏  分配喂奶粉时间、婴儿生病去医院 —— 《东京教父》流浪汉们手忙脚乱照顾捡到的女婴<br>即使披着韩国制片的外衣 内核说到底还是个日式故事。<strong>《掮客》</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIu9ZwlVTJEnS8n2t0rfMuxhbQ24VgWb0XxJHSJj8zHbdDAz9icQNia4jWIeHyHeANsKicv8Lt8Rby4g/640?wx_fmt=jpeg" alt=""><br>绿的静的景 / 蝉鸣 / 少女烦闷的低叹气  日系<br>被抛弃的边缘人 / 母亲 / 父母与子女的关系  是枝裕和<br>虽说是很早惦记上了这片，但还是没过多久就把它抛在了脑后，直到今年4月份得知其入围了第75  届  戛纳电影节主竞赛单元，《掮客》这才又被我拉回眼前。<br>毫无疑问，《掮客》和《分手的决心》热度非常，是枝裕和和朴赞郁的正面交锋，任谁都想看看到底鹿死谁手。<br>最终朴赞郁斩获最佳导演，而宋康昊则凭借《掮客》荣获戛纳影帝，这两部电影热度一时风光无两。<br>**（**希望没看过片子的读者还是先看片再看文，<strong>否则可能不知道我究竟在说什么）</strong><br><strong>一</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwSxn282u0p0lSicxo700w93ZFUMO7uY6Y4veTy02dn7LvX1AEgXaVzPA/640?wx_fmt=other" alt=""><br>在关了灯对所有人说感谢出生的话时候素英不只是羽星的妈妈还变为“母亲”<br>这个符号让其他人有了意义，  不是“妈妈明明说会回来接我”“超过年龄就不再适合领养”“以后别再联系了”<br>而是“谢谢你们，能出生在这个世界”<br><strong>二</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAw0Q81dlX3EGHNfXibaiawKlWpZbE9Ywqg4CZo773PR14ibvr6RicymwkkKA/640?wx_fmt=other" alt=""><br>喜欢裴斗娜跟踪宋康昊那里的镜头动线，本来是旁观者、追逐者的裴听到了尚贤和女儿的对话之后，跟在他身后靠近——看向他的视线——经过他身后——走远<br>感觉在这里她开始站在他的视角走到了他们的故事中，变成了事件的参与者，这里也是她在长久的跟踪以来第一次也是唯一一次和尚贤近距离接触。<br>之前安排人扮演买家的时候我还想说她怎么不亲自上，看到这里觉得安排很妙。<br><strong>三</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwKZEZxEMPRQuzb5hq9EHwwlGFmACCOkuUyl0DkQ85V1bvX4zpQfJicNw/640?wx_fmt=other" alt=""><br>裴打开窗点压挂在玻璃上的花朵，也很有意味，不知道是刻意为之，还是演员即兴，感觉是导演的风格但是裴斗娜演得太自然了。<br><strong>写在最后：彼此救赎</strong>  </p>
+<p>在摩天轮里，东洙和素英都是第一次彻底的袒露心扉，一组简单的正反打镜头，给到两个演员各自的特写表演。东洙隐晦的表达了不用着急把孩子卖掉，或者是咱们选择放弃，直接找一家好的家庭寄养也可以（咱们不卖孩子了）</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwyuQF4ewzmPFBWwUsjO9YfGcjMYuErGF0wAfGZn3oCbgY8U2EyiaUgKw/640?wx_fmt=other" alt=""></p>
+<p>在没得到素英肯定的答复后，东洙再次提出，这个孩子我们可以养着，甚至在面对素英的询问后说出：我可以当孩子的爸爸。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwkyViboYCBiasPWES5IyQxE0Bj5gbctDct87ibs0kFdM7hp6uENxttStFw/640?wx_fmt=other" alt=""></p>
+<p>从两人的面部表情和情感传递来看，可以确认对彼此都有好感，并且两人有一起走下去的想法，但是素英还是说出了残酷的现实：这是不可能的。因为素英的杀人犯身份（被杀者为羽星父亲）早已被警方锁定，被捕只是时间问题。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwUY3DPnGpdibPY8lcSNYaZK8J6Bsxj6JaE2Yo3bxpwDzCemL9y9NLHtg/640?wx_fmt=other" alt=""></p>
+<p>东洙这是用自己的左手挡住了素英的眼睛，其意在表示在新闻报道中，会对犯罪嫌疑人打马赛克的形式来保护其隐私，但东洙此举又有以个人身份来保护素英的含义在，即使是我对这件事情帮不上任何的忙，唯一能做的就是在此时遮住她的双眼，用来保护她。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwSAmML337jB6pSm3jbkk13OajxotMZJiaTntLqbbr4RiaWJh9QD5iax2qg/640?wx_fmt=other" alt=""></p>
+<p>东洙这时也点破了素英一直想要丢掉孩子的真正原因，“不想让他成为杀人犯的孩子”这也是素英在极力克制着不去照顾和关心羽星的原因，害怕自己放不下孩子，但又怕孩子跟着自己要受到一辈子的骂名。</p>
+<p>东洙也借此说：“或许我妈妈也有不得不抛弃我的原因吧。”实则也是在为素英开脱，但素英说道：“那也不用原谅你妈妈，她是一个糟糕的母亲。”这里也是在暗示自己不可被原谅，素英自己也是一个糟糕的母亲。随后东洙说：“我替他原谅你，素英。”</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwzV0ic9AwQdcgREHhsUWoVXzTcXnUiaPjKfappKmrdMicWAVpKSSH9wZAw/640?wx_fmt=other" alt=""></p>
+<p>然后一个大约8秒左右的镜头，素英嘴角略微上扬而后立刻摇头，既感动又否认，感动于对方对自己的安慰，又认为自己不值得被原谅，不到10秒的镜头里情感进行了三次反转，诠释的极其到位。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAw8Sn9oHhvibCvgv04VOQS7WNa7frLc2kPhtvJicQ6j02icKfKdvKySOTyg/640?wx_fmt=other" alt=""></p>
+<p>二人借这段对话，彼此袒露了心扉后，又相互治愈，东洙从素英的眼神中看到了母亲对自己的愧疚，素英从东洙的话里得到了抛弃亲子的原谅，两人在此彼此救赎，相互取暖。随后就是两人沉默对视，给予对方，也给予观众时间来消化这段情感抒发。</p>
+<p>随后接上的是秀珍的镜头，她对助手说道：“现在最想卖掉孩子的反而是我”，略带自嘲的话术反而更能推动剧情情感的抒发，原本看似十恶不赦的人贩子和妓女自我救赎，回心转意，而本应代表着正义一方的警察，却试图促成这邪恶的卖婴交易借此来抓犯人现行。</p>
+<p>又借助手的嘴来说出更为讽刺的话：“反而我们更像是掮客了。”双方仿佛身份互换般的情感诠释，既深化了主题，又带来了更强有力的情感刺激。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwtIlU2CL7x3WubhyJVOTmcIhmspa7OeQSEicekWongOtUPckAPAZbRlw/640?wx_fmt=other" alt=""></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz/E8dLbmPckyKboNT7JkNSHIphX6Ng6NAwWOAImXZ4giaV64S0Uc0BJIibY2Wib7nibCfhP1iakpfyHvqRlWAngtq3k3A/640?wx_fmt=other" alt=""></p>
+<p>抱持着明确的创作目的，精心拣选合适的素材，施以自己一以贯之的个人风格作为包装，转而将之推向既定的道路上去——从这个意义上而言，《掮客》这部影片里，真正的“掮客”或许正是导演是枝裕和本人。</p>
+<p>参考/  披着韩片外衣，仍旧是枝裕和，常熬夜少女，豆瓣，2022-07-06  《掮客》：人贩与妓女的相互救赎，Hannibal，豆瓣，2022-07-06<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4eFBoibwyLHrAz5vYTFdefFSHOt60UWzkgSq5UHjnrraOaHQiaNiaxLoag/640?wx_fmt=png" alt=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4UtH4pI9wuxRdliaH8uqOO2mRpO6iclI9EWGKFj61omYSNOG0JDYW0BlA/640?wx_fmt=jpeg" alt=""><br>24帧观影团<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIKIwiafnicePYSiaAexoftMR4ybeeqD3f39AnUzmpyz2t953XeNMCgrFcIq2AicmXgzZ4gXD0knNzOrw/640?wx_fmt=png" alt=""><br>长按左侧二维码关注</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

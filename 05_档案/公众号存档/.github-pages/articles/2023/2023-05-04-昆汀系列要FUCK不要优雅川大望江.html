@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>昆汀系列要FUCK不要优雅川大望江 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-05-04</div>
+      <h1 class="article-title">昆汀系列要FUCK不要优雅川大望江</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fCFCG1yvNKgJlib3zhTzeFpzy0tTQUqvdByBaGGSKGKdhFdplTIPMLcw/0?wx_fmt=jpeg" alt="cover_image"></p>
+<h1>「昆汀系列」《要FUCK，不要优雅》· 川大望江</h1>
+<p><strong>写在前面</strong><br>最初接触昆汀的电影时，我总震惊于他下一秒的故事走向。我想人生也大都这样出其不意吧。就好像去年还在因为生病被搞得毫无生气的我，是绝对想象不到，今年五月的昆汀系列能带给我多大的能量。<br>似乎没有什么风格能够限制和定义昆汀，没有什么元素是他难以驾驭的。电影里所有的呈现似乎都是最佳选择。我常常以此在面临选择时告诉自己：我走的每一条路都不会是弯路。没有什么是“不应该”和“不适合”的。<br>约是五年前，我无意间读到一篇论文——《〈低俗小说〉之后现代主义探讨》。第一反应让我感觉到这部片子不是啥正经电影，不过反而勾起了我浓烈的好奇心。<br>我怀着期待的心情前去观摩，于是便打开了新世界（电影）的大门。一边被“正经”教育着血腥暴力和性不适合未成年人接触，一边怀着当时还未被消解的罪恶感看着《无耻混蛋》里割头盖骨，《杀死比尔》里踩爆眼珠…以及数不清的“FUCK！FUCK！FUCK！”爽得人头皮发麻。<br>鲜血四溅，头颅横飞，加上经典的配乐和刺眼的配色，可谓是视觉和听觉上的双重爆炸。我想，如果能在大荧幕上看一次昆汀的电影，那将是终生难忘的体验。于是，他的系列便来了。<br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fjYCayThRL2gLCmoEFicRgZCpzDNtpbcCVgzkw35OIE6PLvMMzC0CKIA/640?wx_fmt=png" alt=""><br><strong>放映员说</strong><br><strong>1.《杀死比尔》111min+137min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fibLvk93Meyia1xYmqoYWyF6zu73o3FnW73CnTFDc0zqUbCg58icLfVEnQ/640?wx_fmt=jpeg" alt=""><br>一个简单的复仇故事，各种风格和元素揉杂在一起，却并未显得不伦不类。昆汀鬼才般的电影天赋让《杀死比尔》血腥的渲染达到了一种极致的高度<br>，成为暴力美学之林令人无法忽视的惊艳作品。<br><strong>2.《低俗小说》154min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fuqfRzAcYZXxYLL16IOLjolUrDnyCkHK4EJNR8Sl5DTPibut3dhzk1ng/640?wx_fmt=jpeg" alt=""><br>昆汀最负盛名的作品。影片对他的恶趣味有着比较全面的展现，然后，就是个性。这部电影具有对传统叙事手法和题材的颠覆，还运用了拼贴、戏仿、无厘头、解构手法的特征。它不会告诉你一些深刻的道理，但观完此片不会只是简单触动你的味觉，而是直击味蕾。石头虽然坚硬，但鸡蛋才是生命。当高雅艺术被束之高堂，通俗文化才是人间烟火气。<br><strong>3.《危险关系》154min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fZ86rzHQrRMWfnQrOsloMW66bYWIQNQHriav5Dr3pKpibmZYRFQFBoeHA/640?wx_fmt=jpeg" alt=""><br>这是昆汀最被低估的一部片子，算是他作品里最“普通”的。没有玩弄非线性叙事和过多的炫技技巧，故事也并不复杂。在完美延续昆汀式人物特征的基础上，又区别于其它作品的配乐风格让电影产生了一种奇妙的化学反应。沉稳的叙述方式将这个故事抻得很长，却依然张弛有度。几个长镜头简洁有力，一气呵成，让人酣畅淋漓。<br><strong>4.《无耻混蛋》153min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fQTlJNZzcQGez3WewguqticxdLJFAUWrt8C8FZLznNejFv8cIEO7tZ7g/640?wx_fmt=jpeg" alt=""><br>颠覆般的重构近乎疯狂，昆汀天才般的想象力赋予这部电影无可替代的魅力。电影让一切成为可能，不仅仅旨于宣扬思想或引发共鸣，没有该与不该，纯粹地展示那被或不被认可、真实或虚假、正确或错误都无所屌谓的波涛汹涌的内心世界。如果要以历史的真实性去批判这部电影，那反倒令人发笑了。<br><strong>5.《金刚不坏》114min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fJLFOtn5DqpVbLFSmHibYB6hBz1F5sic5j5hVBibRvicNavtHXJWJQX80QA/640?wx_fmt=jpeg" alt=""><br>爽片的精髓当然在于爽。昆汀似乎在这部片子里放弃了对他那些该死的恶趣味的掩饰，各种特写的脚，各种梗，各种风格。但昆汀的电影也许永远不会出现因为混搭的割裂感而生硬的事情，只会让人觉得：这很昆汀！这很爽！对于喜欢昆汀的人来说，这部片子简直戳爆爽点。<br><strong>6.《被解救的姜戈》165min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fsgfNIQZ9Hv777BKHbS1IsyDjex6yTWl7RrP2th5gdrib6hVCEjI6ibibQ/640?wx_fmt=jpeg" alt=""><br>这部电影少了点昆汀拿手的邪性，而饱含了一些柔软的情感部分。  演员爆发力十足，还是熟悉的废话不断，满篇恶搞，血肉横飞。  可谓配乐一响，爹妈白养。<br>可又在残酷之外带着一丝浪漫和温情，是幽默非常的混合西部风作品。  我本以为严肃题材不能有合理又舒服的讲述方式，但昆汀给出了他的答案。<br><strong>7.《八恶人》168min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fAPUWHvAI5coEoXAVOrttPqOzguJySXL218icxbooVliaOWsydBSyzmIQ/640?wx_fmt=jpeg" alt=""><br>70mm胶片的拍摄使得这部电影如果没能在大荧幕上呈现，将会是一种遗憾。  这是昆汀继《被解救的姜戈》后的第二部西部片，节奏，镜头和配乐都相当棒。<br>而故事本身就已经足够吸引人了，就像昆汀本人说的：  “Story is king.”他俨然已是讲故事的大师了。<br><strong>8.《落水狗》99min</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9f4DVic1XaW9xfa7xuicSic0zVWx3zONA6qMXa8VaiaF4VeYREyTMjg9KbIw/640?wx_fmt=jpeg" alt=""><br>潜意识里总认为昆汀不是个拍情感的好手，看《低俗小说》时我就隐隐感觉到了自己对他的刻板印象，而《落水狗》又佐证了这一点，虽然这是他的处女作。<br>白先生和橙先生的感情……借用网友的一句评价“让人很沸腾啊，很沸腾。  ”嘴里喋喋不休满是FK的人，展现出柔情的一面，还挺tm感人的。<br>昆汀从不对自己的电影多加解释，他只是用心地塑造自己的风格，自己的人物，最后将其幻化成一种独特的电影符号。  这一次， 要FUCK，不要优雅。<br><strong>特别鸣谢：  bilibili@Azuki咔咔</strong>  </p>
+<p><strong>排期表</strong><br><strong>2023年5月7日-6月3日</strong><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fRib5vbhukh7OGh2onvChm3bF3o11ufavCFuPNc9Tbbh7EfRrrDztWSw/640?wx_fmt=png" alt=""><br><strong>主持人</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fHIzibSX1N6oSuQ722ReCmL4Fcn83PP47VJw1GeyIRib7MyiaU95fDVtMw/640?wx_fmt=jpeg" alt=""></p>
+<p>阿Z  </p>
+<p><strong>票价</strong><br><strong>（含一张定制票根）</strong><br>_ ‍  <a href=""><br><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJsHNS5iaFzxmJNPxR10jv9fjIic00MDv4gLVE1vOGxuNn3QF43waWADcRPFEBvU5j3f9CjwLC8ibbVQ/640?wx_fmt=png" alt="">
+</a> ‍<br><strong>社群</strong>  </p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyL5vrB1t7X26RurYxe6qqXrNClUtEHKDWaEjG0yjIxvTxMIE8zHDDjQuTyrHUVzMeLI1kia8YSenfg/640?wx_fmt=jpeg" alt=""></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

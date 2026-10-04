@@ -1,0 +1,6 @@
+# 临时文件和工具产物
+auto.log
+_skill/
+.DS_Store
+node_modules/
+*.png
