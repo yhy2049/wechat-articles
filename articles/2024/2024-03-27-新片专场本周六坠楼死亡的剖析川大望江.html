@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新片专场本周六坠楼死亡的剖析川大望江 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-03-27</div>
+      <h1 class="article-title">新片专场本周六坠楼死亡的剖析川大望江</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「新片专场」本周六 ·《坠楼死亡的剖析》· 川大望江</h1>
+<p><strong>写在前面</strong><br>死亡引发的婚姻剖析和自我解读，真相与谎言，公正与偏见，孤独与爱，它不是妥协和屈服，而是从始至终的战斗宣言。它以极小的切口叙事，逐渐如飓风般席卷所有，它不是一层一层的剥开，而是直接破开。<br>以悬疑和家庭两部分互相牵制，戳开婚姻生活的层层面纱，虚虚实实，正反交织的迷宫，让观众直到最后依然只看到判决而看不到真相。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br>今年戛纳电影节上，金棕榈大奖的桂冠被《坠楼死亡的剖析》这部影片摘得，可谓实至名归。这也是戛纳电影节历史上第三次女性导演荣获此殊荣。<br>影片从一个看似自杀的谋杀坠楼事件入手，深入剖析了男女主角的婚姻生活，层层抽丝剥茧，让人叹为观止。剧本的功力堪称一绝。悬疑案件与婚姻剖析的完美结合，让人在紧张刺激的情节中，感受到了深刻的情感剖析。<br>《坠楼死亡的剖析》通过丰富而清爽的镜头语言，以及极具张力的法庭戏剧，成功征服了所有观众的心。影片既通俗易懂，又不失艺术魅力，既有类型元素，又不落俗套，兼具文学性的深度和故事性的锋利与温柔。<br>法庭对峙中的激烈博弈，如同一场现实版的主权争夺战，而夫妻间作家身份的设计，更是凸显了这一点。丈夫的创作力枯竭，而妻子却能化腐朽为神奇；丈夫试图改变生活却以失败告终，而妻子却在挫折中找到了新的爱与激情。法庭上，男检察官咄咄逼人，而妻子则凭借自己的叙述成功翻盘。<br>在这部多层次的交织作品中，虽然主线是法庭戏，但影片传达给观众的却并非简单的对错与善恶，而是一种态度，一种生活的姿态。这种姿态与性别无关，让人在观看后感到如获新生。总之《坠落死亡的剖析》不仅是一部成功的电影作品，更是一次艺术的盛宴。它让我们看到了女性导演在电影界的崛起与力量，也让我们对电影艺术有了更深的理解和认识。<br><strong>时间</strong>  </p>
+<p><strong>2024年3月30日（本周六）<strong>18:45-19:00入场  19:00-21:31  放映  21:31-22:00  映后<br><strong>地址</strong><br>星美国际影城(学府花园店) 3号线磨子桥地铁站D口步行1000米</strong>（F号厅）</strong><br><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>票价</strong><br><strong>￥40</strong>（含一张官方票根、官方海报）  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+]()</p>
+<p><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

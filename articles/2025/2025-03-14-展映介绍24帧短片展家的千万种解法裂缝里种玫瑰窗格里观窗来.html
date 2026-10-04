@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>展映介绍24帧短片展家的千万种解法裂缝里种玫瑰窗格里观窗来 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-03-14</div>
+      <h1 class="article-title">展映介绍24帧短片展家的千万种解法裂缝里种玫瑰窗格里观窗来</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>展映介绍 | 24帧短片展 · 「家」的千万种解法：裂缝里种玫瑰，窗格里观窗来</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**「家」的千万种解法：裂缝里种玫瑰，**窗格里观春来</p>
+<p>24帧观影团“窗影朝夕”主题短片展将于2025年3月23号（周日）于成都与观众见面。本次短片展以家庭叙事为主题，共邀请8部入围国际展映节的优秀短片，旨在以屏幕为窗，展现人间烟火与家庭百态。
+排片分为三个展映单元，第一单元排片4部，为  剧情或故事短片  ；第二单元排片3部，均为  记录短片  ；第三单元排片1部，为  音乐短片  。</p>
+<p><strong>购票请点击此处</strong></p>
+<p><strong>第一幕：困在血缘里的命题人</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>‌  展映单元  ‌  ：<strong>《流火记》《一个新的情绪》《家》《梵婀玲》</strong></p>
+<p>在《流火记》的氤氲水汽中，我们窥见东亚家庭最隐秘的叙事——爱总以碎片的形式存在，像散落的积木  ，需要观者自行拼凑出完整的形  状。</p>
+<p>《梵婀玲》的乐声弥漫在黑夜里，就像那些家庭里本该充盈着的话语，在黑夜里迷失了方向。</p>
+<p>《一个新的情绪》用摇晃的镜头语言展示家庭矛盾：当父母子女共享同一盏顶灯的光，便总会有餐桌上的争执与日出时的和解。</p>
+<p>而《家》的跨民族婚姻像一场静默的拉锯战——血缘能打破文化壁垒吗？或许答案藏在画面如同法国乡村般的暮色里。爱是比语言更早抵达的方言。</p>
+<p>第二幕：时光琥珀里的萤火虫</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>展映单元  ：<strong>《远水解不了近渴》《妈妈和我的  AI  爸爸》《小熊校园》</strong></p>
+<p>Z世代中，有人困在返乡的行李箱里，被「纪录片养不活人」逼到墙角。看起来《远水解不了近渴》，但旧行李箱里也装着新生的根须，在墙脚下也可以抬头寻找天光。</p>
+<p>有人在《妈妈和我的AI爸爸》中尝试用数字星火映亮蒙尘的记忆琥珀，把模型权重变为轻抚母亲白发的温暖大手。</p>
+<p>有人则直面《小熊校园》中所讲述的残酷真相——家庭防线的溃败，可能始于那句「为什么只欺负你」。</p>
+<p><strong>终章：以艺术为舟，渡家的长河</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>‌  展映单元  ‌  ：<strong>《救赎路》</strong></p>
+<p>当特雷西的flow穿透荧幕，我们终于看清——家从来不是地理坐标，而是母亲凝望的背影，是琴键上未写完的歌，是明知会被灼伤仍要拥抱的火焰。这条救赎路或许布满陷阱，但当beat响起时，所有迷途者都将听见归航的潮声。不要只向前走，回去记得陪妈妈看看海。</p>
+<p>本次影展以屏幕为窗，</p>
+<p>为大家展现生活中的家庭百态。</p>
+<p>无论是否有幸能够与大家共同阅片，</p>
+<p><strong>请大家记得，</strong></p>
+<p><strong>窗会有倒影，但窗不是镜。</strong></p>
+<p><strong>请记得，春又来了。</strong></p>
+<p><strong>它忠诚地造访于每年的三月。</strong></p>
+<p>于季节和太阳而言，世纪初与世纪末并无区别。</p>
+<p>某种意义上，</p>
+<p>我们仍然被千禧年的春光浅浅映照。</p>
+<p>请记得看看新开的杜鹃花丛，</p>
+<p>晒晒被锈栅栏分隔的阳光，</p>
+<p>烤烤那厚重的蓝色窗玻璃里，</p>
+<p>暖暖的、喧闹的、令人昏昏欲睡的火炉。</p>
+<p>祝大家观影愉快！</p>
+<p><strong>报名方式</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>地址</strong><br><strong>报名后获取</strong><br><strong>官方社群</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码加好友拉你进影迷群一起交流</strong> </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

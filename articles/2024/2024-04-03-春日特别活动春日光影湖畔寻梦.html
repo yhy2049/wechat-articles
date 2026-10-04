@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春日特别活动春日光影湖畔寻梦 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-04-03</div>
+      <h1 class="article-title">春日特别活动春日光影湖畔寻梦</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「春日特别活动」春日光影，湖畔寻梦</h1>
+<p><strong>写在前面</strong><br>也是临时起意，3月初的时候在群里和大伙无意聊起，我说我提了辞职，换了一份工作，看在3月底或4月我们计划做一次春游，放不放电影再说，主要希望能带着大伙去放松下心情，因为户外我确实不熟悉，当时很希望有经验的伙伴能联系我给我提供一些帮助，把这次春游计划做好，先是Reafa的帮助，他有过几次徒步组织经验，不过没有在成都，所以路线选择及勘探也成为了一道难题，考虑人数及人员安全，且我们是第一次组织，所以放弃了轻徒步或者探险户外，其实我个人还是很期待这种形式，希望有一天能启动。<br>选择固定地点的多流程活动，这样人员安全有了保证，其实我最开始很希望说能一群人去做成一件伟大或创意的事情，你能想象50人将50张海报拼接在一起然后像风筝一样飞上天空吗？是的这是最开始的想法。<br>脑暴到放弃，最终选择了一个比较素的一次户外活动，说实话我还是挺满意的，因为也是符合最开始制定的方向，放松心情。多人线下活动都会考虑一个关键，就是破冰，说实话这往往是我反感的，我希望我们的活动，是快乐的不是难为情的，是轻松不是尴尬的，我不反对大伙去社交，只是我个人好像不太喜欢目的社交，所以我会尽可能在环节上避免掉，最后选择清明是觉这个传统节假日除了扫墓，最应该去的是踏青，总之第一次简单的外出活动，希望大家能多提提建议，希望我们在电影中能有所见闻，希望我们在行走时有所见闻。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>活动流程</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>13:00-13:30 集合签到  - 现场核销小程序  - 领取自己的名牌贴纸<br>13:30-13:40 主持人开场  讲讲活动的初心和本次活动流程  13:40-14:30 写影评  -
+在自己带来的海报上，写下影评和自己的签名，并将海报挂在“电影隧道”上。  -  参观的人，如果看到感兴趣的电影和影评，也可以在海报背面接着写下自己的影评。
+-  先展示自己的海报及影评，展览并交叉参与<br>14:30-16:00 自由活动  参加者可以自由活动，按自己舒服的方式和大自然相处，也可以找摄影师帮自己拍照<br>16:00-16:20 湖畔冥想  -  听着放松的音乐，在湖边，在草地上，躺一会，用舒服的方式和自己相处一会吧。<br>- 在冥想结束以后，如果有想分享的，可以分享。没有分享的也不勉强<br>16:20-16:40 合影时间  大家一起合影吧<br>16:40-16:50 交换海报 让电影介绍我们成为灵魂契合的朋友吧。“电影隧道”的海报，可以互相赠送也可以自己带回。<br>16:50-17:00 撤场<br>提醒事项  -  如有相机，务必携带！  -  宠物友好，欢迎大伙带上狗子  -  露营椅安排，如遇烈日，天幕安排  -
+报名成功后务必进群，接收最新消息和详细地址导航，也可加下面微信拉你进群  -  活动24小时内不退款，请合理安排时间<br><strong>时间</strong>  </p>
+<p>**2024年4月4日（本周四清明节）**13:00-17:00<br><strong>地址</strong><br>青龙湖湿地公园 4号线成都大学/明蜀王陵地铁站<br><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>票价</strong><br><strong>￥50</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+]()</p>
+<p><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong><br><strong>_ 活动策划：Reafa  _</strong>_ 海报设计：椰头  </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧×方所特别放映迟来的人杨一欣短片智齿飞天大王放映映后谈创作者交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-08-12</div>
+      <h1 class="article-title">24帧×方所特别放映迟来的人杨一欣短片智齿飞天大王放映映后谈创作者交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「24帧 × 方所特别放映」迟来的人 · 杨一欣短片《智齿》《飞天大王》放映 &amp; 映后谈 &amp; 创作者交流</h1>
+<p><strong>时间没有等到他们，但电影记住了。</strong></p>
+<p><strong>时间</strong></p>
+<p>8月15日（周六）14:00-17:00</p>
+<p><strong>地点</strong></p>
+<p>方所成都店</p>
+<p>成都市锦江区中纱帽街八号（成都太古里）负一层M68-70号</p>
+<p><strong>活动</strong></p>
+<p>两部短片，一场映后，一群创作者</p>
+<p>《飞天大王》+《智齿》</p>
+<p>一个被时间落下的男人，一个被家庭落下的女人</p>
+<p>放映 → 映后谈 → 创作者交流</p>
+<p>约150分钟，免费入场</p>
+<p>【 】</p>
+<hr>
+<p><strong>策展人推荐</strong></p>
+<p>这次邀请杨一欣来成都做放映，其实在青海西宁我们就已经约定好，因为我太喜欢他的短片了，他说他很乐意专门从北京飞过来，于是我们一拍即合。</p>
+<p>今年FIRST，我在西宁看了《飞天大王》。那是我在整个影展（短片）唯一一部给了五星评价的片子。也是我观看过的短片场次里，唯一在放映过程中有大笑和掌声的片子，观众喜不喜欢，坐在影厅里就能感受到。而且导演对剧本的熟悉度和理解，在所有映后的对答中都算是高质量的。关于&quot;飞天大王&quot;这个名字，我后来想——它说的是那些我们身边宏大但无法捕捉的事物，它影响着世界，但我们抓不住它。</p>
+<p>看完《飞天大王》我追着导演问：你之前还有作品吗？于是我又看了《智齿》，也很喜欢，里面的男女演员表演很真实，笨拙又真诚。</p>
+<p>为这场活动取名时，我反复想这两部片子到底在拍什么。英雄？边缘奇观？爱情？生活？我想，是&quot;迟来的人&quot;——退休邮递员迟到了四十年才被翻出记忆，女保姆迟到了大半生才开始成长，连智齿都等到四十岁才开始疼。他们想努力抓住，却被落在了时间后面。时间没有等到他们，但电影记住了。</p>
+<p>所以这次在24帧做这场放映，我想让成都的观众看看，一个95后导演怎么拍&quot;迟来的人&quot;；也想让成都的短片创作者过来坐坐，聊聊我们各自镜头里那些迟到的人。</p>
+<p>—— 24帧 宇航员</p>
+<hr>
+<p><strong>导演简介</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>杨一欣，浙江温州人。青年导演、编剧，北京电影家协会会员，北京电影学院文学系博士研究生在读。</p>
+<p>导演作品入围罗德岛国际电影节、FIRST青年电影展、北京国际电影节、北京大学生电影节、86358贾家庄短片周、IM两岸青年影展、国际学生影视作品展（ISFVF）等国内外几十种电影节展。</p>
+<p>获2025年第十五届北京国际电影节短片单元「最佳短片」与「最佳导演奖」、2024年北纬30°短片周「年度编剧」、第八届沈阳青年影像节「最佳剧情片」、伦敦环球电影节「最佳短片」等国内外几十种奖项。</p>
+<p>编剧作品获第十六届中宣部精神文明建设&quot;五个一工程&quot;奖、江苏省精神文明建设&quot;五个一工程&quot;奖。曾担任第七届海南岛国际电影节AIGC单元初审评委、第33届北京大学生电影节初审评委。</p>
+<hr>
+<h1></h1>
+<p><strong>片目一 · 《飞天大王》</strong></p>
+<p><strong>IN THE MARGINS</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>黑白 · 剧情短片 · 2026 · FIRST青年电影展主竞赛入围</p>
+<p><strong>故事梗概</strong></p>
+<p>一个北方小镇上，退休的邮递员邱瑞全夜夜难眠：镇邮电所为参评省级英模，计划将他四十年前曾做过的一桩好人好事拍成宣传片——当年刚入职的他，在麦田里亲手抓获一名逃犯，并因此受到表彰。</p>
+<p>为配合拍摄，邱瑞全反复回忆早已模糊的过往。导演一再追问事件情节，他却只记得彼时生活的细碎感受与边缘琐事。同时，拍摄过程也状况不断：摄制组夸夸其谈；孟所长满口官腔；村民们频频捣乱……</p>
+<p>当这场宣传片拍摄愈发滑稽混乱之时，一个名叫&quot;飞天大王&quot;的国际连环杀人犯的脚印，悄然出现在了小镇之上。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>邱瑞全被拉回四十年前的记忆</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>虚构与现实的边界，在荒诞中模糊</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>一个退休邮递员的人生，被一部迟到了四十年的宣传片重新翻出来</p>
+<p>一个迟到的男人</p>
+<p>邱瑞全的人生，被一部迟到了四十年的宣传片重新翻出来。但他记得的不是当年抓逃犯的英勇——是麦田，是风，是那些被&quot;英雄叙事&quot;忽略的日常。他的记忆迟到了，才看清自己真正在乎的东西。</p>
+<p>导演阐述</p>
+<p>谢晋导演曾说：&quot;拍电影就像手心捧水，走得越远，漏得越多。&quot;那我们的生命也是如此吗？当人生愈加朝前走去之时，我们究竟留下的更多，还是遗漏的更多？</p>
+<p>我构想了一个&quot;没有情节&quot;的人物邱瑞全——邮电所想拍摄他四十年前做过的一件好人好事用以完成政绩，但他的记忆回溯不仅无力，且同现实对&quot;情节&quot;与&quot;奇观&quot;的需求分外割裂：对一个普通个体而言，究竟重要的是生命中的&quot;情节&quot;，还是生活的&quot;毛边&quot;？而他又该如何从这些看似冗余的&quot;毛边&quot;中，寻找到自己存在过的意义与尊严呢？</p>
+<hr>
+<h1>片目二 · 《智齿》</h1>
+<p><strong>WISDOM TOOTH</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>彩色 · 剧情短片 · 2023 · 北京电影学院艺术硕士学位作品</p>
+<p>故事梗概</p>
+<p>邱绿娟在一个数学老师家当着保姆，热爱生活的她每天要处理数十名小学生的饮食起居。她年近四十，没有什么恋爱经历，远在乡村的父母始终对她保有愤怒，将她作为提供钱财的工具。</p>
+<p>最近邱绿娟发觉自己的牙齿有些疼痛，经过诊断是智齿发了炎。在这次诊断后，温柔热情的牙医许大苇闯入了她的生活，教她跳广场舞，陪伴她度过美妙的每时每分。</p>
+<p>但一次偶然似乎又将她吹起的美梦戳破。她该以怎样的姿态面对那欺骗自己的生活呢？</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>邱绿娟的生活，被日常填满</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>深蓝的水面上的那一盏灯，伴随着船上的人儿</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>生活里总有不合时宜的亮色——就像迟来的爱情，在荒诞的夜晚登场</p>
+<p>一个迟到的女人</p>
+<p>邱绿娟的人生，什么都迟到了。智齿四十岁才发炎，初恋四十岁才萌芽，连成长都迟到了大半生。她嘴里的那颗智齿，疼得刚刚好——因为它提醒她，有些东西虽然迟到，但还来得及疼。</p>
+<p>导演阐述</p>
+<p>当你回溯生命的大半过往，却发现自己始终以来的生活不仅刻板重复，你该怎么面对接下去的人生呢？</p>
+<p>《智齿》讲述了一个关于&quot;延缓成长&quot;的女保姆的故事——邱绿娟是一个年近四十，从未有过恋爱经历的保姆，她每天重复着相同的工作与事宜，但她的内心却单纯地停留在过去。她就像自己嘴中那颗疼痛的智齿，迟缓于这个向前涌动的世界——它并不在青春期萌芽，而在生命走过大半时才开始作痛。</p>
+<p>而也基于此，邱绿娟面对她那迟来的成长与疼痛，也正等同于这部作品想要去探寻的主题：当一个个体发现自己的人生始终平静无波时，那对自己生命历史的回溯和考察，是否仍具有其价值和意义呢？而这些个体又该如何在&quot;丧失情节&quot;的生活里，寻找到属于自己那美妙的每时每分呢？</p>
+<hr>
+<h1><strong>活动流程</strong></h1>
+<p>①  短片放映 · 约60分钟</p>
+<p><strong>《飞天大王》→ 中场休息 → 《智齿》</strong></p>
+<p><strong>从荒诞的黑色幽默，到温情的日常疼痛</strong></p>
+<p><strong>②  映后谈 · 约40分钟</strong></p>
+<p><strong>导演杨一欣现场交流：为什么总是拍&quot;迟来的人&quot;？两部片子之间有什么隐秘的对话？从学院到影展，这条路怎么走？也欢迎观众提问。</strong></p>
+<p><strong>③  短片创作者交流 · 约50分钟</strong></p>
+<p><strong>成都本地短片创作者到场，聊聊我们各自镜头里那些迟到的人。不设固定座位，自由走动换组。</strong></p>
+<hr>
+<h1>关于我们</h1>
+<p>24FRAMES PROJECT，前身24帧观影团，成立于2022年，常驻成都。我们是一个以电影放映为核心的文化项目，通过放映、策展与创作实践，让电影成为一种可以被持续进入的生活。我们相信：电影不仅发生在银幕上，也发生在人与人之间的相遇中。总有一部电影会让我们相遇。</p>
+<hr>
+<h1>特别感谢</h1>
+<p>方所，来自中国的公共文化活动和空间的策划和运营机构，典出南朝梁代文学家萧统「定是常住，便成方所」。</p>
+<p>以当代生活审美为核心，涵盖文化商业、文化运营、艺术运营三大领域，以图书、美学、时尚、儿童、美食等复合业态为核心，打造围绕社区服务创新、城市更新、乡村振兴、文化艺术与创作的文化综合体。</p>
+<hr>
+<h1>注意事项</h1>
+<ul>
+<li><p>保持文明观影，请勿屏摄、饮食、聊天。</p>
+</li>
+<li><p>请于片尾结束后再离场。</p>
+</li>
+<li><p>活动将会拍摄照片及视频用于宣传推广。</p>
+</li>
+<li><p>影片可能会引发强烈情绪，请酌情参与。</p>
+</li>
+</ul>
+<p>报名即默认您已知悉并同意以上注意事项，感谢您的理解和支持！</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>719丨24帧罗小黑战记2专场时隔6年再次热血 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-07-17</div>
+      <h1 class="article-title">719丨24帧罗小黑战记2专场时隔6年再次热血</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>7.19丨24帧《罗小黑战记2》专场：时隔6年，再次热血！</h1>
+<p><strong>写在前面</strong>  </p>
+<p>电影《罗小黑战记2》以流石会馆遇袭拉开帷幕，人类得到了对付妖精的武器，小黑和师父无限被卷入其中，从而共同开启抵御危机的冒险之旅。据顾杰导演透露，电影中仅动作场面就包含10场，还创新性加入了“热武器”元素，使动作场面更具层次感和视觉冲击力。其中被诸多主创评为“最难”绘制的“飞机大战”场景，更是聘请了专业的飞机顾问，为一场戏设计了4-5个月之久，最终采取“一拍一”逐帧绘制技术，即1秒钟画24张原动画，从而确保动作更加流畅，且兼具速度感。影片通过萌趣可爱的角色设定、轻松幽默的剧情设计，以及震撼而不失美感的动作场面，精心构建了一个让所有观众都能沉浸其中的奇幻世界。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>  </p>
+<p><strong>罗小黑粉丝说</strong><br>了解到很多朋友是罗小黑的多年粉丝，有些粉丝甚至自发制作物料进行无偿交换，我们深受感动，与其中一位也是罗小黑的同人文《人间乐》的创作者—
+LO狐狸取得联系，有幸了解到更多粉丝们心中的真诚与热爱，下面是  LO狐狸对我们说的话：  </p>
+<p>嗨，大家好！我是罗小黑的老粉了，今天想跟大家聊聊我和这个系列的缘分，还有那些特别戳我的地方。</p>
+<p>我记得特别清楚，我是19年入的坑。那会儿刚好《罗小黑战记》的第一部大电影上映，在B站首页刷到了推荐。我自己本身就特别偏爱那种日常、温馨风格的番剧，一看这画风和简介就觉得对胃口，马上就点开看了。结果这一看就停不下来，看完电影直接就无缝衔接去补了当时的TV版！更巧的是，没过多久，就听说TV版又要恢复更新了，感觉我简直是卡在了最爽的时候入坑，那段时间天天追更，简直过瘾！</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>至于罗小黑为什么这么吸引我？我觉得有几个点特别戳我。首先呢，就是开头说的，我超爱日常番，罗小黑一开始那种慢悠悠、生活化的叙事节奏，一下子就抓住了我，特别舒服。但更打动我的是，它在这些日常里，会非常自然地探讨一些关于生命意义、人生选择、是非对错这些挺深刻的话题。而且它的表达方式一点都不说教，特别温柔，基本都是通过角色间的对话自然而然带出来的。</p>
+<p>比如无限师父和小黑关于“好与坏”的讨论，阿根、小白和小黑一起决定比丢最终归宿时的那种温情和思考，还有木落仙人那一集关于生命延续和价值的解答……这些情节都让我觉得特别有意思，也很有回味。当然啦，除了这些，罗小黑里的打斗场面也绝对不能忽视，那是真的帅！每一场都设计得特别精彩流畅，看得人热血沸腾！</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>哦对了，说到这个，有个特别让我激动的小插曲。之前去漫展我有摆过摊，结果这次《大电影2》上映，有小伙伴看完特意告诉我，说在影片最后的感谢名单里看到了我的名字出现在荧幕上！当时的心情真的难以形容，就是超级超级激动，感觉自己的小小支持被看到了，特别有归属感！</p>
+<p>那对于这部新上映的电影，我现在是充满期待啊！虽然我个人不太擅长预测剧情，但听说了好多消息，光是打斗据说就有十场以上！特别是有场在飞机上打架的戏，想想就知道肯定帅炸了！而且这次关于人和妖之间的关系，感觉肯定会有新的发展和变化，这也是系列一直探讨的核心主题之一。总之，我现在最期待的，就是能在电影院看到更多更帅气、更刺激的动作场面！</p>
+<p>欢迎大家到现场和我交流，期待在现场见到罗小黑的粉丝们！</p>
+<p><strong>预告片</strong><br><strong>时间</strong><br>**2025年7月19日（周日）**18:30<del>19:00签到  19:00</del>21:00放映<br><strong>地址</strong><br><strong>保利万和国际影城(三利爱琴海店)<strong>海昌路地铁站B口西90米 三利广场4F<br><strong>票价</strong><br><strong>￥40 单人票/</strong>￥75双人票</strong>人手任选一款官方物料</strong>
+现场欢迎观众们出主题COS和物料交换<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码购票</strong> 
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

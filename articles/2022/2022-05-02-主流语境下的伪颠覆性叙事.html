@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主流语境下的伪颠覆性叙事 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-05-02</div>
+      <h1 class="article-title">主流语境下的伪颠覆性叙事</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>主流语境下的伪颠覆性叙事</h1>
+<p><strong>写在前面</strong></p>
+<p>有关电影叙事结构的文章中都提到过这样一句话：“这类影片已经在叙事上走得太远，它们自身具备了一种更为深刻的意蕴。一般单个的分类和理论已经不能简单概括它们了。”<br>这正是低俗小说的特点，昆汀说过句话可以与这句话互为参照：“形式的快感与一部内容出乎意料的影片所产生的震惊效果是一样的。”他所拍摄的《低俗小说》完美的证明了这句话。<br><strong>《低俗小说》</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>昆汀·塔兰蒂诺这个人本身的出现，就多少带着那么些颠覆性的色彩。16岁的母亲在性解放的浪潮中生下了他，并用电影主角的名字给他命名。这不得不说是某种机缘。<br>31年之后，昆汀凭着《低俗小说》拿走了戛纳金棕榈，几个月后，又捧起奥斯卡最佳原创剧本的小金人。这部号称颠覆性的作品正式将昆汀扶上了好莱坞明星导演的宝座，“昆汀式叙事”就此成为所有人讨论的话题。<br>本文即尝试对该片的叙事结构进行程度有限的分析和梳理，试图借此对昆汀剧本的叙事特点进行小小的把握。<br><strong>叙事思路</strong><br>先撇去电影语言不论，在将《低俗小说》还原到文本状态后我们可以发现，昆汀的叙事，具有某种文学化的特点。影片讲述了四个彼此独立又相互关联的故事，以小说章节的方式进行组织，以黑幕和小标题隔开各段故事。<br>随后又结合电影化特征，将故事的时间顺序打乱，进行切割、打乱、重组。再以一个名叫文森特的人物贯穿整个叙事起到线索性的作用，使得叙事机巧而不混乱。<br>1.拙劣的强盗情侣在快餐店准备打劫。  2.文森特和朱尔斯去公寓抢钱箱、杀人。  3.老大在酒吧收买拳击手布奇，文森特与布奇第一次相遇。
+4.文森特买毒品。  5.文森特奉命陪老大的老婆米亚，米亚吸毒过度，文森特救她。
+6.布奇反投注给自己并且赢了比赛，准备与女友逃走时发现金表遗失，回去取时杀死文森特。  7.文森特与朱尔斯在公寓故事的回叙。失手杀人，处理尸体。
+8.快餐店情侣抢劫的回叙，朱尔斯对他们的教育。  </p>
+<p><strong>另一种形态</strong><br>众多研究者排出过各种各样的叙事线路，本文采用的主要是电影学院郝建教授的观点，在此基础上强调了文森特的线索性作用。根据昆汀在剧本中的叙述，他一共讲了三个故事：索要赃款、晚餐、金表。<br>而笔者更支持郝建教授的观点，认为剧本实际叙述了四个故事，快餐店的抢劫是独立于索要赃款之外的另一个故事。<br>一.快餐店抢劫 1、8  二.索要赃款 2、7  三.晚餐 4、5  四.金表 3、6<br>我们的发现是，就单个时间的叙事顺序而言，第一个故事被安置在开头和结尾的位置，并且顺序进行了完全的颠倒。这种颠倒中还包括了一小段重合的时间段，对于这一段时间，昆汀使用了一种叫做回叙的手法，并且将叙述的视角进行了改变，充分发掘电影之优于文学的视觉化特征。<br>以朱尔斯的视角重现片头强盗情侣的抢劫动作。又如在段落7中，以神秘第四人的视角重现那神奇的不能毙命的六枪。这样做至少可以避免观众的视觉疲惫，更重要的是提供更多的信息量给予观众突破性的信息收获，从而使观众从叙事中获得快感和满足感。<br>这种叙事学意义上的技巧性重复，使得昆汀影片披上一层诡异而颠覆的色彩。<br>而就第二、四个故事而言，在叙述顺序上并没有时间上的倒错，但彼此进行交错，在图表上呈现出一种收缩性的叙述形态。尤其强调了文森特这个线索人物的存在。<br>虽然这两个故事本质上并没有关联之处，但布奇在自己公寓却遇到了第二、三个故事主人公文森特并且将其杀死，是几条故事线进行了交错，从而也交代清楚了各段的时间关系，给予观众重新整合的契机。文森特在6中被射杀，又在7中重现，观众便终于能够在一团雾水中逐渐看出版块之间时间顺序上的影子。<br>事实上，这种交错更多的意义来自于影像节奏的控制上，我们可以发现，在视觉上给予观众强烈刺激的段落是2、6，中间相隔的第三个故事中，也只有5刺激强烈，却又以其浪漫和通俗文化的展示，区别于2、6中暴力的感官刺激，而隔在中间的段落，则属于过渡性段落，昆汀善于使用这种看似闲笔的过渡，将影片情绪往完全莫名其妙的方向发展，继而再忽然间将观众拉回，增强感官刺激的强度。<br>并且，结合故事一，我们又可以发现，在段落1里，强盗情侣举起枪，故事达到最高潮，昆汀突然剪刀一挥，开讲第二个故事，而在叙述到公寓里莫名其妙冒出来的第四个人再对折文森特和朱尔斯连开溜枪后的奇怪表情时再次收手，进入第三个故事，这种对于观众来说无限暴力的叙述方式人为将悬念做到了最高点，继而在影片最后进行破解，于是就又暴力的将快感塞给了观众。<br>最完整和最正常的叙述是第三个故事的叙述，但我想这可能是因为这段中故事本身的刺激性太强，舞厅、舞蹈、毒品、吸毒过量，文森特发疯似的飞车本身就宣布这段道路不能够进行阻隔和重组，与身俱来的奇特力量没有必要再用结构来增强，否则就是适得其反。<br>通过我们的重组和分析，我们至少可以发现，昆汀这个叙事天才在叙事结构方面对剧情进行不计后果的切割、组接、重现，却又巧妙的加入一些细节性的语句对下一章节的提示性暗示，并且始终强调线索人物的行踪，使剧情完整、碎而不乱。圆满的将一个圈形的叙事画到最圆。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+然而事实是，无论在表面看来这是一个多么机巧多么颠覆的叙事形式，本质上说昆汀还是一个在好莱坞经典类型叙事中泡大的孩子，他的颠覆，也只是经典类型内的颠覆，颠来覆去，也只是看上去很美罢了。天才之于土壤，还是土壤中的天才。<br>参考/  主流语境下的伪颠覆性叙事，滕雅望，豆瓣，2011-02-24
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+少数派主义
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+长按左侧二维码关注</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

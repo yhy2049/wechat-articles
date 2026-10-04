@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱乐之城我想起爱上电影的最初 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-05-14</div>
+      <h1 class="article-title">爱乐之城我想起爱上电影的最初</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>《爱乐之城》，我想起爱上电影的最初</h1>
+<p>以下文章来源于子戈说电影  ，作者子戈</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>子戈说电影</strong>.  枪稿 第三阶段。Scene 1 take 3，Action！</p>
+<p><strong>写在前面</strong><br>任何一部热门影片，都逃不过影评界的三板斧，《爱乐之城》也不例外。<br>最开始，先会迎来一波赞誉，而且话说的都很满，像什么提前锁定年度最佳、拯
+救了歌舞片、革新了电影语言……每个影评人都在绞尽脑汁，找一个刁钻的角度，然后坐稳第一个说“喜欢”的人。<br>如果没赶上第一波的话，没关系，你还可以加入第二梯队，给这部电影泼泼冷水，比如：一部被严重过誉的电影、不过是精心包装的陈词滥调……总之那意思是，喜欢这样的电影，只能说明你没文化、见识短。<br>等到该夸的夸完了，该骂的也骂完了，最后还会冲上一波优越感爆表的影评人，大声高呼：无论是赞的，还是踩的，其实你们都没看懂《爱乐之城》，它应该是这样的……<br><strong>《爱乐之城》</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>我是在看过第一遍后，回来听原声的过程中，喜欢上这部电影的。因为在听的时候，我看见整部电影的画面在眼前重放，所有故事、情感、温暖、遗憾，全都在音符里。</p>
+<p>那一刻，我才意识到，这是一部“被歌舞统治”的电影，影片从始至终，都是“歌舞”在推动着叙事、引领着情绪。而这，才是一部歌舞片，该有的样子。
+一部好的歌舞片，“感官传达”是要先于“故事理性”而存在的。</p>
+<p>这也是《爱乐之城》最先吸引我的地方。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>我们看到，影片一开场，就是一段长达5分钟的歌舞长镜头。  拥堵的洛杉矶，被延宕的追梦步伐，使得一群年轻人跳出车外，用歌舞来宣泄内心的躁动。</p>
+<p><strong>这是对梦想主题的一次定调。</strong></p>
+<p>我们看镜头中的男男女女，轮番上场，在稍纵即逝的机会中，为自己争到一幅画面。  只听他们唱着，“我在群星荟萃的洛杉矶，追寻着灯光与梦想……”</p>
+<p>梦想，就是这座城市的空气，是没有人可以停止的呼吸。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>随后，在这座梦想之城里，爱情上演了。  就像四季  不可逆转的更迭，我们看着男女主人公的爱情，也经历了注定的冷暖变化。</p>
+<p><strong>而在每一次变化中，“歌舞”始终作为“第一推动力”而存在，从未缺席。</strong></p>
+<p>于是我们看到：</p>
+<p>小塞和米娅的第一次相遇，是因为琴声。米娅循声走进酒吧，看见小塞正弹着钢琴，于是人群突然暗去，一束光降临在他们之间。</p>
+<p>小塞和米娅的第一次暧昧，是在舞蹈中完成的。那是一个傍晚，近处是街灯和长椅，远方有星河和山峦。两个人虽唱着“一个被浪费的良夜”，可是，身体
+却比语言诚实。只见他们默契地共舞，若即若离地追逐，所有心思都已表露无遗。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>小塞和米娅的第一次约会，也是音乐促成的。那时的米娅，正心不在焉地陪男友吃饭，突然，广播里传来初次与小塞相遇时的琴声，就像是一道闪电，刺破了所有防备，照亮本心。于是米娅抛下男友，一路微笑着奔跑，赴小塞的电影之约。</p>
+<p>此后他们的爱情不断升温，在格里菲斯天文馆虚拟的星空下，失去重力，奋舞到银河边；在爵士酒吧里，小塞弹琴，米娅斗舞，High翻全场……</p>
+<p>直到影片的最后，那个既温暖又心碎的蒙太奇段落，更是将曾经流淌在他们爱情经验中的每一段旋律，全部以变调的形式，混剪到了这段幻想的爱情中，从而呈现出了一种浓缩又跌宕的生命质感。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>应该说，如果没有歌舞，或是换成对白，这个爱情故事是不成立的。</p>
+<p>因为在这部影片中，<strong>歌舞是先于爱情的动作，而爱情是藏在歌舞之后的心事。</strong></p>
+<p>这也就解释了，为什么单纯依靠理性，很难走进这部电影。</p>
+<p>因为在音乐和舞蹈面前，很多事情是不需要理由的。比如“相爱”这件事，当小塞坐在钢琴前，一束追光打下来，手起手落间，碎梦般的琴声响起，那一刻，爱情就已经成立了，还要什么理由呢。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>《爱乐之城》第二处打动我的地方，在于它娴熟的电影语言。</strong></p>
+<p>这要仰仗于导演达米安·沙泽勒对于影片节奏的非凡控制力。  他在上一部电影《爆  裂鼓手》中，依靠“  鼓点般的快速剪辑
+”来营造刺激的紧张感，并呈现出了自我实现与枯燥练习间无法调和的对立。</p>
+<p>而到了《爱乐之城》，这个速度感却几乎不见了。  印象中只有两个片段吧，一个是拍米娅在咖啡馆打零工时，用三个短镜头的衔接，迅速交代了她的日常工作；
+另一个是拍小塞在家练习弹奏，也是三个短镜头，分别给了唱片、咖啡、琴键，交代了环境。</p>
+<p>从这两个片段里面，还能隐约看出，这是属于《爆裂鼓手》的。
+但其余的部分，完全没有了《爆裂鼓手》的压迫感，取而代之的是舒缓、从容、优雅的长镜头，这一份颠覆自我的勇气，让我非常惊喜。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>此外，  片中的大部分歌舞段落，都是用一个完整镜头呈现的。  看的时候我就在想，这也太难为这些非音乐专业出身的演员了。</p>
+<p>因为在长镜头里，你根本没有找舞替或掩盖失误的机会，完全得靠演员自己，一招一式都马虎不得。
+不过，最终的效果还是很不错的，高司令和石头姐在唱跳方面都完成得很好。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>另外，在电影语言方面，还有一点让我很兴奋的，就是：单纯用镜头讲故事，回归到电影语言的本质。</p>
+<p>影片中，我最喜欢的三场戏，都是完全依靠镜头来铺陈的，没有多余的对白，没有过分的情绪渲染，但却异常精彩。</p>
+<p>第一场戏，是两位主角的相遇。</p>
+<p>记得塔可夫斯基曾经说过：“如果忽略了为相遇所做的准备，那么相遇将是苍白的。”</p>
+<p>在相遇之前，米娅和小塞的处境都很糟糕。
+他们是两个失落的追梦人：米娅是个渴望被认可的演员，却在试镜中屡战屡败；而小塞则为古典爵士乐痴狂，但无奈爵士乐已近消亡。</p>
+<p>影片采用双线叙事的方法，从这两位主角的视角，分别逼近这次相遇。  最终两条线汇聚在了一点，酒吧里，被琴声吸引的米娅，见到了沉醉于演奏的小塞。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>接下来的那个镜头棒极了：小塞在食客嘈杂的酒吧里弹奏，没有人在乎音乐，但从米娅的眼神看过去，人群暗了，噪音消失，一束光从头顶洒下来，灼灼地落在小塞的侧脸上。</p>
+<p>只这一个镜头，就表明了他们之间爱的缘起：作为一个活在别人眼光里的演员，米娅被眼前这个目空一切、宠辱不惊的男人，彻底吸引了。</p>
+<p>她仿佛看到了一个精神偶像般的存在：有梦的人，无需喝彩，便自带光芒。  而一个人最糟糕的时刻，在另一个人眼中却熠熠生辉。还有比这更浪漫的邂逅吗？</p>
+<p>第二场戏，是在演唱会的现场。</p>
+<p>为了现实生存，小塞加入了一只流行乐队，开始了无休止地巡回演出。  而在演唱会的这场戏里，导演单纯运用镜头的语言，为我们呈现了一场无声的争吵：
+一开场，舞台上一束追光打下，小塞独自弹着钢琴，那一幕，就像是米娅和小塞初遇时的场景，一切还完好如初。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>可突然间，镜头拉到远景，全场的灯光亮起，流行乐的节奏点燃了现场。  之后镜头马上给到了人群中的米娅，只见她诧异地看着享受其中的小塞，眼神变得陌生。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>她看着这个曾经执着于爵士梦的男人，如今却在欢呼的人群中，迷失了自己。</p>
+<p>而此刻全场的灯光，又与她内心只投射给这个男人的那束光，形成了鲜明的对照：虽然现场灯光无数，但在米娅心里的那束光，却正在暗淡。</p>
+<p>在下一个镜头里，米娅被欢呼的人群不断地向后推，她的身体在一点点远离着小塞，而比身体更远的，却是心里。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>此后，屏幕“啪”的一黑，一切戛然而止，当再次亮起时，已转场进入“秋”的段落。</p>
+<p>这段镜头语言，真是精彩！</p>
+<p>第三场戏，是一段平行剪辑。</p>
+<p>导演将两组同时发生的镜头，混剪在了一起：一边是米娅在观众寥寥的舞台上，演着独角戏；一边是小塞在摄影师的要求下，做着配合的表情。</p>
+<p>无需说明，其义自现：那一刻，两个人实际上完成了一次身份的换位。  曾经懦弱的人，站上了舞台，哪怕没人喝彩；曾经勇敢的人，跌下神坛，为了别人的喝彩。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>这种视觉上的对位，绕过了语言逻辑和大脑反应，直指人心最软弱的部分。</p>
+<p>而它背后预示的裂痕，更是一种难以痊愈的隐痛。  这三场我最喜欢的戏，恰好又穿起了小塞和米娅的感情线索。
+这不是个逼迫男女主角在爱情与梦想间作出选择的故事，相反，他们的爱情和梦想，是一体的。</p>
+<p>当梦想失落时，爱情也就不可能存续了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>这就是我喜欢《爱乐之城》的原因。</p>
+<p>它是一部以歌舞来推动叙事的歌舞片，更是一部依靠镜头语言来讲故事的电影，它让我看到了属于电影的独特魅力，更让我回想起，当初自己爱上电影时的那份激动。</p>
+<p>而它的故事，又是这样简单。在现实中无法完成的爱情，那么就造一场梦，让它实现。  这，不就是电影的意义吗？</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

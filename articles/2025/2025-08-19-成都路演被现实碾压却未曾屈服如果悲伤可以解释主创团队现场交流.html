@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演被现实碾压却未曾屈服如果悲伤可以解释主创团队现场交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-08-19</div>
+      <h1 class="article-title">成都路演被现实碾压却未曾屈服如果悲伤可以解释主创团队现场交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「成都路演」被现实碾压却未曾屈服​《如果悲伤可以解释》主创团队现场交流</h1>
+<p><strong>写在前面</strong><br>《如果悲伤可以解释》是导演覃亚的长片首作，一部从黔北土地里生长出的现实主义力作。导演覃亚出生于贵州务川自治县，他将镜头对准家乡的群山与河流，以务川的方言、地貌和市井烟火为底色，讲述了一个“被现实碾压却未曾屈服”的故事
+。<br>影片灵感源于导演身边亲友的真实遭遇——为筹备彩礼而坠入传销陷阱的青年、被门第观念撕裂的爱情、沉默却滚烫的中国式父子关系
+。这种对社会痛点的敏锐捕捉，让影片尚未公映便已斩获<strong>第十一届重庆青年电影展最佳编剧奖</strong>
+，并接连入围北京国际电影节、FIRST青年电影展等重磅单元，被影迷誉为“灵气与勇气交织的年度之作”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong></p>
+<p>若你以为这仅是一个“爱情输给彩礼”的俗套故事，便低估了它的野心。影片以男主角覃奋（宁桓宇 饰）的传销噩梦为引线，引爆了更深刻的追问：
+当爱情被标价、亲情被误解、尊严被践踏，人该如何在命运的暗流中守住最后的光？</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>这部“潮湿而炽热”的西南叙事即将登陆全国银幕。24帧特别邀请到影片导演覃亚、主演宁桓宇和楚布花羯做客现场，与观众们对话，了解更多故事真相。
+无论你是被现实主义刺痛的人，还是相信爱情可抵岁月长的理想主义者，都值得走进这场光影交织的生命对话——因为所有未被解释的悲伤，终将在理解中获得尊严。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>时间</strong><br>**2025年8月24日（周日）**18:30<del>19:00签到  19:00</del>20:40放映  20:40~21:10映后<br><strong>映后嘉宾</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>导演  ：  覃亚</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>主演  ：  宁桓宇</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>主演  ：  楚布花羯</strong>（具体到场嘉宾以现场为准）<br><strong>地址</strong><br><strong>保利万和国际影城(招商花园城购物中心店)<strong>地铁理工大学或东郊记忆站</strong>招商花园城购物中心</strong>6F
+<strong>票价</strong><br><strong>￥40/单人票</strong>￥70/双人票<br><strong>含一张官方海报</strong><br><strong>报名方式</strong> 
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>社群</strong> 
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<ul>
+<li>现场签到领取周边，进入影厅任意选座，无需按照座位落座    </li>
+<li>观影过程勿屏摄、勿吃东西    </li>
+<li>片尾也是影片的一部分，请完全结束后再离场    </li>
+<li>映后非强制参与，有事可先离场    </li>
+<li>检票将在电影开场时结束，迟到的观众请向影院前台出示购票页面入场，</li>
+</ul>
+<p>周边将在活动全部结束后发放</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

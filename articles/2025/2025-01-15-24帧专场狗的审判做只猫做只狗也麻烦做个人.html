@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧专场狗的审判做只猫做只狗也麻烦做个人 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-01-15</div>
+      <h1 class="article-title">24帧专场狗的审判做只猫做只狗也麻烦做个人</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「24帧专场」《狗的审判》“做只猫做只狗，也麻烦做个人”</h1>
+<p><strong>写在前面</strong></p>
+<p>作为利蒂希亚·多施的导演首作，该片凭借独特的视角、荒诞的情节以及对动物权利和社会议题的深刻探讨，赢得了诸多评委和观众的一致好评，入围了第77届戛纳国际电影节一种关注单元，导演利蒂希亚·多施也凭借该片获得了第77届戛纳电影节“金摄影机奖”（导演首作奖）提名，并荣获第六届海南岛国际电影节“金椰奖”最佳导演。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>电影《狗的审判》讲述了败案累累的年轻女律师艾薇儿（利蒂希亚·多施 饰）为了改变现状，她下定决心：下个案子无论如何都要赢。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>但艾薇儿的下个案子却是跟她一样绝望的客户——科斯莫（小狗科迪 饰），一只因为经常袭击她人而被判死刑的狗。  _ </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>为了帮助科斯莫翻案，艾薇儿想尽一切办法，而人性的复杂，让这场对狗狗的审判变得出乎预料，各路人马开启法庭论战，科斯莫也被迫加入“辩论”，艾薇儿自己也陷入了辩护危机。
+ <strong>放映员说</strong><br>定档预告中，女律师艾薇儿为了帮科斯莫翻案，使出浑身解数，和受害女性的辩护律师罗莎琳展开了激烈辩论，法庭现场甚至摆放了按钮装置，企图让狗狗科斯莫自己来“回答”问题，庭审现场极具荒诞效果。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>网友热评：
+哪里是狗的审判，明明是人的审判！看似是在讲动物保护议题，实际上也在讲女性议题。小狗因为只咬女性被指责厌女，女主尝试纠正狗狗对女性的攻击性却始终无果，两方律师与各自支持者的冲突对立不就是现今的日益割裂的社会现实的写照，女主最终也没能赢得胜利，因为这是真实故事改编，没有美好的结局供我们安慰自己，右转已成定势，但呐喊依旧有意义。小狗演员真的好聪明，狗狗金棕榈实至名归。
+——高远<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>海报上正襟危坐的狗嬉皮笑脸看着观众，你方「动保大法」我方「性别骂战」…凡此种种都误以为它只是一个有些神经错乱的喜剧，但直到后来才想起开始前的“真事改编”绝不只是什么伪记录说辞而已。它关注着人们的失序以及极端思想驱动下的种种后果，它谨慎地给出警示；“做只猫做只狗”，也麻烦做个人。——基瑞尔<br><strong>预告片</strong>特邀嘉宾紧急入口名誉店长——岁喜
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>时间</strong>  </p>
+<p>2025 月1月 18日（周六）  15:00-16:25放映  16:25-16:55映后<br><strong>地址</strong><br><strong>寰映影城(成都招商大魔方店)</strong><br><strong>票价</strong><br><strong>￥40</strong><br>**随票周边（如图）抽奖周边：**24帧放映本次海影节“金椰奖”最佳导演的《狗的审判》
+到场有机会获得海影节徽章和笔记本哦～<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>购票链接</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>社群</strong> 
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

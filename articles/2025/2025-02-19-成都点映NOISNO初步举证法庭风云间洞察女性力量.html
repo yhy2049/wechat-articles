@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都点映NOISNO初步举证法庭风云间洞察女性力量 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-02-19</div>
+      <h1 class="article-title">成都点映NOISNO初步举证法庭风云间洞察女性力量</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「成都点映」NO IS NO——《初步举证》法庭风云间洞察女性力量</h1>
+<p><strong>写在前面</strong><br>在当今社会，性别平等与女性权益的话题愈发受到关注。《初步举证》（Prima
+Facie）正是在这样的时代背景下诞生的一部具有深刻意义的作品。这是一部由艾美奖得主朱迪·科默（Jodie
+Comer）主演的舞台剧改编电影，这部剧最初源于英国剧作家苏西·米勒（Suzie
+Miller）的同名戏剧，讲述了年轻刑辩律师泰莎（Tessa）从法律捍卫者到性侵受害者的身份转变，深刻探讨了法律、公正与性别议题。凭借犀利的视角、深刻的主题，在戏剧舞台上大放异彩。影视化后的《初步举证》更是将这份震撼力推向了更广阔的观众群体，成为了推动社会变革的一份重要力量。<br>自2022年首演以来，原版舞台剧在全球范围内引起广泛关注，斩获奥利弗奖最佳新剧奖和最佳女演员奖等多项殊荣，并以NT
+Live的形式刷新剧院现场影像票房记录，在豆瓣更是斩获9.6分的高分。  影片版本由贾斯汀·马丁（Justin
+Martin）执导，保留了舞台剧的精髓，以电影形式呈现，带来全新的观影体验。专业影评人称赞它是“一部极具勇气的作品，以毫不退缩的姿态撕开社会隐痛，为那些被沉默掩埋的声音发声”。众多观众也在社交媒体上分享自己的观剧感受，称其“让人重新审视司法体系与性别平等的复杂关系，每一个情节都直击心灵”
+。成为了近年来探讨性别议题影视剧中的佼佼者。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br>《初步举证》的故事围绕着年轻有为的大律师泰莎展开。泰莎在男性主导的法律界一路披荆斩棘，事业蒸蒸日上，她凭借着聪明才智和凌厉的辩论技巧，在法庭上屡战屡胜。然而，一次意外的聚会彻底改变了她的生活轨迹。面对伤害，泰莎并没有选择沉默，而是选择勇敢的站出来。当泰莎决定用法律武器捍卫自己的权益时，却发现法律的程序和社会的眼光成为了一道道难以跨越的障碍。法庭上，她不仅要面对对方律师的质疑、刁难、步步紧逼，还要承受来自公众的无端猜测和社会舆论的偏见，都让她倍感压力。在这个过程中，泰莎并没有被打败击垮，而是在困境中不断挣扎、成长，将内心的挣扎与坚强展现得淋漓尽致，最终实现了自我的觉醒和救赎。她从最初的震惊、愤怒，到自我怀疑，再到最后的觉醒与反抗，让观众深刻感受到了一个女性在困境中不屈的力量。<br>“有些事情必须改变”——这声呐喊不仅仅讲述了一个女性被性侵的故事，更是一首关于女性力量、勇气和正义的赞歌！影片中的每一个女性角色，都有着自己独特的魅力和力量。那个坚持事实真相，毅然放弃实习工作的女实习生，她的勇敢让人敬佩；那个穿着不合身制服，却在泰莎最无助时伸出援手的女警察，她的温暖让人感动；还有那个在法庭上忍受律师尖锐质问，只为保护其他女性的女受害者，她的坚韧让人动容。这些女性角色，虽然身份不同、年龄各异，但她们都在为了女性的权益而努力，她们的力量汇聚在一起，形成了一股强大的暖流，照亮了黑暗中的前行之路。<br>影片的叙事结构紧凑，节奏明快，朱迪·科默以其精湛的演技，成功塑造了泰莎这一复杂多面的角色。她通过细腻的独白和肢体语言，展现了泰莎从自信的律师到受害者的心路历程，情感层次丰富，令人动容。影片不仅是一部简单的法律题材作品，更是一部关于人性、道德和社会公正的深刻反思，映照出社会中存在的性别不平等、受害者污名化等诸多问题。这部剧让我们意识到，正义的实现不仅仅依赖于法律条文，更需要整个社会观念的转变。它激励着每一位观众去思考如何为营造一个更公平、更包容的社会贡献自己的力量。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>《初步举证》作为目前国内唯一一部以NT Live（英国国家剧院现场 National Theatre Live，简称NT
+Live）形式上映的电影，将用100分钟的时间，以其深刻的主题和出色的演绎，带你沉浸式地从影院穿越到剧院现场，观看朱迪·科默震撼人心的独角戏，感受女性振聋发聩的呐喊和击穿银幕的力量，带领我们思考法律与道德的边界，挑战我们对正义的认知。
+<strong>预告片</strong><br><strong>时间</strong><br>2025 月 2 月 22 日（周六）  18:45<del>19:00签到  19:00</del>20:49放映  20:49~21:19映后<br><strong>地址</strong><br><strong>保利万和国际影城(招商花园城购物中心店)<strong>7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥30</strong>随票周边：定制票根一张</strong>抽奖官周：光栅卡，票根，合计约20份</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>品牌支持</strong><br><strong>社群</strong> 
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*退票规则以报名链接为准 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

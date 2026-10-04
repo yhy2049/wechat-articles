@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映日常对话一张餐桌的距离摄像头开启的对话契机 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-06-25</div>
+      <h1 class="article-title">独立放映日常对话一张餐桌的距离摄像头开启的对话契机</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「独立放映」《日常对话》一张餐桌的距离：摄像头开启的对话契机</h1>
+<p><strong>写在前面</strong><br>长桌的两端，搭坐着母与女。镜头里，她们面对面，却不相望; 家居场域里，她们同住一处，却彼此很陌生。<br>纪录片开头，母亲沉着地替女儿及孙女准备了一鱼两菜的中餐，摆妥在餐桌前，便安静地出门了。黄惠侦导演自语：「我和妈妈的关系，好像只剩下桌上的那桌饭菜.....」
+亟欲跨过貌似陌生人的边界，必然要走过彼此内心一逡。然而，黄惠侦导演说：「妈妈以前从来不说自己的事情的。」 可是，「我和妹妹一直都是想知道的。」<br>所有时间无以解答的困惑，积累在母女关系里，成为家庭岁月的灰尘。于是，开启了黄惠侦导演往后的影像叙事和纪录。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>《日常对话》<strong>SMALL TALK</strong>中国大陆 | 2018 | 闽南语、汉语普通话</strong>88min**|**中（繁）英文字幕 | 2K DCP<br>_ 【日常  对话  获奖情况】  _ _ ·第67届柏林国际电影节 (2017)  _ _ 泰迪熊奖  最佳纪录片 黄惠侦  _ _ 泰迪熊奖
+评审团最佳纪录片 黄惠侦  _ _ ·第53届台北金马影展 (2016) 金马奖  _ _ 最佳剪辑(提名) 林婉玉 金马奖 最佳纪录片(提名)  _ 
+·第19届台北电影节 (2017) 台北电影奖 最佳纪录片  _ _ ·第17届华语电影传媒大奖 (2017) 最佳电影<br><strong>导演简介</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>黄惠侦，导演，代表作品《日常对话》曾在2016年金马影展、2017年柏林电影节上亮相。主要作品包括《八东病房》、《乌将要回家》、《我和我的T
+妈妈》等纪录片。<br>黄惠侦六岁开始跟着妈妈跳阵头，二十岁转行从事社会工作，开始学习纪录片，主要关注移工、原住民及土地议题。曾任台北市纪录片从业人员职业工会秘书长，现为自由影像工作者。  </p>
+<p><strong>故事简介</strong><br>每天早上，我的母亲总是先于我醒来，她会先准备好我的午餐，然后出门。
+每天傍晚，我的母亲会在外面吃过晚餐之后才回家，静静地梳洗完毕后就又回到属于她的房间，打开收音机关上房门，在晚上九点睡去。<br>我们生活在相同的空间里，但几十年来，我们就像是同个屋檐下的陌生人，唯一的交集是她为我准备的吃食，我们之间没有嘘寒问暖、没有母女间的心里话、没有“我爱你”。当我注视着她，我知道在那震耳欲聋的沉默之下，藏着让她难以面对、无法言说的秘密。我知道在紧闭的双唇背后，是令她窒息且摆脱不去的耻辱。<br>这天，我终于鼓起勇气与她开启对话，但我真的准备去好面对她将给出的答案了吗？我们又是否都能够好好面对那些已经被埋藏许久的过去？<br><strong>导演自述</strong><br>作为一个用影像参与社会的人，我好像一直都在说着别人的故事，那些边缘的、没有机会发声、不被看见的人们的故事。<br>我理解他们的边缘、伤痛、无力与愤怒，是因为我自己也曾经历过。但我却迟迟没有足够的勇气去说出自己的故事。因为自我揭露是件困难的事，对爱提出质疑是件困难的事，面对真相是件困难的事。但我似乎已经到了不能再以困难为由，继续回避那些生命里最重要的提问的人生节点：我的身
+份  不再只是女儿，同时也是别人的母亲。<br>身份的转化让我对母亲这个角色有了新的认识，所以我决定逼迫自己去靠近、重新去理解我妈，并且试着帮助我们都能找到说出真相，以及超度自身伤痛的勇气。<br>作为一名电影制作人，我一直在讲述边缘化、无能为力或代表性不足的故事。我感受到他们的痛苦，他们的苦难，他们的无能为力，他们的挫折，因为这些也是我的经历。但说到我自己的故事，我却没有勇气或力气发出声音，因为暴露自己很难，问自己是否被爱更难，面对真相最难。但我不能再用我的恐惧作为借口，因为我的角色已经发生了变化。<br>现在我自己也是一位母亲，我以不同的视角看待我的妈妈。这种新的观点迫使我反思我的过去，面对我的恐惧。我希望这个过程可以帮助我和母亲走出阴影，远离困扰我们这么久的痛苦。<br><strong>导演采访</strong><br><strong>时间</strong><br>**2024年6月28日（本周五）**19:45<del>20:00入场  20:00</del>21:28放映  21:28  ~22:00映后
+导演黄慧侦连线交流  _
+<strong>地址</strong><br><strong>川大望江</strong>（报名后获取详细地址）  </p>
+<p><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>票价</strong><br><strong>￥60</strong>（含一张定制票根） 
+_ ‍  [
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>社群</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*NO KIDS，介意勿参与 </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*不设选座，先到先得 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

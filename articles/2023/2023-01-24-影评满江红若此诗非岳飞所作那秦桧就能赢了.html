@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影评满江红若此诗非岳飞所作那秦桧就能赢了 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-01-24</div>
+      <h1 class="article-title">影评满江红若此诗非岳飞所作那秦桧就能赢了</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「影评」《满江红》：若此诗非岳飞所作，那秦桧就能赢了</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>怒发冲冠,凭栏处、潇潇雨歇。<br>抬望眼、仰天长啸,壮怀激烈。<br>三十功名尘与土，八千里路云和月。<br>莫等闲、白了少年头，空悲切。<br>靖康耻,犹未雪。臣子恨，何时灭。<br>驾长车，踏破贺兰山缺。<br>壮志饥餐胡虏肉，笑谈渴饮匈奴血。<br>待从头、收拾旧山河，朝天阙。</p>
+<p>——岳飞·《满江红·写怀》</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>张艺谋的第二春</strong></p>
+<p>之前几次在电影院看其他片子时我就被《满江红》的贴片吸引了。</p>
+<p>不像其他电影贴片有镜头快剪有对白，它全程只是通过红色血迹配合鼓点音乐渲染出片名，没有一句台词。悬疑感拉满，一下子就跟其他贴片区别开了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>虽然此前宣发时，易烊千玺说演《满江红》“特烧脑”，但暴龙兽看完之后认为，<strong>用烧脑来形容这个故事其实并不那么恰当</strong>。</p>
+<p>毕竟作为中国精神符号的《满江红》，岳飞的英雄形象、秦桧的奸臣脸谱以及屈辱的宋金议和早已深深烙印在中华文明之中。虽然影片背景设定于岳飞死后四年，大部分人物和情节也均是虚构，但爱国立意与大反派秦桧这两点基本要素，必然不会动。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>再者，尽管影片标注的主打类型是**“悬疑”<strong>，但暴龙兽亲自看完后感觉更贴近</strong>“推理”**。</p>
+<p>我们似乎习惯了把悬疑和烧脑放一起，但实际上二者相去甚远。</p>
+<p>根据《现代汉语词典》里的解释，推理是指从已知的事实推出某种结论。悬疑的意思是一件充满悬念、且无法看清真相的事物所导致人有一种怀疑和不理解的心态。不同之处请自行体会。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>所以，<strong>《满江红》不是张艺谋拿来测观众智商的</strong>
+，他提供的视角依然是偏上帝视角的，也就是说咱们可以不用太费劲地去判断谁是正派，谁是反派，个别角色除外（暂不剧透）。</p>
+<p>《满江红》的故事也不是犯罪电影的那种“凶手是谁”的方向，而是<strong>重在博弈</strong>。</p>
+<p>就像你看别人玩《狼人杀》一样。所谓当局者迷，旁观者清，影片的戏剧冲突就在于落座银幕前的观众“了如指掌”的观摩，各怀鬼胎的剧中人在迷局中花明柳暗的周旋，亦是赏玩此类电影的一大乐趣。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>用“喜剧 + 悬疑”来传达主题精神是否太过冒险？</strong></p>
+<p>张艺谋接受媒体采访时坦言，他始终对新尝试、新挑战乐此不疲。在他看来，以前自己执导的影片虽然不乏喜剧色彩，但《满江红》这部电影杂糅了不同类型，它的分寸和节奏难以把握，很考导演功力。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>确实，《满江红》并没有像《长安十二时辰》、《风起陇西》那样用移步换景来展现风俗，而是张艺谋再次抛开了刻板印象里“大红大绿”的张艺谋，匹配了简洁的美术风格，
+<strong>将刀光剑影压缩到黢黑的宅邸内</strong>。</p>
+<p>当两位主角在有限的空间和时间内来回穿梭，追凶过程又包含了轮番出现的突袭和背刺，案中案、计中计，反转不断，隔几分钟见一次血，见缝插针的喜剧桥段……
+<strong>两个半小时被填得满满当当</strong>，喜剧不仅没有破坏悬疑的紧张感，反倒让影片显得张弛有度。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>张艺谋：&quot;片中大人物、小人物，都会受到某些制约。我们之所以看到一些反转，其实看到的是人心的挣扎、人心的不甘。无论是正面人物还是反面人物，人在困境中的挣扎和企图破局的努力，才是真正的看点。&quot;</p>
+<p>一边追凶一边藏下蛛丝马迹，为最终热血壮烈氛围的营造也非常有章法，很好地解决了喜剧和正剧之间的排异反应，不得不感叹<strong>72岁的张艺谋宝刀未老</strong>。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>《满江红》非岳飞所写？</strong></p>
+<p>《满江红·写怀》，是宋代抗金将领岳飞的词作。此词上片抒写作者对中原沦陷的悲愤，对前功尽弃的痛惜，表达自己继续努力争取壮年立功的心愿；下片抒写作者对民族敌人的深仇大恨，对祖国统一的殷切愿望，对国家朝廷的赤胆忠心.</p>
+<p>它作为爱国将领的抒怀之作，情调激昂，慷慨壮烈，词里句中无不透出雄壮之气，雪耻若渴的神威，从而成为反侵略战争的名篇。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>岳飞像</p>
+<p>可是，<strong>自民国以来一直有人想证明《满江红·写怀》并非是岳飞所作</strong>，而是后人的伪作。至今也不乏这样的声音。</p>
+<p>在暴龙兽能查找的资料中，第一个提出《满江红·写怀》非岳飞真作的是一个台湾的学者，叫余嘉锡，时间大约是上世纪30年代，当时他任职北平辅仁大学国学教授，背景是在日伪“华北临时政府”统制下。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>余嘉锡（1884~1955）</p>
+<p>以余嘉锡为首的提出质疑的人毕竟不是历史学者，而他们引用的专家，却是著名历史学者<strong>吕思勉</strong>
+，引述的是吕1923年所著的《自修适用白话本国史》一著（本书于1937年抗战爆发后被禁）。</p>
+<p>吕思勉被称为“现代四大史家”之一（其余三位是，陈垣、陈寅恪、钱穆）。用白话写通史的极少，所以这本《白话本国史》是二三十年代国内发行量最大的一部中国通史。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>吕思勉（1884~1957）</p>
+<p>我们看一下吕思勉在这本书里的的观点：</p>
+<p>秦桧“爱国”，不是“金朝的奸细”；</p>
+<p>“主持和议的秦桧却因此而负大恶名，真冤枉极了”；</p>
+<p>“能解除韩世忠，岳飞的兵权，是他手段过人之处”；</p>
+<p>岳飞、韩世忠等武将已成“军阀”；</p>
+<p>岳飞的抗金事迹全被夸大，朱仙镇大捷“更是必无之事”，《宋史·岳飞传》的有关记载，“真是说得好听，其实只要把宋，金二史略一对看，就晓得全是瞎说的”。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>岳飞像</p>
+<p>这些观点槽点是很多的。譬如岳韩的战绩都是假的，如果都是假的为什么金人会同意议和?议和后，赵构的母亲韦太后从金国被放回来，回国后最想见的不是皇帝儿子，而是“岳相公、韩相公”，说这才是“真男儿”。这是正史有载的。</p>
+<p>至于他的“《宋史》全是瞎说的”，如果24史全是瞎说，那哪些不是瞎说的？又如何证明？</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>岳飞像</p>
+<p>至于他的“《宋史》全是瞎说的”，如果24史全是瞎说，那哪些不是瞎说的？又如何证明？</p>
+<p>不论如何吧，吕思勉**“崇秦贬岳”<strong>的观点立马得到了</strong>胡适的支持**
+：秦桧“真是冤枉”。吕思勉“秦桧爱国论”的最大受害者则是汪精卫，当然也可能不是受害者，本来就是知音罢了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>汪精卫（1883~1944）</p>
+<p>因为根据近年披露的史料，1932年上海“一·二八”事变爆发，1月29日<strong>汪精卫</strong>在和蒋介石在探讨应怎样应对“一·二八”事变时说：</p>
+<p>“南宋的秦桧遭到世人唾骂，但我觉得秦桧也是个好人。因为他在国家危亡关头，总要找出一个讲和的牺牲者，秦桧其实就扮演了这么一个角色，他用自己遭世人唾骂，换来当时的和平，使无辜生灵免遭涂炭之灾。照我看秦桧的救国与岳飞的抗敌，只是手段不同而已。”</p>
+<p>旁边坐着的<strong>蒋介石</strong>怒道：“<strong>秦桧是地道的卖国贼！这事妇孺皆知，怎么能同岳飞相提并论呢？</strong>”</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>位于杭州的岳王庙</p>
+<p>说回电影《满江红》吧。</p>
+<p><strong>张艺谋曾多次使用古代典故作片名。</strong>
+2004年的《十面埋伏》，取自项羽垓下之战，实际故事和项羽无关；2005年有《千里走单骑》，是来自关羽过五关斩六将后一人一骑回到刘备身边的故事，被他用来讲父子情谊；2006年用了讲农民起义的“满城尽带黄金甲”，赋予影片色彩鲜明的宏大场面。</p>
+<p>如今用了岳飞的名篇《满江红》，故事没有岳飞其人，却又随处可见岳飞的影子。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>结合电影和诗词想想，红是什么？红是雪耻的刀就佩在身上，却只能对准自己人；红是烙印在背上却无法示人的精忠报国，红是被压抑的英雄气，是被软禁的真相，是绝口不提的创伤记忆和江河回望（亦是张艺谋最擅用的颜色）。</p>
+<p>从密信开始，到一首词结尾，<strong>《满江红》是一群小人物对秦桧的诛心运动</strong>
+。他们不甘心参与这场虚伪权力的建构，要在精神上打败他，释放被封印许久的“精忠报国”。</p>
+<p>万物总要循环，人心总有流向，《满江红》终将被传颂  。</p>
+<p><strong>参考</strong></p>
+<p>「1」春节档｜《满江红》：好一个冷焰在燃烧！，飞鱼，影视独舌，2023-01-22 10:50</p>
+<p>编辑  摸鱼暴龙兽</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧专场如父如子何为亲子何为家人何为家 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-12-04</div>
+      <h1 class="article-title">24帧专场如父如子何为亲子何为家人何为家</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「24帧专场」《如父如子》：“何为亲子”、“何为家人”、“何为家”？</h1>
+<p><strong>写在前面</strong>  </p>
+<p> 是枝裕和导演发来给中国观众的特别寄语视频。  </p>
+<p>导演在手写信中写道：“继《小偷家族》时隔6年后的再一次相见，爱你们！！”，并且在寄语视频中表示：“六年前在中国上映的《小偷家族》得到了大家非常暖心的反馈，非常荣幸。这次也希望大家能多多支持《如父如子》。”这部影片是继《小偷家族》后，是枝裕和导演的又一口碑神作再登中国大银幕。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>《如父如子》在豆瓣上已有超16万人打出8.7分的超高分数。时隔六年的再一次相会，是枝裕和导演带着对中国观众满满的热情与诚意，以最真诚的姿态，带着最优质的作品，回馈中国观众的喜爱。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>  </p>
+<p>由艺术家黄海特别绘制的独家艺术海，报画面定格父子和解泪目瞬间，及其风格化的海报，生动刻画了电影最后男主野野宫良多追逐着离他而去的儿子野野宫庆多的场景。曾经的良多总是高高在上，展现着父亲不容置喙的权威，鲜少给予庆多温柔慈悲的父爱；发现孩子被抱错后，他的挣扎与犹豫，不仅伤害着纯粹爱着父亲的庆多，更是拷问着每一位观众的内心。</p>
+<p>然而，在电影的最后，他站在低矮的小岔路上，向着大路上的庆多道歉，最终两条路汇成一条，父子俩也迎来了和解的时刻。这一场景不仅象征着父子关系的转变，也寓意着家庭情感的重生。值得一提的是，本次为《如父如子》设计中国独家海报，也是艺术家黄海在电影《小偷家族》后，再次为是枝裕和导演电影创作艺术海报。</p>
+<p><strong>放映员说</strong><br>《如父如子》讲述的是两对父母在抚养了自己的孩子六年以后，突然得知自己的孩子并非亲生后发生的故事。<br>一面是血浓于水的血缘纽带，一面是朝夕相处的亲情羁绊，原本平静幸福的生活一朝被打破，在两个家庭的困惑、徘徊与挣扎中，有关“何为亲子”、“何为家人”以及“何为家”的答案逐渐在细腻平静的情感暗涌中浮出水面。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>日本国民级实力演员福山雅治、尾野真千子、真木阳子以及Lily
+Franky分别在影片中饰演两对父母，以细致入微的演技贡献了最为真挚的表演，而在片中饰演被抱错的孩子的两位小演员二宫庆多和黄升炫也带着孩子独有的纯真，将最自然的状态融入表演，使得整部影片浑然天成，以四两之力拨千斤情感之弦。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>时间</strong>  </p>
+<p><strong>2024年12月8日（本周日）<strong>13:45~14:00签到  14:00-16:00放映  16:00-16:30映后<br><strong>地址</strong><br>保利万和国际影城(招商花园城购物中心店) 7/8号线地铁站理工大学<br><strong>票价</strong><br><strong>￥40</strong><br><strong>随票周边：</strong>•</strong>_ 溪边合影海报A3（前50）</strong>•文艺书签（前50） 
+<strong>•胶片（映后交流送出）</strong>• 立体明信片（映后交流送出）<br>[
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+_
+<strong>社群</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

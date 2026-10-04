@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧返场幽灵公主4K修复超量周边 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-05-01</div>
+      <h1 class="article-title">24帧返场幽灵公主4K修复超量周边</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>24FRAMES PROJECT</h1>
+<p>城南的朋友们久等了，24帧带着《幽灵公主》来了！<br>日本动画大师宫崎骏1997年的史诗巨作《幽灵公主》，以战国时代的日本为背景，讲述被诅咒的少年阿西达卡为解开宿命，踏入迷雾笼罩的原始森林，卷入人类与自然神灵的惨烈战争。当钢铁文明的铁炮撕裂森林的呼吸，当山兽神的翡翠血液让大地枯萎，影片以暴烈画面质问：​​当人类征服自然时，是否也在杀死自己的灵魂？​<br>【💰观影票价】<br>￥45<br>【🎁物料包含】<br>前60报名周边：森林气味香薰片1张、A3磨砂工艺透明海报1张、书签1张、面具钥匙扣1个、剧照明信片1张、角色透卡1张<br>24帧为大家特别准备了可选购福袋，包含：角色帆布袋1个、亚克力彩窗邮票2枚（随机2张不重样）、剧照胶片2张、镭射票根1张<br>24帧还采购了角色设定集，供宫崎骏的粉丝们抢购<br>另有官方各种物料随机掉落，希望每个朋友看的满意，拿的满足！<br>【📆观影时间】<br>2025月5月11日（本周日）<br>放映：14:00-16:14<br>映后：16:14-16:44（自愿环节非强制，i人友好）<br>【📍观影地址】<br>寰映影城(成都招商大魔方店)<br>地铁孵化园站C口 大魔方招商花园城B馆6层<br>【🚪购票方式】<br>点击参与活动报名<br>【📣其他注意事项】<br>*现场签到领取周边，进入影厅任意选座，无需按照座位号落座<br>*观影过程勿屏摄、勿吃东西<br>*片尾也是影片的一部分，请完全结束后再离场<br>*映后非强制参与，有事可先离场<br>*检票将在电影开场时结束，迟到的观众请向影院前台出示购票页面入场，周边将在活动全部结束后发放<br>【退款规则】<br>申请退票时间＞放映开始时间 24小时，自助退全款<br>申请退票时间＜放映开始时间 24小时，不再接受退款，希望大家尽量确定行程后再报名哦~</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

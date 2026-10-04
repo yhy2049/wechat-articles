@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我是布莱克为一无所有之人呐喊 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-03-10</div>
+      <h1 class="article-title">我是布莱克为一无所有之人呐喊</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>《我是布莱克》｜为一无所有之人呐喊</h1>
+<p>以下文章来源于十一號電影誌  ，作者十一號編輯部</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>十一號電影誌</strong>.  再见语言，电影在场。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>*全文阅读时间约<strong>10</strong>分钟。 </p>
+<p>作为杰出的自然主义电影大师，英国导演肯·洛奇电影往往聚焦于工人阶级的生活，具有极为突出的自然主义影像风格，这使得他的作品获得了独一无二的作者性。毋庸置疑，肯·洛奇是戛纳电影节最受欢迎的嫡系导演，他执导的作品曾十四次入围主竞赛单元，并两次获得最高奖金棕榈奖，其中一部影片为《我是布莱克》，本片获得第69届戛纳国际电影节金棕榈奖，于2016年5月13日在法国上映。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《我是布莱克》讲述的是英国底层阶级的生活境遇，男主角丹尼尔·布莱克是一位木匠，他年近60岁，由于心脏疾病问题，他生平第一次需要申请社会救济。尽管他的医生认为他不适合继续工作，但他依然决定冒着被罚款的风险谋求一份工作。在他反复前往就业中心求职的过程中，他结识了凯蒂，一位需要照顾两个孩子的单身母亲。为了不让孩子流落到儿童福利院，她不得不居住在一间离自己出生地450公里远的公寓内。英国现下行政机构的繁琐程序就像一张巨大的网，将布莱克和凯蒂紧紧套牢在一起，两个人决定尝试着相互帮助，以求共同渡过目前的生存难关。</p>
+<p><strong>自然主义风格“起源说”</strong></p>
+<p>实际上，肯·洛奇自然主义的影像风格形成与他之前在BBC的工作经历有关。从20世纪60年代中期到70年代末，肯·洛奇多次与英国著名的制作人托尼·加内特合作，托尼·加内特是英国电视台最具争议的人物之一，他曾负责制作英国有史以来最激进的戏剧。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>在20世纪50年代末和60年代初，有两件重大事件导致了当时电视剧内容的严格规章制度的放松。第一次是1960年，休·卡尔顿-
+格林被任命为BBC的新总干事，这使得BBC开启了一个更具实验性和大胆创新的时代。第二次则是1962年广播委员会的调查报告，该报告批评了当时BBC
+的墨守成规，ITV
+将新商业频道提出的许多节目进行了简化。如果BBC要生存下来，并继续通过一笔由家庭直接支付的许可费来证明其公共资金的合理性，那么它就需要向新一批的、在社会和地理上更具多样化的一代新兵开放。这为肯·洛奇和托尼·加内特之间的合作提供了自由发挥的条件，并得到了BBC相应的支持。</p>
+<p>与此同时，肯·洛奇对电影的创作主题也进行了更加深入的探索，紧紧围绕着对底层人民的关注和对当局的政治批评，渐渐形成了他独具特色的自然主义影像风格，以电影作为政治诉求表达的艺术载体，揭露和纠正社会上的不公正现象，呈现个体艰难处境背后所藏匿的社会病症。</p>
+<p><strong>自然主义风格的影像建构</strong></p>
+<p>在肯·洛奇所创作的众多电影中，尽管影片的故事内容、主人公所代表的群体、揭露的社会问题等面貌各异，但作品的主题往往是循环往复的，即通过自然主义的影像风格，关注工人阶级的生活以及表达对不公正的政治制度的批判。肯·洛奇式的自然主义，采取了更为科学和客观的艺术方法，因为与现实主义密切相关，通常被视为现实主义的一种变形，但比现实主义风格更为突出，对生活的描述也比后者更加准确而深刻。  </p>
+<p>肯·洛奇的这种自然主义风格，表现在他的电影叙事的各个环节。他的影片大多采用线性叙事，也就是事件严格按照时间顺序与生活逻辑向前推进，试图让观众深刻地感受到主人公内心世界发展的渐进过程，并与主人公保持同等效力的内心节奏，在主人公陷于事件漩涡之后，观众也会随即生发出无力感。</p>
+<p>影片伊始，布莱克很快便陷入了现实的窘境中，他必须要“先接到电话后接到邮件才能申诉”，但等待无望，因为“没人给他打电话”。后来他生病了无法工作，要去申请补助，但为了拿到补助，他又要去寻找一份工作来证明自己找不到工作，事件升级为荒谬的存在。在经过一系列的对抗与争取之后，布莱克似乎迎来了事态的好转，但最终却因为某种不可抗力而悲惨死去。</p>
+<p>在处理“布莱克”这一人物形象时，肯·洛奇放弃使用闪回的剪辑方式，遵循着时空统一的顺序式叙述结构，使得观众更能深切地感受到英国底层的世事无常，以及布莱克年老体弱后不能得到社会善待的无力感，从而更能与影片的主人公产生情感共鸣。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>肯·洛奇的这种自然主义风格，还体现在他电影的镜头语言之中。影片《我是布莱克》以中近景镜头为主，尽管使用广角镜头拍摄影片可以交代更多的信息，但肯·洛奇的摄影机与影片中人物始终保持着适当距离，特别是中景镜头，就像一位如影随形的目击者从始至终观看和记录着人物的情绪状态、人物之间的对位关系以及事件的曲折走向。</p>
+<p>此外，影片《我是布莱克》的大部分场景为固定镜头。肯·洛奇没有选择通过频繁的剪辑切换和节奏变化来强化影片的矛盾冲突，他更喜欢使用固定的长镜头，静静地记录着眼前所发生的故事，向银幕前的观众展示着他对英国底层的人文关怀。正如影片中布莱克在救济中心使用电脑填写救济申请的固定长镜头中，主人公的手足无措被持久放大，观众在观看时会倍感无奈，甚至能够达到与主人公同呼吸共命运的错觉。</p>
+<p><strong>“作者型”导演</strong></p>
+<p><strong>与他的底层叙事逻辑</strong></p>
+<p>毫无疑问，肯·洛奇在他的作品中有着明显的个人印记，部分元素因隐藏于自然主义风格之下而并不易被观众察觉，比如他有意追求表演的生活化、非职业演员出演、街区实景拍摄等。为了在影像中持续输出一种稳定的真实感，让演员在同一场景中不断重复同一动作，直至这种动作成为角色深入骨髓的“下意识”。譬如在影片中，凯蒂来到救济中心，由于极度饥饿的原因，她见到食物架上的罐头立即打开食用，这场戏被导演要求重复演了二十多次，传闻当时有不明就里的顾客见状差些报警。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>为了平衡影片中的戏剧性与纪实性，肯·洛奇也做了诸多尝试，最经典也最惯用是一种情节剧模式。电影的主人公通常是被主流社会抛弃的边缘人，他们面临着各式各样的现实问题，也经历了一系列的事件重击，但在人生的某一个节点，或因为自身对某件事物的追求和向往，或由于身边某个人或某件事的激励，他们重新振作起精神，试图通过自身的努力反抗命运的不公和社会的黑暗，谋求相对体面的生活，找寻自己一生所笃定的信仰（比如爱、尊严、公正、和平等），然而结局往往充满悲剧性，人物命运也因此灰暗不明。</p>
+<p>在人物选择和背景设计中，肯·洛奇通常用纪录片式的镜头展现人物恶劣的物质生活，并展现出社会事件与文化体制对人的戕害。在社会情境和生活空间的刻画上，强化和彰显了影片视觉上的真实生活质感，运用大量扎实的细节和纪实手法展现了这些底层人物家庭破碎、居无定所、颠沛流离的生活常态，从而在整体上营造出一种情景上的逼真性和丰富性。</p>
+<p>在角色内核方面，主人公想要改变自身处境的动力通常来自于自我内心的欲望或者外部的生存压力。肯·洛奇影像的现实逻辑，表现在叙事上尊重生活本身的形态，尤其是戏剧性的设置常常源于现实生活的动机和困境。肯·洛奇电影中的每个主人公几乎都面临着人与人的矛盾、人内心的矛盾、人与环境的矛盾这三重矛盾，这是人物的内核，也是叙事的动力。影片中，福利制度在一点一点地摧毁布莱克作为人的尊严，而布莱克最后在墙上写那行字，目的就是为了保有自己仅存的自尊。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>在人物的身份背景、叙事动力建构完成之后，主人公开始遭受一系列的打击、伤害、挫折，命运逐步跌至谷底。影片中布莱克平时工作勤奋、按时纳税、对人和善，但面对福利机构一次又一次的推诿拖延、荒谬的福利制度、冷漠的官僚机构和繁琐的办事手续，他感到了深深的无奈。在环境带来的压力下，电影中的人物采取屈从、抗争、沉默或求助等行为方式对抗外部环境的压力。</p>
+<p>这种反抗一面是主人公对自身悲惨命运的抗争，另一面则是对体制不公的反抗，当主人公经历了一番周折，克服了种种障碍，却发现未来仍希望渺茫之时，开始对社会和体制发出掷地有声的控诉。影片中布莱克在大厦墙壁上写下“I，Daniel
+Blake”，结尾处布莱克在信中写道：“我的名字，是丹尼尔·布莱克。我是堂堂正正的人，不是街边乞怜的狗。我在此讨回本属于我的权利，并要求你以尊重之心待我。”</p>
+<p>纵观肯·洛奇的电影生涯，他不遗余力地探讨英国底层人民的生存处境问题，关注失业、社群解体后的犯罪，涉及移民、种族冲突、战争后遗症等全球性问题，而探讨的核心部分还是后工业革命之后英国的社群撕裂、社会失序、民众生存危机以及价值观崩塌等问题，这也不免让他的电影走向了社会问题片和伦理剧的类型，譬如影片《凯西回家》《折翼母亲》《爱之吻》《我是布莱克》等。</p>
+<p>作为一位左翼导演，肯·洛奇坚持拍摄“回应现实提出来的问题的电影”。而作为一位有着强烈社会责任感的导演，他也始终坚守着自己的保守主义立场，较少涉及分离主义、种族主义问题，很少有创新性的电影语言，而一如既往遵循着情节剧的创作模式，但他俨然还是一位作者型导演，有着鲜明的个人风格和明确的艺术追求，为世界电影艺术源源不断地输送着宝贵的视角和观点，伸张着电影之于艺术主权的正义。</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新浪潮月电影是二十四格的真理大源 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-08-31</div>
+      <h1 class="article-title">新浪潮月电影是二十四格的真理大源</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「新浪潮月」《电影是二十四格的真理》· 大源</h1>
+<p><strong>写在前面</strong><br>大家好，我是墩墩。<br>由于本人实在不擅⻓面对面的交际，本着能微信就不⻅面，能打字就不语音的i人生存指南，把一些想说的都提前写到这里，大家可以在映后时积极讨论交流。<br>做这个系列的起因是今年五月份的时候与朋友同追戛纳，说起其中某部影片与新浪潮中的《祖与占》相似，朋友疑惑，问我什么是新浪潮，沉默一分钟后，我开始了⻓达十几
+分钟的碎碎念科普，朋友频频点头发出恍然大悟的声音然后一本正经的总结道“就老电影呗，你早说嘛”，我说“emmm怎么不算呢”。这时候我才意识到，那段电影史上的光辉岁月并非所有人都知晓的。最近此电影又一次冲上话题，在看完豆瓣褒贬不一的评论后，萌生出安利新浪潮电影的想法，于是借助24帧观影团的平台推出”电影是每秒24格的真理“系列。<br>由于时间关系，这一系列仅选取了活跃度较高的三位导演的四部经典作品与大家分享，当然也包括一部女性导演的作品，都是可看性较强的影片，希望通过这些影片让大家了解新浪潮，爱上新浪潮，更爱上电影。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br><strong>第一期分享的是新浪潮的伟大旗手——弗朗索瓦·特吕弗导演的作品《祖与占》</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>安德烈·巴赞给世人留下最完美的两样礼物——《电影手册》和弗朗索瓦·特吕弗。而此影片是特吕弗作品中最具新浪潮⻛格又细腻动人的一部，可整部电影都弥漫着一股舞动⻘春却又无可奈何的悲凉绝望气息。(引自《世界电影史》)<br>电影很简单，只是讲述两位挚友分享了爱情的简单故事。客观理智的将三人关系呈现，没有对错的讨论、没有树立任何的价值观，仅此而已。同时影片也提出许多令人深思的问题，何为爱？何为自由？何为对？何为错？<br>观影关键词:黑色电影/女性主义<br>第二期因临近让-吕克·戈达尔导演逝世一周年纪念日，谨以一部《精疲力尽》纪念。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>“精疲力尽，然后去死” 2022年9月13日，91高龄的戈达尔选择在公寓中结束自己的生命，而原因仅仅是自己精疲力尽了。<br>1960年戈达尔凭借伟大绝妙的跳切打破了好莱坞叙事的连贯性，开创了电影新时代，法国前电影资料馆馆长朗格罗瓦说，当代电影分为两种，“戈达尔前”和“戈达尔后”，而《精疲力尽》正是戈达尔时代的开始。<br>不过直到现在我都无法准确描述这部影片的内容，只能等你来感受。<br>“在悲伤和虚无之间，我选择悲伤……，你呢，你选择什么？”<br>“选择悲伤，这太蠢了。我选择虚无。”<br>观影关键词：跳接/环形镜头/存在主义<br>上一期的电影也许会让大多影迷看的一头雾水，喜欢的人如获至宝，讨厌的人恨之入骨，没关系，电影本就是私人性极强的一项娱乐活动，往往是彼之蜜糖，汝之砒霜，更何况他是戈达尔。为了防止大多数人影迷对导演报以偏见而错过更多优质影片，第三期分享的仍旧是戈达尔导演的作品。
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>《狂人皮埃罗》作为《精疲力尽》五年后的作品，采用了宽银幕和绚丽的色彩，加上极具导演个人风格的声音拼贴与跳接，保留导演特色的同时，又极大的增强了影片的可看性。除去这些技术层面上的变化，《狂人皮埃罗》的故事也极其有趣，单拿出来一条都足以让人吃瓜欲爆棚……<br>被公司开除的倒霉员工与旧爱重燃爱火？？？  抛妻弃子一同私奔却被黑帮追杀被迫失散，重逢之后却发现失散的旧爱竟是去寻觅自己的真正男友？？？
+绝望之下的皮埃罗竟……  （本人垂直入坑戈导的神作，五星力荐！！！无比喜欢他的结尾）<br>观影关键词：纯粹诗意/超现实主义/声音跳接<br>女性一直以来都是一股无法令人忽视的力量，在法国新浪潮中也不例外。第四期分享的影片是有“新浪潮祖母”一称的阿涅斯·瓦尔达的成名作品《五至七时的克莱奥》
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>巴黎，下午五至七时，等待体检报告的美丽的女歌手克莱奥忐忑不安的游走在街头、咖啡厅、或是家里，遇到了各类形形色色的人，对他们诉说她生命中的每一个段落，但似乎没人真正理解她。<br>她一袭黑衣，摘掉假发，面无声色地掩饰着内心中的恐惧与焦灼，担心自己是否会如占卜的人所言，患上胃癌。直到最后，她遇见了即将远赴阿尔及利亚战场的年轻士兵……<br>观影关键词：女性导演/长镜头/音乐片<br><strong>时间</strong><br>**9.3《祖与占》**9.10《精疲力尽》**9.17《狂人皮埃罗》**9.24《五至七时的克莱奥》<br><strong>地址</strong><br><strong>源动力潮盛华文体活动中心</strong>(大源地铁站D口步行450米)<br><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>墩墩  </p>
+<p><strong>票价</strong><br><strong>单场￥40/通票￥120</strong>（含一张定制票根）<br>_ ‍  <a href="[object Object]">undefined</a> ‍<br><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

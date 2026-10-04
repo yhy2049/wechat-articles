@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>是她们撑起了电影的半边天 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-03-08</div>
+      <h1 class="article-title">是她们撑起了电影的半边天</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>是她们撑起了电影的半边天</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>大约每一百位电影导演中只有六位是女性。  </p>
+<p>每当有女导演们的作品问世，总是极容易被划归到冷门、小众的阵营中去。倘若要打破这些偏见，又往往容易用力过猛，成为带有鲜明“女权主义”的讨巧之作。</p>
+<p>然而，从台前到幕后，女性电影人在男人堆里坚定的前行着，尽管从数量上无法与之抗衡，但她们一直在用行动证明：玩电影，不是“纯爷们”的事。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>索菲亚·科波拉</strong>  </p>
+<p>美国纽约，  1971-05-14</p>
+<p>对于索菲亚·科波拉来说，困难的是向人们证明她是索菲亚，而不仅仅是科波拉之女。</p>
+<p>她不愿当《教父3》中那个卖弄风情的大小姐。含着金汤匙出生，在父亲的盛名下度日，不是她想要的生活，她觉得体内的艺术能量在蠢蠢欲动。</p>
+<p>于是，当离开影视圈多年的她看到小说《处女自杀》时，她觉得，是时候释放她体内的那个索菲亚了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《处女自杀》以细腻敏感的笔触，表现一种强烈到无可名状的阴郁、深邃、毁灭性的痛感。索菲亚聪明的选择了属于她的叙事视角，在《迷失东京》中两个本无交集的美国男女，在异国他乡东京相遇了。带着来自外部世界的异质目光，他们打量这个迷狂的后现代大都市，然而这目光，最终只映衬出他们自己荒凉的内心。  </p>
+<p>开始拍摄历史题材的索菲亚被许多评论家质疑影片外表华丽，内在空洞肤浅。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>其实索菲亚从来都没有野心拍摄法国革命，《绝代艳后》的宏大历史背景在玛丽皇后的情感欲念中沦为苍白单薄的舞台背景。是的，她就是要表现一个庞大背景下的渺小个人，即便这个人是皇后。</p>
+<p>除了拍戏这事儿，索菲亚从来也不缺少才华，无论是做模特、摄影师还是时尚品牌设计师，她都有着敏锐的艺术感知力。</p>
+<p>这些都不是科波拉这个姓氏带给她的。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>香特尔·阿克曼</strong>  </p>
+<p>比利时布鲁塞尔，1950~2015</p>
+<p>当我们被《天水围的日与夜》中母与子那种平淡如水的情感所打动时，还是不由要感叹，香港电影的现实主义终究还是太抓马了些。</p>
+<p>你也许会觉得我在黑许鞍华，但是，时间倒退33年，来到1975年，比利时导演香特尔·阿克曼拍出了女性主义电影的里程碑《  让娜·迪尔曼  》。</p>
+<p>女性主义是她永远坚定的立场，现实主义是包裹在外的叙事容器，风格呢，一种受到安迪·沃霍启发的极限主义美学。</p>
+<p>沃霍的极限主义，是将摄影机对准帝国大厦，一动不动拍8小时。到了阿克曼这里，极限主义的枯燥风格刚好符合一个家庭主妇单调乏味的生活。  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>这部长达201分钟的影片呈现了一个中年寡妇三天的日常生活。</p>
+<p>低位摄影机，或凝视一条走廊，或缓慢摇过一张餐桌，事无巨细的记录着她穿衣打扮、烤肉、洗盘子、向顾客致意等生活琐事，戏剧情节被淡化到趋近于零。</p>
+<p>在影片时间的流逝中，观众借艾克曼的眼睛来观看日常生活中那些被忽略的家居空间，这几乎实现了意大利新现实主义的最高理想：记录一个普通人一天八小时的生活，并且，这是一种隐含有性压迫和经济剥削的女性被压抑的家居生活。</p>
+<p>在这部风格凌厉且十分枯燥的精英主义影片之后，艾克曼也撑不住了，开始对观赏性做出妥协。但她始终专注于描绘女性的工作、爱情、欲望。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>维拉·希蒂洛娃</strong>  </p>
+<p>捷克奥斯特拉瓦，1929~2014</p>
+<p>作为“捷克新浪潮”的代表人物，在创作初期，维拉·希蒂洛娃与战友们走的都是规规矩矩的现实主义路线。很快，他们就分裂为多种不同的美学流派。</p>
+<p>也许因为早年哲学与建筑学的知识背景以及服装设计师的工作经验，齐蒂洛娃开始将她的作品带入一种华丽的幻想情境。  </p>
+<p>《雏菊》是捷克斯洛伐克影史上最激进和最时髦的影片之一，也是希蒂洛娃最美和最具个人色彩的作品。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>色彩绚烂的影像、华丽的视觉风格、超现实主义的迷乱叙事，这是属于两个形影不离的女孩的乐园，她们有着相同的名字——玛丽，这或许暗示了一个女孩是另一个的酷似者或内在心理的映象。</p>
+<p>玛丽们以游戏来解构颠覆这个这个被条条框框禁锢的枯燥世界。  </p>
+<p>与同时代人相同，希蒂诺娃利用了极度的人造化来嘲讽人造的现象：商品、政策、制度、习俗……这部一完成就被禁的影片，无疑道出了现代人的迷惘，于是两位女孩最终在报纸的包围与捆绑下，消失在这片华丽的表象世界中。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>玛塔·梅萨罗什</strong>  </p>
+<p>匈牙利布达佩斯，1931-09-19</p>
+<p>玛塔·梅萨罗什常以女性视角叙事，因其影片独特的观念角度，为匈牙利电影带来了不同凡响的力量，也使她成为历史上第一位擒得柏林电影节金熊奖的女导演。</p>
+<p>梅萨罗什之所以有如此高成就，同她早年拍摄纪录片和新闻短片的经历密不可分。在此期间，她逐步养成了细致的观察力和精准的刻画能力。</p>
+<p>因此，她的导演处女作《女孩》的起点就很高，被视为匈牙利女性主义电影的“第一声”。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>她邀请日后的摇滚巨星卡蒂·科瓦奇担任《女孩》的主演，影片讲述一名在孤儿院长大的24岁女孩寻找亲生父母的故事。</p>
+<p>梅萨罗什在这名女孩身边安排的男性上至六旬老汉，下至16岁少年，期间穿插着爱音乐的表兄、卖弄外语的幽默男、对其一见倾心的火车男、一言不发，但靠眼神“放电”的舞厅男等等。</p>
+<p>该片也被视为梅萨罗什的半自传电影，</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>通过这部电影，我们几乎打开了一本匈牙利男子图鉴。同时也会不自觉的想，如果我是这个女孩，面临这些“男性凝视”时，该怎么办呢？</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>玛格丽特·杜拉斯</strong>  </p>
+<p>越南胡志明市，1914~1996</p>
+<p>首先，杜拉斯是一位作家。</p>
+<p>她的小说《情人》畅销全球，让她蜚声国际文坛。她将意识的纵横交错化成一种近乎呓语的文字，被尊为“新小说之母”。</p>
+<p>其次，杜拉斯在戏剧和电影方面成就卓著。</p>
+<p>1959年，“法国新浪潮旗手”之一的阿仑·雷乃请她为他的剧情长片《广岛之恋》撰写剧本。此片在法国大受欢迎，创下很高的票房纪录，阿仑·雷乃的名字也传遍世界。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>在《广岛之恋》里，绝决的死亡与毁灭，暗涌的意识与记忆，爱欲的欢愉与痛苦，所有杜拉斯的创作母题都呈现的如此清晰，甚至压过了阿伦·雷乃的视觉阐释。但对于杜拉斯而言，这些呈现都还不够极致。</p>
+<p>于是，她拿起了摄影机，决定将影像阐释的权力留给自己。</p>
+<p>杜拉斯一直认为商品电影多是小聪明，鲜有大智慧，因此野心勃勃的她拍摄了一系列在智力上挑战观众的精英主义电影。</p>
+<p>其中最著名的是《印度之歌》。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>杜拉斯在声音与画面的独立分离上做了惊人的实验，以一种叛逆的姿态打破所有电影叙事的规则和语法。</p>
+<p>更牛的是，杜拉斯用《印度之歌》的声带，配上不同的画面，形成了一部全新的电影《她在威尼斯时的名字在荒凉的加尔各答》。</p>
+<p>这是电影史上唯一的，用同一条声带和两种画面形成两部完全不同的电影。</p>
+<p>这些尝试使她站在现代主义电影的顶峰，同时作品的极度晦涩亦使杜拉斯饱受争议。</p>
+<p>然而，即便如此晦涩，在她的影像里，我们总能如此贴近现代电影的那些感性元素，感受到现代人情感中的疏离、孤独，和她对文字与影像的爱与力量。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>梅雅·黛伦</strong></p>
+<p>乌克兰基辅，1917~1961</p>
+<p>梅雅·黛伦，也许是本文所提到的女性作者中，最被人忽略的一位。</p>
+<p>这可能和她一生只拍实验短片，从没拍过长篇电影有关。然而，凭借这些短片，就足以让  黛伦  位列电影大师之列。</p>
+<p>1946年，  黛伦  在格林威治村某剧院举办了首次个展，放映《午后的迷惘》、 《在陆地》和《为摄影机的舞蹈学研究》，成功向世人展示了何为“先锋性”。</p>
+<p>她以自由的影像表达内心的现实，这种行云流水般的书写快感，在她以前的诗歌创作和舞蹈中都不曾出现。</p>
+<p>黛伦  把影像当作一种灵活的语言来表达抽象思维，在那个年代大大拓宽了影像的表现力。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>她开掘电影媒介对于时间与空间的独特表现能力，她用影像消弥了时间空间的界限、真实与虚构分野，她将两个不同空间的镜头接在一起，使用剪辑造成一个连贯的动作在这两个空间完成的幻觉，现实的空间被破坏了，一种电影上的时空观念却由此而生。</p>
+<p>并自始至终以一种轻盈的自由与舒展的方式，而绝不晦涩枯燥。</p>
+<p>美国电影理论学家比尔·尼可斯评价道：“梅雅扮演了电影界的普罗米修斯，从好莱坞的众神手中盗来了火把，照亮了那些不被众神认可的人们。”</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>简·坎皮恩</strong>  </p>
+<p>新西兰惠灵顿，1954-04-30</p>
+<p>坎皮恩执着于探讨女性性别身份的复杂性与女性精神空间的深度。她的角色自始至终是在迷惘挣扎中寻找并获得身份与自我认同的。在刻画一个个敏感忧郁、内向却饱含强烈情感的人物画像时，坎皮恩的笔触是细腻而深沉的。</p>
+<p>但在这种克制的外表下，酝酿着一股被深深压抑到内心最深处的力量，使《天使与我同桌》中的简纳被人们误认为精神分裂者；使《钢琴课》中的艾达沉默失语，只能借音乐传递心声；使《一个贵妇的画像》中伊莎蓓尔只能在一次次感情的错付中，来获得自我存在的意义。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>简·坎皮恩似乎格外钟爱迷失、困惑的女性，她/他们往往被男权制度压抑，默默承受着煎熬与痛苦，这当然是多少有些陈旧的立场了。</p>
+<p>然而，正是通过对“软弱者”的精准呈现，使她成为公认的当代最杰出的女性作者之一。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>里娜·韦特缪勒</strong>  </p>
+<p>意大利罗马，1928~2021  </p>
+<p>出生于罗马一个虔诚的天主教家庭的韦特缪勒从来都不是循规蹈矩之人，学生时代被十多所教会学校劝退。相比枯燥的学业，韦特缪勒更喜欢沉浸在漫画世界里，其中以四十年代风靡欧美的《飞侠哥顿》为最爱。</p>
+<p>六十年代初，投身戏剧行业的韦特缪勒结识了比自己年长八岁的导演费里尼，并受邀在《八部半》剧组中担任副导演一职。</p>
+<p>“我永远不会忘记《八部半》拍摄期间他曾跟我说过，‘对于不会讲故事的人来说，哪怕拥有全世界最好的技术，也照样没救。’这番话让我恍然大悟，并终身受益。”多年之后韦特缪勒如此表示费里尼对她的影响。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>1963年7月，韦特缪勒自编自导的处女作《浪荡少年时》在瑞士洛迦诺国际电影节上首映，旋即收获最佳导演奖的肯定。此后几年，她先后尝试过西部片、歌舞片、爱情片等各式类型，也慢慢找到了自己想要的表现风格。</p>
+<p>韦特缪勒的成名作是1975年的《七美人》，被纽约电影发行商引进放映，打动了不少美国观众的心。</p>
+<p>1977年举行的奥斯卡上，该片获得最佳导演、男主角、原创剧本和最佳外语片四项提名。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>那一年的奥斯卡最佳导演奖的竞争十分激烈，除了韦特缪勒外，还包括凭借《面对面》入围的瑞典电影大师英格玛·伯格曼。</p>
+<p>虽然最终空手而归，但韦特缪勒作为史上首位获提名的女性导演已经创造了历史。</p>
+<p>2019年，93岁的韦特缪勒获得奥斯卡终身成就奖，以表彰这位女性电影先驱半个多世纪以来为艺术做出的贡献。此后韦特缪勒继续在演艺界工作，直至去世。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>凯瑟琳·毕格罗</strong>  </p>
+<p>美国圣卡洛斯,1951-11-27</p>
+<p>她外形俊美身材高挑，天生的模特坯子却选择当导演。她是美国导演凯瑟琳·毕格罗。</p>
+<p>代表作包括《底特律》、《猎杀本·拉登》与《拆弹部队》......她绝对可以算是个特殊又难以归类的存在。</p>
+<p>首先，她是好莱坞为数不多、持续活跃的女导演之一，同时，她是奥斯卡史上首位女性最佳导演。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>此外，她的作品并不带着所谓的“女人味”——传统刻板印象中特别符合女性气质的如爱情、婚姻、家庭，很少在她的片子里出现。</p>
+<p>尤其是在千禧年后，凯瑟琳的作品内容越来越注重地缘政治和其他社会现状的写实，也更带着对暴力的批判与反思。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>她曾说过：“如果女人拍电影会遭遇某些困难，我选择忽略，理由有两个：我不能改变我的性别，我拒绝停止拍电影。”</p>
+<p>凯瑟琳一直都坚定地走着属于她的道路，不断以更复杂的角度挑战观众，不愿给出简单的答案与意识形态，使大家关心她的电影而不是性别。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>阿涅斯·瓦尔达</strong>
+](<a href="[object Object]">undefined</a>)</p>
+<p>比利时布鲁塞尔，  1928~2019</p>
+<p>拍摄处女作《短岬村》时，“法国新浪潮”的风都尚未吹起。</p>
+<p>朴素的记录风格与清晰浓缩的叙事风格的平行使用，使《短岬村》成为那个时代形式最前卫的作品，影响了新浪潮的几位旗手。</p>
+<p>阿伦·雷乃就承认自己文学性的繁复对位风格来自于此，连公认最骄傲的戈达尔也在《精疲力尽》中让女主角朗读威廉·福克纳的长篇小说《野棕榈》（《短岬村》改编自《野棕榈》）。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>瓦尔达不容置疑的成为“新浪潮的之母”。  </p>
+<p>可不是每个人都买瓦尔达的账。大洋彼岸另一位教母级人物，美国影评人宝林·凯尔，站在左派知识分子的激进立场上，对瓦尔达作品中温和的女性主义做了严厉批判。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>她大骂《一个唱，一个不唱》是“以迪斯尼的方式看待女性解放问题”。</p>
+<p>其实对于瓦尔达女性主义立场的批判，早在《幸福》一片中就已有过。</p>
+<p>这部瓦尔达自诩为“轻松、柔和、梦幻般的影片”表现一个男人在妻子死亡后，与情人继续过起了没羞没臊的幸福生活。影片所呈现的“男人的幸福建立在女人的劳动上”使瓦尔达饱受女性主义者的批评。  </p>
+<p>直到1985年的《天涯沦落女》，瓦尔达才终于在女性主义的立场问题上扳回一局。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>孤绝、桀骜的流浪女寻寻觅觅，游走于主流社会之外，她选择自我放逐，选择不去做国家机器强加给个人的标准的答案。</p>
+<p>瓦尔达继续以她钟爱的记录方式，通过采访与流浪女接触过的人，来呈现流浪女支离破碎的一生。</p>
+<p>流浪女是否寻找到了属于她自己的答案？每个人都有自己的答案。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>莱妮·里芬施塔尔</strong></p>
+<p>德国柏林，1902~2003</p>
+<p>立体的五官，强大的气场，一双迷人的眼眸，可她的眼睛里透露的并非是妩媚动人，而是一股凛冽决然的坚定，如蓄势待发的野豹。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>舞蹈家、演员、作家、导演、摄影师……无数不同种类的工作，她均有涉猎，她也许是同时代最才华横溢的女人。</p>
+<p>而最令人瞩目的还是她导演的身份，她一生执导了8部电影，开创了众多领先于时代的拍摄技巧，夺下了多项电影大奖，是无可争议的电影大师，也是最具争议的电影大师。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>一切要从1931年说起。</p>
+<p>那年她自编自导了处女作《蓝光》，作为当时德国的第一位女性导演，一出手就斩获了威尼斯电影节的银狮奖。</p>
+<p>也正是因为这部影片，让希特勒在电影院观看时，忍不住对身旁的人说：“记住，一旦党需要拍电影，就必须让这个女人来拍。”</p>
+<p>1935年，希特勒实现了他的想法，邀请莱妮拍摄《意志的胜利》。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>尽管纳粹士兵都瞧不起这个女人，可希特勒给予了她百分百的支持。</p>
+<p>不仅无限制的提供经费，还为她准备了36架摄像机、百余人的摄制团队，所有的士兵、群众，甚至希特勒本人都任莱妮调遣。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>1938年，她又被希特勒授意为柏林奥运会拍摄了纪录片《奥林匹亚》。</p>
+<p>运动的竞技之美、人体的形体之美、纯粹的生命之美，被莱妮的镜头展现得淋漓尽致。《洛杉矶时报》不吝溢美之词：“这是摄影机的胜利，是银幕的史诗。”</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>从艺术上来说，这是两次空前的尝试，既有关于秩序与力量的视觉表达，又有灵气、优美和感性的诗意镜头，完全是两部无可争辩的杰作。</p>
+<p>可是从政治角度来说，这两部作品是彻头彻尾的纳粹政治宣传片，其制作过程完全脱离不了第三帝国宣传部门及希特勒意志的导向。</p>
+<p>然而，当时的莱妮还不知晓她要为此付出的代价，她正沉浸在巨大的创作激情中，不能自拔。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>当二战结束，这个曾经被希特勒赞扬为“我的完美德国女人”多次遭到拘捕，可经过漫长的审讯和调查，证明莱妮和希特勒并无暧昧关系，也没有参与任何战争行动而被宣判无罪。</p>
+<p>尽管在后半生的漫长岁月里，她不厌其烦的一再强调：“我只喜欢美的事物，不管它是不是有关于政治。”然而，这一段不堪的历史将永远与莱尼如影随行。</p>
+<p>面对指责与非议，陪伴莱妮的只有摄影机。</p>
+<p>1956年，受海明威的小说《乞力马扎罗的雪》的影响，莱妮前往了广袤的非洲大陆，她被这古老而神秘的文明而吸引，用镜头拍摄了《最后的努巴人》这样的类似人类学影像志的摄影集。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>1971年，已经68岁的莱妮虚报年龄，考取了潜水执照，此后她坚持潜水30多年。</p>
+<p>100岁那年，她还完成了一部名为《水下世界》的潜水纪录片。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>在《时代》周刊评选的20世纪100位最重要艺术家中，莱妮成为了榜单中唯一的女性。  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>莱妮曾总结自己的一生：被爱、被迫害、永不被忘记。</p>
+<p>功与过，且留给后人评断。但这个女人，永远是传奇。</p>
+<p>编辑  摸鱼暴龙兽</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

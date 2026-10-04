@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿凡达2要来了全片3个小时多 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-10-21</div>
+      <h1 class="article-title">阿凡达2要来了全片3个小时多</h1>
+    </div>
+    
+    <div class="article-content">
+      <h1>《阿凡达2》要来了！全片3个小时多</h1>
+<p>授权转载：淘梦<br>昨日，一条“《阿凡达2》片长190分钟“的词条一出，网友们就开始了调侃“这可不止走心，还走肾”“可以效仿印度来个中场休息”，不过3个多小时确实时长感人。
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>目前，距离12月份上映还有不到两个月，除了媒体活动，<strong>《阿凡达2》也在月初举办的釜山电影节进行了15分钟的放映，</strong>
+制片人兰道线下参与了放映交流，导演卡梅隆线上参与互动，透露了一些关于影片的消息：</p>
+<p>创作初衷</p>
+<p><strong>詹姆斯卡梅隆说电影转向水下世界是因为他个人对蓝色的依恋：</strong>
+“这只是我自己对海洋的热爱和快乐，也是我作为一名潜水者、探险家和海洋保护主义者的热爱和快乐。”<br>“所以在第一部电影中，我们看到了雨林，我们看到了雨林中的人们，以及他们如何受到采矿作业的攻击——这些都是真实世界中发生的事情。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+在这部新电影中，我们将看到海洋生态系统受到了某种程度的破坏，这也发生在地球上。所以这些电影是我们和地球上土著人民正在经历的真实经历的一个寓言。”  </p>
+<p>续集计划</p>
+<p>卡梅隆还在会上谈到了继《阿凡达：水道》之后即将上映的第三、四系列阿凡达。他说他目前正在拍摄《阿凡达》第四部，
+**而新系列中，“我将向你展示潘多拉星球的不同环境。还会有沙漠和极地。”**他补充说，“你可以遇到更多不同的生物。你会享受一切可以想象的。”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+“我们的想象力已经疯了，”他说。“很多都已经设计好了。我们只需要让它活起来。从技术上来说，现在我们的工具非常强大，我们几乎可以做任何事情，但这并不容易。所以我们未来的目标是挑战自己，让艺术家更容易使用工具。我们将使用机器深度学习来帮助我们更容易操作这个过程。”<br>制片人兰道透露，第三部电影已于2020年12月完成，计划于2024年上映。目前正在创作第四部：
+“我们已经完成了《阿凡达4》第一幕的大部分内容，”兰道说。“我们已经设计了电影的大部分内容，但实际上还没有拍完全部，只拍了第一幕。”<br>并且每部续集都会引入一种新文化，同时保留前几部电影中引入的文化：“在每部续集中，我们都会向观众介绍新的文化和新的生物群落。我们不会忘记我们（前集）遇到的文化。”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>  </p>
+<p>表演捕捉</p>
+<p>**卡梅隆为这部续集开发了突破性的新技术，可以在水中进行表演捕捉。**这也意味着演员们必须重新学习如何在水下表演。<br>“我们在水的问题上遇到了很多挑战，不过，首先也是最重要的是让演员在水中表演时感到舒服，<strong>所以我们花了两个月的时间训练他们屏住呼吸，</strong>
+因为他们不能用水肺(在动作捕捉中)潜下去。他们不得不屏住呼吸。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+在第一部《阿凡达》中，我们带着演员去夏威夷的热带雨林排练，以获得一种记忆感，并体验在热带雨林中的感受。我们在《阿凡达2：水之道》中也这么做了。但这一次，
+<strong>除了雨林，我们还把他们带到漆黑的海洋中，希望演员能够把这种体验带回动捕池中。”</strong>  </p>
+<p>放映格式</p>
+<p>**詹姆斯卡梅隆将使用“simple hack”将高帧率投影带入标准电影院，**用于他即将上映的《阿凡达：水之道》。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>由于高昂的投影机升级成本和电影美学的缺失，以前在全球发行高帧率电影的尝试在影院所有者和观众中基本上没有成功。<br>相反，<strong>詹姆斯·卡梅隆将按照既定的数字电影规范工作，以 48fps 的格式放映DCP，大多数支持 3D 的电影院都可以放映。</strong>  </p>
+<p>高帧率</p>
+<p>卡梅隆在韩国釜山国际电影节上通过视频通话向观众发表讲话，他承认高帧率电影制作有创意限制。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>“我们正在使用“高帧率”来改善
+3D，在我们想要增强临场感的地方，例如在水下或某些飞行场景中。但对于只有站着说话的人的镜头，高帧率对我们很不利，因为它在更平凡、更正常的场景中创造了一种超真实感。有时我们需要
+24fps 的电影感，”卡梅隆说。<br>“影院能否支持可变帧率，在 24fps 和 48fps 之间来回切换电影？&quot; 答案是否定的，他们只在48fps 的频率运行。在我们想要 24fps
+的场景的任何部分中，我们只需将帧数加倍。
+因此，它们实际上显示了同一帧两次，但是，观众的肉眼并没有那么看得出来。因此，在本质上我们只是在已经存在的高帧率平台运用了一个simple hack罢了。”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>  </p>
+<p>剧本创作</p>
+<p>**在《阿凡达：水之道》剧本定稿之前曾经写过一部完整的剧本，但最终把它扔进了垃圾桶，**因为
+詹姆斯·卡梅隆希望他的《阿凡达》续集在各个层面都是完美的，包括潜意识。<br>卡梅隆认为一部电影必须获得成功的三个类别：“所有电影都有不同的层面。第一层是表象，即人物、问题和解决方案。第二层是主题，即电影想表达什么？《阿凡达》还有第三个层面，即潜意识。”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+我为续集写过一个完整的剧本，读过之后意识到它没有达到第三个层次。然后重新开始写，这花了一年的时间。<br>关于第三个层次，卡梅隆曾详细解释过：“这是一种梦境般的渴望，一个安全的地方，一个你想去的地方。无论是飞行时的自由和兴奋，还是森林里泥土的气息，这是一种感官层面的深层次交流，这就是第一部电影的精神内涵。”  </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

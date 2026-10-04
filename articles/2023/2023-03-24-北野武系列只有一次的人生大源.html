@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北野武系列只有一次的人生大源 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-03-24</div>
+      <h1 class="article-title">北野武系列只有一次的人生大源</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「北野武系列」《只有一次的人生》· 大源</h1>
+<p><strong>写在前面</strong><br>在三月，24帧观影团主理人宇航员问我，你有没有特别喜欢的，想做放映的导演？我那天毫不犹豫地告诉他，有，北野武。<br>一个小小的愿望，我希望能在大银幕看北野武的电影。<br>北野武的自传里有这样一句话。“我希望观众在走出影院的时候，会不太确定该说些什么、想些什么。就像我说过的，这是我从以前就有的梦想：捕捉并拍下我们以为真实和眼中所见事物之间的差别。我想牵着这些人的手，带领他们去对自己提出一些问题，鼓励他们自己去想象接下来发生的事。我不喜欢人们只是“看”这部电影，我也希望他们去感受、体会这部电影。然后，可能的话，希望他们会决定再去看一遍，然后再分析它一下。”<br>这次我们决定做一系列北野武的放映。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>绚烂的生命绝唱《花火》，仅此一次炽热的青春《坏孩子的天空》，寡言但心潮汹涌的《那年夏天，宁静的海》，永不停止生活里奔跑的《阿基里斯与龟》，暴力血性和情感道义的交织的《座头市》《大佬》，充满现实黑色幽默但温暖动人的《龙三和他的七人党》《菊次郎的夏天》。<br>我们就争取选址在放映厅进行放映，给大家最好的视听体验。你可以是从未看过的初识者，也可以是已经反复观看的影迷，我们都发出诚挚地邀请。每场映后大家可以畅所欲言，我们照例赠送精致的票根给大家作为纪念。因为在放映厅，仅仅因为放映厅这一个理由就足够。它对我们都意义非凡。<br><strong>放映员说</strong><br><strong>1.《花火》103mins</strong>_ 丁瑜<br>这部电影里有北野武在经历车祸后对生命新的认知。久石让柔情的配乐与枪火碰撞。凝望蓝色海岸，花火自在心中。人们的爱可以消解恐惧，消解死亡，自此我们逃脱暴力的奴役，逃脱遗忘的虚无，即使踽踽独行，也源源不断地生长出浪击岩石般以柔克刚的力量。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>2.《大佬》114mins</strong>_ 陆熙樾<br>北野武的暴力镜头常与沉默、冷峻相伴，又给观众以空洞缓和的空镜。好像那些所谓的血腥无情的、不择手段的作为都源自于不可言说的、痛苦深沉的内心隐痛。让人费解的是，当我们对他的角色感到畏惧憎恶或是鄙夷时，同时又有可叹、可敬之情。他沉默着，却传递着无声的、难以抗拒的力量，他似乎什么也没留下，但又已经留下了一切。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>3.《坏孩子的天空》107mins</strong>_ 陆熙樾<br>关乎青春的话题向来充盈着憧憬怀念与遗憾，似乎我们那时候和周围世界勇敢炽烈的冲撞随着年岁增加已变得钝化。人生是不断选择的过程，我们心怀畏惧，诚惶那些决策穷尽往后的路，却又极力劝慰自己活在当下。也许悲哀是藏匿在现实中的，正如鲁迅先生所说，绝望之为虚妄，正与希望同。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>4.《座头市》116mins</strong>_ 丁瑜<br>‘‘因为盲人，更容易洞察人心。’’对自然的痴迷，让人放弃眼的捕捉，去聆听环境的诏音。《座头市》作为北野武暴力美学风格下的‘‘实验作’’，是一部趣味十足的日式西部片。东方式写意的侠客风情，全片没有打斗交错的冗长，处处留下刀光剑影的犀利。一芥浪人一把刀，就能以心感洞察万物。手起刀落，血脉奔涌。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>5.《阿基里斯与龟》119mins</strong>_ 陆熙樾<br>差一点点，阿基里斯与乌龟永远差一点点。有人选择在悖论中斗争，有人选择沉沦。艺术是谎言吗，还是人们相信只能秉持来者追随论，望艺术之项背，使之难以企及。如何平衡现实价值与心中梦的彼岸？如若在向死而生的路上迷惘麻木，请给自己敢于直面荒诞的勇气，去战胜虚无。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>6.《龙三和他的七人党》111mins</strong>_ 丁瑜<br>拍子武式幽默重出江湖。这部电影在北野武众多黑帮片里独树一帜，昔日黑帮重聚，对青春岁月进行追忆和调侃。用真实去踏平梦的足迹，用笑声去掩盖时过境迁的悲凉。这部电影会让人心情大好，既热血又温情，完美诠释了北野武＂无聊的人生，我死也不要＂的态度。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>7.《那年夏天宁静</strong>的海》101mins_ 陆熙樾<br>眼前这片蓝色的海，静谧安详却蕴藏着激荡的梦与爱。无声的世界里，陪伴茂的是蓝色，是浪花还有与他同样沉默的贵子。似乎贵子已习惯，当她望向海的时候，茂与海浪是一齐出现在眼前的，就如在人们印象中夏天与美好总是相伴而来。总还是会想起两人拿着冲浪板走过海边的一幕幕场景，如同沉湎于大海的蓝…<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>8.《菊次郎的夏天》121mins</strong>_ 丁瑜<br>一部经典的喜剧电影，被定义为治愈神作，背后却是北野武痛定思痛的沉重步履。这部取材于他小时候真实经历的电影，成功让暴力没有用武之处。北野武在采访里说：＂我想让《菊次郎的夏天》成为一部公路电影，用双脚走出来的公路电影，因为当我们一步步走路的时候，那种度过时间的感觉很不一样。＂他用一部电影囊括了漫漫岁月，他是如何一步步走向与父亲菊次郎的和解，也一步步学着去爱去表达。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>我一直认为勇气是北野武的电影最多的传递。不管我们身处于人生的哪一个阶段，生活里如此多瞬息万变，幸运都只是一时的依偎。“虽然辛苦，我还是会选择那种烫的人生。即便是有机会让我的人生重新来过，我想我还是会选择那种会以几亿度的高温飞速燃烧的人生。”<br>只有一次的人生，勇气是我们唯一的出路。<br><strong>时间</strong><br><strong>2023年4月全周末</strong>18:45<del>19:00入场  19:00</del>21:00放映  21  :0  0~21:30映后<br><strong>地址</strong><br>源动力潮盛华文体活动中心 (大源地铁站D口步行450米)<br><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>票价</strong><br><strong>早鸟票：¥40/场（3.31</strong>截止**_ ）<strong>单人票：¥45/场
+双人票：¥80/场（原价¥90）<strong>全系列八场：¥280/场（原价¥360）（3.31</strong>截止</strong>_ ）**
+单场签到领取当场手绘风票根<strong>凭4场及以上，票根及购票凭证领取北野武系列周边</strong><br>_ ‍  <a href="[object Object]">undefined</a> ‍<br><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，并亮码、佩戴口罩</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

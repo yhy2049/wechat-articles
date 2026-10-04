@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年度最佳女导演作品解构湿滑记忆 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-02-25</div>
+      <h1 class="article-title">年度最佳女导演作品解构湿滑记忆</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>年度最佳女导演作品，解构湿滑记忆</h1>
+<p>**你眼中的远方：<strong>夏洛特</strong>·**威尔斯谈《晒后假日》</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>当  这位  苏格兰电影人回顾起她这部备受好评的长片首作时，童年记忆与当下渴望的完美邂逅是最美妙的乐章。  </p>
+<p>记忆是湿滑的。历经年岁与创伤，我们曾记忆犹新的事物变得暧昧，时而清晰，时而模糊。在夏洛特  -  威尔斯的处女作《晒后假日》中，苏菲是她记忆的港湾  ——
+一个跨越两个时代的主人公。故事发生在  1990  年代末，童年中苏菲与父亲  Calum
+共度的那个夏天。如今，家庭类电影与旅途中的瞬间让人们感受到一直以来所眷恋的那些事与物。</p>
+<p>影片从假期本身出发，描绘了父女二人在土耳其度假胜地的慵懒时光。  11
+岁的苏菲刚刚进入青春期，青涩的自信渐显，而父亲隐秘的愁思则随之逐渐加深。除了苏菲从梦中惊醒的片段，影片的大部分时间里，我们都置身苏菲的旅途回忆之中。这些童年旧事与成年的希冀所融合的时刻，是威尔斯内心最深处对回忆的渴望的表达。对于苏菲来说，父亲的形象是缥缈不定的，带着阴晴的悲伤，仿佛悲剧注定发生。苏菲反复陷入一些梦境：在朦胧的记忆里，
+Calum  躲在玻璃窗后，被镜头所模糊，又或是被夜店奇怪的闪烁霓虹灯所阻隔。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>影片即使在其虚构情节中，也似乎企图塑造出艺术品般有感染力的时刻、场景、人物，这也许就是那种当我们处于失去的悲痛中时，所渴望眷恋的事与物。尽管影片中的核心人物的关系有一定特殊性，但其仍引发了人们关于家庭、少女青春期、失去以及爱与疼痛的普遍思考。
+Mescal  和新人  Corio
+的表演为这段父女关系注入了一种轻松的家庭亲密感：既活泼又扭捏，虽让人舒适安心，但又充满不确定性。影片的节奏也强化了这种风格基调，不由让人联想到人的呼吸
+——  时而急促不
+稳时而又静如入梦。我在和威尔斯交流时得知，影片继今年早些时候在戛纳和爱丁堡首次亮相后，刚刚在伦敦举行了首映，并获得了评论界压倒性的好评。晒后假日无疑是当之无愧的，它承载着高超的制作技术与强烈的情感共鸣，它让我们内心一些松散无形的东西变得清晰可见。在记忆消逝的瞬息，威尔斯与那些依偎在一起，牢牢握住消逝的回忆。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**我想先谈谈影片中关于记忆的召唤。首先是关于苏菲的个人记忆，再是关于集体的记忆，特别是对于英国观众来说，音乐、熟悉的假期  ….
+为什么在这部电影里，记忆的呈现是非常必要的表现手法？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+当我第一次有这个构思的时候，其实很直截了当。我想做一部关于一个年轻父亲和他女儿的度假电影，这个父亲可能被当作她的哥哥，他们也是非常好的  “  搞事搭档
+”
+。基于这个想法的存在，我将自己的回忆以及我与父亲的关系渗入电影架构中。第一版草稿有两页，我当天写了个大概，不包括夜店狂欢的情节。但写着写着，我把这一情节呈现了出来。我想这是随着影片创作的推进而逐渐呈现的，也是影片最终沉淀的一部分。因此，虽然某种程度上我想打破那种架构，但正是这个架构促成了影片本身成型。我查阅资料时，一个我试图弄明白的点是，电影人是如何描绘记忆的，又是如何将观众代入其中。</p>
+<p>在影片的拍摄部分，我和我的摄影师决定将成年苏菲的视角作为首要视点，其他视点相对来说较为次要。最后是影片的剪辑环节，也是整个过程中非常重要的环节。在剪辑的过程中，一些片段的确在影片的回忆感塑造上起到了很大作用。起初，我们只是为了解决镜头问题，例如节奏问题或者角色塑造之类的，而非是技术性难题。但最终，我们发现这些正是这部电影所不可或缺的，我认为它们的确在很大程度上呈现出了影片中的回忆段落。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**你说你曾有想要打破架构的冲动，是因为不想让自己的内心或者脆弱的一面过度暴露在镜头下吗？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+我认为电影里对于人之间关系的表达，是非常个人化的，所以其实并不存在所谓的过度展现自己之类的。在影片的制作过程中，我没想过有人会看这部电影，我想这是创作的最佳状态。我更担心的其实是影片能否有风格化呈现，或者所表达的是否清晰。因为剧本开头和结尾的那些反复出现的抽象而陌生的片段，其实很容易让人匪夷所思。</p>
+<p>**提问:**那关于集体记忆这个概念，你会意识到可能让人们产生共鸣的细节点吗？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+我在制作这部电影时没有想到这一点，并不是我有意回避这个问题，我感兴趣的是对于我印象中细节的呈现。但我偶尔读到关于这部电影的反馈时，发现人们注意到像  “
+芬达汽水  ”
+这类的细节时，让我非常高兴。我想人们确实会在这方面产生共鸣，我选择表现这些细节并不是因为它们对我具有特别的意义，而是因为它们本就是人们共同的记忆，我的意思是，并不是因为它们是人们共同的回忆的所以我选择它们，而是由于它们的共享性而让我也拥有了这个记忆点。我们中的许多人一离开英国就会喝
+Fanta lemon  、吃  Magnum
+Almonds，因为在国内买不到，这些都是让人们印象深刻的细节，就像在机场坐大巴，在深夜里驾车，欣赏山边日落，怀着淡漠的心绪直到日出升起…</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**在电影中引起人们共鸣的方式有很多，不仅仅是通过一些具体的细节性的东西，在更广泛的情感层面也能有清晰的展现。</p>
+<p>**夏洛特  ·  威尔斯：**我想我是通过影片中空间映射来呈现的，但其实我认为影片中还有很多其他的方式，就像  “  条条险途通罗马  ”
+之类的。我们第一次试映时，全场对影片的理解超乎我们的想象。每个个体都能感受到一种共同的情绪，从始至终没有人对影片细节有单独的、清晰的感受表达，但在场的人都有这种情感共鸣。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**能谈谈影片的选曲吗？有些歌曲很大程度上承载了人们的共同记忆，有些歌好像是我很早前听过的。</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+整个过程有几个不同的环节。我有个歌单，里面有我想放入影片中的一些曲目。有的歌曲我加在了电影里，但有的我一直没有找到适合它们的位置。像这种安静的电影，当歌词很突出的时候，非常容易引导观众，这往往是一个问题。有时候你会对这种方式有所倾向，但有时候你又不太想这么安排，这是个比较难驾驭的点。我的剪辑师
+Blair McClendon从我的歌单以及我们的音乐指导Lucy
+Bright那里进行选曲，再进行整合。Bright对英国流行音乐完全不感冒，所以他只会选择那些与场景相符又或是带给人惊喜的音乐，比如“Under
+Pressure”。起初我并不打算在电影里用这首歌，但这可能是最重要的一首歌。</p>
+<p>**提问:**这首歌我听过无数次了，但我之前从来没有好好读过这首歌的歌词。我很喜欢这句  “love dares you to care for
+the people on the edge of the night.”  这太棒了，  “Losing My Religion”  这首也用得很妙。</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+那首歌剧本里其实是有的。我们需要有几个备选方案，以防现有的选择不能呈现出最好的效果，这确实让我很头大，我费了很大的劲选择合适的曲目。因为歌词往往最有表达力，显然，这不是我选择这首歌的理由，我不根据歌词选曲。我选它可能是因为那是我第一首知道全部歌词的歌，但也有可能是我潜意识里觉得它会是合适的。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**你刚刚提到你的剪辑师，  Blair McClendon,
+而我最感兴趣的就是影片的步调节奏了。影片中有许多长镜头，镜头停留在某个场景中，让人置身其中，极具张力。其中也有许多快切镜头，给人一种跳跃凌乱的感觉。你对这种节奏的剪辑怎么看？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+有些镜头切换是按照脚本来的，从更加商业的层面上来说，我也是一个剪辑师。但我通过剪辑的方式来思考，用剪辑来写作，并且结合不同的音效加以匹配。他们到达酒店那场戏和
+Calum
+打电话的片段，接着又切到他给她系鞋带的镜头，同时依然接他打电话的镜头，这个情节也是有脚本的。有时候我对场景间的转换有一种自己的感知，并且我在这上面花了很多心思。我的摄影师敦促我在剧本创作阶段考虑了很多转场问题，否则，这就只是单纯剪片而不是电影制作了。第一个版本剪出来有两个半小时，那是对剧本最直接的呈现，涵盖了我们拍的每一场戏，那个版本整体是很混乱的。之后我们又整理修改，尝试了很多种剪辑方式以找到影片最合适的节奏，不过结尾几乎都没有变化，我是指，电影最后的四十分钟，节奏很流畅，产生了很好的效果。影片的前半部分，前三分之二，是问题最多的部分。我们做了很多努力让观众相信电影本身有明确的走向，尽管成效不佳。我想你可能也希望你的观众仅仅满足于关注这两个人一起度假时产生的化学反应，毕竟这是影片一开场就交代了的。你做了很多铺垫，设置情节转折或是起伏，之后又对其呼应对照，但你其实期望观众能够跟随情节游走，沉浸其中。当你呈现一组流畅的镜头组接，如果他们心绪为此徘徊，说明你是成功的，就像影片开始
+Calum  在阳台上抽烟那场戏，一定程度上抓住了观众。</p>
+<p>**提问:**有许多场戏都是我们透过窗户或是镜子去看  Calum
+，其实很明显为什么我们用这种镜像式的方式去理解这个角色，但我很好奇你拍摄这个角色的立场，因为他就像是蒙上了面纱一样。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**夏洛特  ·  威尔斯：**是的，我很刻意去营造出那样的感觉。对我来说，那些  Calum
+独自一人的场景某种程度上是想象出来的，可能是通过一些模糊的感觉，也可能是通过：  “  苏菲处于睡梦中时，隐约听到开门声，想象到可能是  Calum
+在干些什么  ”
+这类情形而构造出来的。因此，为了传递这一点，虽然我们并不是在期待观众能够明确了解我们在做什么，但是为营造出那样的感觉，我们决定在一臂以外的距离去拍摄
+Calum
+，这意味着摄影机与他之间有一个人之间的身体距离，意味着更广角的镜头，并且我们通过拍摄镜子、玻璃或者墙面来形成观众对于他的认知屏障，让他的形象总是模糊不清。甚至在结尾的时候，他坐在床上啜泣的那场戏，是从背后拍摄的。这个镜头很有意思，因为剧本上，他是面对窗户，镜头从后面取景，拍摄剪影，那样拍出来会非常美。但
+Greg
+说，我们不应该只是追求漂亮的镜头，适合角色和情境更加重要，于是我们选择拍摄他在墙边的镜头，碰巧的是，最后那个镜头拍出来也很美。但我们这么拍他是为了保持
+Calum  的模糊感，这对我们很重要，我敢肯定一些观众会因此有些失望，但这就是影片的旅程，他的能为人所知的那一面其实是不重要的或是无意义的。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**我想问问影片将苏菲成长的叙事和对她父亲的具有感染力的、有怀旧气息的描绘相融合，把这些内容融合在一起是很重要的吗？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+这个问题很有趣，因为我也不敢肯定这是不是真的起作用，我怕我拍成了两部电影，而不是将它们成功融合成一部。因为即使在最不接地气、最假、最老套的故事里，  “
+成长历程  ”
+这类叙事也是存在的，并且总是存在且清晰易懂。我也不太确定我是否传递出了有效的表达，但显然我们对于这类故事习以为常，所以我想将其留在影片中不会出错。在影片中所囊括的内容里，有一点是：共享的欢愉和个人的忧郁，又或说是个人经历与另一种共同经验的兼容。因此，像青少年的那种历程以及和
+Michael  的插曲，那种身体和性的某种意识的萌芽，都被保留了下来。这些细节是我想捕捉的，就像  Fanta Lemon  一样。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>**提问:**能谈谈你与  Frankie  合作和与  Paul Mescal  合作的细微差别吗？</p>
+<p><strong>夏洛特  ·  威尔斯：</strong>
+他们都非常棒。我对我想要的表演有一种感知，这很有趣，我们拍了一条又一条，结果最终在剪辑室里时，我也还是搞不懂自己为什么又想再拍一条，真的是这样。但在那一刻，你是完全熟悉银幕上的每个动作表现、转折和环境的。我们始终是为了追求一个自然的表演和表达方式。我们尽可能在镜头前给
+Frankie  舒适的空间，包括她和其他青少年一起的时候，我们试图从中捕捉到一些欢乐和愉悦的片段。因为  Frankie
+是个孩子，我们在拍摄时间上有很大压力。其实真正表演的时间并不多，但当我们尝试并做到的时候，还是有很多乐趣的。这点真的很让人欣慰，就像某刻时间慢下来了，你有机会去给到一个不一样的想法，去尝试新的东西，或让某个人在某方面惊艳其他人。又或是当你放任摄影机拍摄，让一场戏自然而然按照剧本上演，进而去看看会发生什么。关于卡拉
+OK  那场戏，我这几天一直很好奇  Frankie  对于她带着观众那样徜徉有何感想，不过我有点害怕她对她的表演想得太多，所以就还没问。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p> 参考原文：  _ _ <a href="[object Object]">undefined</a>
+charlotte-wells-discusses-aftersun  _ _ 翻译：陆熙樾  </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

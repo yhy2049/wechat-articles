@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演电影节口碑佳作风起前的蒲公英公益观影专场主创交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-06-29</div>
+      <h1 class="article-title">成都路演电影节口碑佳作风起前的蒲公英公益观影专场主创交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「成都路演」电影节口碑佳作《风起前的蒲公英》公益观影专场+主创交流</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>FIRST最佳纪录片提名，观众选择荣誉大奖</strong>  </p>
+<p>中国版“放牛班的春天” 6/25正式上映</p>
+<p><strong>《风起前的蒲公英》公益观影场</strong></p>
+<p><strong>/ 主创嘉宾 + 美育公益 / 现场映后互动</strong></p>
+<p>纪录电影《风起前的蒲公英》通过北京蒲公英中学合唱团的故事，展现了孩子们在逆境中如何通过音乐实现自我成长。<strong>本次公益专场放映，旨在</strong>
+感谢长期支持美育事业的爱心人士与机构
+，展示美育公益的实践成果和未来方向，传播美育理念与公益理念。邀请电影主创、成都本地公益代表进行互动交流，分享更多关于制作的幕后故事、以及探讨在分数之外，美育如何为孩子的生命奠基？</p>
+<p><strong>◎  2025.7.4 周五 18:30</strong></p>
+<p>签到：18:30-19:00（核销选座）</p>
+<p>观影：19:00-20:48</p>
+<p>主创与公益代表分享，观众互动交流：20:48-21:30</p>
+<p><strong>◎ 成都市双流区保利万和国际影城（三利爱琴海店）</strong></p>
+<p>靠近地铁海昌路B口</p>
+<p><strong>购票方式</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>❤️公益观影票价41.8元</p>
+<p>其中35元支持电影票房</p>
+<p><strong>每张6.8元将全部捐赠给</strong></p>
+<p><strong>成都公益组织“一扇窗计划”</strong></p>
+<p>支持乡村儿童走出大山看世界</p>
+<p><strong>◎ 电影主创嘉宾</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>联合导演 唐韬</strong></p>
+<p>先后毕业于清华大学新闻与传播学院、美国南加州大学电影学院。作为剪辑指导参与了纪录电影《大学》《风起前的蒲公英》；上学期间，导演了网剧《薛定谔的猫》《少年有点酷》；作为短片导演参与了湖南卫视《幻乐之城》录制。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>程泓九 制片人</strong>  </p>
+<p>北京源真文化有限公司制片人，曾参与多部院线纪录电影制作与宣发。代表作品有《喜马拉雅天梯》《我在故宫修文物》《大河唱》《大学》等。</p>
+<p><strong>◎ 公益嘉宾</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>黄露</strong>  </p>
+<p>成都一扇窗公益服务中心主任，毕业于四川大学，福布斯中国30Under30。生长在成都的乡村，从小好奇小镇以外的“世界”，乡村支教两年后一直全职公益教育，希望通过微小的力量，把优质的课程资源带给和我相似成长背景的小朋友们，带他们看见“大大的世界”！</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>曹邦新</strong>  </p>
+<p>A4儿童艺术馆T+乡村教师美育素养发展⽀持计划项⽬负责人，一名乡村教育⼯作者的陪伴者和协作者。</p>
+<p><strong>◎ 周边福利</strong></p>
+<p>1. 纪念海报（人均一份）</p>
+<p>2. 纸飞机金属胸针+官方帆布包（映后互动抽奖）</p>
+<p>*周边以最终实际到货为准 </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>◎ 退款规则</strong></p>
+<p>一经售出，概不退票，可转让，希望大家尽量确定行程后再报名哦~</p>
+<p><strong>◎ 温馨提醒</strong></p>
+<p>*现场签到领取周边，入场任意选座，不按票根座位号落座 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场 </p>
+<p>*检票将在电影开场时结束，迟到的观众请向影院前台出示购票页面入场，周边将在活动全部结束后发放 </p>
+<p><strong>◎ 影片介绍</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>导演: 梁君健 / 唐韬 / 刘张铂泷</p>
+<p>主演: 权煜飞 / 张展豪 / 王路遥 / 冯小云</p>
+<p>类型: 纪录片</p>
+<p>制片国家/地区: 中国大陆</p>
+<p>语言: 汉语普通话</p>
+<p>片长: 108分钟</p>
+<p>又名: Bitter Sweet Ballad</p>
+<p><strong>第17届FIRST青年电影展 (2023)</strong></p>
+<p>主竞赛单元 观众选择荣誉大奖</p>
+<p>主竞赛单元 最佳纪录长片（入围）</p>
+<p><strong>2024年北京国际电影节展映</strong><br>展映入围影片 观众评分榜首</p>
+<p><strong>2024年上海国际电影节</strong></p>
+<p>提名电影频道传媒大奖</p>
+<p>最受传媒关注影片</p>
+<p><strong>北影节推介语：</strong></p>
+<p>中国版“放牛班的春天”，渺小的梦在这里发声。影片聚焦并追踪了蒲公英合唱团四位团员的训练日常和他们各自的学习生活与家庭境况。流动的家庭、升学压力、变声期尴尬，无处不在的社会规矩，现实经常耀武扬威，考验着一颗颗稚嫩的爱乐之心。也许未来不似所愿，但只要歌声依旧，我们终将抵达。</p>
+<p><strong>影片简介：</strong></p>
+<p>影片以<strong>蒲公英中学（北京市第一所为进城务工者的子女创办的中学）合唱团</strong>
+的学生们为主要拍摄对象，采用纪实手法，呈现了四个小主人公的音乐梦想，描摹出一所生机盎然的校园，也真实地展现出了这些“小蒲公英们”的青葱岁月和生命力量。</p>
+<p><strong>◎ 关于影片</strong>（以下内容来源于网络）</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>影片历时两年跟踪式拍摄四年后期，纪录真实，保留质感，呈现了四个孩子的音乐梦想和一所装满理想的校园，也展现出孩子和父母之间的动人亲情。影片摒弃旁白解说式的第三者讲述，细节化充分展现生活逻辑的内在张力和影像语言的叙事魅力，展学现真实中学生的生活、习、歌唱、成长。</p>
+<p>影片大多数拍摄对象都出生于奥运前后的首都北京，城市建设不仅为进城务工者提供了大量就业机会，也为随父母生活在城市的孩子们提供了五彩斑斓的成长空间。这些孩子们探索着属于自己的城市地图，为我们展现了个体与城市发展之间的真实生动的独特关系。</p>
+<p>随着父母工作的频繁流动，校园里的伙伴来了又去。已经熟悉的校舍，也因城市建设需要而即将拆除。在一切的动荡无常之中似乎只有每天放学后，合唱教室准时响起的歌声，始终如一地陪伴着他们的欢笑与泪水、相遇与离别，安稳了他们苦乐参半的青春与成长。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>主创阐述</strong></p>
+<p>这是一个关于“离别”的故事，这四个人也构成了一个关于“离别”的统一叙事。</p>
+<p><strong>——导演 梁君健</strong></p>
+<p>蒲公英象征着“离别”，在风吹来之后，蒲公英就散掉了，一颗颗小小的种子就被播撒到世界的其他角落;而正像袁老师讲的，蒲公英中学的这些孩子们都要学会面对不断离别，朋友的离别、家人的离别。其实分离教育对于每个人的成长来说都很重要，但由于随迁儿童本身命运的不确定性，对他们而言，离别可能格外的提前和残酷。但是又好像在风起之前，蒲公英中学给他们提供了一个暂时的乐园、一个让大家可以安心成长的环境，大家都还在“枝桠”上的时候，可以被学校保护着、联系着。所以这个片名的寓意就像是大家生存的状态。</p>
+<p><strong>——联合导演 唐韬</strong></p>
+<p>对这些孩子来说，音乐不光是当下唱歌这件事情，它其实是情感和记忆的一个寄托，重要不在于唱得有多好，只是唱歌的时候开开心心的，留下了一段宝贵的生命片段记忆，其实就足够了，真的就是“音乐陪伴成长”。</p>
+<p><strong>——联合导演 刘张铂泷</strong></p>
+<p><strong>公益伙伴推荐</strong></p>
+<p>我带着六年级的孩子们坐在一起观看这部电影，共同经历的欢笑与思考，将成为他们童年记忆里温暖的一页。而很快，他们也将像蒲公英的种子一样，乘着毕业的微风，离开熟悉的校园、老师和伙伴，飞向不同的中学，开启新的旅程。毕业意味着什么？可能是对一段珍贵时光的告别，是对童年纯真的珍藏；可能是对成长的一次庄严确认，孩子们将带着在这里汲取的知识、养成的品格、收获的友谊，走向更广阔的天地。《风起前的蒲公英》在毕业季上映，对我们而言，恰逢其时。它让我们在真实的影像中，思考教育的真谛、离别的意义以及美育的价值。</p>
+<p><strong>——河北任丘 乡村教师 郭祉祺</strong></p>
+<p>从2013年开始，我在北京读书的第二年，就跟随当时我的师兄师姐们，借由西部之窗协会，走进了许多和蒲公英中学类似的学校（当时叫打工子弟小学），在周末时间为孩子上课、陪他们成长…一晃10多年过去了，这部片子又重新把我的记忆拉回了从前。</p>
+<p>当初，在这个偌大的北京城，我第一次知道了他们的存在。现在，借由纪录片的观察，我更多地走进了他们的生活…那时候看到的是碎片，现在看到了整体。那时候看到他们的快乐和限制，现在看到了他们和他们父辈的挣扎和力量。</p>
+<p>不尽圆满，诸多遗憾，成长就在歌声里悄然发生着…如果你也对孩子、对教育、对音乐和艺术等话题有兴趣，推荐你看看这部影片。4月在温州研讨会上看过点映版，当时就为记录这部影片的主创团队感动。真诚与观察，可能击中你的心。</p>
+<p><strong>—— 音画梦想 张鸿原</strong></p>
+<p>强力推荐，看到另一种感觉的北京！看电影时，生怕错过任何一个人认识的人出镜，果真看到了戴静、小雪、亲爱的叶老师……带回同在给农民工子弟学校上课的时光！真是看哭。片尾郑校长说，学校的搬迁跟时代的变迁同在，这个事需要讨论一下，要让社会因为我们更加美好。</p>
+<p><strong>——新艺动 龚瑜</strong></p>
+<p><strong>观影评论</strong></p>
+<p>这种无旁白纯记录纪录片，拍摄难度极大，但最终效果令人惊艳。尽管蒲公英学校的孩子来自底层，他们身上的阳光和活力令人感动。那本是他们同龄人应有”可如今无处可寻的事物。影片的配乐更是拉近了我们和这群孩子的距离，我想到了小学夏日无忧的时光，而这正是合唱团带给孩子们的礼物。愿这群孩子们，以及蒲公英的老师们一切安好。</p>
+<p><strong>——网友有眼眸的鱼</strong></p>
+<p>那首蒲公英里唱的是“蒲公英，飘到东，飘到西，随风飘扬世界。”那首四季的问候唱的是“四季的风你将何去何从，四季的风我会一直追逐&quot;..影片的名字也取得眞好，风起前的蒲公英，bittersweetballad。我还是喜欢那个搬新校区前的那个蒲公英，校舍矮矮的，墙上有许多美丽的壁画，写着爱满天下，教室外有柿子树，有一年一度的柿子节，阳光酒下来有动人的阴影。孩子们啊，如果不知道未来会去哪里，有那些哭着笑笑着哭的时刻也已足够珍贵。希望有更多更多的蒲公英学校吧。2024.4.19。</p>
+<p><strong>——网友lea</strong></p>
+<p>直给但有效。不亚于《棒少年》的表达，合唱团的演出虽非天籁，但仍能客观的呈现不足与成长，人与人之间的互动更因为环京贫困带人如蒲公英的现实局面而更显弥足珍贵。影后交流:摄制组耗时两年，校外深度跟踪10名学生，从800多小时的素材剪出这么两小时，确实花了不少功夫和心血。respect。</p>
+<p><strong>——网友lixunhuan</strong></p>
+<p>太眞诚，太打动人了，导演好有才华!值得被更多人看到的纪录片!</p>
+<p><strong>——网友六比特</strong></p>
+<p>More</p>
+<p><strong>· 联合发起观影 ·</strong></p>
+<p>排名不分先后</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>24帧观影团</strong>成立于2022年5月，至今已举办线下观影200余场次，目前是成都最活跃的观影团之一。线下、映后、多场合、深度交谈，24
+帧不仅是电影，更是一场关于连接造梦者与梦的生活实验。我们相信，每一帧电影都能点亮一簇星，而每一次相遇都在重构城市的温度。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>成都一扇窗公益服务中心</strong>
+发起于2014年，并于2017年在成都民政局注册。愿景：在数字时代，帮助欠发达地区的乡村学生与老师，能从容地，健康地成长与发展。使命：为乡村师生提供课程、培训和联校比赛的活动，通过互联网+教育的模式和因地制宜的区域运营，有效促进乡村学生的自主发展和提升乡村师生的数字素养与技能，联动多方一起共建有希望与美好的乡村教育。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>A4儿童艺术馆</strong>
+致力于创建全国社区儿童友好的美育平台，支持社会教育的发展需求，为儿童提供社会化学习与成长的广阔土壤。自2014年起，A4儿童艺术馆持续举办iSTART儿童艺术节，搭建一个支持数万名儿童成长的创新美育平台。通过艺术，让儿童成为自己，找到与自我、他人及更广阔世界的真实联系。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>北京新艺动社会工作发展中心</strong>
+是由一群中央美术学院毕业的硕士研究生和本科生倡议成立的社工机构，旨在将专业艺术创作活动的思考带入公共教育领域并服务于社会工作平台。2017年发起儿童病房艺术陪伴项目，面向社会招募专业教师、艺术爱好者等成员组建成志愿服务队，主要服务于3-14岁长期&amp;住院患病儿童。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>乡村儿童美育网络</strong>
+于2019年，由国内八家关注乡村儿童美育工作的公益组织联合发起，致力于为乡村儿童美育公益行动者搭建成长交流与资源链接的平台，让美育深入人心。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>熊猫乡村书院（Panda Country Academy，简称PCA）</strong>
+，2021年在四川成都正式成立，以“支持孩子成长，助力乡村振兴”为核心宗旨，现已形成“熊猫公益”“乡村振兴”两大核心板块，成为联结城乡、服务乡村的综合性实践平台。PCA“熊猫公益”致力于城乡优质教育均衡，打造以“熊猫1小时”为中心的系列高品质公益服务，让“熊猫老师”深入乡村、学校、社区等不同场景，开展阅读陪伴、科技启蒙、品质研学、乡村教师培训等公益活动。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>摸鱼美术馆</strong>
+是一个以轻摄影为基础的多媒体社群，致力于通过鼓励普通人进行影像创作，提升生活幸福感。我们聚焦日常摄影传播、大众审美培育，并持续践行儿童公益事业与乡村振兴项目。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>成都绿之叶公益发展促进中心</strong>
+，2012年3月由四位支教老师发起成立。2014年2月28日，正式在成都市民政局注册成为拥有合法资质的NPO（非营利）组织，更名为：成都绿之叶公益发展促进中心。十余年来，绿之叶公益一直扎根边远山区，专注于支援山区乡村教育。经过持续不断地努力与发展，在川贵两地累计修建村小5所，管理运营和支援了28所乡村小学。通过向社会募集爱心善款近2000万，招募培育支教志愿者804人次（截至2024年秋季学期），为万余人次山区儿童提供相对公平且有质量，朴素而幸福的教育。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>益微青年（EV）</strong>
+是一家支持青年成长的公益组织，脱胎于2003年由北京10所高校大学生和知名学者联合发起的短期支教项目——西部阳光行动，2012年成立，2014年在北京市民政局注册。</p>
+<p>截至目前，益微青年已累计支持上万名大学生奔赴乡村，为缺乏素质教育资源的孩子带去好玩有趣的夏令营，重塑儿童与知识、伙伴和乡土的关系；通过精心设计的“服务学习”全流程支持大学生提升同理心、独立思考和协作共创能力（统称“EV力”），成长为独立自信有担当的青年。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>“一年·四季”自然艺术工作室</strong>成立于2011年，
+致力于扎根四川本土的自然教育事业探索，从2015年开始参与推动国内自然教育行业的行业交流工作，以及自然教育行业人才培育工作。机构联合创办人黄膺（自然名蒲公英）是全国自然教育网络的理事成员，以及人才培养专业委员会成员。</p>
+<p>我们秉承“自然为师、身土不二、生活美学、相伴成长”的教育理念，通过践行具有本土特色的自然教育，帮助孩子、亲子家庭和行业从业人员重建和自然、本土的情感联接，推广与自然和谐共生的可持续生活方式，助力于个人身心灵健康成长。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>彭州市引力社会工作服务中心，简称“引力社工”</strong>
+，其法人于2008年“5.12”汶川地震后，一直服务山区的留守儿童、妇女及老人等工作。2019年7月在原磁峰镇人民政府的支持下，正式注册民办非企业单位形式的公益机构。机构愿景：感受爱，传递爱，让爱在这里生根发芽，服务山区留守儿童、妇女、老人，支持社区发展等工作。以“爱的引力”和“被爱吸引”相结合的模式，关注农村地区孩子的健康成长，妇女能力提升，关爱老人生活，构建健康与安全的儿童成长与教育环境，为热心公益事业的企业志愿者或个人志愿者，搭建公益服务平台，鼓励社会各界共同参与，汇聚爱心力量。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>北京立心惠人咨询有限责任公司</strong>
+成立于2022年，公司使命在于通过为8-18岁青少年及父母提供线上、线下成长课程，保护并激发学生学习动力，激发人生使命，成长为更有志向、更有活力、更加幸福的青少年；支持父母成长为更有能力、更有力量、更有自信的养育者。</p>
+<p>公司因同样的使命和价值追求集结了一批优秀的心理学、教育学、社会学专业背景的师资队伍，团队核心成员为北京师范大学、中国社科院大学等名校硕博，培训教学团队成员均具有八年以上培训、课程研发、心理咨询等相关从业经历。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>壹基金</strong>
+以“尽我所能、人人公益”为愿景，专注于灾害救助、儿童关怀与发展、公益支持与创新三大领域，是5A级社会组织，连续十三年保持信息公开透明度满分，并两度荣获中华慈善奖。从自发起到2024年底，壹基金联合全国超过2000家社会组织和爱心团队，318万人次志愿者一起行动，带动更多人参与公益，帮助了超过5200万人次改善困境、提升能力，过上更有质量的生活。</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

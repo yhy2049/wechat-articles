@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>映后谈日常对话爱里藏着更多的痛苦 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-06-29</div>
+      <h1 class="article-title">映后谈日常对话爱里藏着更多的痛苦</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>映后谈 |《日常对话》爱里藏着更多的痛苦</h1>
+<p><strong>映后导演观众Q&amp;A</strong><br>_ @胖德里克<br>在这  部片子
+里，本来应该作为“父亲和丈夫”的角色的几个男人都没有出现。当然您的父亲我们知道他是因为一些客观的原因，所以不能出现，但是像您的丈夫和您妹妹的丈夫也都几乎是处于一个缺席或缺位的状态，我想知道，这只是因为这是您在艺术创作上的一种主观选择（因为毕竟这部纪录片还主要是围绕您和您母亲之前去拍的嘛）吗？还是也有其他原因？<br>_ @黄慧侦<br>主要是幾個考量吧，其一是因為這部電影是我要給我媽的一封情書，所以決定不將她不樂見的人也寫進來。二是因為這些男性角色的缺席，更真實反應我從小成長的世界。三則是在片中這些男性角色的「缺席」，反而會形成一種看不到卻又無處不在的感覺，就像我們所身處的父權社會結構一樣。  </p>
+<hr>
+<p>_ @无敌黑大帅嘿嘿嘿嘿嘿嘿嘿<br>有注意到这部片子在拍摄人物时基本都是在用比较近的特写的景别，这是为什么？<br>_ @黄慧侦<br>謝謝這位觀眾的提問，那樣的距離其實代表著我對凝視他們的渴望，尤其是對我的母親，那是我在真實世界無法做到的，於是透過鏡頭便貪心地靠近，再靠近。也很謝謝攝影師，完全能理解我的想法。  </p>
+<hr>
+<p> __ @Ankh<br>导演认为是妈妈天然爱自己的孩子并期待被爱，还是孩子天然爱自己的妈妈并期待被爱？<br>_ @黄慧侦<br>我認為，不只是母親與孩子，只要是身而為人，自然都是期待被愛的，小時候期望父母的愛，上學了期待同儕的友愛，青春期期望戀人的愛，因為我們需要從中確認自己的存在是有意義的。但是我也同時認為沒有哪一種愛是理所當然的，不管是母親對孩子，或是孩子對母親。覺得如果我們都能有這樣的認識，在愛我們的人面前應該會更懂得珍惜對方所給予的，而在不愛我們的人面前，也就不會那樣受傷。這個問題其實需要更多篇幅來回答，但限於各種條件，就只能先這樣了。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>影评分享</strong><br>_ @石榴希子<br>《日常对话》的票根上写着一句“秘密里藏着很多爱”，本以为是母女之间的温情对谈，看完才发现“爱里藏着更多的痛苦”。<br>现在同性题材的电影已经不局限于只是像《蓝宇》那样拍摄爱情，从《谁先爱上他的》开始，再到《日常对话》，创作者们把镜头往爱情以外延展，去拍摄同性恋的婚姻和家庭。可是我在想为什么，当女性成为同妻的时候，女性是痛苦的。当女同性恋去跟异性恋组建家庭时，女性还是如此痛苦。<br>是婚姻和生育的问题吗？不管是传统的婚姻关系，还是隐瞒或是被迫组建的婚姻关系，女性永远是被压榨的一方。是这样吗？<br>女性创作者在创作的过程中，常常带着利剑似的尖锐和果断，不带一丝迟疑。女儿跟母亲在餐桌前对谈，如此平淡如水的纪录片竟然普通仍旧掀起巨浪。她问母亲“你为什么有几次让我去父亲房间里睡觉？”
+我心想着，别再说了。别再说了。<br>可是导演不听。她就是把我心里早就预设好的痛苦铺开来，拿出来，让我直视它。也许我感受到的痛苦大概还不足真实的十分之一，却都没有勇气再看下去。<br>为什么女性创作者表达的痛苦都在一个屋檐下面，甚至小到可以只在一张餐桌上来叙事？《坠落的审判》在一间山顶的木屋里，黄立群只写海边的一间房间，崔恩荣写一间老家的旧屋，金爱烂写房间里墙纸下一个没写完的名字。我不是没去读余华莫言，或是胡波，他们同样带给我痛苦和无所逃于天地间的一丝无奈与叹息。可是男性创作者营造的痛苦更令我麻木，像是佛家讲的“业”，我似乎笼罩在其中。而女性表达的屋檐下的痛苦，甚至不需她们多言，我便被刺痛。可是她们还要继续讲。<br>这是为什么呢？  男女的苦难叙事的视角来源于哪里？  我在想。  也许是女性的痛苦从出生在这间屋子里便开始了，而男性的痛苦往往是要开始抗争之后才出现的。
+我把这归结于父权社会对女性从出生开始的压迫，性骚扰，婚姻，生育，伴随着永恒的亲人的逃避。<br>但是黄导在最后告诉我们说，父权制的受害者往往不止女性。  女性在受压迫的同时，男性也不允许去讨论自己受到的伤害。
+嗯，也许是男性从来不允许被讨论真实确切的痛苦，所以他们的痛苦总是伴随着时代变动和社会问题吧。
+当然我对此有些迟疑，我想起来白先勇的《孽子》，是不是只有被父权制抛弃之后你们才会讨论到他们带给你的痛苦呢？<br>这不是我可以想得明白的话题了。<br>当被问及经历过如此破碎的原生家庭，怎么还要选择生育的时候，黄惠侦导演提到一个词——“轮回”。  她说也许这世世代代复制下的家庭模式可以在我们这一代有所改变。<br>我当时也在想一模一样的词语——“轮回”。  在佛家讲修行的目标是要脱离六道轮回，可是那一代一代传递下来互相伤害的母女关系又何尝不是一种轮回呢？<br>影片最后，小小的孙女问阿嬤：  “你爱我吗？  ”  “我爱你。  ”  “我也爱你。  ”<br>这就是已经跳出轮回了。<br>谢谢黄惠侦导演，让我看到了跳出轮回的可能性。  也让我看到了日常对话不光是“吃了吗”“想吃什么”，而是可以涉及更深更远的问题。<br>_ @黄慧侦<br>像這樣的觀後感，對我們這樣的創作者來說，是非常珍貴的回饋，請代我向他致謝！對於生命的很多問題，我們應該沒有人能給出個絕對肯定的答案，但當有人願意拋出問題，有人願意接住且開始一起思考，那就是讓種種問題得以改變、結束輪迴的開始，而我相信這正是電影能夠做到的事。<br><strong>后续：敬请期待</strong><br>**_ @黄慧侦  _**目前正在制作的新片是我從2008年開始拍攝的一個故事，  「LOMA-
+我們的家」，但成片片名應該會改過。  從一場台灣原住民部落的強拆，談論族群、家庭與愛情。主角之一，是在日常對話中缺席的我的前夫。</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARTBAY电影诗冬日放映情书麓湖 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-12-07</div>
+      <h1 class="article-title">ARTBAY电影诗冬日放映情书麓湖</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「ART BAY」电影诗 | 冬日放映 ·《情书》· 麓湖</h1>
+<p><strong>写在前面</strong><br>其实没想到过有朝一日能收到麓湖的邀请。
+我一直企图把电影变成一群人缄默的狂欢，或是一个人的悲欢，在这一年多内，24帧在成都走过了许多风景，许多回忆就像它的名字一样，拽住回忆片头，能够拉出动态的回忆。<br>这一次合作开始于一场小小的会议，三个7点还在不同地方加班的打工人悄悄摸起了鱼，聊的是希望尝试一些新的实验。短暂而并不正式的会议的末尾，他们问我24帧未来还会有哪些可能性。我说我要先做了才知道。<br>冬天又已经来了，但我们还可以把致死的热情献给情书。<br><strong>PARTⅠ</strong>  </p>
+<p>把麦穗摔打成灰</p>
+<p>在幽深的咀嚼中 大雪过境</p>
+<p>困住风的气球开始斑斓的远行</p>
+<p>蝉鸣铺满河床</p>
+<p>诗是人类的眼睛。诗歌从来都不是什么阳春白雪、不可触及之事物。它藏匿于你我生活中的每一个细节里。人人皆诗人。因此，我们想，探索一场电影与诗的交相辉映。</p>
+<p>规则与流程:  1.  启程于影像：抽取一张电影主题的明信片，让它成为你的诗意启程。  2.
+词语的收集者：在我们精心准备的电影片名文字中，寻找那些触动你的词汇。每一个字、每一个词，都承载着故事的片段，情感的色彩。  3.
+拼贴：在明信片的空白上，自由组合这些文字碎片。就像拼图，一点一滴拼出你心中的影视诗篇。  4.
+分享与留念：你的作品，是你与电影对话的见证。可以选择将其展示于我们的摊位，与同好分享这份艺术品；也可以将其带回，作为这段美好时光的永久回忆。在这个活动中，每一位参与者都是诗人，也是电影的再创作者。让我们在文字影像的交汇处，共同编织一场关于电影与诗的梦境。<br>地点：麓湖艺展中心·湖畔广场  日期：12月9号  活动时间：13：00开始  </p>
+<p>用电影与诗，如火如石般碰撞，</p>
+<p>请你</p>
+<p>迸发出，这世界上最炽热的曜光。</p>
+<p><strong>PARTⅡ</strong>  </p>
+<p>“那些没有开口的告白，最终还是让你听见了”</p>
+<p>一边茫茫雪原上，博子身穿黑色大衣，在冷冽的白色大地上，仰头，侧脸，闭眼。这是电影的第一个画面，也是电影《情书》的海报画面。博子渐渐离开这边白色，远处是树、房子和世界。寒冷的温度迫使人们本能地蜷缩在被窝里，新陈代谢变慢，行动变缓，个体的思绪逐渐散漫开来。关于回忆，关于过往，关于那些不能说的秘密，都渐渐浮现在脑海之中。无论多少年后，那些日子总会再次让心底温热，让人挨过一个又一个漫长且冷冽的季节。于是，我们想以此为契机，开展一次特别的“冬日放映”环节。<br><strong>冬日放映《情书》</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>活动流程：  1.  冬日放映：现场将放映岩井俊二电影《情书》，我们一起回到“藤井树”的那个温暖的冬天。  2.
+“你好吗，我很好”：现场放映结束后，请保持住你心底弥留的真挚感情，现场将提供邮票和信笺，你可以写下任何东西，主题、字数、形式均不限。我们帮你用传统的邮件形式寄到国内任何地方。关于你的种种回忆，我都一一寄还给你。
+3.  神秘装置：我们还准备了一个关于《情书》的神秘装置，朋友们，敬请期待。<br><strong>票价</strong>￥30</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>地点：麓湖艺展中心·A4学术报告厅  日期：12月9日  放映时间：18：00—20：00  映后活动：20：00—21：00  </p>
+<p>极端的诗意美学、色彩的极致运用、对于朦胧青春的探索与再探索，都构成了《情书》当中独具特色的“岩井俊二”风格。越长大，越发现真诚的难能可贵。面对错综复杂的社会关系，我们庆幸心里总保留着最初的那份悸动，让硬邦邦的世界不至硬进心里，让软弱的心不至倒塌不起。</p>
+<p>生命只是一连串孤立的片刻，靠着回忆和幻想，许多意义浮现了，然后消失，消失之后又浮现。我想这次，正是《情书》让我们相遇，而那些没有开口的告白，最终还是让你听见了。</p>
+<p><strong>特别支持</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刀下留人王家卫电影之消失的演员们 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-10-13</div>
+      <h1 class="article-title">刀下留人王家卫电影之消失的演员们</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>刀下留人！王家卫电影之消失的演员（们）</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/<strong>王祖贤</strong>/</strong></p>
+<p>王祖贤在1993年高调加盟王家卫的《东邪西毒》，甚至接受韩国媒体说一般自己很少接演群戏，这次加盟因为信任王家卫，可是她万万没想到，上映后的成片居然和自己完全没关系——香港版本仅剩一个侧脸，台湾版有一个8秒的镜头。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>王祖贤的戏份是一个镜头，在树林里，从天而降，落地，惊飞很多鸟，回头看镜头。</p>
+<p><strong>/<strong>张曼玉</strong>/</strong></p>
+<p>从1990年的《阿飞正传》开始，那个叫苏丽珍的女人就以不同面貌周旋于王家卫的影片中，长达14载。</p>
+<p>可是“苏丽珍”张曼玉自己也没料到会被王家卫耍一次。</p>
+<p>《2046》最初的演员设定，巩俐和张曼玉双女主，可惜最后都惨遭“剪刀手”，张曼玉在成片中更是连一分钟都没有。</p>
+<p>张曼玉说自己花费了很多心血去拍摄《2046》，结果等来了这样的结果，张曼玉也在此后逐渐淡出影坛。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/<strong>林青霞</strong>/</strong></p>
+<p>林青霞原本会在《重庆森林》中扮演一个过期女星韦云丽和金城武之间发生一系列故事，可是成片，王家卫莫名其妙将林青霞的角色剪成了一个女杀手，另外林青霞自己都很遗憾自己翻唱叶德娴《明星》的那场戏被全部删除。不过不得不佩服王家卫的剪功，可以将一个尖酸刻薄的女星剪成一个毫无关系的女杀手。</p>
+<p>相比王祖贤和张曼玉，王家卫对林青霞绝对算得上“刀下留情”了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/<strong>张智霖</strong>/</strong></p>
+<p>没错，张智霖参与了《一代宗师》的拍摄，演的是宫二的未婚夫。</p>
+<p>你想不起来不要紧，我也想不起来，因为王家卫毫不留情地将这位老帅哥的戏份一剪没——只剩一个正面。配角的戏份全部落到张晋身上，结果让张晋拿下了金像最佳男配角。</p>
+<p>其实这个角色还有一个背影，不过是张震补拍的。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/<strong>宋慧乔</strong>/</strong></p>
+<p>比张智霖好得多，我们都能记起来宋慧乔在《一代宗师》里出演叶问的妻子张永成，出身名门的大家闺秀。</p>
+<p>然而最初王家卫告诉她这个角色和宫二是并列女一号，于是宋慧乔为了演好这个角色，专程在中国广州生活两年，期间没有接下其他任何片子，结果上映后，王家卫没有给这位韩国美女面子，一通剪，成了出现不到15场戏的女N号。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/ 刘嘉玲  /</strong></p>
+<p>同样在2046被删减戏份，刘嘉玲最初加盟2046，王家卫是说香港回归50年，刘嘉玲可能出演女警，结果角色是《阿飞正传》的延续LULU，和张震的戏份被删减不到2分钟，全片不超过20分钟。不过王家卫还是给了刘嘉玲面子，和王菲扮演的未来机器人的戏份还是有那么几场的。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>/ 木村拓哉  /</strong></p>
+<p>又是《2046》，在1999年开机的时候，木村拓哉以日本第一偶像的身份加盟，据说当年木村还因为角色问题和妻子工藤静香差点闹掰，而墨镜王拖拖拉拉拍摄到2000年中的时候突然来了个暂停拍摄，之前梁朝伟、王菲、木村拓哉、张震在泰国拍摄的戏份已经是全部泡汤了。</p>
+<p>直到2002年重启拍摄，木村一开始说明因为家庭因素不能二度加盟，但最后木村还是加入了拍摄工作（绝对是真爱），好不容易待到戛纳上映，木村一看，自己的戏份居然才10分钟。</p>
+<p>好在2004年正式公映的时候王家卫总算给木村加戏了，不知道他愿不愿意再跟墨镜合作了。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>往 期 推 荐</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+<p>《神探大战》：只是朱颜改</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+<p>东亚导演双生子：是枝裕和 &amp; 贾樟柯  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+](<a href="[object Object]">undefined</a>)</p>
+<p>阿巴斯：瞬间与永恒</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2022.html">2022年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映献给成都的一封情书午夜出走紧急入口 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-16</div>
+      <h1 class="article-title">独立放映献给成都的一封情书午夜出走紧急入口</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「独立放映」献给成都的一封情书《午夜出走》· 紧急入口</h1>
+<p><strong>写在前面</strong><br>地铁在隧道里穿行，记录着几个年轻人带领观众开启一场视觉版的午夜出走，整部片子弥漫着迷离又虚实交织的氛围。Funky
+Town是成都本地年轻人喜爱的一家电音俱乐部，聚集了处于社会主流文化边缘的一波青年群体。为了逃避白天生活中的各种问题，到了夜晚他们来到俱乐部，在歌舞中找回枯竭的生命力和爆发力，直到第二天太阳升起，他们是属于这里的主流。Funky
+town是属于这个群体身心栖息地，同样也是短暂的避难所。随着城市建设，俱乐部周围出现了巨大的起重机，城市被建筑工人慢慢占领着。留给这群青年人在此处的时间也不多了，他们将被迫面对当初来到俱乐部的原因……<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>中国，美国 | 2023 | 纪录长片</strong>|<strong>95min</strong><br>-2023年IDFA阿姆斯特丹国际纪录片电影节【影展最佳】单元
+-2023年CPH:DOX哥本哈根国际纪录片电影节【特别提及荣誉】  -2023年北京爱酷电影周【开幕影片】  -2023年SXSW
+Sydney西南偏南(悉尼)电影节  -2023年雅典国际电影节  -2023年罗马国际纪录片电影节  -2023年Visions du
+Réel瑞士真实影展 -2023年Camden国际电影节<br><strong>导演简介</strong><br>Ben Mullinkosson(笨笨)<br>《午夜出走》是来自芝加哥的导演笨笨的第二部长片纪录片，也是他第六年回到成都。他中文流利，能说成都话。他的第一部纪录长片Don&#39;t Be A Dick
+About
+lt荣获2018年阿姆斯特丹国际纪录片电影节IDFA观众评审大奖，并由知名独立电影厂牌Oscilloscope发行。他之前导演的短片入围了全球50多个电影节和平台，包括翠贝卡、Slamdance、Big
+Sky、哥德堡、NYTimes纽约时报等。不拍电影的时候，笨笨拍MV和玩滑板。<br><strong>导演阐述</strong><br>《午夜出走》讲述了我在成都认识的5个朋友的故事。这部电影是对生命的庆祝，也是给这个美好社区的一封情书，我很幸运能成为这个社区的一员。这部电影对我来说很私人。Funky
+Town是我逃避问题的地方，即使只是在晚上。它是成都地下社区的中心。在这里，每个不适应传统规则的人都可以感到狂野和自由。<br>Funky
+Town拯救了我们。电子音乐拯救了我们的生命。我这个项目的目标是创造一个临时乌托邦的肖像，并与更多的观众分享这个亲密的空间。我深深地被我主角们的旅程所吸引，我希望世界各地的人们也能如此感受。与抑郁症作斗争、作为艺术家生活所带来的疲惫、努力维持生计所面临的挣扎：这些问题迄今为止在我生命的决定性时刻发挥了作用，也是这部纪录片中每个角色成长故事的核心。BBC曾报道成都要发射一枚假月亮，我觉得那么2018年便是Last
+Year of Darkness。现在也刚好契合主演们的状态，影片纪录了他们迷茫的20岁。——Ben Mullinkosson<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br>在夜晚流苏衣饰的包装下，他们走秀，他们舞蹈，他们飞扬的姿态，结合白天生活中的切片，将记录者的完整性和复杂性完全暴露在观众面前。每个人的身上都存在着巨大的割裂感，渴望平静，也想要找到一个出口去展现真实的自己。终于在夜里可以取下面具，不再是房间里的大象，在不被当作异类的环境下，可以吐露心声，能够被看见，被理解，被尊重。<br>“午夜”是一种对抗白天麻木的精神状态，“出走”则是对生活的一次次叛逆。Funky
+Town在某种程度上，对他们来说是属于他们的断背山。我们每个人内心，也都有属于自己的断背山。我一直认为大多数的偏见，来自于不理解，多元文化的出现，构建了这个世界。当主流以胜利者的姿态来告知如何正确，却忘记了自己也曾处于文化边缘。<br>从另一个角度来看，这是一个关于沟通的纪录片。生活中，大多数时候我们无法以上帝视角，来看待一个问题的发生，只会站在自己的立场，来为自己而辩护。我们可以跟陌生人谈理想，谈人生，却很少跟自己亲近的人，展示真实的自己。一方面是怕不被接受，一方面也只是想展现对方期盼的自己，似乎隔着这层滤镜，平衡就不会被打破。我们会被生活的某个片刻而治愈，早餐店吆喝的声音，行走在沉睡了一整夜的公园，感受第一缕阳光的降临，当然也有不经意的回眸看到的最美日落。这些能让我们触碰到的当下，也只有分享给跟自己有相同感知的人。<br>我们都游离在这个虚无且真实的存在的环境，会因为所见，也想处于那样的状态。在无法触及的时间轴里，一次次的质疑自己，忽视了个体的存在本身也是一种价值。当一个社会决定去接受和看见那部分少数人，不被承认的人，而不是用那些宏大叙事和伟大称谓，掩盖无数个人的命运沉浮，那样的时代或许才是我们这些从身旁走过每个活着小人物的伟大时代。用旁观者的视角去看待每个人，在人生这个剧本里所扮演的角色。《午夜出走》是一部关于成长的电影，它是献给成都的情书，也歌颂青春的短暂——从爱到失去，从呕吐到清醒。<br><strong>预告片</strong><br><strong>时间</strong><br><strong>2024年10月18/19日（本周五/六）<strong>20:00~21:30放映</strong>本次为授权放映</strong> 
+<strong>地址</strong><br>紧急入口·Emergency Drink 
+<strong>购票链接</strong><br>_ ‍
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>联合举办</strong><br>“紧急入口”——坐标成都｜主营精酿：一个属于幸存者们的精神洞穴，情绪自由，容纳一切。“紧急入口”这个名字有好几层含义，一方面是希望在精神世界、情绪状态临近坍塌的那刻，可以像冲进避难所那样来到这里；一方面“入口”也有“喝进嘴里”的含义，紧急入口的别名也叫应急酒精，或许有的时候我们真的很需要大灌一口放松或麻痹一下思绪。<br>当你感到疲惫，过不下去的时候，请紧急进入这里，这里永远接纳包容你！<br><strong>社群</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*NO KIDS，介意勿参与 </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

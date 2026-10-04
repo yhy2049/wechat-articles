@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24帧策展人招募计划光暗下来的时候还有银幕会亮 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-10-28</div>
+      <h1 class="article-title">24帧策展人招募计划光暗下来的时候还有银幕会亮</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「24帧策展人招募计划」光暗下来的时候，还有银幕会亮</h1>
+<p><strong>前奏</strong><br>在黑暗的影院里，我们曾无数次被银幕上的故事捕获心神，让陌生的情感在胸腔共鸣。影片，这束穿越时间与空间的光，不仅照亮叙事，也悄然映照出我们内心未被言说的渴望——是否，也曾有那么一刻，你想亲手转动放映机的齿轮，将这份触动传递给更多人？<br>在24帧，我们相信，影像的魅力不仅在于观看，更在于“共创”。过去三年，我们欣喜地看到，一群和我们一样热爱影像的灵魂，从熟悉影厅座位的一隅观众，走到映后的发言台，从最初的一句“我也想试试”，到一场场别出心裁的影展落地。<br>有人因为最爱的导演昆汀，发起策展，只为在大银幕上亲眼看一眼《低俗小说》的枪火和跳舞；有人借策展之机送出一束花、一句诗、一张写满祝福的明信片，只为让观众离开时带走一丝温柔；有人把短片装进DV、连上老式电视机，只为让回忆“蜕变”成可触碰的实体；也有人站在场地布置与观众动线之间，默默解决设备问题，只为放映顺利。<br>2022-2025策展小伙伴们<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>从他们的故事里，我们看到几个关键词：  表达、连接、实践、成长、理想主义的浪漫落地。
+他们是电影的搬运工，是现实中的造梦者，也是我们希望成为的“影像策展人”。<br>我们倾听这些“过来人”的心声，听到了一些动人的——  </p>
+<p>回响<br>1  ｜创意的实践：点子落地的过程，也是一场冒险<br>“我们用磁带DV和老电视播放短片，想让‘衔尾蛇’这个主题在空间里显影。”“票根背后写诗、放映前发明信片，这些‘小动作’也都是策展的一部分。”“其实就是灵光一现——《姜戈》那场端出啤酒：“酒香都溢出银幕了，那一刻我想让观众真的喝一口。”这些点子有的天马行空，有的来源于一次深夜聊天，但它们最终都以一种真实而温柔的方式，抵达了现场。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>2  ｜表达的权利：从看的人，变成能说的人<br>“以前看影片，只是感动就完了。现在我能把自己为什么感动的部分‘编进’这场策展里。”“写推文、设计环节、与观众互动，那些曾经只敢在脑里想象的桥段，如今可以真实发生。”策展人的身份，让每一个平凡的观影者，获得了一种新的表达权——不是拍一部影片，而是用一场放映，把感受与理解交给更多人。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>3  ｜连接的发生：人与人、人与影片的关系被重新建立<br>“有观众映后来找我，说他也曾经有过类似经历，我们就坐在出口聊了很久。”“策展让我们这些热爱影片的人聚在一起，有点像在城市里种下了一些‘临时的乌托邦’。”“和团队一起打磨物料、调试设备、商量预算的过程，其实比看影片还动人。”<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>策展的意义，不止于现场，更在于过程中发生的理解、共鸣与携手。这些回响，汇聚成我们发起  「24帧策展人招募计划」  的初心与力量。<br>今天，我们正式向所有热爱影像（电影、短片及其他形式）的你发出邀请：加入  「24帧策展人招募计划」  ，将你的热爱，转化为独一无二的光影现场！<br>一些期待<br>希望你怀揣对影片不变的热情与独特的想法；  愿意从“观看者”变为“创造者”，拥抱挑战与成长；  乐于沟通协作，享受团队共创的乐趣。<br>一些支持<br>展示的舞台：支持你策划心中理想的影片展映（无论是大师回顾、主题单元、青年短片展还是实验影像集合）、特别放映甚至是更大胆的创新项目。
+充分的支持：经验分享、资源对接（包括短片片源支持）、团队协作、落地执行指导，从想法萌芽到银幕亮起，我们与你同行。
+满满的正反馈：设立年度策展人评选，表彰杰出贡献者，让你的努力被看见、被铭记。无论是独立影展、短片展还是特别放映，你的名字都将与作品一同闪耀。
+强烈的归属感：加入一个志同道合、相互支持的社群，这里不仅有好影片，更有因影像结下的深厚情谊。
+实在的福利：每一位策展人都有福利票名额，你可以邀请更多人见证你的策展成果；朋友圈分享影展信息，还有专属的策展人购票折扣，扩大影展影响力。<br>一点愿景<br>放映百花齐放：让成都的影像生态因更多元（涵盖电影、短片等各类影像）、更个性、更用心的策展而生机勃勃。<br>舞台属于每个人：无论是台前引导，还是幕后耕耘，每一位参与者的才华与付出都值得被珍视和绽放，“包括我们在幕后的每位。”<br>如何加入<br>邮箱投递  :  <a href="[object Object]">undefined</a>
+，写下你的放映愿望或初步想法，并介绍你现在的职业与擅长，还可以附上作品集或者各社交媒体账号（如有），最后记得留下联系方式，本次招募截止时间是
+2025年11月2日  晚。<br>尾声<br>影像，是造梦的机器，也是连接人心的桥梁。在24帧，我们相信，每个人心中都藏着一座独一无二的“放映厅”，里面装满了渴望被分享的故事、情感与视角，等待着被点亮，等待着与更多灵魂共享那份光与热。<br>不要让你的热爱只停留在心底的悸动或社交媒体的点赞。走上前来，点亮属于你的数字帧。<br>——24帧观影团全体成员 敬邀<br><strong>分工</strong><br><strong>收集整理：小乔、孙佳佳</strong>文案：牛牛、Taiki<br>_ 社群
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

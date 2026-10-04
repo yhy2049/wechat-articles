@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年会回顾在下一帧开始之前我们这样相聚 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-01-18</div>
+      <h1 class="article-title">年会回顾在下一帧开始之前我们这样相聚</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>年会回顾 | 在下一帧开始之前，我们这样相聚</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>写在前面</strong></p>
+<p>| 第一次，我们这样相聚</p>
+<p>1961年</p>
+<p>建筑师塞德里克·普莱斯与戏剧导演琼·利特伍德</p>
+<p>提出一个从未完工 、却始终开放的构想 ：</p>
+<p>FUN PALACE 乐趣宫殿 。</p>
+<p>没有中心 ，没有既定路线 ，</p>
+<p>是人们进入 、停留 、参与 、离开 ，</p>
+<p>在不断流动中创造的临时社群 。</p>
+<p>2026年1月10日</p>
+<p>24帧首次  年终聚会  </p>
+<p>[ FUN PALACE 乐趣宫殿 ]</p>
+<p>顺利落幕！</p>
+<p>这次，我们与影迷朋友相聚影院，</p>
+<p>共同搭建起一座FUN PALACE，</p>
+<p>打造了这场主角是你我的专属聚会。</p>
+<p>从青年导演沙龙座谈到获奖短片展映，</p>
+<p>从入场的互动到共创胶片放映再到dance together……</p>
+<p>无论你是否亲临现场，</p>
+<p>此刻，诚邀你，</p>
+<p>共同重温这一场专属影迷的年终聚会！</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>24帧年终聚会海报</p>
+<p><strong>1</strong></p>
+<p><strong>入场时刻</strong></p>
+<p>| 我的电影人格 X 电影红黑榜</p>
+<p>我的电影人格</p>
+<p>入场时，每位影迷随机抽取了mbti人格的专属问题卡片，答案不是标准选项，是一句可以回应问题的电影台词。</p>
+<p>I  </p>
+<p> “ 不要温顺地走进那个良夜，激情不能被消沉的暮色掩埋。”  </p>
+<p> 《星际穿越》  </p>
+<p>E  </p>
+<p> “ 心心念念的，它近在咫尺了。”  </p>
+<p> 《马戏之王》  </p>
+<p>_ P  </p>
+<p> “ 我只是想看看，如果我不按计划生活，会发生什么。”  </p>
+<p> 《白日梦想家》  </p>
+<p>J  </p>
+<p> “ 迷雾之后，遥远天际有一棵树，你看到了吗？”  </p>
+<p> 《雾中风景》  </p>
+<p>共鸣，或许可以是在电影里读到了生活，看见了自己。</p>
+<p>我的电影人格｜现场照片</p>
+<p>电影红黑榜</p>
+<p>2025年底，  我们收集了近百份影迷的私人十佳电影。</p>
+<p>从中统计出热度最高的十部作品，  在 24 帧年会现场开启了一场 [ 电影红黑榜 ] 的评选。</p>
+<p>电影的魅力，正是在这些不同的声音里。</p>
+<p>电影红黑榜｜现场照片</p>
+<p><strong>2</strong></p>
+<p><strong>电影沙龙</strong></p>
+<p>| 听听创作者们怎么说</p>
+<p>电影，并不只是被观看的对象。</p>
+<p>它被放映、被谈论、被误解，也被重新理解。</p>
+<p>本次沙龙环节  我们邀请到了</p>
+<p>李爱鑫、何力、陈语沙三位青年导演</p>
+<p>由24帧创始人宇航员担任主持人</p>
+<p>围绕“如果生活从未有过电影”</p>
+<p>与现场观众展开了一场关于电影的灵魂拷问</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>沙龙现场｜如果生活从未有过电影</p>
+<p>主持人宇航员首先提到了一个很具体的瞬间。</p>
+<p> “24帧如果有一段时间没有放映的话，大家会主动过来问什么时候会有电影放映计划，可能对于很多人而言，<strong>电影早已是生活中不可或缺的存在。</strong>”</p>
+<p><strong>李爱鑫</strong></p>
+<p>青年导演、「投奖」投片平台创始人</p>
+<p>短片作品曾参加IM两岸青年影展</p>
+<p>重庆青年电影展、平遥国际电影展</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>电影的价值，从“被提问”开始</strong> </p>
+<p>“在看电影过程中，它也会给你抛出一些问题，思考这些问题的过程，是我现在生活中为数不多会自我复盘的地方，当下很多人生活的比较麻木，但电影能带来关于生活的深度思考，比如看完《情感价值》后，我会主动去琢磨自己和父母的关系，这种触动是日常中很难获得的。”</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>何力</strong></p>
+<p>《同名男子》编剧兼导演</p>
+<p>《宇宙探索编辑部》执行导演</p>
+<p>《东四十条》联合制片人</p>
+<p><strong>电影，像人生的“平行时空模拟器”</strong> </p>
+<p>“我本来只是个普通人。电影原本是我线性人生的一条分支，却让我生出无数种设想：可以是农场工人，也可以是故事里挣扎求索的逃犯。对我而言，电影不只是表达工具，更是一种经验扩展机制，让我的世界持续被打开、不断延展。”</p>
+<p><strong>陈语沙</strong></p>
+<p>青年导演兼演员</p>
+<p>长片《我们在河畔希望被鱼怪吃掉》</p>
+<p>奇幻短片《凌晨四点》</p>
+<p>均入围多个国内外电影节展</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>实际创作比空想更有价值</strong> </p>
+<p>“在进入电影行业之前，我对于电影产业、以及一部片子的诞生是如何运转的一无所知，当时的想法就是‘我要拍’！那个时候不知道它能给我带来什么，但我认为这个东西拍了之后它一定会被一部分人看到，也一定会带给我什么。”</p>
+<p> 因此她强调，电影创作者的成长没有固定的模板，在现实创作里，与其停留在设想，不如把作品真正做出来，实际创作比空想更有价值。  </p>
+<p>谈到当下电影行业现实挑战时</p>
+<p>几位嘉宾一致认为</p>
+<p>痛苦与震荡也是电影行业的一部分</p>
+<p>但作为热爱电影事业的工作者不能持续地内耗</p>
+<p>需要在创作表达与商业性之间寻求兼顾</p>
+<p>或许是当下更可行的一条和解之路</p>
+<p><strong>3</strong></p>
+<p><strong>经典环节</strong></p>
+<p>| 五部获奖短片展映</p>
+<p>从一部部电影里遇见彼此，24帧和每一位影迷的结缘，都始于对光影的热爱，这份初心从未改变。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>短片放映｜5部电影海报</p>
+<p>我们挑选了5部青年导演的诚意之作，与影迷在银幕前见面。</p>
+<p>温柏高《锦鲤，锦鲤》、宋东旭《羊羊羊》、李新宇《穿过公园就到了》、南子佚《浅水池》、李嘉航《奇石》。</p>
+<p>这些在各大电影节被看见、被点亮的作品，承载着新锐影人最滚烫的热忱与最认真的表达。</p>
+<p>把初心交给更好的内容，也交给每一次相见。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>短片放映｜现场照片</p>
+<p>这一次，灯光暗下，银幕亮起，我们仍然还坐在一起。</p>
+<p><strong>4</strong></p>
+<p><strong>分享环节</strong></p>
+<p>| 生活电影共创 X 回顾与延续</p>
+<p>把镜头对准你：生活电影共创计划</p>
+<p>年会筹备初期，  我们向影迷朋友们</p>
+<p>发出了 “电影瞬间” 的征集邀请</p>
+<p>最终，我们将这一个个动人片段</p>
+<p>汇集成独属于大家的**“生活电影”**</p>
+<p>并在年会的银幕上展现</p>
+<p>故事从未落幕，你我皆是主角。</p>
+<p>把镜头对准我们：24帧回顾与延续</p>
+<p>“在一切加速的时代，</p>
+<p>我们为何还要相约走进黑暗，共同凝视一束光？</p>
+<p>24帧相信，电影是回应这个时代最优雅的方式。”</p>
+<p>24帧首次年终聚会，</p>
+<p>不仅是我们与影迷朋友们的一次欢聚，</p>
+<p>也想通过本次年会，和大家分享24帧的过去与未来。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>2025年度回顾｜现场照片</p>
+<p><strong>Q：2025年是怎么把事情做下去的？</strong></p>
+<p>A：让观看变慢，让关系变深</p>
+<p>2025年</p>
+<p>我们坐在一起<strong>48</strong>次</p>
+<p><strong>48</strong>场放映</p>
+<p><strong>11</strong>场路演</p>
+<p>与<strong>3</strong>部电影主创远程连线交流</p>
+<p>......</p>
+<p>这份成绩单</p>
+<p>凝聚着影迷们的支持</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>2025年度最佳策展人解乔</p>
+<p>同样，策展人是24帧最重要的一部分</p>
+<p>他们从观众席里，走上台前，成为创造者</p>
+<p>2025年度最佳策展人<strong>解乔</strong></p>
+<p>感谢她以志愿者的初心，策展人的专业</p>
+<p>为24帧点亮第一盏短片之窗</p>
+<p> 24帧短片展：窗影朝夕特别环节-隔空对话
+](<a href="[object Object]">undefined</a>)</p>
+<p><strong>Q：2026，我们去哪里？</strong></p>
+<p>A：不去更远的地方，而是去更真实的地方</p>
+<p>[ 24帧观影团 ]</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

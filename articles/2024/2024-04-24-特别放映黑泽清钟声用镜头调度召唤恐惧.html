@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特别放映黑泽清钟声用镜头调度召唤恐惧 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-04-24</div>
+      <h1 class="article-title">特别放映黑泽清钟声用镜头调度召唤恐惧</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「特别放映」黑泽清《钟声》用镜头调度召唤恐惧</h1>
+<p><strong>写在前面</strong><br>《钟声》首映于第74届柏林国际电影节特别展映单元，自《暗房秘密》以来再次操刀最为拿手的心理惊悚题材。即使片场仅为45分钟，在柏林观看首映的观众仍惊叫连连，所有观众无不为黑泽清优秀的氛围掌控力所折服。<br>我们已购买了《钟声》的NFT（非同质化货币）版权，这也是我们可以如此快地与本片见面的原因。《钟声》是黑泽清与数字电影交易平台Roadstead的最新合作。通过这种NFT方式出售给观众，购买者不仅拥有观看权，还具备独立的放映权，传统的公开放映面临的最大挑战是版权问题，NFT的使用已经电影放映流程带来简化和完善。相信也会有越来越多的创作者在未来使用这样的方式让作品与观众见面。<br>本片故事以小切口展开，从微观上剖析了日本社会的「症结」——社会身份的分裂。并在另一个角度表现了黑泽清的“本体”，也就是无处不在的恐惧。“恐惧”是根植于人类社会，没有由来的一种情绪，黑泽清导演在《钟声》中将“未知的恐惧”无限地强调并以其强大的执行力将其视觉化。若想知道“未知”的模样，请一定要来观看这部短片。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br>黑泽清一直是一位紧跟时代的创作者，他的作品中时常出现与当代社会问题相关的指涉，人与人之间的“立场”的冲突也是他不断拍摄并表现的主题。他曾前往法国拍摄电影，也曾为著名导演卡拉克斯前来日本拍摄《狂人梅德》时提供帮助。在中国，他有许多崇拜者，贾樟柯导演是黑泽清的头号粉丝，邀请黑泽清进行访谈只为了搞清楚他的一部电影中的一个镜头是如何被拍摄而成的。同时黑泽清在东京艺术大学的授课也为人津津乐道，奥斯卡得主滨口龙介是他的学生，他也拍摄了滨口龙介所写的剧本《间谍之妻》，获得威尼斯最佳导演。<br>也许有人说黑泽清一辈子只拍一种电影，也许有人说黑泽清沉闷无聊，但对我而言他所做的是不断地挖掘“恐惧”的魅力，并不断将其日常化。“日常恐怖”也是人们在评价黑泽清时最常用的一个词。黑泽清拍摄恐怖电影的目的其实并不是惊吓观众，而是让观众将注意力转移到自己的生活之中。<br>生活不是戏剧，人们面对或谈论恐惧时是不会有过于强烈的表现的。若是真的有恐怖景象发生，即使不会受到伤害，但在离开那个惊悚之地时，我们的心理仍然会想起那种令人战栗的感觉，这就是「日常恐怖」的意义所在。克苏鲁神话的缔造者H.P.洛夫克拉夫特曾说过，人类最原始且最强烈的情绪就是恐惧，而最原始且强烈的恐惧就是对未知事物的恐惧。在生活中让我们感到害怕的往往不是一个具象的物体，而是我们无法名状的“现象”。「日常恐怖」让观众更加在意自己生活中面对未知的种种情绪，并以此为基点探寻更高维度的意义；更加敬畏这个世界，对自己存在的意义进行更加深刻的思考。<br><strong>神秘活动</strong><br>在黑泽清的电影《钟声》中，日常物品如洋葱、面包胚、生鸡肉和易拉罐被赋予新的恐怖质地。这些平凡的食材不仅构成了厨房的常客，内化成了主角心理压力的来源。通过精心设计的音效，这种“日常恐怖”被完美地展现出来，让观众能感受到主角的内心。<br>我们诚邀您加入我们的放映厅，亲身体验电影与现实的交织。放映活动中，我们将重现电影中的厨房场景，每道菜单和电影中的背景相一致。详细的白板菜谱将会带您从视觉到味觉完全沉浸在夜晚的《钟声》世界中。为了让每位观众都能舒适地体验这场电影，我们特别使用洋葱等来增加沉浸感。请对气味敏感的朋友提前告知我们，或在活动中保持适当距离。<br>放映结束后，我们将为每位观众递送一份“神秘的食物”，准备好挑战你的感官极限了吗？加入我们，一起深入探索黑泽清的电影艺术，体验一场真正的感官盛宴，“神秘食物”带来不只是味觉的挑战，还有“未知”的惊喜。<br>抢  先预定您的专属  座位！  #JoinUs #CinemaNight<br><strong>时间</strong>  </p>
+<p>**2024年4月27日（本周六）**18:45-19:00签到  19:00-19:45  放映  19:45-20:15  映后<br><strong>地址</strong><br>交子&amp;BEEPLUS COFFEE(兴盛国际商务总部店) 2号线金科北路地铁站B口<br><strong>主持人</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>票价</strong><br><strong>￥35</strong>（含一张定制票根）  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+]()</p>
+<p><strong>分工</strong><br><strong>放映文案：廉价杀手  策划文案：关灯</strong><br><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>票一经售出，除不可抗因素，恕不退票</p>
+<p>请提前15分钟到场，勿喧哗、禁止屏摄</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

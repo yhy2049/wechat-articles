@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>哈利波特系列魔法回忆录 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-09</div>
+      <h1 class="article-title">哈利波特系列魔法回忆录</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「哈利波特系列」《魔法回忆录》</h1>
+<p><strong>写在前面</strong><br>时隔23年，9¾站台重新有列车驶来，亲爱的麻瓜，有没有准备好和24帧的伙伴们一起登上这列奇幻的列车？<br>系列放映将会在上映首周周六16:00开启放映，共排片8部，  点击此处即可预约购票<br>拿上神奇独家票根，找到发光的魔法咒语，吃下哈利和罗恩同款的怪味豆，希望你不要抽到邓布利多的一生之敌——耳屎味！<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>听觉上还想上点强度？满足你，参与映后交流，和其他麻瓜分享《哈利波特》不为人知的彩蛋，电影主题音乐八音盒拿回家！<br>傻傻的麻瓜你问还有什么福利？金色飞贼带着套票飞到你面前，单场40元，8场通票只要280元（放映日期请参照后文），魔法师大礼包放在行李箱里带走（主题八音盒、魔法立体书、摇摇乐票根）。<br>或许你收集齐了8张票根，有一天把它们放在一起，你会发现，隐藏的秘密……<br>最后的最后，当然是放出终极福利！欢迎每一个观众穿着电影主题服饰前来观影，放映结束后，我们将在这些影迷朋友们中抽取一位幸运星获得真实来自魔法世界的祝福——一支海德薇的羽毛。国家一级保护动物，可以和魔法世界沟通的灵性生物，这份礼物有多贵重，不用多说，DDDD。<br>麻瓜们，拿好票根和魔杖，跟24帧一起出发！<br><strong>排期表</strong>  </p>
+<p><strong>《哈利·波特与魔法石》1</strong></p>
+<p>9又3/4站台，</p>
+<p>霍格沃茨的特快列车缓缓驶来，</p>
+<p>缤纷多彩的魔法世界徐徐展开…</p>
+<p>这场奇幻冒险，</p>
+<p>就像七百种味道的多味豆，</p>
+<p>时刻在体验开盲盒的过程，</p>
+<p>会移动的楼梯，能守门的画像，</p>
+<p>幽灵四处游荡，魔镜吐露欲望，</p>
+<p>魁地奇球场依然不时掀起热浪，</p>
+<p>旧日的标记，</p>
+<p>是被爱守护的痕迹，</p>
+<p>此刻的选择，</p>
+<p>莫负于来路的跋涉，</p>
+<p>零星的真相，</p>
+<p>于火焰中慵懒地化为灰烬，</p>
+<p>友谊和勇气，</p>
+<p>在黑暗里坚定地冲破荆棘，</p>
+<p>请永远记住，</p>
+<p>哈利，你是一个巫师。  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>  </p>
+<p> 10月13日周日  </p>
+<p>16:00-18:32放映</p>
+<p>18:32-19:02交流</p>
+<p>《哈利·波特与密室》2</p>
+<p> 10月19日周六  </p>
+<p>16:00-18:41放映</p>
+<p>18:41-19:11交流</p>
+<p>《哈利·波特与阿兹卡班的囚徒》3</p>
+<p> 10月26日周六  </p>
+<p>16:00-18:21放映</p>
+<p>18:21-18:51交流</p>
+<p>《哈利·波特与火焰杯》4</p>
+<p> 11月2日周六  </p>
+<p>16:00-18:37放映</p>
+<p>18:37-19:07交流</p>
+<p>《哈利·波特与凤凰社》5</p>
+<p> 11月9日周六  </p>
+<p>16:00-18:18放映</p>
+<p>18:18-18:48交流</p>
+<p>《哈利·波特与混血王子》6</p>
+<p> 11月16日周六  </p>
+<p>16:00-18:33放映</p>
+<p>18:33-19:03交流</p>
+<p>《哈利·波特与死亡圣器（上）》7</p>
+<p> 11月23日周六  </p>
+<p>16:00-18:26放映</p>
+<p>18:26-18:56交流</p>
+<p>《哈利·波特与死亡圣器（下）》8</p>
+<p> 11月30日周六  </p>
+<p>16:00-18:10放映</p>
+<p>18:10-18:40交流</p>
+<p><strong>地址</strong><br>保利万和国际影城(招商花园城购物中心店) 7/8号线地铁站理工大学B2口<br><strong>票价</strong><br><strong>单场￥40</strong>_ _一张定制票根<br><strong>找到发光的魔法咒语，吃下哈利和罗恩同款的怪味豆</strong>分享彩蛋抽奖主题八音盒<br><strong>穿着电影主题服饰</strong>抽取一位幸运星获得真实来自魔法世界的祝福——一支海德薇的羽毛
+<strong>套票￥280</strong>魔法师大礼包（主题八音盒、魔法立体书、摇摇乐票根）
+ _
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+_ ‍  [
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>特别联名</strong><br>欢迎进入魔法世界的奇妙角落——  紧急入口·Emergency Drink  ，品尝哈利・波特同款黄油啤酒！<br>当你轻轻抿上一口，那绵密的泡沫在舌尖跳跃，仿佛施了魔法般带来细腻的口感。浓郁的黄油香气与醇厚的啤酒风味完美融合，甜而不腻，香而不浓。想象自己置身于霍格莫德村的三把扫帚酒吧，与哈利、罗恩和赫敏一同享受这独特的美味。在这里，你可以暂时忘却现实的烦恼，沉浸在魔法的氛围中。快来品尝哈利波特同款黄油啤酒，开启属于你的魔法之旅！<br>恰逢哈利波特重映，10.11——10.18期间，在电影院观影后的巫师/麻瓜可凭电影票根到店购买黄油啤酒可减免十块。通过24帧观影团观看哈利波特，10.11——10.18期间，凭24帧观影团的定制票根到店购买黄油啤酒可享半价优惠。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>策展团队</strong><br><strong>策划：熊猫船长  文案：熊猫船长、一家  平面设计：古古</strong><br><strong>社群</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong> </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

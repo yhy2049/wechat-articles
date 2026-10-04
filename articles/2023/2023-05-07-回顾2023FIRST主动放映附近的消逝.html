@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>回顾2023FIRST主动放映附近的消逝 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2023.html">← 2023年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2023-05-07</div>
+      <h1 class="article-title">回顾2023FIRST主动放映附近的消逝</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>回顾|2023FIRST主动放映 · 附近的消逝</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>2023</p>
+<p>附近的</p>
+<p>消逝</p>
+<p>FIRST主动放映·成都24帧站</p>
+<p>当附近逐渐消逝，  </p>
+<p>每一个微小的瞬间，</p>
+<p>都藏着发光的生活，</p>
+<p>总有一部电影会让我们相遇。</p>
+<p>我们在电影中回归你我，感受你我，</p>
+<p>我们在消逝中重构，发现，相遇，感知，回溯。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>2023年5月2日至5月3日，</p>
+<p>FIRST主动放映 · 成都24帧站</p>
+<p>在渡口顺利完成放映。</p>
+<p>在春天的这场相遇中，</p>
+<p>各行各业以及各个年龄段的影迷朋友们聚在生活和工作的中转站，</p>
+<p>一起跨入了电影这个美丽的入口，</p>
+<p>去让故事和画面重塑自我，</p>
+<p>在渡口的路灯下感受自我。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>选片信息</p>
+<p>本次活动分为五个单元：</p>
+<p>回声单元选取《旷野歌声》</p>
+<p>地衣单元共选取七部短片：《大桥遗犬》</p>
+<p>《有羽毛的东西》《南方午后》《盘中餐》</p>
+<p>《木官木才》《莉莉》《白露》</p>
+<p>磐石单元选取《废物故事》</p>
+<p>星燎单元选取《义乌闯客》</p>
+<p>荼靡单元是映后的电影沙龙</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>活动现场</p>
+<p>“电影是现实的渐进线”</p>
+<p>5月2日的现场观影中，</p>
+<p>大家在现实中打开不同“房间”，</p>
+<p>打破时间和空间的枷锁，</p>
+<p>与纪录片《旷野歌声》以及地衣单元的七部短片共度。</p>
+<p>大家认真地观看，</p>
+<p>感受银幕上闪烁的光芒，</p>
+<p>在黑暗中，</p>
+<p>我们静静倾听，  </p>
+<p>毫不吝啬的聊着自己的映后感受，</p>
+<p>从文化的消逝，</p>
+<p>信仰，个人，社会命运，宗教的交汇</p>
+<p>到“犬”视角下对当代生活现状做出的影像表达，</p>
+<p>再到难民处境，私人记忆，动画表达......</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>“摄影机面对物质却审视精神”</p>
+<p>5月3日的现场观影中，</p>
+<p>两部纪录片《废物故事》和《义乌闯客》</p>
+<p>让我们感受到导演与人物的长久情谊。</p>
+<p>导演的摄影机带着平视的目光和并肩的姿态，</p>
+<p>在这样真实的记录下，</p>
+<p>电影艺术不只是娱乐，</p>
+<p>更是思考人生和社会的启示。</p>
+<p>在这个虚拟的空间里，</p>
+<p>我们得以探索自我和人性深处。</p>
+<p>映后沙龙</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>“还是有人在看电影的”</p>
+<p>消逝后的回溯</p>
+<p>后电影时代：我们在期待什么？</p>
+<p>大家进行私人记忆的共享，</p>
+<p>从私人记忆出发再到影像交流。</p>
+<p>纯粹的、愉悦的</p>
+<p>畅谈自己对电影的喜欢，</p>
+<p>对隐藏在未知里的影像充满期待。</p>
+<p>在最后，</p>
+<p>一位影迷真诚地写下了一句话：</p>
+<p>“还是有人在看电影的。”</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>三部纪录片，七部长短片</p>
+<p>我们与影像共度</p>
+<p>与FIRST共度</p>
+<p>镜头会凝固时间</p>
+<p>留下记忆  记录历史</p>
+<p>电影永不消逝</p>
+<p>你我也会常相见</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>特别鸣谢</p>
+<p>FIRST主动放映·成都24帧站志愿者团队</p>
+<p>推文组：  王琪雯、  何春黎、  周子禹</p>
+<p>拍摄组：胡靖寒、傅龙峰</p>
+<p>海报设计宣发：罗诗雅  </p>
+<p>场地对接、执行场务：廖梓良、何春黎、周子禹</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2023.html">2023年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

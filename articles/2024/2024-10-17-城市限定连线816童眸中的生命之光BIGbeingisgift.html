@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城市限定连线816童眸中的生命之光BIGbeingisgift - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-17</div>
+      <h1 class="article-title">城市限定连线816童眸中的生命之光BIGbeingisgift</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「城市限定连线」《816》童眸中的生命之光——BIG：being is gift</h1>
+<p><strong>写在前面</strong><br>魏德圣导演2008年执导长片《海角七号》获现象级票房成绩，2012年执导《赛德克·巴莱》亦获得第 48
+届金马奖最佳剧情片。从《海角七号》到《赛德克·巴莱》魏德圣导演用扎实的电影品质和真实感人的故事赢得了观众的喜爱，在华语电影圈内也产生了深远的影响。时隔七年，导演将创作触角伸展至儿癌题材，《816》因此诞生，
+ 点击此处即可预约购票<br>《816》用最温柔的视角，深入浅出、轻快温暖将生命与死亡这一沉重的话题娓娓道来。拍完电影后，导演对于“生命”也有一番体悟：这个世界再怎么糟，没有人奈何得了你，活着过这一关就好啦！相信看完影片的你，也能在影片中获得力量！<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>放映员说</strong><br>官方发布的“大声笑用力活”版定档海报中，六组家庭齐聚816病房，他们温暖的笑容如阳光般照亮了整个房间；抗癌不易，但是小勇士们奋力抗击的精神和追求生的勇气不减反增，展现了影片“大声笑用力活”的积极情感内核。<br>值得注意的是，影片的logo很是特别，蓝色的房间号816被人用红色笔改成了英文单词“BIG”，如此富有创意的举动是来自816的孩子们吗？“BIG”的涵义又会是什么？想必看完影片后每位观众都会有自己的答案。<br><strong>六位小勇士纷纷亮相</strong><br>乐观懂事、爱跳街舞的女孩源源；<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>戴着彩色假发、酷酷的音乐少女珈农；<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>热爱画画和机器人的男孩是延；<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>喜欢在医院骑车、期待妹妹出生的男孩罗恒；<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>小天使一样可爱善良的女孩努拉；<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>以及帅气温柔、阳光开朗的少年大杉。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>性格、背景迥异的家长们和认真负责的医护人员们相互鼓舞扶持，共同守护着816房间的勇敢斗士们。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>当绝望和希望交织，小小斗士们又会以怎样的方式来奋力作战、创造欢乐？10月20日，不妨来影院一探究竟。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>时间</strong><br><strong>2024年10月20日（本周日）<strong>13:30<del>13:45签到  13:45</del>16:25  放映  16:25~16:40映后
+连线嘉宾：魏德圣（导演） 
+<strong>地址</strong><br>保利万和国际影城(招商花园城购物中心店) 7号厅</strong>7/8号线地铁站理工大学B2口</strong><br><strong>主持人</strong>  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>「24帧观影团」主理人  最酷的宇航员<br><strong>票价</strong><br><strong>￥40</strong>（人手官方海报、票根2选1，人手医用手环，映后互动抽奖：电影同款毛绒猴）  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>策展团队</strong><br><strong>策划、文案：熊猫船长  平面设计：轻舟</strong><br><strong>社群</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong>  </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+<p>标题引用豆瓣：  Arthur  《816：童眸中的生命之光》——BIG：being is gift，侵删</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

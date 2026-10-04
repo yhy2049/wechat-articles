@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独立放映成都首映amp重庆双城放映菠萝凤梨导演闫啸林现场交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2024.html">← 2024年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2024-10-22</div>
+      <h1 class="article-title">独立放映成都首映amp重庆双城放映菠萝凤梨导演闫啸林现场交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「独立放映」成都首映&amp;重庆双城放映《菠萝，凤梨》导演闫啸林现场交流</h1>
+<p><strong>写在前面</strong><br>闫啸林导演的长片作品《菠萝，凤梨》获得了第60届台北金马影展最佳剧本和最佳女主角的提名，今年入围了FIRST青年电影展，“FIRST
+FRAME她的一帧”单元。<br>《菠萝，凤梨》以一对母女为主角，以“高考移民”的身份展开了一场与“高考”的对抗，更是对命运的抗争。<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>中国香港 / 新加坡 / 法国 | 2023 | 汉语普通话</strong>|<strong>剧情</strong>黑白**| 101<strong>min</strong>|<strong>中文字幕 | 2K DCP<br><strong>放映员说</strong><br>关于片名菠萝凤梨，来自辽宁的闫啸林导演在一次采访中提到：“其实并不知道有凤梨的这个水果，是在前两年去西双版纳，才第一次见到凤梨。其实那个场景跟我片中的那个场景一样，我第一次看到它就以为是菠萝，别人告诉我才知道，这是凤梨，跟菠萝长得很像，但比菠萝要贵，而且特别甜。这个事情给我留下很深的印象。到需要给这个电影取名的时候，我就突然想到了菠萝和凤梨的生活经历，我觉得作为片名是很贴切的。对于高考移民这个事，同样的一个人在不同的地方，他可能会有完全不一样的境遇或者差异。”<br>菠萝和凤梨是不同的水果，但不管它们长在哪里，如何被培育，不都还是水果吗？“高考移民”就算拼命移到能改变境遇的地方，不都还是要高考吗？<br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br>全片以黑白为色调营造出一种极端压抑、极端焦虑的情绪氛围，传达出一个冷峻的、残酷的社会现实，女主角生活的环境。FIRST
+FRAME单元的学术顾问戴锦华老师也在本片的推荐语里写到：“黑白影像尝试捕捉并赋予剧情以社会现场的质感，细节的累计与长镜的运用着力于勾勒一幅微末而强悍的母亲肖像”<br><strong>导演自述</strong><br>对抗命运的故事总是特别迷人，这里面有不屈和抗争，也有反讽和嘲弄。<br>高考是普通家庭想要改变命运几乎唯一正当的路径了，在中国这样一个地区发展不平衡的国家，各地的高考政策差异非常大，钻空子的“高考移民”应运而生了，而能实现这一操作的都是有钱有关系的家庭。<br>故事讲述的则是一个完全没有这种能耐的母亲想要通过“高考移民”这种不正当的方式来改变她和女儿的命运。<br>影片跟着母亲的视点，一路犹如闯关游戏，每次过关都要打破这个女人原有的道德原则，直到最后她发现自己做不到为了自己孩子而无视另一个孩子的性命。<br>如果不够坏，是很难改变命运的。<br><strong>宣传片</strong><br><strong>成都时间</strong><br><strong>2024年10月26日（周六</strong>）14:45  <del>15:00签到  15:00</del>16:41  放映
+16:41~17:11  映后</strong>导演闫啸林现场交流**<br><strong>成都地址</strong><br><strong>三环内，报名后获取详细地址</strong>  </p>
+<p><strong>成都票价</strong><br><strong>￥60</strong>（含一张定制票根）；抽奖：水培凤梨、钥匙扣  </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+]()<br><strong>重庆时间</strong><br>**2024年10月26日（周六）**18:45  ~19:00签到  19:00  ~20:41放映  20:41  ~21:11映后
+<strong>映后方式待定：<strong>导演闫啸林</strong>_ 连线/VCR交流</strong><br><strong>重庆地址</strong><br>重庆物候景观规划设计有限公司 
+<strong>重庆票价</strong><br><strong>￥40单人/70双人</strong>（含一张定制票根）<br><a href="[object Object]">undefined</a>  </p>
+<p><strong>社群</strong> </p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>扫码加好友拉你进影迷群一起交流</strong> </p>
+<p>*一经售出，概不退票，可转让 </p>
+<p>*现场签到领取周边 </p>
+<p>*观影过程勿屏摄、勿吃东西 </p>
+<p>*片尾也是影片的一部分，请完全结束后再离场 </p>
+<p>*映后非强制参与，有事可先离场   </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2024.html">2024年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

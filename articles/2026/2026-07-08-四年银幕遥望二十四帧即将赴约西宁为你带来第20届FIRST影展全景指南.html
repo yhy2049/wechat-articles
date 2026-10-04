@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四年银幕遥望二十四帧即将赴约西宁为你带来第20届FIRST影展全景指南 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-07-08</div>
+      <h1 class="article-title">四年银幕遥望二十四帧即将赴约西宁为你带来第20届FIRST影展全景指南</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>四年银幕遥望，二十四帧即将赴约西宁，为你带来第20届FIRST影展全景指南</h1>
+<blockquote>
+<p>七月的西宁，将为众多年轻影片提供一次大银幕上的完整呼吸。它们或许没有广为人知的名字，甚至难以用三言两语概括全貌。但当光束穿透黑暗，陌生人的面孔、远方的山峦、县城的午后、沉默的家庭、笨拙的爱意，都将一一浮现。（FIRST青年电影展官方策展语）</p>
+</blockquote>
+<hr>
+<h1>从成都到西宁，24帧与FIRST的四年</h1>
+<p>24帧和FIRST的联结，从一块银幕开始。</p>
+<p>自2023年起，我们以主动放映的形式，先后四次与FIRST官方合作，从片库选片，将FIRST的影片带到成都的放映空间。那些带着粗粝的质感和锐利的表达，在一个个周末的午后或深夜，与成都的观众相遇。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>在这四年间，我们也透过FIRST关注到了一些独立长片——它们尚未公映，没有宣发，几乎没有被大众看到的渠道。于是我们直接联系导演，将这些片子带到了成都，以独立放映的方式做成了一次又一次的成都首映。</p>
+<p>我们放过《锔瓷》，蒋与之导演的作品，像锔瓷手艺一样把家庭碎片重新拼合；《妖怪秘密》，陈彦彬的长片首作，原本要在成都做放映——可惜因不可抗力最终取消；放过《菠萝凤梨》，闫啸林导演的影片，用山东与海南的双城叙事一刀切开&quot;高考移民&quot;的荒诞；放过《佛走过田埂》，陈吉文的镜头跟着一位导演回到小村庄，想拍一部关于村史传说的电影——结果拍出来的，是拍电影这件事本身的困境；放过《上流》，傅宗盛自编自导的四个小时伪纪录片，UP主生态的锋利切片，拿下了FIRST&quot;一种立场&quot;荣誉；也放过《洗头记》，康世伟拍了80分钟的私影像，用最日常的动作掀开一个家庭最深的褶皱。</p>
+<p>这些影片有一个共同点：它们都尚未公映。但成都的首映场，观众在散场后不愿离去，和导演或现场或线上深度交流。这是独立放映特有的能量——创作者和观众面对面，影像成为彼此的讯号。</p>
+<p>惠存这重击。在两周年时，通过FIRST支持，梦游满洲里。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>24帧一直以来的工作，就是用放映连接两端：一端是拍出它们的创作者，一端是渴望看到它们的观众。</p>
+<p>今年，24帧以媒体身份正式参与FIRST青年电影展的官方现场。我们带着过去四年在成都积累的放映与策展经验，从散场通道走到电影节的前排，去观察、去记录、去直击电影发生的第一现场。</p>
+<p>这篇文章是一份预习指南，也是我们从成都出发的信号。</p>
+<hr>
+<h1>🎬 一幅摊开的时代手稿</h1>
+<p>本届FIRST共收到报名记录1333条，剧情长片114部、纪录长片53部、短片1122部。</p>
+<p>数字背后，是18至30岁为主体的年轻创作者——千禧年后出生者超过620人；占比升至37.66%的女性视点；跨越22个联合制片国家的流动视野。这些数字并不只是规模的证明，更是一份摊开的时代手稿。</p>
+<p>FIRST官方将此届创作生态概括为：粗糙、未完成，但足够诚实。</p>
+<hr>
+<h1>🏆 主竞赛评委会</h1>
+<p>评委会主席由德国导演弗洛里安·亨克尔·冯·多纳斯马尔克担任——《窃听风暴》导演、奥斯卡最佳外语片得主。评委：演员段奕宏（东京影帝）、导演邵艺辉（《爱情神话》《好东西》）、编剧游晓颖（《相爱相亲》《我的姐姐》）、演员袁泉、导演曾国祥（《少年的你》）以及纪录片导演赵琦。</p>
+<p>七位评委，七种方向——他们从不同入口进入电影，都证明了一件事：电影仍然能够抵达生活中最难命名的部分。</p>
+<hr>
+<h1>🎞️ 主竞赛剧情长片：十六个&quot;阿莱夫&quot;</h1>
+<p>博尔赫斯在小说中构想过一个名为&quot;阿莱夫&quot;的奇妙原点——空间里的一个点，却包含着宇宙所有的空间。某种意义上，这16部剧情长片，正是今年盛夏的16个阿莱夫。它们以细小的切口，容纳了当代生活最驳杂的切面。</p>
+<p>FIRST官方将这些影片分为四组，我们沿此脉络走近它们：</p>
+<h1>一、不能承受的生命之轻：失重的人</h1>
+<p>卡尔维诺将&quot;轻盈&quot;列为文学留给未来的第一项品质——不是回避，而是换一种姿态，让沉重之物重新显出轮廓。</p>
+<blockquote>
+<p>有些生活的改变，并不以灾难的形式降临。它像一阵忽然变向的风，让人发现自己原本踩住的地面已经松动。——FIRST策展语</p>
+</blockquote>
+<p>《落水天沉落去》｜闭善益</p>
+<p>岭南市郊古镇，高考落榜的&quot;落草乐队&quot;要在同学的升学宴上演出，以证明自己的价值——其实是在逃避即将散伙的危机。古村的雨水、河流、摇滚乐与少年心事。从山海计划短片孵化而来，这大概是今年最让人会心一笑的作品。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《湍》｜胡妤如</p>
+<p>杭漂情侣霏与阿星因未来分歧分手，阿星与朋友创业直播&quot;赛博修行&quot;意外走红。当阿星与同伴阿月渐生情愫时，霏突然重返杭州……底色是混沌与迷茫，努力找寻着自身的定位与方向。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《鸵鸟》｜何欣言</p>
+<p>相爱中的男孩和女孩在对亲密关系的勾勒中逐渐离散。推倒这座爱情景观的，不是疾风劲雨般的争吵，而是隐匿在散漫日常中的错位。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《七分熟》｜张歆</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>二、柏拉图的洞穴：家未必是归处</h1>
+<p>家常常被想象为归处，但电影更敏锐的地方在于：它知道家也可能是一间暗室。在日光下被维持的体面、沉默与秩序，往往在幽暗的空间里浮出形状。</p>
+<blockquote>
+<p>这里有爱，也有亏欠；有相守，也有压抑；有日常生活维持出的平静，也有迟迟没有被说出口的裂缝。——FIRST策展语</p>
+</blockquote>
+<p>《地下美人》｜夏昊（主演：郝蕾、刘奕君）</p>
+<p>父亲失踪后，儿子与母亲关系紧张。处于青春期的儿子意外拨打了23号&quot;情感专员&quot;的情色电话，使得两人以另一种方式进行情感的连通。已入围东京电影节亚洲未来单元、香港国际电影节火鸟大奖，并在北京国际电影节荣获最受注目艺术贡献奖。豆瓣上讨论热度最高。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《扔你的猫》｜吴蔚峰</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《缰绳》｜巴达荣贵</p>
+<p>布赫回来了，带着二十年的刑期过往和一身落满风雪的秘密。刀锋般凌厉的黑白画面，白描出被牛羊声与风雪掩埋了二十年的往事。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《岁末寒潮》｜李海荣</p>
+<p>一场由寻找私房钱撬开的家庭裂隙。团圆日暗中喷涌着愤怒与询审，爱与怨怼一同在对碰的酒杯中沉沦。一个关于中国式家庭暗面的故事，在春节烟火气中发生，让人不寒而栗。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《倒转来去》｜李炯达、李炜</p>
+<p>一台被遗留下来的旧相机，像一只没有合上的眼睛。死去的人仍在镜头里游荡，活着的人仍在现实中寻找。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>三、奥德赛之后：路途中的人</h1>
+<p>道路不是为了抵达，而是为了让人被改变。</p>
+<p>《当瓶子转动时》｜洛旦</p>
+<p>为了一句还没还清的承诺，一个反复入梦的亡妻，一座遥远的寺，旦巴老人路上遇见了流浪诗人。高原把他们放在同一条路上，彼此不作说服，只是同行。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《来一杯奶叶茶》｜洪光贤（中国香港）</p>
+<p>不同语言、肤色与文化的人群在同一街区交汇。奶叶茶的温热蒸汽稀释了人与人之间的陌生感，当身份认同不再泾渭分明，共处本身便成为一种温柔而坚定的答案。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《山风蛊》｜萧潇（彩色&amp;黑白）</p>
+<p>山、风、祠堂、迷雾与沉默的人物共同构成一场向内坠落的返乡叙事。在潮湿的影像里呈现缓慢的&quot;招魂&quot;感。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>四、子不语：类型抵达现实</h1>
+<p>真正有效的类型，从来不是对现实的遮蔽，而是一种绕路进入现实的方式。</p>
+<blockquote>
+<p>借谜团谈伦理，借笑声谈荒诞，借旧案谈历史，借地方谈人的处境。深山、海边、粮仓、村庄、传闻与旧案，不只是故事发生的背景，而是叙事得以生成的地层。——FIRST策展语</p>
+</blockquote>
+<p>《山中来客》｜万波</p>
+<p>两位警察来到浙江剡溪山中，追查一桩七年未解的失踪悬案。黑白影像与东方山水意境结合，摄影指导罗攀、美术指导陆苇。已入围上海国际电影节金爵奖亚洲新人单元。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《呼啸而去》｜葛震（监制：梅峰）</p>
+<p>取材于宁波象山特大盗猎案。红珊瑚、海难与旧日罪责交织成一场迟到的追索。海面之下，沉着真相，也沉着一个人必须重新面对的自己。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《探子必须死》｜柴小雨</p>
+<p>有古装谍战的机巧，也有黑色喜剧的寒意。在成熟的视听控制中，把忠奸之辨落到一个更朴素的问题：山河将倾时，一个人还能为谁守住一点人间。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>《有虎出没》｜超凡（彩色&amp;黑白）</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<hr>
+<h1>📹 纪录长片：情感转向</h1>
+<p>今年纪录片呈现出一种&quot;情感转向&quot;——非虚构创作向内挖掘，家族史、乡村史的自觉回顾，&quot;私影像&quot;公共化。科技对情感的介入（AI扮演虚拟爱人、复活逝去亲人）成为最亮眼的叙事母题。</p>
+<p>《从来》｜陈德明（中国/美国/法国/中国台湾）——已获CPH:DOX最佳纪录片奖及全州电影节最佳影片奖，国际履历最强。</p>
+<p>《河以为家》｜尹航</p>
+<p>《姥姥，奶奶，和我》｜巩安——三代女性的家庭记忆</p>
+<p>《爱（AI）和你之间》｜钱弈成——AI时代的爱情</p>
+<p>《行走的布达拉》｜郭亦飞（中国/中国香港）</p>
+<p>影像语言上，一种&quot;去工业化&quot;特质正在蔓延——摒弃华丽包装，回归素朴的&quot;真实电影&quot;传统。手机或DV记录的长年累月的影像，以极低介入姿态换取了极高的情感浓度。</p>
+<hr>
+<h1>🎥 短片单元</h1>
+<p>24部短片入围。本届短片呈现技术成熟与感知多元并进的面貌。&quot;城市漫游、高敏感人物、情感细节与幽灵叙事&quot;成为短片矩阵中的几条分支。多数作品不再急于完成叙事闭环，转而捕捉漂浮、失语、缺席与记忆之间更细微的震颤。</p>
+<p>动画短片形成清晰的感官支流——不再止于技术展示，而试图处理现实经验难以直接抵达的部分：身体羞耻、精神噪声、童年记忆、亲密关系、集体恐惧。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<hr>
+<h1>🎀 FIRST FRAME她的一帧 &amp; 学术主题展映</h1>
+<p>她的一帧：一次关于自由的练习</p>
+<p>今年是FIRST FRAME她的一帧单元第五年。本届主题&quot;身体，先于语言抵达&quot;，致敬美国前卫电影人玛雅·黛伦。4部长片+10部短片入围。女性创作者报名比例首次触达50.1%。</p>
+<p>肢体的辩证方法：玛雅·黛伦回顾展</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>与FIRST FRAME主题对应，本届学术展映将精选玛雅·黛伦五部影史里程碑短片进行回顾放映。在她的影像世界里，肉身通过舞蹈的律动，于非线性的时空中流转、分裂与新生。</p>
+<p>学院精神：罗马尼亚新浪潮早期创作</p>
+<p>目光投向罗马尼亚电影教育中的早期创作——克里斯蒂安·蒙吉、柯内流·波蓝波宇等导演在学生时期的短片。它们像一份尚未归档的手稿，保留着成为作者的过程。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>影评人周特别策划：戛纳 × FIRST</p>
+<p>戛纳电影节&quot;影评人周&quot;闭幕影片《石墙》（法国青年导演长片首作）将在FIRST完成亚洲首映。戛纳影评人周策展主管Thomas Rosso将携主创现场交流。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>另一种亚洲电影实践：Next Step Studio: Indonesia</p>
+<p>聚焦印度尼西亚，在跨国协作中进入家庭、身体、信仰、声音与地域文化深处。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>闭幕特别策划：《燃烧吧！爸爸》</p>
+<p>原名《敲碎爸爸的头盖骨》，第18届FIRST电影市场孵化，徐峥、曾剑监制。已入围第28届上海国际电影节主竞赛单元。影片从父亲离世后的身后事展开，丧葬礼俗、市井秩序、母女关系、沪语空间与黑色幽默彼此交织。</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<hr>
+<h1>📅 实用信息</h1>
+<p>影展时间：2026年7月17日-7月25日，西宁</p>
+<p>重要时间点：</p>
+<ul>
+<li>排期表已于7月6日上线官网</li>
+<li>7月8日10:00起：观影预约开启 + 单场观影证开售</li>
+</ul>
+<p>学术展映排期方向：</p>
+<ul>
+<li>学院精神（罗马尼亚新浪潮短片）</li>
+<li>影评人周特别策划（《石墙》亚洲首映）</li>
+<li>Next Step Studio: Indonesia</li>
+<li>玛雅·黛伦回顾展</li>
+<li>闭幕：《燃烧吧！爸爸》</li>
+<li>人间短歌非虚构特别展映</li>
+</ul>
+<p>同期活动：</p>
+<ul>
+<li>电影市场·官方酒会&quot;市场的夜&quot;：7月21日</li>
+<li>创投会公开陈述：7月22日-23日</li>
+<li>创投会·一对一洽谈：7月24日-25日</li>
+<li>电影市场颁奖礼：7月24日</li>
+<li>星光红毯/青年电影盛典：7月25日</li>
+</ul>
+<hr>
+<h1>👋 我们在西宁见</h1>
+<p>今年，24帧以媒体身份进入FIRST的官方现场。从成都的独立放映厅到西宁的电影节主场，到现场去看，把那些值得被看到的作品带回来，带回成都的银幕上。</p>
+<p>这是我们出发的原因。</p>
+<p>凯鲁亚克在《在路上》里写道：&quot;真正的人都是疯疯癫癫的，他们热爱生活，爱聊天，不露锋芒，希望拥有一切，他们从不疲倦，从不讲些平凡的东西……&quot;</p>
+<hr>
+<p>撰文：24帧编辑部</p>
+<p>信息来源：FIRST青年电影展官方公众号、官方微博、百度百科、潮新闻、澎湃新闻、豆瓣电影等公开渠道</p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

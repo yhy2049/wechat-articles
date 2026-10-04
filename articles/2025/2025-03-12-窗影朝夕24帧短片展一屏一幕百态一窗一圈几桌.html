@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>窗影朝夕24帧短片展一屏一幕百态一窗一圈几桌 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../..index.html">← 首页</a>
+        <a href="../..2025.html">← 2025年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2025-03-12</div>
+      <h1 class="article-title">窗影朝夕24帧短片展一屏一幕百态一窗一圈几桌</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<h1>「窗影朝夕」24帧短片展 · 一屏一幕百态，一窗一圈几桌</h1>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>24  帧短片展·第一届</strong></p>
+<p>24帧观影团“窗影朝夕”主题短片展将于2025年3月23号（周日）于成都与观众见面。本次短片展以家庭叙事为主题，共邀请8部入围国际展映节的优秀短片，旨在以屏幕为窗，展现人间烟火与家庭百态。
+排片分为三个展映单元，第一单元排片4部，为  剧情或故事短片  ；第二单元排片3部，均为  记录短片  ；第三单元排片1部，为  音乐短片  。</p>
+<p><strong>购票请点击此处</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p><strong>活动介绍</strong></p>
+<p><strong>「家庭回忆」打卡活动——票价减免  5  元</strong></p>
+<p><strong>生活的角角落落，时间的具象与抽象，朝夕之间我们已然长大成人。</strong></p>
+<p><strong>参与方式</strong>：  影展活动开始三天前，即  3  月  20  日（含  3  月  20  日）之前  ，在小红书发布  有关家庭回忆的照片
+。并  @24帧观影团  小红书官方账号，参与**#24  帧短片展  #**话题打卡活动，并保留帖子至影展结束。</p>
+<p><strong>核销方式</strong>：影展结束后统一核销退款</p>
+<p>家庭观影活动——票价减免  </p>
+<p><strong>「家」有千万种解法，此时并肩同行之人亦是珍贵的宝藏</strong>。</p>
+<p><strong>本次展映特别设置多人套票，推荐多人同行观影。  欢迎大家结伴而来，同时诚挚邀请您与家人一同前来观影。</strong></p>
+<p><strong>套票选择</strong>：双人票共减免  10  元，三人票共减免  15  元。</p>
+<p><strong>核销方式</strong>：影展结束后统一核销退款</p>
+<p><strong>家庭观影活动——特殊赠礼</strong></p>
+<p>观影当日与家人、伙伴同行，可瞬时  定格当下，同春来  。</p>
+<p><strong>特殊赠礼</strong>：<strong>拍立得合影一张</strong>。</p>
+<p>注：单张票以上三种活动仅限参与一种<br>定格春日</p>
+<p>春分已过，春天已悄然来临。如果你想定格此刻，  现场我们同时提供拍立得拍照项目。</p>
+<p>收费  ：  10r/张  。不包废片</p>
+<p><strong>隔空对话</strong></p>
+<p>本次放映特别联系影片导演。  观影进场前大家会收到“<strong>所思所想</strong>”手卡，可以在观影间隙和映后把有关影片的想法写在手卡上。</p>
+<p>包括但不仅限于：<strong>自己观影过程中的感想、想对导演说的话、想向同为观众的大家说的话、向导演提出的疑问等等。</strong></p>
+<p>我们会在影片放映结束后留十分钟时间给大家平复心情，书写手卡。然后统一收集手卡，整理大家书写的内容并反馈给导演，  后续在微信群及公众号会有导演的回复
+。期待大家的参与！</p>
+<p><strong>实体物料</strong></p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>纪念票根</p>
+<p><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure></p>
+<p>影展手册</p>
+<p><strong>报名链接</strong><br><figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure><br><strong>策划团队</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>关于我们</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>地址</strong><br><strong>报名后获取</strong><br><strong>官方社群</strong>
+<figure class="article-image">
+  <img src="[object Object]" alt="">
+  
+</figure>
+<strong>扫码加好友拉你进影迷群一起交流</strong> </p>
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../..index.html">首页</a> · 
+        <a href="../..2025.html">2025年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
