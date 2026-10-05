@@ -1,0 +1,238 @@
+{
+  "main": {
+    "id": "1fd456fdf615db45",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8cac172ff55ae40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37101eb266f7e248",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "档案/公众号存档/_数据/图表/monthly.png"
+              },
+              "icon": "lucide-image",
+              "title": "monthly"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45c859b716c8bb13",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed1ec2bda9f246a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2aabe221433f243c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "33902ba8f7e0c19f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "6c9c8e63679f94a0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0093565df6a152f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "a48d105f09ef87e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d143fe85b606fa7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "06_AI/2026-10-06_24帧运营库-DSH优化方案/24帧运营库-DSH优化方案.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "e74586add4bb3f77",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06_AI/2026-10-06_24帧运营库-DSH优化方案/24帧运营库-DSH优化方案.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "4adcbc60ae0f3ea5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "458f950d765b43bb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "4b1406bb9b1e6199",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "06_AI/2026-10-06_24帧运营库-DSH优化方案/24帧运营库-DSH优化方案.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "37101eb266f7e248",
+  "lastOpenFiles": [
+    "档案/公众号存档/_数据/图表/top20.png",
+    "档案/公众号存档/_数据/图表/weekday.png",
+    "档案/公众号存档/_数据/数据看板.md",
+    "档案/公众号存档/_meta/removals.md",
+    "档案/公众号存档/_meta/corpus-overview.md",
+    "档案/公众号存档/2026/2026-04-18-告别场0418翠湖卞灼导演线上交流.md",
+    "档案/公众号存档/2026/2026-04-22-路演0422燃比娃主创现场映后交流.md",
+    "档案/公众号存档/2026/2026-04-12-路演0412植物学家主创现场映后.md",
+    "档案/公众号存档/2026/2026-04-13-像素之外24帧短片展2026影片介绍.md",
+    "档案/公众号存档/2026/2026-04-13-路演0413如父如母导演现场交流.md",
+    "档案/公众号存档/2026/2026-04-04-联合放映我许可阳光女子合唱团.md",
+    "档案/公众号存档/2026/2026-04-03-24帧组讯我们要拍短片了.md",
+    "档案/公众号存档/2026/2026-04-04-2026FIRST主动放映24帧站志愿者招募.md",
+    "档案/公众号存档/2026/2026-04-07-像素之外24帧短片展2026在像素之外在囚笼之上归于无声又重新升起.md",
+    "档案/公众号存档/2026/2026-03-21-成都路演重逢不是为了答案是为了好好告别时间旅馆导演翟义祥现场交流.md",
+    "档案/公众号存档/2026/2026-03-11-超前点映在你好爱美丽的水彩梦境里重拾儿时的纯粹.md",
+    "档案/公众号存档/2022/2022-05-09-书影音没法支撑恋爱建议豆瓣把该片挂在开屏.md",
+    "档案/公众号存档/2022/2022-05-02-主流语境下的伪颠覆性叙事.md",
+    "档案/公众号存档/2022/2022-04-22-每个人的童年都会结束每个人的飞船都会离开.md",
+    "档案/公众号存档/_数据/2026-05-31-数据快照.md",
+    "档案/公众号存档/_数据/阅读量排行榜.md",
+    "档案/公众号存档/_数据/2026-11-18-数据快照.md",
+    "档案/公众号存档/_数据/2026-11-14-数据快照.md",
+    "档案/公众号存档/_数据/2026-11-07-数据快照.md",
+    "档案/公众号存档/2026/2026-03-28-24帧成都路演0328长夜将尽主创现场映后交流.md",
+    "档案/公众号存档/2026/2026-10-26-专场1030笑傲江湖2东方不败.md",
+    "档案/公众号存档/2026/2026-10-23-专场1101生日快乐站在幸福之外.md",
+    "05_档案/公众号存档/_数据/图表/heatmap.png",
+    "05_档案/公众号存档/_数据/图表/distribution.png",
+    "05_档案/公众号存档/_数据/图表/category-quadrant.png",
+    "05_档案/公众号存档/_数据/图表/category-median.png",
+    "05_档案/公众号存档/_数据/图表/length.png",
+    "05_档案/公众号存档/_数据/图表/quadrant-engagement.png",
+    "05_档案/公众号存档/_数据/图表/films.png",
+    "05_档案/公众号存档/_数据/图表/series.png",
+    "05_档案/公众号存档/_数据/图表/weekday.png",
+    "05_档案/公众号存档/_数据/图表",
+    "05_档案/公众号存档/_数据/数据看板.html",
+    "05_档案/公众号存档/_skill/scripts/build-dashboard.py",
+    "05_档案/公众号存档/_skill/scripts/update-data.py",
+    "05_档案/公众号存档/_skill/setup.sh",
+    "05_档案/公众号存档/_skill/package.json",
+    "05_档案/公众号存档/_skill/requirements.txt",
+    "05_档案/公众号存档/_skill/scripts/wxmp-verify.py",
+    "05_档案/公众号存档/_skill/scripts/wxmp-probe.py",
+    "05_档案/公众号存档/_skill/scripts/wxmp-audit.py"
+  ]
+}
