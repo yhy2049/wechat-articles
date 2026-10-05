@@ -69,6 +69,8 @@ def parse_item(entry):
         "read_num": a.get("read_num", 0),
         "share_num": a.get("share_num", 0),
         "item_show_type": a.get("item_show_type", 0),
+        "copyright": a.get("copyright", 0),  # 1=原创, 0=转载
+        "is_original": a.get("copyright", 0) == 1,  # 便捷判断
     }
 
 
