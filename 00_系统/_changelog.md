@@ -1215,3 +1215,15 @@ ming 审阅发现：03_任务旧 status 迁移后，仪表盘和工作台的 Dat
 - 健康检查基线未变（仍为 6 断链 / 4 review / 5 .DS_Store），本方案未引入新断链
 ### 状态
 - `status: review` —— 需宇航员拍板 P1 六项（删 292 篇重复、日志分卷、headless 定时、检索落库、接 preset 记忆、清 review 堆积）
+
+## [2026-10-06 04:45] 调研 | 06_AI/2026-10-05_AI-agent知识库协作调研/多agent协作-长期记忆-知识资产治理-工程化素材.md
+### 做了什么
+- 补齐同目录上一份调研未覆盖的六块：记忆分层实现、文件即协议可执行规范、知识库卫生工具链、Git 治理配置、上下文预算、评审流水线
+- 全部结论来自实际抓取（curl / GitHub API / Mintlify `.md` 端点），50 个 URL 全部实测可解析
+### 验证
+- star 数读取时间 2026-10-06（GitHub API）；重点 URL 逐个 HTTP 200 复检，仅 Wiley 那篇 403（已在文中标未查证）
+- 纠正一处常见误引：Letta 源码已迁至 letta-ai/letta-code，letta-ai/letta 主分支只剩导航
+- errata-ai/vale 已 301 迁到 vale-cli/vale（6.2k★）
+- 库内未实测项已显式标注（git-lfs 建议、vault-inspector 成熟度、重复笔记检测无成熟工具）
+### 状态
+- `status: final` —— 素材已就绪，待并入 DSH 优化方案
