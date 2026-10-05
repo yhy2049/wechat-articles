@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>让影像长河多一种奔涌的方向，让一朵花同时落入千百片湖 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-11-02</div>
+      <h1 class="article-title">让影像长河多一种奔涌的方向，让一朵花同时落入千百片湖</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQFH4jXdkcNRmKjbo8stFxcyYXmzj9pYZt5LlsEqdSXOy8UfJwx24pajq6TmjqZBsqBFQsbibtK7FhKRn0VE6hWmGRAMs3HrArro/0?wx_fmt=jpeg" alt="cover_image"></p>
+<p class="article-source" style="text-align:left;font-size:0.9em;color:#8a8a8a;margin:18px 0;word-break:break-all;">公众号原文：<a href="https://mp.weixin.qq.com/s/MOh-qZdyCdyZPbIBfyYCLA" target="_blank" rel="noopener">查看原文 ↗</a></p>
+<h1>在川西土地上，听见中国电影“盛放”的声音</h1>
+<p>文 / 24帧</p>
+<h1>1。</h1>
+<p>成都的秋天，总带着一种洗练后的松弛。</p>
+<p>当车子驶进大邑</p>
+<p>安仁古镇</p>
+<p>，青砖黛瓦、二十七座中西合璧的老公馆，与远处杜甫笔下“窗含西岭千秋雪”的群山叠印在一起，空气里便自然而然地流淌着一种电影感。</p>
+<p>这里是中国电影基金会女性电影专项基金第三届“</p>
+<p>盛放计划</p>
+<p>”的发生地。作为今年现场的媒体嘉宾，当我们在古镇的烟雨与光影里穿行，听着耳边此起彼伏的讨论声、笑声、甚至银幕上女孩们奔跑时传来的方言，我们忽然意识到：中国电影的根脉，从来不只在聚光灯下的红毯上，而深深扎在这些带着泥土芬芳、滚烫且真诚的角落里。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQE4cmJbVhgPnd6oOjccmN1M7G1WiadJYAmCTAIhd1DFHJejSyjtR9YVtFxRkQdQ7omkJw8QO2qT5IaTkqGSwOcwG6LP81dHst7w/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>每年的电影节展，都有很多值得被反复书写、津津乐道的事件——不论是行业寒冬下的自我打气，还是破圈大谈的</p>
+<p>AIGC</p>
+<p>与算力风暴。熟悉我们的人都知道“24帧”一以贯之的脾性：我们并不热衷于堆砌那些高大上的产业报告，也不愿把一场影展的报道简化为几句温情脉脉的宣传套话。</p>
+<p>站在第三年这个关键的节点上，我们更想穿越那些致辞、项目与宣告的表面，去检视一个真正以“女性”与“孵化”为核心的影展平台，究竟在为当下的中国电影生态带来什么。</p>
+<h1>2。</h1>
+<p>回望过去三年，关于中国电影产业“市场变冷”、“流量至上”的焦虑声从未停歇。但在安仁，在盛放计划的现场，悲观没有被回避——致辞里就有人直说项目孵化难、投融资对接不畅——可那些话没有停在悲观里，更多时候，我们听到的是野蛮生长拔节的声音。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQFmBVqEWuglra3x9sbRVB2TdUJCW5RnqboPb9qC0Oh4z4RkooiccK3HXvwmMeJ1Fon969axTNMriaAgqG6HbcCqjwZe7KpyvCNRY/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>三年的时间，数字给出了它厚重的分量——超过 3000 部作品从全国各地汇聚于此，232 位创作者在这里被看见、被守护，31 部作品真正从剧本走向了市场。更让人动容的是，首届盛放孵化出的 3 部影片，在两年后带着“</p>
+<p>龙标</p>
+<p>”和成片回到了安仁展映交流。那一刻，所有的孵化、陪伴与等待，闭环成了一条闪光的河流。</p>
+<p>在盛放的 5 大创投单元里，观众能够读出一种非常明确且不随波逐流的选片审美与生态脉络：</p>
+<p>30+女性题材单元（其中 85% 创作者 30 岁以上）： 视线从过去单一的青春阵痛，扩展至全年龄段、全生命周期的女性生存状态，展现出前所未有的丰富度与包容性。</p>
+<p>纪录长片单元（涵盖28种方言）： 那些独特的乡音，将镜头深深扎进中国大地最隐秘、最真切的褶皱里。没有真正的人生，就没有真正厚重扎实的剧本。</p>
+<p>未来影像单元（46%跨界创作者）： 技术的迭代不再是冰冷的壁垒，反而成了年轻人手中打碎常规、重新探索叙事边界的利器。</p>
+<p>展映交流中，第一届扶持的纪录片</p>
+<p>《春日幻游》</p>
+<p>引发了全场的深刻共鸣。影片追踪了几个山区女孩真实的成长与挣扎——辍学、打工、面对家庭与现实的重压。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQGmCXGNqyzCvhd1PGohQMbaj6ebB9z5KibxGBibbJicZwibEFu3S8jWr8QpDZklhK9kMVuvpibC483ibVoFVLZw3RInrAVZdCPK7AgXc/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>导演陈东楠在映后谈到，她没有以高高在上的“帮扶者”姿态，而是平等地与女孩们相遇。当女孩选择离开学校去工厂做质检员（QC）时，虽然有失落，但她选择尊重与祝福。“我觉得纪录片也好，真实影像也好，非常珍贵的地方就是我们要去做打破圈层的事情。我们不是要固守在自己的世界里面，我们要和新的人相遇，然后给彼此带来新的生活的想象。”</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQHiaLRJXOw8BqjoVpaScpemiapRjyGOqRY1WC3sBWRC4zw9xpnEhpJBkibz9HHNvZQKRCWcnjkJzEdMvw6KT4g7ibuEy8tbuj5RMB8/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>正如国家一级剪辑师、中国电影剪辑学会名誉会长周新霞老师在台上宣读的《盛放宣言》：“资本可以助推热度，但更该托举初心；产业追逐市场，但更要守护艺术。”</p>
+<p>在这个追求短平快的算法时代，盛放像是一个执拗的港湾。它告诉所有心怀热爱的电影人：不必去迎合流俗的表象，你的真诚，自会有回响。</p>
+<h1>3。</h1>
+<p>如果说前两届的盛放计划是一束光的“点亮”，那么今年，它正在向一个生态的“场”跃迁。</p>
+<p>在大邑，我们看到了政校合作、产教融合最生动的切片。据主办方介绍，三度摘得中国纪录片年度导演的周兵（曾执导《故宫》《敦煌》），决定搬离香港和北京，把创作扎根进川影，扎根进安仁。他把自己 30 年间收集的数万分钟老胶片影像，陆续存档进安仁校区的纪录影像文献中心，并希望向全球和全国的学术界开放；上个月，一个名为“爱上纪录片”的艺术空间已经落地，用来承接大师驻留。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQGsIIuwGlYat9KMRZpc5MQyCzPTibYsf3ibevUo9A4Gmv3t8aBYEJk7w07kmZdyFfIHgQh541L5p11DKO0Mtb0AyaeA50u1xZiawc/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>从“盛放计划”（点的照亮），到“看见计划”（带山区孩子体验艺术大学，生成爱的场域），再到如今发起的“驻留计划”（场的生成），川影与安仁正在把一片地处川西的乡土，建设成一个强大的“创作能量场”。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQHUOqOXPtVNqhHIRtA4zNPb3m218WoygFE1plName8dRfrGHxODfRtBtysawjsk1Fls0qJ4stNSBx8dyOnJfibfuBG4s5C6RJY0/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>古镇的烟雨、百年老街的文脉，与年轻人的镜头碰撞在一起，形成了“创意有处落、项目有处拍、成果有处展”的在地生态。</p>
+<p>而与此同时，在现场启幕的“四川影视文创城 AIGC 产业生态基地”与工信部 AIGC 综合培训中心，则将这场对话推向了技术的最前沿。在算力补贴、桌面级智算与“AI+实拍（AIVP）”混制技术的探讨中，大家关心的核心依然是“人类的灵魂”。</p>
+<p>AI 可以帮我们生成绝美的空间、精准的光影和无限延伸的镜头，却很难替代人在生活里真实的痛感、隐忍的笑意，以及对这个世界深沉的爱。</p>
+<p>当算力拉低了高昂的制作门槛，当技术解放了繁复的机械劳动，创作者终于可以把全部的注意力，重新放回“如何用镜头打动人心”这件事本身。</p>
+<h1>4。</h1>
+<p>开幕式临近收尾时的那一幕，带着一种近乎浪漫的影人仪式感。</p>
+<p>中国夏衍电影学会会长江平老师，忽然拿出了三十多年前自己当场记时最熟悉的物件——场记板。他笑着说，自己今天回到了 30 多年前干过的职业，要给《2026盛放计划》客串一把场记。</p>
+<p>伴随着一声清脆的“片名《2026盛放计划》，第一场，第一镜，第一次，Action！”台上的评审专家、青年导演、制片人与台下的无数双眼睛共同定格了那一刻。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQF5PuGUfnmdSsmSBa0KOSlI2j7ia0UK1aMueTjx8dmT0W36HXwnsLushia5JCIr7BBVcl7UIWZspHLrrmxg1IcLCf3tlOwjvPhNY/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>而今年闭幕式，“盛放之夜”以“拥抱与看见”为主题。四川电影电视学院校长、党委副书记，中国电影基金会女性电影专项基金总监罗思在主题分享中表示，拥抱不只是表达爱，也是一种“看见”。在她看来，真正的盛放，是看到每一个人、每一份创作的用心，看到中国电影不只是票房，而是雕刻着中国人的故事。</p>
+<p>作为穿梭在光影之中的媒体观察者，在 24帧 的视野里，中国电影或许正经历着阵痛与重构，但只要安仁的秋雨里依然有人在热烈地讨论剧本，只要大邑的土地上依然有年轻人用镜头叩问心灵，只要那些关于爱、关于女性、关于真实生活的故</p>
+<p>事依然在被认真打磨——</p>
+<p>中国银幕的繁花似锦，就永远值得我们去等待，去奔赴。</p>
+<p>祝你，祝我们，也祝中国电影：</p>
+<p>一路盛放。</p>
+
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

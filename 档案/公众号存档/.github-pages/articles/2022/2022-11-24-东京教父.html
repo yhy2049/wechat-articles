@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>东 京 教 父 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2022.html">← 2022年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2022-11-24</div>
+      <h1 class="article-title">东 京 教 父</h1>
+    </div>
+    
+    <div class="article-content">
+      <p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/E8dLbmPckyLWsEGqYHKK1XQbY5MwrJv5icFhhp9U0xcCgVuC0TVAiaicMEfWNbFAF6S0EwfJVtwOmbdfB4qAG75fQ/0?wx_fmt=jpeg" alt="cover_image"></p>
+<p class="article-source" style="text-align:left;font-size:0.9em;color:#8a8a8a;margin:18px 0;word-break:break-all;">公众号原文：<a href="https://mp.weixin.qq.com/s/gsMfNpeYYF9BOjXwYZgo4g" target="_blank" rel="noopener">查看原文 ↗</a></p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJGAIUGa5nJctIhiaVQkDuiboUibpP59s3j1kS6MNrLNEGEhAmIiaooC2E8GtBRhnS46nx5XUhoh2NMuw/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt=""></p>
+<p>hi，我是本期的票根设计小鱼。</p>
+<p>看完《东京教父》，你有没有一种圣诞节提前到来的感觉哇。</p>
+<p>我印象中的日本必要的元素总是海边、樱花、浴衣、花火大会和富士山，看完《东京教父》把东京塔也加入了我的“东京印象”。</p>
+<p>正如我很喜欢的一条豆瓣影评说：</p>
+<p>“最美的镜头大概就是随着阿花拉着那个巨大的条幅落下，太阳升起的瞬间.清子大概真的是天使,是上帝派来拯救所有人的。其实没有人是心肠歹毒的不是么。也许，东京教父就该是暖暖的,和那个封面上作为背景东京塔一样，尽管是冰冰冷冷的。</p>
+<p>可是，暖光打上去，还是灿烂的.”</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyLWsEGqYHKK1XQbY5MwrJv5Gcs9oaGMWmS3Iuq5DCiamk9jylY3O7Z2DibTDBtMAerbDAy4yuib0xvuA/640?wx_fmt=png" alt=""></p>
+<p>也是成年人的童话喔</p>
+<p>这是今敏最完美的圣诞电影，有高达9.0的评分、位列top250，故事很好地把生活的困苦和乐观的喜剧元素结合起来，编织了一部出离于现实又透露着神秘感动的现实童话；像融化的巧克力一样“脏兮兮”又暖烘烘，流浪汉、被遗弃的小孩、性倒错者、离家出走的少女，每个人都能在动画里收获自己的happy ending。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyLWsEGqYHKK1XQbY5MwrJv57HPV4qCibUow5CukT37nLscjLMib9lwvQd5tkMur9gWcPEsUIfY7O1ag/640?wx_fmt=png" alt=""></p>
+<p>所以这次正面选了清子的画像，希望看到这个救赎着别人与被救赎着的像天使一样的小婴儿能带给你温暖的感觉；而且教父这个词，主要是指给小孩赐名、承担教育责任的人，电影里的三个主角像是世俗的三圣人，给清子爱和保护，清子的存在就是对“东京教父”四个字最棒的证明（还有就是这张真的太可爱了吧！！！我的少女心爆炸~</p>
+<p>文案的意思是**“坦诚爱对方”**，来自“当彼此坦诚相待还能爱对方，才是真正的亲情吧。”彼此坦诚相爱的世界，一定暖暖内含光。</p>
+<p>提前祝你圣诞节快乐呀~</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyJGAIUGa5nJctIhiaVQkDuiboxpB6gM6GDEo7Vc2gwq15ibDWsd1gA31p4wnzCFbkBia876hBdI3yeoicg/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt=""></p>
+<p><em>「二十四帧观影团」票根设计</em></p>
+<ul>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><em>小鱼</em></p>
+
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
