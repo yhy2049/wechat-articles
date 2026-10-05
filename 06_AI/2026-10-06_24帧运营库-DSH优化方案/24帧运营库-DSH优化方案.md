@@ -40,9 +40,11 @@ tags: [基建, DSH, agent协作, 知识管理]
 | 总字节 | **5.53 MB** | ≈ 184 万汉字等效（中文 UTF-8 按 3 字节/字估）|
 | 去掉公众号存档后 | **2.15 MB** ≈ 72 万汉字 | agent 日常真正需要掌握的内容 |
 | `05_档案` 占比 | 642 / 865 = **74%** | 库的体量由历史存档决定 |
-| git 提交数 | **52** | 2026-09 有 25 次，2026-10 有 27 次 |
-| 工作区体积 / `.git` | **208 MB / 85 MB** | 其中约 32 MB 是可在库外存放的 |
-| git 跟踪文件 | **1330** | |
+| git 提交数 | **52**（审计时） | 提交节奏健康：2026-09 有 25 次、2026-10 有 27 次 |
+| 工作区体积 / `.git` | **208 MB / 85 MB**（审计时） | 其中 19 MB（node_modules）+ 8.9 MB（`.hermes`）可以在库外存放 |
+| git 跟踪文件 | **1330**（审计时） | 本次方案落库后 1336 |
+
+> 说明：本节数字为 2026-10-06 审计时快照。库每天都在长（审计当天 `_changelog.md` 就从 1184 行涨到 1229 行），要最新数字请重跑 §1.3 的健康检查。
 
 ### 1.2 目录分布
 
@@ -98,9 +100,9 @@ tags: [基建, DSH, agent协作, 知识管理]
 |---|---|---|
 | **C1** | **292 篇文章双份存** | 年份目录（`2022`–`2026`）295 个唯一文件名 vs `.github-pages/articles/` 294 个，**交集 292**。`_meta/removals.md` 自己写了规则"重复内容保留年份目录版本"，但从没执行 |
 | **C2** | **`.hermes/` 8.9 MB 被 git 跟踪**（Hermes 时代的附件缓存，现在是死目录）| 6 个文件：2 个 docx **与项目目录 md5 完全相同**（可直接删）；4 个 PDF 是政策**原文**，项目目录里放的是 `_标注版.pdf`（内容不同，**不能直接删**，要归位）|
-| **C3** | **22 MB 的 `node_modules` 留在库内** | `05_档案/公众号存档/_skill/node_modules/`（playwright-core + playwright）。虽然嵌套 `.gitignore` 排除了它，但它仍在工作区，且每次 `rglob` 都要扫 |
+| **C3** | **19 MB 的 `node_modules` 留在库内** | `05_档案/公众号存档/_skill/node_modules/`（playwright-core + playwright）。虽然嵌套 `.gitignore` 排除了它，但它仍在工作区，且每次 `rglob` 都要扫 |
 | **C4** | **会议存档命名两种风格** | 17 个文件里 8 个用 `YYYY-MM-DD-主题.md`、8 个用 `YYYY-MM-DD_主题.md`，1 个（`宇航员个人访谈-…`）无日期前缀。手册规定是下划线 |
-| **C5** | **`_changelog.md` 只增不减，已经 1184 行 / 130 条**，其中 12 条格式不合规 | 12 条形如 `## 2026-09-27`，没有 `[日期 时间]` 和 `类型 \| 文件`，破坏 `grep "^## \["` 的解析约定 |
+| **C5** | **`_changelog.md` 只增不减** | 审计当天 1184 行，**当天又涨到 1229 行**（+45 行）——因为它没有轮转机制。145 个 `## ` 标题里 **133 条合规、12 条不合规**（形如 `## 2026-09-27`，缺 `[日期 时间]` 和 `类型 \| 文件`，破坏 `grep "^## \["` 解析约定）|
 
 ### D 类 · 让工作重复（自动化层，4 条，含 1 个实测坑）
 
@@ -194,6 +196,19 @@ Karpathy 在 wiki 长到几百页后靠 [tobi/qmd](https://github.com/tobi/qmd)�
 | 5 | **Skill 的三级渐进披露**：① name+description 常驻 → ② SKILL.md 正文按需读 → ③ 引用的附件再按需读 | [agentskills.io](https://agentskills.io/) | 支持把 `24frames-vault` 从 1052 行砍到 150 行（P0-4）；细则留在库内文件里，不进 skill |
 | 6 | **多写者会撞车**：每次 ingest 都要重写 index/log + 10–15 个页面，两个 ingest 并发就冲突；git 会给你"散文里的 merge conflict"；`commit author` 分不清是哪个 agent | [dev.to 实测帖](https://dev.to/forrestzhang/karpathys-llm-wiki-what-it-is-and-how-to-set-one-up-56ck) | 一次只让**一个** agent 写库；定时任务**只报告不写正文**；commit message 里带 agent 标识 |
 
+### 4.6 工程化补充：六条可执行的机制（来自第二份调研）
+
+> 完整内容见 [[多agent协作-长期记忆-知识资产治理-工程化素材]]（50 个 URL 实测）。
+
+| # | 结论 | 出处 | 落到运营库 |
+|---|---|---|---|
+| 1 | **SKILL.md 硬线 < 500 行**；且"**skill 一旦加载，内容会跨轮常驻上下文，每一行都是重复 token 成本**" | Anthropic Agent Skills 官方文档 | 这是 P0-4 砍 1052 行的直接依据。skill 只放"去哪读"，不放"写什么" |
+| 2 | **没有值得直接接进 Obsidian 的记忆框架**。可移植的是四条机制：①只追加不覆写 ②事实带有效期与 provenance ③热度驱动升格（访问够多才提炼到长期）④**先索引后全文**（claude-mem 三层检索：50–100 token/条 → 时间线 → 500–1000 token/条，差一个数量级） | mem0 / Graphiti / MemOS / claude-mem | ①对应 P0-11 + patch 写回；②对应 `_schema.md` 里给判断标 `confidence`；③对应灵感页的 `stage` 升格；④对应 P0-10 的 `_index.md` 优先 |
+| 3 | **frontmatter ↔ JSON Schema 校验器只有一个**：`remark-lint-frontmatter-schema`（npm） | 卫生工具调研 | P2 新增：把 `_schema.md` 落成 `_schema.json`，用它做机器校验，人读 md 版 |
+| 4 | **markdown 库没有成熟的内容近似重复检测工具** | 同上（明确标注为未查证到的缺口） | P2 新增：在 `vault-health-check.py` 里自己加指纹比对（标题 + 首段 + wikilink 集合），不引外部依赖。**这条正好治 C1 的 292 篇重复** |
+| 5 | **AI 自审失败是结构性的**：同一段有偏上下文是"回忆"规则而不是"执行"规则，加"再检查一遍"没用。正解是**干净上下文的子代理 + run-don't-read**（每个数值断言必须跑一个能证伪它的命令）+ 证据日志（`CLAIM/CMD/OUT/VERDICT`，**说不出证伪命令就标 UNVERIFIED**） | [anthropics/claude-code #72206](https://github.com/anthropics/claude-code/issues/72206) | 新增 §9.4 评审流水线。本方案自己就是这么验的（见 §9.4 末行） |
+| 6 | **多 agent 成本**：比单 agent 聊天多用约 **15× token**，**只在广度优先可并行的场景划算**；"多数编码任务的可并行部分比研究少" | Anthropic multi-agent 研究系统 | 新增反面清单：日常归档/写作任务**不要**上多 agent 编排，一个 agent 串行做完更便宜也更一致 |
+
 ---
 
 ## 5. 目标架构（To-Be）
@@ -271,7 +286,7 @@ Karpathy 在 wiki 长到几百页后靠 [tobi/qmd](https://github.com/tobi/qmd)�
 | **P0-1** | **修 `归档操作规范.md` 的两处失效路径** | Step 1 第 4 条 `02_归档文件/` → `05_档案/会议存档/`；Step 2 的 `04_人物/` → `03_人物/`；删掉 Step 2 里的"任务文件"段（任务已并入项目页）；文末"目录结构参考"同步改 | 文件里搜不到 `02_归档文件`、`04_人物`、`03_任务` |
 | **P0-2** | **建 `00_系统/_schema.md`** | 照抄附件B §B1。定义：`type` 12 个合法值、`status` 5 个、`audience` 3 个、`stage` 4 个、`progress` 6 个；每类文件必填字段表；"新增取值要改这个文件"的硬规则 | `_schema.md` 存在，`运营手册.md` / `归档操作规范.md` / skill 都改为**引用**它，不再各写一份 |
 | **P0-3** | **修 6 个断裂双链** | `03_人物/宇航员.md` 那条被截断的多行 wikilink（目标以 `何力长片-浮生若丽` 开头）重写；`06_AI/2026-07-10_痴迷影评/影评评分机制-可复用版.md` 的三个 skill 名去掉 `[[]]`；`_changelog.md` 里两个历史断链加进脚本白名单 | `python3 00_系统/agent/vault-health-check.py` 退出码 0 |
-| **P0-4** | **把 skill 搬进库** | 库根建 `.agents/skills/`，`24frames-vault` 从 1052 行砍到 ≤150 行（只留路由 + 硬规则 + 指向库内文件的路径）；`vault-archiving` 把"已知陷阱"整节删掉（因为 P0-1 已经修了规范） | 库根 `.agents/skills/` 存在且进 git；两个 skill 里搜不到 `OH-WorkSpace`、`03_任务`、`06_灵感库` |
+| **P0-4** | **把 skill 搬进库并瘦身** | 库根建 `.agents/skills/`，`24frames-vault` 从 **1052 行砍到 ≤150 行**（只留路由 + 硬规则 + 指向库内文件的路径）；`vault-archiving` 删掉「已知陷阱」整节（P0-1 已修规范）。**官方硬线是 SKILL.md < 500 行**，1052 行是 2 倍超限——而且"skill 一旦加载就常驻上下文，每一行都是每轮重复付费的 token" | 库根 `.agents/skills/` 存在且进 git；两个 skill 都在 150 行内；搜不到 `OH-WorkSpace`、`03_任务`、`06_灵感库` |
 | **P0-5** | **三份嵌套 `AGENTS.md`** | `02_项目/`、`06_AI/`、`05_档案/会议存档/` 各一份，每份 15–25 行，照抄附件B §B2 | 三个文件存在；`AGENTS.md`（根）里写明"进入子目录会自动加载局部规则" |
 | **P0-6** | **修 `HOME.md` 的死查询** | 4 个 ```dataview 块改成 **agent 维护的静态表格**（每次改动项目页时顺手更新），另建 `.base/项目看板.base` 给 Obsidian 用 | `HOME.md` 在 Obsidian 里打开看到的是真表格，不是代码块 |
 | **P0-7** | **清死目录** | ① `.hermes/` 里的 **2 个 docx 是精确重复**（md5 与 `02_项目/何力长片-浮生若丽/01_参考文档/` 下同名文件一致）→ 删；**4 个政策 PDF 是原文**（项目里是 `_标注版`，不是同一文件）→ 移到 `02_项目/何力长片-浮生若丽/01_参考文档/00_原始政策文件/` 归位；② `git rm -r --cached .hermes`，`.gitignore` 加 `.hermes/`；③ `05_档案/公众号存档/_skill/node_modules/` 移出库（先把 `SKILL.md`、`docs/python-fetching.md` 复制进 `06_AI/2026-10-05_公众号抓取工具链/`）；④ 删 5 个 `.DS_Store` | `.hermes` 不再被跟踪；工作区体积降到 175 MB 以下；`_skill` 目录不再存在于库内 |
@@ -300,6 +315,8 @@ Karpathy 在 wiki 长到几百页后靠 [tobi/qmd](https://github.com/tobi/qmd)�
 | P2-3 | `06_AI` 产出的 `_已校准` 三态真正用起来（现在 0 个文件在用） | 下一次宇航员校准文案时 |
 | P2-4 | 公众号存档「转载判定」自动化（`wxmp-audit.py` 现在靠 `_meta/removals.md` 手工维护） | 下次补档时 |
 | P2-5 | 给 `05_档案/写作DNA/` 的 20+ 个 JSON 建 `_meta/index.json` 说明 | 要用到写作 DNA 时 |
+| P2-6 | 把 `_schema.md` 落成 `_schema.json`，用 `remark-lint-frontmatter-schema` 做机器校验（这是调研里找到的**唯一**一个 frontmatter↔JSON Schema 校验器）| P0-2 落地两周后 |
+| P2-7 | 在 `vault-health-check.py` 里自己加**内容指纹比对**（标题 + 首段 + wikilink 集合），治 C1 类重复。调研确认：markdown 库没有成熟的开源近似重复检测工具，只能自己写 | C1 去重之后作为回归防线 |
 
 ---
 
@@ -366,7 +383,22 @@ dsh --profile headless "回答两个字：可用"                 # 期望：正
 | 自动化 | 连续 3 天 cron 有执行记录，且健康检查结果写进了日志 |
 | 体积 | 工作区 < 175 MB，`.git` < 80 MB |
 
-### 9.3 回滚
+### 9.3 评审流水线（对外交付物必过）
+
+> 依据：Anthropic 官方 issue 的结论——**自审失败是结构性的**，加"再检查一遍"无效。有效的是换干净上下文 + 强制跑命令。
+
+| 段 | 做什么 | 谁做 |
+|---|---|---|
+| ① 干净上下文 | 起一个**不带主会话历史**的子代理，只给它 `git diff` 和文件清单 | 主 agent 派发 |
+| ② run-don't-read | 每个数值/行为断言，必须**跑一个能证伪它的命令**（`wc -l`、`md5`、`grep`、实跑脚本），不许只"读一遍觉得对" | 评审子代理 |
+| ③ 证据日志 | 每条结论写 `CLAIM / CMD / OUT / VERDICT`。**说不出证伪命令的，标 UNVERIFIED，不算通过** | 评审子代理 |
+| ④ 卡口 | 评审没出结论前不 `git commit` | 主 agent |
+
+**互审要跨模型家族**：同一模型自审有 correlated blind spots。库里可用的组合是 DSH(deepseek) / Claude Code / Codex——用不同家族的模型审同一份对外文档。
+
+**本方案自己的执行记录**：找出了 3 处自己的错误——`.hermes` 的重复判定（4 个 PDF 其实是原文，不是副本）、`05_档案` 文件数（670 含 node_modules，实为 642）、`status` 取值数（11 → 实为 9）。修正见 commit `64af1de`。
+
+### 9.4 回滚
 
 | 操作 | 回滚方式 |
 |---|---|
@@ -388,6 +420,8 @@ dsh --profile headless "回答两个字：可用"                 # 期望：正
 | 不为"未来可能的需求"造目录和流程 | Karpathy 的 Simplicity First：不写没要求的东西 |
 | 不把 skill 内容复制进库 | 库是事实源，skill 是路由。两边都存=两边都会过期（现在的 `24frames-vault` 就是反面教材） |
 | 不追求"零警告" | `_DS_Store`、空目录这类信息项不用管，把精力放在错误项和规范一致性上 |
+| 日常任务不上多 agent 编排 | 多 agent 比单 agent 多用约 **15×** token，只在广度优先可并行时划算（如本次的两份并行调研）。归档、写稿、改项目页这类串行活儿，一个好 agent 做完更便宜也更一致 |
+| 不装 Claude Code 的 PreToolUse 那一套 | DSH 没有 PreToolUse 钩子。**DSH 里等价的口子是 git pre-commit hook + `--sandbox`/审批策略**（见 P2-2）。硬要"写入前拦截"，只能靠 hook 跑 lint 拦住 commit，拦不住 write 本身——这一点要如实告诉 agent，别让它以为有绝对防线 |
 
 ---
 
@@ -402,7 +436,8 @@ dsh --profile headless "回答两个字：可用"                 # 期望：正
 | 四原则中文拆解 | https://cloud.tencent.com.cn/developer/article/2661615 |
 | qmd（markdown 本地混合检索） | https://github.com/tobi/qmd |
 | Obsidian Bases 语法 | https://obsidian.md/help/bases/syntax |
-| 本库配套调研（46 个 URL 逐条抓过） | [[AI-agent与个人知识库协作-公开最佳实践调研]] |
+| 本库配套调研①：卡帕西/文档规范/知识库协作（46 个 URL 逐条抓原文） | [[AI-agent与个人知识库协作-公开最佳实践调研]] |
+| 本库配套调研②：记忆分层/文件即协议/卫生工具/Git 治理/评审流水线（50 个 URL 实测） | [[多agent协作-长期记忆-知识资产治理-工程化素材]] |
 | mcp-obsidian（定点 patch 写回） | https://github.com/MarkusPfundstein/mcp-obsidian |
 | basic-memory（可直接指向 vault） | https://github.com/basicmachines-co/basic-memory |
 | llms.txt v2 规范 | https://llmstxt.org/ |
@@ -420,4 +455,5 @@ dsh --profile headless "回答两个字：可用"                 # 期望：正
 - [[附件A-规范修订对照表]] ｜ [[附件B-Agent落地执行手册]]
 - 相关方向：[[观影团]] ｜ [[宣发平台]] ｜ [[影视创作]]
 - 前序讨论：[[06_AI/2026-09-20_DSH-AI宇航员思路讨论/思路讨论|DSH-AI宇航员思路讨论]]
-- 配套调研：[[AI-agent与个人知识库协作-公开最佳实践调研]]
+- 配套调研①：[[AI-agent与个人知识库协作-公开最佳实践调研]]
+- 配套调研②：[[多agent协作-长期记忆-知识资产治理-工程化素材]]
