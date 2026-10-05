@@ -1,6 +1,6 @@
-# 临时文件和工具产物
+# 临时文件
 auto.log
-_skill/
 .DS_Store
+
+# npm 依赖
 node_modules/
-*.png

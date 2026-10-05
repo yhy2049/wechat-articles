@@ -1146,6 +1146,7 @@ ming 审阅发现：03_任务旧 status 迁移后，仪表盘和工作台的 Dat
 ### 存档更新
 - 新增 4 篇（真新）：锔瓷(2024-08-29)、我是001号(2026-09-28)、HiShorts征片(2026-09-29)、水东游(2026-10-04)
 - 存档覆盖更新到 2026-10-04
-- 新增 .gitignore（忽略 _skill/、auto.log、.DS_Store）
+- 新增 .gitignore（忽略 auto.log、.DS_Store、node_modules/）
 ### 知识沉淀
-- `~/.agents/skills/24frames-vault/references/wxmp-article-fetching.md`：完整流程+踩坑+脚本用法
+- `_skill/docs/python-fetching.md`：Python 工具链完整流程+踩坑+脚本用法
+- `_skill/SKILL.md`：更新目录结构，加入 Python 工具链入口
