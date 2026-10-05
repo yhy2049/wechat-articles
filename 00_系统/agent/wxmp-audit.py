@@ -13,6 +13,7 @@
     3. 重复检测：年份目录 vs .github-pages 的同名文章
     4. 缺失检测：后台有但存档没有的文章（按标题关键词匹配）
     5. 过期检测：tempkey URL 已过期的文章（无法补抓）
+    6. 移除检测：读取 _meta/removals.md，报告已移除的文章
 
 依赖：Python 3.6+，无外部库
 """
@@ -63,6 +64,33 @@ def check_duplicates(files):
         if len(sources) > 1:
             dupes.append((kw, paths))
     return dupes
+
+def load_removals():
+    """读取 _meta/removals.md，返回移除记录"""
+    removals_file = Path(ARCH) / "_meta" / "removals.md"
+    removals = []
+    
+    if not removals_file.exists():
+        return removals
+    
+    with open(removals_file) as f:
+        lines = f.readlines()
+    
+    # 解析表格行
+    for line in lines:
+        line = line.strip()
+        if line.startswith('|') and not line.startswith('|---') and not line.startswith('| 日期'):
+            parts = [p.strip() for p in line.split('|')]
+            if len(parts) >= 5:
+                date, title, reason, _ = parts[1], parts[2], parts[3], parts[4]
+                if date and title:
+                    removals.append({
+                        'date': date,
+                        'title': title,
+                        'reason': reason
+                    })
+    
+    return removals
 
 def check_missing(articles, files):
     """找出后台有但存档没有的文章"""
@@ -137,6 +165,14 @@ def main():
     print(f"   .github-pages: {gh_count} 篇")
     print(f"   存档总数: {year_count + gh_count} 篇（含重复）")
     
+    # 检查移除记录
+    print(f"\n🗑️ 移除记录...")
+    removals = load_removals()
+    print(f"   已移除: {len(removals)} 篇")
+    if args.verbose and removals:
+        for r in removals:
+            print(f"     - {r['date']} {r['title'][:30]} ({r['reason']})")
+    
     # 检查重复
     dupes = check_duplicates(files)
     print(f"\n🔄 重复文章: {len(dupes)} 篇")
@@ -175,6 +211,7 @@ def main():
     print(f"{'='*50}")
     print(f"   后台总数: {len(articles)}")
     print(f"   存档总数: {year_count + gh_count}（含 {len(dupes)} 篇重复）")
+    print(f"   已移除: {len(removals)} 篇（见 _meta/removals.md）")
     print(f"   缺失: {len(missing)} 篇")
     print(f"     - tempkey 过期: {len(tempkey_expired)}")
     print(f"     - 可补抓: {len(truly_missing)}")
