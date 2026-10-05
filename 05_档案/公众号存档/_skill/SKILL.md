@@ -25,12 +25,13 @@ wechat-articles/
 │   │   └── generate-article-html.js  # 生成文章 HTML
 │   └── docs/
 │       ├── workflow.md               # 详细文档
-│       └── python-fetching.md        # Python 工具链（wxmp-list/fetch/verify/probe）
+│       └── python-fetching.md        # Python 工具链（wxmp-list/fetch/audit/verify/probe）
 └── README.md
 ```
 
 > **Python 工具链**：`00_系统/agent/wxmp-*.py`，基于 Playwright，见 `docs/python-fetching.md`。
 > 核心优势：短链无需 chksm，抓取更稳定，支持命令行批量调用。
+> 审核机制：`wxmp-audit.py` 对比后台 vs 存档，检测数量/重复/缺失。
 
 ## 快速开始
 

@@ -11,6 +11,7 @@
 |------|------|------|
 | `wxmp-list.py` | 扫码登录 → 后台拉文章列表 → JSON | Playwright, 微信登录 |
 | `wxmp-fetch.py` | 批量抓取文章 → Markdown → 年份目录 | Playwright, iPhone UA |
+| `wxmp-audit.py` | 存档完整性审核：数量/重复/缺失检测 | 无（纯 Python） |
 | `wxmp-verify.py` | 存档完整性校验：比对线上 DOM vs 归档 MD | Playwright |
 | `wxmp-probe.py` | 诊断工具：探查文章页面结构 | Playwright |
 
@@ -43,6 +44,47 @@ python3 00_系统/agent/wxmp-fetch.py --date 2026-09-20 URL
 **输出格式**：`ARCH/YYYY/YYYY-MM-DD-safe_title.md`
 
 已存在同名文件时自动追加时间戳后缀。
+
+### wxmp-audit.py
+
+```bash
+python3 00_系统/agent/wxmp-audit.py                    # 用 /tmp/wxmp-articles.json
+python3 00_系统/agent/wxmp-audit.py -v                  # 显示明细
+```
+
+审核项：
+1. **数量对比**：后台总数 vs 存档总数（年份目录 + .github-pages）
+2. **重复检测**：找出在两个位置都存在的文章（年份目录 vs .github-pages）
+3. **缺失检测**：后台有但存档没有的文章（按标题关键词匹配）
+4. **过期检测**：tempkey URL 已过期的文章（无法补抓）
+
+**输出示例**：
+```
+📊 公众号存档完整性审核
+==================================================
+
+📡 后台文章总数: 324
+📅 后台日期范围: 2022-11-07 ~ 2024-08-29
+
+📁 扫描存档...
+   年份目录: 298 篇
+   .github-pages: 588 篇
+   存档总数: 886 篇（含重复）
+
+🔄 重复文章: 294 篇
+
+❌ 缺失文章检测...
+   tempkey 过期（无法补抓）: 0 篇
+   存档未找到（可补抓）: 15 篇
+
+📋 审核汇总
+==================================================
+   后台总数: 324
+   存档总数: 886（含 294 篇重复）
+   缺失: 15 篇
+```
+
+**注意**：标题关键词匹配不完美，部分"缺失"文章可能在存档里但标题不同。需要人工确认。
 
 ## 核心发现（2026-10 实测）
 
@@ -112,9 +154,9 @@ python3 00_系统/agent/wxmp-fetch.py --date 2026-09-20 URL
    ↓
    /tmp/wxmp-articles.json（324 篇，含短链）
 
-2. 交叉比对        对比存档已有文章（两个位置都要搜）
+2. 审核            wxmp-audit.py
    ↓
-   找出真正缺失的 URL
+   找出缺失/重复/过期
 
 3. 批量抓取        wxmp-fetch.py URL1 URL2 ...
    ↓
@@ -124,6 +166,10 @@ python3 00_系统/agent/wxmp-fetch.py --date 2026-09-20 URL
    ↓
    确认图文完整
 ```
+
+**建议频率**：
+- 每月跑一次 `wxmp-audit.py`，检查是否有新文章需要补抓
+- 每次抓取后跑一次 `wxmp-verify.py`，确认图文完整
 
 ## 常见错误与修复
 
