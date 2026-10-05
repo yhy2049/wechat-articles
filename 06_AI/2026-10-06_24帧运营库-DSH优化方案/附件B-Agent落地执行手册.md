@@ -524,7 +524,7 @@ description: "24FRAMES 运营库入口。5+1 目录结构、frontmatter schema�
 
 ## B5 · `00_系统/agent/vault-search.py`（P1-4）
 
-> **本脚本已实测跑通**：索引 214 个文件（`00_系统`–`04_灵感` + `06_AI`，跳过公众号存档与 attachments），检索"苏宁"返回 5 个文件并带命中片段，检索"票价"返回 3 个。
+> **本脚本已实测跑通**：索引 214 个文件（`00_系统`–`04_灵感` + `06_AI`，跳过公众号存档与 attachments），检索"苏宁"返回 13 个文件、检索"票价"返回 16 个文件，均带命中片段。
 > 中文用 SQLite FTS5 的 **trigram** 分词器（本机 SQLite 3.51.0 支持），不需要额外装分词器，也不需要 qmd。
 
 **落盘到**：`00_系统/agent/vault-search.py`；`.gitignore` 追加一行 `00_系统/agent/vault-index.db`
@@ -630,7 +630,7 @@ $ python3 00_系统/agent/vault-search.py --rebuild
 索引重建完成：214 个文件 → 00_系统/agent/vault-index.db
 
 $ python3 00_系统/agent/vault-search.py "苏宁" -n 3
-命中 3 个文件（关键词：苏宁）
+命中 13 个文件（关键词：苏宁）—— 下面是前 3 条
     9×  00_系统/_changelog.md
         … ## [2026-06-11 12:35] 归档 | 苏宁影城路演合作 - 新建项目：`02_项目/苏宁影城路演合作/` …
    10×  02_项目/苏宁影城路演合作/自我审计清单.md
@@ -639,7 +639,9 @@ $ python3 00_系统/agent/vault-search.py "苏宁" -n 3
         … type: project name: 苏宁影城路演合作 status: exploring …
 ```
 
-**维护**：把 `vault-index.db` 加进 `.gitignore`（生成物不进 git），在 `vault-lint.sh` 里加一行 `--rebuild`。
+**维护**：`vault-index.db` 是生成物，**已加进 `.gitignore`**（不要在 `git add -A` 时把它带进去——本方案第一次提交就犯过这个错，见 commit `9ca8d5d`）。在 `vault-lint.sh` 里加一行 `--rebuild`。
+
+> 索引规模会随库增长：本次实测 214 个文件；把 `06_AI/2026-10-06_24帧运营库-DSH优化方案/` 自身算进去是 217。
 
 ---
 
