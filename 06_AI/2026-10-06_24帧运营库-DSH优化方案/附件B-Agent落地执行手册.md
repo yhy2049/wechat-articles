@@ -71,6 +71,8 @@ updated: 2026-10-06
 | `both` | 双方都看（绝大多数文件） |
 | `public` | 内容已定稿且不含内部信息，**可以直接给合作方看**（对外计划书、媒体介绍） |
 
+> 历史遗留值 `agent+human`（2 处）→ 统一改成 `both`。
+
 ## 2. type 取值表（10 个合法值）
 
 | type | 用在哪 | 必填专属字段 | 落盘位置 |
@@ -92,7 +94,7 @@ updated: 2026-10-06
 |---|---|
 | `影评`、`公众号文章`、`游戏推荐`、`评分`、`analysis`、`guide`、`report` | `draft`（未定稿）或 `output`（已发布） |
 | `项目会议`、`非正式饭局谈话` | `meeting` |
-| `direction-reference`、`brand-resource`、`project_plan`、`concept`、`external-submission` | `reference` |
+| `direction-reference`、`brand-resource`、`project_plan`、`concept`、`external-submission`、`research` | `reference` |
 | `ai-draft` | `draft` |
 | `task` | `project`（并入项目页的 `## 待办` 段） |
 

@@ -78,7 +78,7 @@ tags: [基建, DSH, agent协作, 知识管理]
 | **A1** | **`HOME.md` / `_index.md` 的查询是死的**。库里**没装 Dataview**，7 个 ```dataview 代码块在 Obsidian 里就是 7 段代码 | `.obsidian/` 只有 4 个文件，无 `plugins/`、无 `community-plugins.json`；`HOME.md` 4 个块，`_index.md` 3 个块 |
 | **A2** | **`24frames-vault` skill 与库内规范脱节**：1052 行、21 个文件、168 KB，写的是旧世界 | 路径写 `~/Documents/OH-WorkSpace/24帧运营库`（**不存在**）、说"6 个业务方向"（实际 5）、提 `03_任务`（已废止）、提 `06_灵感库/归档/`（实际 `04_灵感/归档/`） |
 | **A3** | **入场入口太薄**：`AGENTS.md` 只有 2.7 KB / 8 条硬规则，真正的规则分散在 6 个文件里，没有"什么时候读哪个"的路由 | `AGENTS.md` 2,695 字节；规范实际分布在 `运营手册.md`、`_index.md`、`归档操作规范.md`、`04_灵感/README.md`、`经验沉淀.md`、`录音会议存档SOP.md` |
-| **A4** | **没有 schema 单一事实源**：frontmatter 枚举散在 3 份文档里，实际用法早就跑飞 | 实测 271 个非存档 md：`type` 出现 **24 种**取值、`status` **11 种**、`audience` **4 种**（`public` 用了 67 次，手册里没这个值）；`editable` 缺 42 处、`updated` 缺 46 处、`audience` 缺 30 处 |
+| **A4** | **没有 schema 单一事实源**：frontmatter 枚举散在 3 份文档里，实际用法早就跑飞 | 实测 273 个非存档 md：`type` **24 种**取值（17 个文件完全没有 `type`）、`status` **9 种**（22 个没有）、`audience` **5 种**——手册只定义了 3 种，实际多出 `public`（67 次）和自创的 `agent+human`（2 次），另有 30 个文件没有；`editable` 缺 44、`updated` 缺 46、`created` 缺 38 |
 | **A5** | **检索只有 grep**：865 个文件没有全文索引，agent 每次靠"目录印象"找文件 | 库里唯一检索手段是 grep；`astronaut` preset 那边有 FTS5 索引，但只索引自己那 19 个文件 |
 
 ### B 类 · 让 agent 做错（规范层，6 条）
