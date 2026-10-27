@@ -46,8 +46,13 @@ python3 00_系统/agent/wxmp-audit.py
 # 3. 重建站点
 node _skill/scripts/generate-site.js
 
-# 4. 提交并推送
-git add 05_档案/公众号存档 && git commit -m "更新公众号存档" && git push origin main
+# 4. 发布存档到 GitHub（远端 main 只保留 05_档案/公众号存档）
+git fetch origin main
+git checkout -B archive-sync origin/main
+git checkout main -- "05_档案/公众号存档"
+git commit -m "更新公众号存档"
+git push origin archive-sync:main
+git checkout main
 ```
 
 ## 仓库
