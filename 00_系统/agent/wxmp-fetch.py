@@ -48,7 +48,9 @@ JS_META = r"""() => {
     if (el) date = el.innerText.trim().slice(0, 12);
   }
   const show = h.match(/window\.(?:real_)?item_show_type\s*=\s*['"]?(\d+)['"]?/);
-  return { title: title, date: date, type: show ? show[1] : '' };
+  const cover = ((document.querySelector('meta[property="og:image"]') || {}).content || '') ||
+                (h.match(/var\s+msg_cdn_url\s*=\s*['"]([^'"]+)['"]/) || [])[1] || '';
+  return { title: title, date: date, type: show ? show[1] : '', cover: cover };
 }"""
 
 # DOM → Markdown。标题降级不超出 6 级，轮播图追加在末尾
@@ -225,7 +227,9 @@ def main():
 
             kind = "贴图" if meta.get("type") == "8" else "文章"
             with open(fp, "w", encoding="utf-8") as f:
-                f.write(f"#  {title}\n\n> 公众号原文：<{url}>\n\n{md_body.strip()}\n")
+                cover = meta.get("cover", "")
+                prefix = f"![cover_image]({cover})\n\n" if cover.startswith("http") else ""
+                f.write(prefix + f"#  {title}\n\n> 公众号原文：<{url}>\n\n{md_body.strip()}\n")
 
             print(f"✅ {date} [{kind}] {title[:34]}\n   {len(md_body):,} 字 / {n_img} 图\n"
                   f"   → {fp}")
