@@ -1,0 +1,1511 @@
+{
+ "generated_at": "2026-10-28",
+ "total_articles": 302,
+ "linked": 300,
+ "missing": [
+  "2023-01-06-放映本周日关于莉莉周的一切市二医院",
+  "2023-01-24-影评无名程耳在路上"
+ ],
+ "links": {
+  "2022-07-12-披着韩片外衣仍旧是枝裕和": {
+   "title": "披着韩片外衣，仍旧是枝裕和",
+   "url": "https://mp.weixin.qq.com/s/j8L398vseUpQ14b2Dles7Q",
+   "date": ""
+  },
+  "2022-08-16-放映本周六薄荷糖锦城湖": {
+   "title": "「放映」本周六 ·《薄荷糖》· 锦城湖",
+   "url": "https://mp.weixin.qq.com/s/Vajcmue6Mx6gpbiDNvG7KA",
+   "date": ""
+  },
+  "2022-12-01-放映本周六东京教父世纪城": {
+   "title": "「放映」本周六 ·《东京教父》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/-b-CWp89tQpzLeDZvQ9K0w",
+   "date": ""
+  },
+  "2022-11-01-放映本周六天使爱美丽大源": {
+   "title": "「放映」本周六 ·《天使爱美丽》· 大源",
+   "url": "https://mp.weixin.qq.com/s/20YePg8kQxZocRp46cH6SQ",
+   "date": ""
+  },
+  "2022-06-19-你遇见我我遇见你这就是意义": {
+   "title": "你遇见我，我遇见你，这就是意义",
+   "url": "https://mp.weixin.qq.com/s/ZFjh2Rwv3lWHI9xgamlRWQ",
+   "date": ""
+  },
+  "2022-12-24-放映本周六卡罗尔大源": {
+   "title": "「放映」本周六 ·《卡罗尔》· 大源",
+   "url": "https://mp.weixin.qq.com/s/62ULqv2bHZ9jf0ps92PE1w",
+   "date": ""
+  },
+  "2022-04-14-为什么我": {
+   "title": "为什么我",
+   "url": "https://mp.weixin.qq.com/s/FAtfH6-nME4UIPMyObZ91w",
+   "date": ""
+  },
+  "2022-10-13-刀下留人王家卫电影之消失的演员们": {
+   "title": "刀下留人！王家卫电影之消失的演员（们）",
+   "url": "https://mp.weixin.qq.com/s/Uy6usVFCIjEyL3nG4JKwUA",
+   "date": ""
+  },
+  "2022-12-02-放映本周六火山挚恋大源": {
+   "title": "「放映」本周六 ·《火山挚恋》· 大源",
+   "url": "https://mp.weixin.qq.com/s/fRL0Eh1XphlZastOphyMDg",
+   "date": ""
+  },
+  "2022-06-14-放映本周六爱在黎明前HOME空间": {
+   "title": "「放映」本周六 ·《爱在黎明前》· HOME空间",
+   "url": "https://mp.weixin.qq.com/s/ee6PC3SpD2B9JVmP4qSbdg",
+   "date": ""
+  },
+  "2022-05-02-主流语境下的伪颠覆性叙事": {
+   "title": "主流语境下的伪颠覆性叙事",
+   "url": "https://mp.weixin.qq.com/s/SM3HN33ktsU6aLSBFCMzfg",
+   "date": ""
+  },
+  "2022-12-28-侯麦系列本周六冬天的故事世纪城": {
+   "title": "「侯麦系列」本周六 ·《冬天的故事》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/liqY8zjuKznVO2OQGgoxAA",
+   "date": ""
+  },
+  "2022-06-27-人生很多大事电影最好只取一瓢": {
+   "title": "人生很多大事，电影最好只取一瓢",
+   "url": "https://mp.weixin.qq.com/s/JZorFMWJY0bnhC5PXnKMmg",
+   "date": ""
+  },
+  "2022-12-06-放映本周六红辣椒世纪城": {
+   "title": "「放映」本周六 ·《红辣椒》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/W9925VyQYeH3_lYS3U1MwQ",
+   "date": ""
+  },
+  "2022-06-10-还好有一个秘密": {
+   "title": "还好有一个秘密",
+   "url": "https://mp.weixin.qq.com/s/IgqfKnxYUelKSbmNwTZITg",
+   "date": ""
+  },
+  "2022-06-22-放映本周六银翼杀手2049HOME空间": {
+   "title": "「放映」本周六 ·《银翼杀手2049》· HOME空间",
+   "url": "https://mp.weixin.qq.com/s/FFF6n26NrJI-YDiph1MJdw",
+   "date": ""
+  },
+  "2022-06-29-放映本周六爱情神话HOME空间": {
+   "title": "「放映」本周六 ·《爱情神话》· HOME空间",
+   "url": "https://mp.weixin.qq.com/s/8yzgH22pWiI7DemyzA6_5A",
+   "date": ""
+  },
+  "2022-12-14-放映本周六悲情三角大源": {
+   "title": "「放映」本周六 ·《悲情三角》· 大源",
+   "url": "https://mp.weixin.qq.com/s/8fRKjIt4206GU7_8WqlP1w",
+   "date": ""
+  },
+  "2022-07-04-老乌你的故事讲到了哪": {
+   "title": "老乌，你的故事讲到了哪",
+   "url": "https://mp.weixin.qq.com/s/vtgz3t9t12J30ZNNSBX1Xg",
+   "date": ""
+  },
+  "2022-10-31-有史以来最棒的啤酒运送绿皮书导演拍了一部粉红主旋律": {
+   "title": "《有史以来最棒的啤酒运送》｜《绿皮书》导演拍了一部粉红主旋律？",
+   "url": "https://mp.weixin.qq.com/s/wreLDzp_LdUPe9s5pOMpDg",
+   "date": ""
+  },
+  "2022-10-02-国庆档十四年之变从百花齐放到中国特色": {
+   "title": "国庆档十四年之变：从“百花齐放”到“中国特色”",
+   "url": "https://mp.weixin.qq.com/s/6ilhl4d7Y-t5XfbkDmsIQQ",
+   "date": ""
+  },
+  "2022-12-29-放映本周日大鱼大源": {
+   "title": "「放映」本周日 ·《大鱼》· 大源",
+   "url": "https://mp.weixin.qq.com/s/K1jIB2G08mmnSTPGqJJXFw",
+   "date": ""
+  },
+  "2022-08-13-24帧观影团今晚招募": {
+   "title": "24帧观影团，今晚招募！",
+   "url": "https://mp.weixin.qq.com/s/bS8_s7DccSHTeCE95odOAg",
+   "date": ""
+  },
+  "2022-08-10-放映本周六日分手的决心锦城湖大源": {
+   "title": "「放映」本周六日 ·《分手的决心》· 锦城湖×大源",
+   "url": "https://mp.weixin.qq.com/s/aYJORwCD3P3dVmDPYcbCsw",
+   "date": ""
+  },
+  "2022-10-10-专场本周六过期的船票川大望江": {
+   "title": "「专场」本周六 ·《过期的船票》· 川大望江",
+   "url": "https://mp.weixin.qq.com/s/ekL-xpChSOLIzOiPw7Z-mQ",
+   "date": ""
+  },
+  "2022-11-16-放映本周六风柜来的人大源": {
+   "title": "「放映」本周六 ·《风柜来的人》· 大源",
+   "url": "https://mp.weixin.qq.com/s/zDBKB6llQ1Riu7Y53XaZNQ",
+   "date": ""
+  },
+  "2022-12-17-放映本周日战场上的快乐圣诞牛市口": {
+   "title": "「放映」本周日 ·《战场上的快乐圣诞》· 牛市口",
+   "url": "https://mp.weixin.qq.com/s/-fOAGkRqZYzDZhAuXXKA8A",
+   "date": ""
+  },
+  "2022-07-18-东亚导演双生子是枝裕和amp贾樟柯": {
+   "title": "东亚导演双生子：是枝裕和 & 贾樟柯",
+   "url": "https://mp.weixin.qq.com/s/oy8P59H5TcC7V9ZNmHIWkw",
+   "date": ""
+  },
+  "2022-07-05-放映本周六掮客HOME空间": {
+   "title": "「放映」本周六 ·《掮客》· HOME空间",
+   "url": "https://mp.weixin.qq.com/s/mjm1QC_jkR--pOx_Dk8VAw",
+   "date": ""
+  },
+  "2022-11-04-影展本周六Fadein非定青年电影展试映会大源": {
+   "title": "「影展」本周六 ·《Fade-in非定青年电影展试映会》· 大源",
+   "url": "https://mp.weixin.qq.com/s/RXa9vdUoaMGCqIi3f3m8cQ",
+   "date": ""
+  },
+  "2022-05-25-24帧xHOME放映计划不能说的秘密": {
+   "title": "24帧 x HOME+放映计划·《不能说的秘密》",
+   "url": "https://mp.weixin.qq.com/s/9G7jC24WUrdQgstLKkEdAA",
+   "date": ""
+  },
+  "2022-11-09-放映本周六燃烧女子的肖像大源": {
+   "title": "「放映」本周六 ·《燃烧女子的肖像》· 大源",
+   "url": "https://mp.weixin.qq.com/s/RqgkaPsOywwJpHH_hOzAAg",
+   "date": ""
+  },
+  "2022-07-13-放映本周日咒HOME空间": {
+   "title": "「放映」本周日 ·《咒》· HOME空间",
+   "url": "https://mp.weixin.qq.com/s/0ZAV-oCLdgFkPadXccgJow",
+   "date": ""
+  },
+  "2022-10-18-放映本周六苏州河世纪城": {
+   "title": "「放映」本周六 ·《苏州河》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/wNHNFTMPSrsbWxAls8LkAA",
+   "date": ""
+  },
+  "2022-10-04-放映本周五闪灵世纪城": {
+   "title": "「放映」本周五 ·《闪灵》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/KtgVT9AdRel22JLheIqOrA",
+   "date": ""
+  },
+  "2022-06-13-侏罗纪世界3退退退": {
+   "title": "《侏罗纪世界3》：退！退！退！",
+   "url": "https://mp.weixin.qq.com/s/ecSmK4OwcbRvCijnFNX8kQ",
+   "date": ""
+  },
+  "2022-10-19-映后过期的只有船票对吗": {
+   "title": "映后 | 过期的只有船票，对吗",
+   "url": "https://mp.weixin.qq.com/s/BIfYYF_370mxd7aUDN0Tag",
+   "date": ""
+  },
+  "2022-09-13-绝佳的视听语言戛纳最佳导演的实至名归": {
+   "title": "绝佳的视听语言，戛纳最佳导演的实至名归",
+   "url": "https://mp.weixin.qq.com/s/yvi7ERjpkpoZfufQkpcTMA",
+   "date": ""
+  },
+  "2022-05-14-爱乐之城我想起爱上电影的最初": {
+   "title": "《爱乐之城》，我想起爱上电影的最初",
+   "url": "https://mp.weixin.qq.com/s/21gtOTwmtFJqaFGXyZMDIA",
+   "date": ""
+  },
+  "2022-04-22-每个人的童年都会结束每个人的飞船都会离开": {
+   "title": "每个人的童年都会结束, 每个人的飞船都会离开",
+   "url": "https://mp.weixin.qq.com/s/0v4OE2WaIWq3sq6E-AGu6Q",
+   "date": ""
+  },
+  "2022-05-09-书影音没法支撑恋爱建议豆瓣把该片挂在开屏": {
+   "title": "书影音没法支撑恋爱，建议豆瓣把该片挂在开屏",
+   "url": "https://mp.weixin.qq.com/s/uSZYIZlCnbn7WNiUXG9Z7A",
+   "date": ""
+  },
+  "2022-06-28-执雪之手银翼杀手2049影评": {
+   "title": "执雪之手《银翼杀手2049》影评",
+   "url": "https://mp.weixin.qq.com/s/jwmoul6fOiSv_NUMpj6AXA",
+   "date": ""
+  },
+  "2022-12-12-坂本龙一异步人生": {
+   "title": "坂本龙一：异步人生",
+   "url": "https://mp.weixin.qq.com/s/kO5a0q-ARHzOOZCqdGzZBw",
+   "date": ""
+  },
+  "2022-10-03-再谈奈飞的亚洲野心": {
+   "title": "再谈奈飞的亚洲野心",
+   "url": "https://mp.weixin.qq.com/s/1SSAN9E3MzcikccumB1VMw",
+   "date": ""
+  },
+  "2022-12-31-随机放映不确定性与可能性": {
+   "title": "「随机放映」不确定性与可能性",
+   "url": "https://mp.weixin.qq.com/s/rm8gWAU1T788t0Y7YSCEbg",
+   "date": ""
+  },
+  "2022-12-30-电影是什么他们有话说": {
+   "title": "电影是什么？他们有话说",
+   "url": "https://mp.weixin.qq.com/s/GbNEGubsva8P20Fbsc8CyQ",
+   "date": ""
+  },
+  "2022-09-28-导演映后本周六方舟锦城湖": {
+   "title": "「导演映后」本周六 ·《方舟》· 锦城湖",
+   "url": "https://mp.weixin.qq.com/s/dgHjrCVY5IPEYuuVEueKnA",
+   "date": ""
+  },
+  "2023-02-24-放映本周六小说家的电影暗房里": {
+   "title": "「放映」本周六 ·《小说家的电影》· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/OatM8TSlhAkPfROTRHmjgg",
+   "date": ""
+  },
+  "2023-01-06-放映本周六兹山鱼谱市二医院": {
+   "title": "「放映」本周六 ·《兹山鱼谱》· 市二医院",
+   "url": "https://mp.weixin.qq.com/s/bm9b2ZIKk03MLTX6-XFXxg",
+   "date": ""
+  },
+  "2023-03-23-我们永远不要相互遗忘": {
+   "title": "我们永远不要相互遗忘",
+   "url": "https://mp.weixin.qq.com/s/whlpHeAVhek_DF_lkoas0w",
+   "date": ""
+  },
+  "2023-05-12-预约放映母亲节妈妈大魔方": {
+   "title": "「预约放映」母亲节 ·《妈妈！》· 大魔方",
+   "url": "https://mp.weixin.qq.com/s/1uoOIOR_Eq55WXHEK3_5xg",
+   "date": ""
+  },
+  "2023-01-28-影评流浪地球1amp2不敢说名垂影史至少看过的人不会忘": {
+   "title": "「影评」《流浪地球1&2》：不敢说名垂影史，至少看过的人不会忘",
+   "url": "https://mp.weixin.qq.com/s/odJ-C8-h_Dc8v3yGNbgfkw",
+   "date": ""
+  },
+  "2023-02-28-联名本周六女性主义剧本围读amp妇女参政论者暗房里": {
+   "title": "「联名」本周六 ·女性主义剧本围读&妇女参政论者· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/WEXprt_IBBtUnKYMaigeWg",
+   "date": ""
+  },
+  "2023-06-09-点映成都首映街娃儿": {
+   "title": "「点映」成都首映 ·《街娃儿》",
+   "url": "https://mp.weixin.qq.com/s/XXG5Xhj15yPMAW3qKcbI2Q",
+   "date": ""
+  },
+  "2023-03-22-放映本周日鲸大源": {
+   "title": "「放映」本周日 ·《鲸》· 大源",
+   "url": "https://mp.weixin.qq.com/s/cYPMleM8fuDdBtPpw24W5w",
+   "date": ""
+  },
+  "2023-03-09-嘉宾映后本周六完美的世界渡口": {
+   "title": "「嘉宾映后」本周六 ·《完美的世界》· 渡口",
+   "url": "https://mp.weixin.qq.com/s/bj_i5TV9G9J3SS2bxJW1cA",
+   "date": ""
+  },
+  "2023-12-07-ARTBAY电影诗冬日放映情书麓湖": {
+   "title": "「ART BAY」电影诗 | 冬日放映 ·《情书》· 麓湖",
+   "url": "https://mp.weixin.qq.com/s/1o1quqZL6kHaykAKy9aaig",
+   "date": ""
+  },
+  "2023-10-20-路演超前点映一个和四个太古里百丽宫": {
+   "title": "「路演」超前点映《一个和四个》· 太古里百丽宫",
+   "url": "https://mp.weixin.qq.com/s/B69yrTB6gu2SFaGq2eWvOw",
+   "date": ""
+  },
+  "2023-08-18-路演本周日野蛮人入侵建设路": {
+   "title": "「路演」本周日 ·《野蛮人入侵》· 建设路",
+   "url": "https://mp.weixin.qq.com/s/keqUxTwra5ODflnnRlga9Q",
+   "date": ""
+  },
+  "2023-02-23-随机放映20": {
+   "title": "「随机放映」2.0",
+   "url": "https://mp.weixin.qq.com/s/BEGF6KF_aqeF7jQRcQgC_Q",
+   "date": ""
+  },
+  "2023-03-15-成都特别放映主创见面3月19日迷你剧平原上的摩西": {
+   "title": "「成都特别放映主创见面」3月19日 ·迷你剧《平原上的摩西》",
+   "url": "https://mp.weixin.qq.com/s/8o2zHtH3hsYtgi3r4oftwg",
+   "date": ""
+  },
+  "2023-02-22-影展本周六ANOTHER电影展短片联展川大望江": {
+   "title": "「影展」本周六 ·《ANOTHER电影展--短片联展》· 川大望江",
+   "url": "https://mp.weixin.qq.com/s/esZZYVzwsAlHvJwZPzTNzg",
+   "date": ""
+  },
+  "2023-03-01-放映本周日廊桥遗梦大源": {
+   "title": "「放映」本周日 ·《廊桥遗梦》· 大源",
+   "url": "https://mp.weixin.qq.com/s/kPkm5TVCOK3utmrtcapmXA",
+   "date": ""
+  },
+  "2023-01-24-影评满江红若此诗非岳飞所作那秦桧就能赢了": {
+   "title": "「影评」《满江红》：若此诗非岳飞所作，那秦桧就能赢了",
+   "url": "https://mp.weixin.qq.com/s/stNzjrxzTE9tVv1yaHhSuw",
+   "date": ""
+  },
+  "2023-12-22-重映本周六爱乐之城杜比厅": {
+   "title": "「重映」本周六 ·《爱乐之城》· 杜比厅",
+   "url": "https://mp.weixin.qq.com/s/z0ZKPWwRnpFqsU0h-f5tbQ",
+   "date": ""
+  },
+  "2023-01-12-放映本周六午夜巴黎世纪城": {
+   "title": "「放映」本周六 ·《午夜巴黎》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/7t16MLvzcq637I5gqzl3cg",
+   "date": ""
+  },
+  "2023-06-25-新片专场本周日记忆双店路": {
+   "title": "「新片专场」本周日 ·《记忆》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/i0PTnkH6PQNwrEM6FNK_MA",
+   "date": ""
+  },
+  "2023-03-08-是她们撑起了电影的半边天": {
+   "title": "是她们撑起了电影的半边天",
+   "url": "https://mp.weixin.qq.com/s/oTy2oLqXRD6XHgbuBv-kxg",
+   "date": ""
+  },
+  "2023-04-19-预约放映本周六山河故人大魔方": {
+   "title": "「预约放映」本周六 ·《山河故人》· 大魔方",
+   "url": "https://mp.weixin.qq.com/s/kUfHFAbykNNdFHEqRVUetg",
+   "date": ""
+  },
+  "2023-05-19-一周年特别放映本周日24帧大源": {
+   "title": "「一周年特别放映」本周日 ·《24帧》· 大源",
+   "url": "https://mp.weixin.qq.com/s/kUcqJIG-QkMAakjDEAYOcA",
+   "date": ""
+  },
+  "2023-04-03-新片专场本周三宇宙探索编辑部CGV": {
+   "title": "「新片专场」本周三 ·《宇宙探索编辑部》· CGV",
+   "url": "https://mp.weixin.qq.com/s/seJ4goq3Bc3Ej1Hd_MqcyA",
+   "date": ""
+  },
+  "2023-08-09-放映本周六日关于我和鬼变成家人的那件事": {
+   "title": "「放映」本周六日 ·《关于我和鬼变成家人的那件事》",
+   "url": "https://mp.weixin.qq.com/s/tkZ3RZ9E7K3sLIPZyWu58Q",
+   "date": ""
+  },
+  "2023-11-22-点映本周五涉过愤怒的海学府影城": {
+   "title": "「点映」本周五 ·《涉过愤怒的海》· 学府影城",
+   "url": "https://mp.weixin.qq.com/s/SM7fHfHDcgR753U9Jo-zFg",
+   "date": ""
+  },
+  "2023-06-07-影展浪影像24帧冥王星时刻": {
+   "title": "「影展」浪影像×24帧 · 冥王星时刻",
+   "url": "https://mp.weixin.qq.com/s/gGSWnCOVHoco4IL9OS2KRw",
+   "date": ""
+  },
+  "2023-04-25-FIRST主动放映成都24帧站附近的消逝": {
+   "title": "FIRST主动放映·成都24帧站 | 附近的消逝",
+   "url": "https://mp.weixin.qq.com/s/oOtBmLwR7zy9JyNC8GQ8Aw",
+   "date": ""
+  },
+  "2023-03-14-放映本周六时时刻刻大源": {
+   "title": "「放映」本周六 ·《时时刻刻》· 大源",
+   "url": "https://mp.weixin.qq.com/s/i4Mbgg7rbF4mJbFYHBc-zw",
+   "date": ""
+  },
+  "2023-11-16-新片专场本周六红猪东光": {
+   "title": "「新片专场」本周六 ·《红猪》· 东光",
+   "url": "https://mp.weixin.qq.com/s/97XT7gyuQVmbIgRX1G10XA",
+   "date": ""
+  },
+  "2023-05-07-回顾2023FIRST主动放映附近的消逝": {
+   "title": "回顾|2023FIRST主动放映 · 附近的消逝",
+   "url": "https://mp.weixin.qq.com/s/Dzl7i-UQGNwhvk7Wu_yhuQ",
+   "date": ""
+  },
+  "2023-02-25-年度最佳女导演作品解构湿滑记忆": {
+   "title": "年度最佳女导演作品，解构湿滑记忆",
+   "url": "https://mp.weixin.qq.com/s/_rs8CG2i0o-TtN4SNVkwhQ",
+   "date": ""
+  },
+  "2023-06-15-一周年特别放映本周六一一大源": {
+   "title": "「一周年特别放映」本周六 ·《一一》· 大源",
+   "url": "https://mp.weixin.qq.com/s/IWU_qqhn8aX1H7AbqHOqFg",
+   "date": ""
+  },
+  "2023-12-11-回顾一次新的探索制造一场诗与信的雪": {
+   "title": "「回顾」一次新的探索，制造一场诗与信的雪",
+   "url": "https://mp.weixin.qq.com/s/dgvMlOO7OLMIdUKHNt0CPQ",
+   "date": ""
+  },
+  "2023-08-03-放映本周六鲭鱼罐头大源": {
+   "title": "「放映」本周六 ·《鲭鱼罐头》· 大源",
+   "url": "https://mp.weixin.qq.com/s/pfNCnEPu7lrh4rMcTg-cvw",
+   "date": ""
+  },
+  "2023-03-10-我是布莱克为一无所有之人呐喊": {
+   "title": "《我是布莱克》｜为一无所有之人呐喊",
+   "url": "https://mp.weixin.qq.com/s/WNA9rGzL6zGbGpjSNmeaLg",
+   "date": ""
+  },
+  "2023-10-13-独立放映本周日巢川大望江": {
+   "title": "「独立放映」本周日 ·《巢》· 川大望江",
+   "url": "https://mp.weixin.qq.com/s/XYhhrF79iWhBX78bYayq6w",
+   "date": ""
+  },
+  "2023-12-27-跨年特别企划跨越时间海REX春台": {
+   "title": "「跨年特别企划」跨越时间海 · RE:X春台",
+   "url": "https://mp.weixin.qq.com/s/Y18J0QdMI5iPPZHAF27SSA",
+   "date": ""
+  },
+  "2023-12-14-新片专场首映日狗神双店路": {
+   "title": "「新片专场」首映日 ·《狗神》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/yRE2RDnKoj1qh376gseuzQ",
+   "date": ""
+  },
+  "2023-05-04-昆汀系列要FUCK不要优雅川大望江": {
+   "title": "「昆汀系列」《要FUCK，不要优雅》· 川大望江",
+   "url": "https://mp.weixin.qq.com/s/Eb337RAI28UmjTbTV9Oa3g",
+   "date": ""
+  },
+  "2023-05-24-一周年独立放映成都首映失语镇": {
+   "title": "「一周年独立放映」成都首映 ·《失语镇》",
+   "url": "https://mp.weixin.qq.com/s/vpv4F4dGyRyItOmCWiNCSg",
+   "date": ""
+  },
+  "2023-09-05-重映本周六红色恋人双店路": {
+   "title": "「重映」本周六 ·《红色恋人》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/wLb_mB9cvZ6AgyNK6-d7lA",
+   "date": ""
+  },
+  "2023-03-24-北野武系列只有一次的人生大源": {
+   "title": "「北野武系列」《只有一次的人生》· 大源",
+   "url": "https://mp.weixin.qq.com/s/FlpeoarVTSkFMeHz0vgd_Q",
+   "date": ""
+  },
+  "2023-01-21-新年平安喜乐": {
+   "title": "新年平安喜乐！",
+   "url": "https://mp.weixin.qq.com/s/F1fdGT1wqAa_K0GDT-y6TQ",
+   "date": ""
+  },
+  "2023-10-18-新片专场本周六河边的错误双店路": {
+   "title": "「新片专场」本周六 ·《河边的错误》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/jU5YGGIhhjonXKLU4yTsrg",
+   "date": ""
+  },
+  "2023-08-30-新片专场本周六奥本海默双店路": {
+   "title": "「新片专场」本周六 ·《奥本海默》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/BtFb8sq_gIVrKwUQn8pVbw",
+   "date": ""
+  },
+  "2023-03-13-侯麦系列本周六春天的故事世纪城": {
+   "title": "「侯麦系列」本周六 ·《春天的故事》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/UZPZBI8mv18tN2FPTHrzYQ",
+   "date": ""
+  },
+  "2023-04-06-侯麦系列本周六秋天的故事金科北路": {
+   "title": "「侯麦系列」本周六 ·《秋天的故事》· 金科北路",
+   "url": "https://mp.weixin.qq.com/s/OFkn83hNeCXNFQ4_8fPjZA",
+   "date": ""
+  },
+  "2023-08-17-新片专场本周五火山挚恋双店路": {
+   "title": "「新片专场」本周五 ·《火山挚恋》· 双店路",
+   "url": "https://mp.weixin.qq.com/s/WAgRkVW8TBEUQWwnLTT9tQ",
+   "date": ""
+  },
+  "2023-02-17-放映本周六回归暗房里": {
+   "title": "「放映」本周六 ·《回归》· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/2bB9BA11sQ2NDoUQXgDEZA",
+   "date": ""
+  },
+  "2023-05-25-我们的麦芒": {
+   "title": "「我们的麦芒」",
+   "url": "https://mp.weixin.qq.com/s/L23jlmIX_1i34TKVDc3RPQ",
+   "date": ""
+  },
+  "2023-08-04-放映本周日蓝色大门大源": {
+   "title": "「放映」本周日 ·《蓝色大门》· 大源",
+   "url": "https://mp.weixin.qq.com/s/Wfl3F1jjynBiDLJiof0QRA",
+   "date": ""
+  },
+  "2023-02-16-回归票根": {
+   "title": "《回归》票根",
+   "url": "https://mp.weixin.qq.com/s/Qu0eFMoFmrLIrTDuVo_TPg",
+   "date": "2023-02-17"
+  },
+  "2023-02-09-放映本周六孤味暗房里": {
+   "title": "「放映」本周六 ·《孤味》· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/Ou2X1eIef46OOgrcBiffLg",
+   "date": ""
+  },
+  "2023-02-13-点映本周三拨浪鼓咚咚响太平洋影院金沙": {
+   "title": "「点映」本周三 ·《拨浪鼓咚咚响》· 太平洋影院金沙",
+   "url": "https://mp.weixin.qq.com/s/ri-pYVf0gBMBJIIjuDndtw",
+   "date": ""
+  },
+  "2023-08-31-新浪潮月电影是二十四格的真理大源": {
+   "title": "「新浪潮月」《电影是二十四格的真理》· 大源",
+   "url": "https://mp.weixin.qq.com/s/5vHV_lvSa1GmeVLDG9Kmjw",
+   "date": ""
+  },
+  "2023-02-08-侯麦系列本周六夏天的故事世纪城": {
+   "title": "「侯麦系列」本周六 ·《夏天的故事》· 世纪城",
+   "url": "https://mp.weixin.qq.com/s/ZZusiVK6mOIqyyH_BXgung",
+   "date": ""
+  },
+  "2023-02-03-放映本周日巴黎夜旅人暗房里": {
+   "title": "「放映」本周日 ·《巴黎夜旅人》· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/ta1vpZwnMZpLquTRFUquXQ",
+   "date": ""
+  },
+  "2023-05-01-放映本周日请以你的名字呼唤我大源": {
+   "title": "「放映」本周日 ·《请以你的名字呼唤我》· 大源",
+   "url": "https://mp.weixin.qq.com/s/E09byHVr_D3O8ZteGCWl8A",
+   "date": ""
+  },
+  "2023-05-01-昆汀系列专场属于昆迷的狂欢": {
+   "title": "【昆汀系列专场】属于“昆迷”的狂欢",
+   "url": "https://mp.weixin.qq.com/s/P3XNsQvFBDPtfssiNRjQtw",
+   "date": ""
+  },
+  "2024-05-20-两周年独立放映阿芙蓉超长纪录片放映马占冬导演到场交流": {
+   "title": "「两周年独立放映」《阿芙蓉》超长纪录片放映+马占冬导演到场交流",
+   "url": "https://mp.weixin.qq.com/s/nBWxv8BUcna7FIx6QZGYag",
+   "date": ""
+  },
+  "2024-12-16-24帧在电影与人群之间": {
+   "title": "24帧，在电影与人群之间",
+   "url": "https://mp.weixin.qq.com/s/68E-Wqml_Fn5K_pOAqOh6g",
+   "date": ""
+  },
+  "2024-08-27-回顾2024戛纳一日CannesFramewaves灵动碰撞回响": {
+   "title": "回顾 | 2024戛纳一日Cannes Framewaves:灵动、碰撞、回响",
+   "url": "https://mp.weixin.qq.com/s/xABdndHG2wQNCPaFGvoQ0Q",
+   "date": ""
+  },
+  "2024-12-12-新片专场每个人心中都有几个地狱要破破地狱赠官方周边": {
+   "title": "「新片专场」每个人心中都有几个“地狱”要“破” |《破·地狱》赠官方周边",
+   "url": "https://mp.weixin.qq.com/s/E-J9Z-V3ci0yn4D4A9dXvA",
+   "date": ""
+  },
+  "2024-06-29-映后谈日常对话爱里藏着更多的痛苦": {
+   "title": "映后谈 |《日常对话》爱里藏着更多的痛苦",
+   "url": "https://mp.weixin.qq.com/s/YJ2AP4BkZIlryEzMdJW2CQ",
+   "date": ""
+  },
+  "2024-12-05-24帧专场残酷至极的巅峰礼赞爆裂鼓手赠官方特典": {
+   "title": "「24帧专场」残酷至极的巅峰礼赞《爆裂鼓手》赠官方特典",
+   "url": "https://mp.weixin.qq.com/s/FaDDaXwvxV1yVP_kyxMO3Q",
+   "date": ""
+  },
+  "2024-01-19-放映本周六布达佩斯大饭店大源": {
+   "title": "「放映」本周六 ·《布达佩斯大饭店》· 大源",
+   "url": "https://mp.weixin.qq.com/s/NAhcqnV1zPymAKzKEbcN5w",
+   "date": ""
+  },
+  "2024-03-07-新片专场本周六沙丘2杜比全景声": {
+   "title": "「新片专场」本周六 ·《沙丘2》· 杜比全景声",
+   "url": "https://mp.weixin.qq.com/s/g4DCKruQ8wJ-3iXzsHd6mw",
+   "date": ""
+  },
+  "2024-10-22-独立放映成都首映amp重庆双城放映菠萝凤梨导演闫啸林现场交流": {
+   "title": "「独立放映」成都首映&重庆双城放映《菠萝，凤梨》导演闫啸林现场交流",
+   "url": "https://mp.weixin.qq.com/s/JLBzqltyjh9d9xaqjxaytg",
+   "date": ""
+  },
+  "2024-12-17-回顾6thHIIFF2024海影节登岛一周做自由而热烈的电影岛民": {
+   "title": "回顾6thHIIFF ｜2024海影节登岛一周：做自由而热烈的电影岛民",
+   "url": "https://mp.weixin.qq.com/s/gWixLo4MRbFpC7UfQT5Frg",
+   "date": ""
+  },
+  "2024-06-25-独立放映日常对话一张餐桌的距离摄像头开启的对话契机": {
+   "title": "「独立放映」《日常对话》一张餐桌的距离：摄像头开启的对话契机",
+   "url": "https://mp.weixin.qq.com/s/z0grIYNRrBkGN0b76xQAkg",
+   "date": ""
+  },
+  "2024-12-11-独立放映群山无法见证但我们可以看见秦巴山地映后连线导演李丽君": {
+   "title": "「独立放映」群山无法见证，但我们可以看见《秦巴山地》映后连线导演李丽君",
+   "url": "https://mp.weixin.qq.com/s/KoEwpnftIqIeQ-fOZlzuUA",
+   "date": ""
+  },
+  "2024-05-30-新片专场杜比全景声坂本龙一杰作最后一次说再见": {
+   "title": "「新片专场」杜比全景声《坂本龙一：杰作》最后一次说再见",
+   "url": "https://mp.weixin.qq.com/s/buYtlf9yH4WgrdSpQKyasA",
+   "date": ""
+  },
+  "2024-09-20-独立放映成都重庆双城首映妖怪秘密第18届FIRST青年电影展主竞赛单元评委会大奖": {
+   "title": "「独立放映」成都重庆双城首映《“妖怪”秘密》第18届FIRST青年电影展·主竞赛单元评委会大奖",
+   "url": "https://mp.weixin.qq.com/s/Fz656c4tvqgB5Hq323tLVw",
+   "date": ""
+  },
+  "2024-12-13-成都路演FIRST最佳影片最后的告别导演张中臣主演王耀德映后现场交流": {
+   "title": "「成都路演」FIRST最佳影片《最后的告别》导演张中臣、主演王耀德映后现场交流",
+   "url": "https://mp.weixin.qq.com/s/VqWuKSTvoxUCaIGP4shZUw",
+   "date": ""
+  },
+  "2024-07-10-影展24帧逆流计划": {
+   "title": "「影展」24帧逆流计划",
+   "url": "https://mp.weixin.qq.com/s/n6plKDPNYm1FrEeDRcAaHQ",
+   "date": ""
+  },
+  "2024-10-17-城市限定连线816童眸中的生命之光BIGbeingisgift": {
+   "title": "「城市限定连线」《816》童眸中的生命之光——BIG：being is gift",
+   "url": "https://mp.weixin.qq.com/s/kHdV4jmoSqpMiM4rAm6dDw",
+   "date": ""
+  },
+  "2024-12-24-成都路演东京国际电影节提名金马影帝洛桑群培主演异乡来客一段跨越代际的情感旅程": {
+   "title": "「成都路演」东京国际电影节提名、金马影帝洛桑群培主演《异乡来客》一段跨越代际的情感旅程",
+   "url": "https://mp.weixin.qq.com/s/_Em3vbT-v4NO9k4EcWSuSg",
+   "date": ""
+  },
+  "2024-04-03-春日特别活动春日光影湖畔寻梦": {
+   "title": "「春日特别活动」春日光影，湖畔寻梦",
+   "url": "https://mp.weixin.qq.com/s/ONVaav5yPj7DEYz4bTXrNw",
+   "date": ""
+  },
+  "2024-12-18-周日加场2024戛纳入围短片影展戛纳一日CannesFramewaves精选": {
+   "title": "周日加场「2024戛纳入围短片影展」《戛纳一日 Cannes Framewaves》精选",
+   "url": "https://mp.weixin.qq.com/s/V_QkaVYjyxN1CYKwYVR1BQ",
+   "date": ""
+  },
+  "2024-08-14-新片专场浪漫的断章一场对电影艺术的极端挑战": {
+   "title": "「新片专场」《浪漫的断章》一场对电影艺术的极端挑战",
+   "url": "https://mp.weixin.qq.com/s/iMhuln_oOV7wyV0YE3718w",
+   "date": ""
+  },
+  "2024-12-15-独立放映你昨天刚扮过菩萨还找人算什么命洪月娥做梦映后连线": {
+   "title": "「独立放映」 “你昨天刚扮过菩萨，还找人算什么命”《洪月娥做梦》映后连线",
+   "url": "https://mp.weixin.qq.com/s/Tf0s56v_9tOceMZ4KCPhlw",
+   "date": ""
+  },
+  "2024-06-14-放映每分钟120击存在即原罪要多歇斯底里才不算沉默": {
+   "title": "「放映」《每分钟120击》存在即原罪，要多歇斯底里才不算沉默？",
+   "url": "https://mp.weixin.qq.com/s/0_o1fF4BNrMnnQXx2LBFxg",
+   "date": ""
+  },
+  "2024-03-27-新片专场本周六坠楼死亡的剖析川大望江": {
+   "title": "「新片专场」本周六 ·《坠楼死亡的剖析》· 川大望江",
+   "url": "https://mp.weixin.qq.com/s/5Qsip684HSFCMoF72jUnJg",
+   "date": ""
+  },
+  "2024-04-24-特别放映黑泽清钟声用镜头调度召唤恐惧": {
+   "title": "「特别放映」黑泽清《钟声》用镜头调度召唤恐惧",
+   "url": "https://mp.weixin.qq.com/s/o0pd1XGMSXheYuVwaa1zlw",
+   "date": ""
+  },
+  "2024-12-02-独立放映成都首映导演梁君健现场交流FIRST观众选择荣誉影片风起前的蒲公英生而流动又如何且听风吟": {
+   "title": "「独立放映」成都首映+​导演梁君健现场交流 | FIRST观众选择荣誉影片《风起前的蒲公英》：生而流动又如何？且听风吟",
+   "url": "https://mp.weixin.qq.com/s/8DlMp1gZWLpN0ozA-qjL9Q",
+   "date": ""
+  },
+  "2024-09-25-取消放映通知": {
+   "title": "取消放映通知",
+   "url": "https://mp.weixin.qq.com/s/8xjH7j1PCSsejG5-5TSLXA",
+   "date": ""
+  },
+  "2024-11-12-独立放映成都首映FIRST一种立场获奖影片上流流量的背后是欲望与命运的博弈": {
+   "title": "「独立放映」成都首映 | FIRST“一种立场”获奖影片《上流》：流量的背后，是欲望与命运的博弈",
+   "url": "https://mp.weixin.qq.com/s/4iT_8fwb776hyml_-yUnRQ",
+   "date": ""
+  },
+  "2024-04-12-路演本周日雪豹苏宁影院春熙路": {
+   "title": "「路演」本周日 ·《雪豹》· 苏宁影院春熙路",
+   "url": "https://mp.weixin.qq.com/s/mOkIDfid1BouoDUJg7WoQw",
+   "date": ""
+  },
+  "2024-08-28-新片专场人海同游共赴一段借来的好时光": {
+   "title": "「新片专场」《人海同游》共赴一段借来的好时光",
+   "url": "https://mp.weixin.qq.com/s/dH1nMu9eGXxnkqiNL0cB0A",
+   "date": ""
+  },
+  "2024-08-29-独立放映锔瓷成都首映第18届FIRST青年电影展最佳剧情长片提名最佳导演获奖": {
+   "title": "「独立放映」《锔瓷》 成都首映 | 第18届FIRST青年电影展最佳剧情长片(提名) 、 最佳导演获奖",
+   "url": "https://mp.weixin.qq.com/s/JUTqgp-cdGBGy7HVI5Y-gA",
+   "date": "2024-08-29"
+  },
+  "2024-11-11-重映专场海上钢琴师我在世界之中我又在世界之外": {
+   "title": "「重映专场」《海上钢琴师》“我”在世界之中，“我”又在世界之外",
+   "url": "https://mp.weixin.qq.com/s/tOG0tUQRBgRKWUiHC7twzA",
+   "date": ""
+  },
+  "2024-02-10-新年快乐何其有幸年岁并进": {
+   "title": "新年快乐，何其有幸，年岁并进。",
+   "url": "https://mp.weixin.qq.com/s/pQ6pbYvK56R-u-saMqriew",
+   "date": ""
+  },
+  "2024-07-05-新片专场老娘与海优秀的女性就像灯塔照耀的不止是一代人": {
+   "title": "「新片专场」《老娘与海》优秀的女性就像灯塔，照耀的不止是一代人",
+   "url": "https://mp.weixin.qq.com/s/1ukb4WFB4ZCyHPFTgcQI5A",
+   "date": ""
+  },
+  "2024-12-10-24帧专场跃然纸上的金光闪闪波提切利佛罗伦萨和美第奇家族赠官方周边": {
+   "title": "「24帧专场」跃然纸上的金光闪闪《波提切利，佛罗伦萨和美第奇家族》赠官方周边",
+   "url": "https://mp.weixin.qq.com/s/ZTSu2vf0M8ryPCh1fw3hQQ",
+   "date": ""
+  },
+  "2024-05-14-两周年独立放映重庆首映午夜出走从爱到失去从呕吐到清醒": {
+   "title": "「两周年独立放映」重庆首映 ·《午夜出走》从爱到失去，从呕吐到清醒",
+   "url": "https://mp.weixin.qq.com/s/mO0k7DeaurAlY5jkXVsgyg",
+   "date": ""
+  },
+  "2024-04-01-宫崎骏系列在色彩斑斓中寻找人生的答案": {
+   "title": "「宫崎骏系列」《在色彩斑斓中寻找人生的答案》",
+   "url": "https://mp.weixin.qq.com/s/Rpfi3acldqbxxFVDRgbaeg",
+   "date": ""
+  },
+  "2024-06-27-新片专场机器人之梦不说谎的话分手后你过得还好吗": {
+   "title": "「新片专场」《机器人之梦》不说谎的话，分手后你过得还好吗？",
+   "url": "https://mp.weixin.qq.com/s/qUo2SQKXy4UHMyP5ER7yBQ",
+   "date": ""
+  },
+  "2024-05-15-成都路演冰下的鱼给周而复始的生活楔进刺痛的力量": {
+   "title": "「成都路演」《冰下的鱼》给周而复始的生活楔进刺痛的力量",
+   "url": "https://mp.weixin.qq.com/s/6RT4Ad1LxD6k6GyjjLGVeg",
+   "date": ""
+  },
+  "2024-12-31-独立放映在高原之上倾听心灵的回响羌塘空响主创现场交流": {
+   "title": "「独立放映」在高原之上，倾听心灵的回响《羌塘空响》主创现场交流",
+   "url": "https://mp.weixin.qq.com/s/LmzI0-DJG-5pCWyGqIIJEw",
+   "date": ""
+  },
+  "2024-11-04-成都路演单单命运陡峭的人灵魂里都有一座悬崖": {
+   "title": "「成都路演」《单单》命运陡峭的人，灵魂里都有一座悬崖",
+   "url": "https://mp.weixin.qq.com/s/J8SMpXYoZtmFxWBrCvDAgQ",
+   "date": ""
+  },
+  "2024-10-16-独立放映献给成都的一封情书午夜出走紧急入口": {
+   "title": "「独立放映」献给成都的一封情书《午夜出走》· 紧急入口",
+   "url": "https://mp.weixin.qq.com/s/hF4GuUaIMHkeOzMEkCRL8g",
+   "date": ""
+  },
+  "2024-10-15-成都路演冲撞冲撞是一种态度巴适也都值得尊重": {
+   "title": "「成都路演」《冲撞》冲撞是一种态度·巴适也都值得尊重",
+   "url": "https://mp.weixin.qq.com/s/WDD8d7b2WJoLfYuq3RcVig",
+   "date": ""
+  },
+  "2024-05-08-FIRST主动放映成都24帧站真实之镜非虚构与想象力折叠": {
+   "title": "FIRST主动放映 · 成都24帧站｜真实之镜：非虚构与想象力折叠",
+   "url": "https://mp.weixin.qq.com/s/OhMu3F12xNxnDGn8KjVvkg",
+   "date": ""
+  },
+  "2024-10-30-内地首映这个杀手不太冷SHAPEOFMYHEART": {
+   "title": "「内地首映」《这个杀手不太冷》SHAPE OF MY HEART",
+   "url": "https://mp.weixin.qq.com/s/GfiOfIEmw2ILVqFKX1y7lQ",
+   "date": ""
+  },
+  "2024-12-14-2024戛纳入围短片影展戛纳一日CannesFramewaves精选首映": {
+   "title": "「2024戛纳入围短片影展」《戛纳一日 Cannes Framewaves》精选首映",
+   "url": "https://mp.weixin.qq.com/s/x3Bkp1cxy9Thv9A7dOuI5g",
+   "date": ""
+  },
+  "2024-02-23-放映本周六利益区域大源": {
+   "title": "「放映」本周六 ·《利益区域》· 大源",
+   "url": "https://mp.weixin.qq.com/s/NkgK1Eb0IrX9MS-nJMMLrg",
+   "date": ""
+  },
+  "2024-01-05-超前点映本周日夜幕将至导演连线": {
+   "title": "「超前点映」本周日 ·《夜幕将至》导演连线",
+   "url": "https://mp.weixin.qq.com/s/VuaT2MWClCkWbgLcS7MdiA",
+   "date": ""
+  },
+  "2024-08-30-加餐放映蔡杰归省且唱一曲归途上人海同游好时光": {
+   "title": "「加餐放映」蔡杰《归省》且唱一曲归途上，人海同游好时光",
+   "url": "https://mp.weixin.qq.com/s/vLTEp-Z436Qu5R1dHthL5Q",
+   "date": ""
+  },
+  "2024-01-12-放映本周六日怪物": {
+   "title": "「放映」本周六日 ·《怪物》",
+   "url": "https://mp.weixin.qq.com/s/Pl83tW1e2vy457r-SKyXQg",
+   "date": ""
+  },
+  "2024-11-05-独立放映成都首映FIRST最佳艺术探索奖佛走过田埂我们不过都在寻找一束光": {
+   "title": "「独立放映」成都首映 | FIRST最佳艺术探索奖《佛走过田埂》我们不过都在寻找一束光",
+   "url": "https://mp.weixin.qq.com/s/Wi6_PIXQ7mK1R1yMZZebwA",
+   "date": ""
+  },
+  "2024-10-21-独立放映理想无须缅怀因为它已经没有了土壤再见乌托邦紧急入口": {
+   "title": "「独立放映」理想无须缅怀，因为它已经没有了土壤《再见，乌托邦》· 紧急入口",
+   "url": "https://mp.weixin.qq.com/s/rqBYvcBlhkkfd-Wq2V7Bew",
+   "date": ""
+  },
+  "2024-09-05-成都路演夏末最后一个台风如期而至人海同游映前短片归省放映": {
+   "title": "「成都路演」夏末最后一个台风如期而至《人海同游》+映前短片《归省》放映",
+   "url": "https://mp.weixin.qq.com/s/FtBlhZ6sqa5VgMJhNbv4Zw",
+   "date": ""
+  },
+  "2024-06-06-回顾2024FIRST主动放映真实之境非虚构与想象力折叠": {
+   "title": "回顾 | 2024FIRST主动放映 · 真实之境：非虚构与想象力折叠",
+   "url": "https://mp.weixin.qq.com/s/bVVXZv6zdYDzhdn_u5KKpQ",
+   "date": ""
+  },
+  "2024-11-14-成都路演向死而舞一群华裔女性的生命之书女人世界制片人徐筱到场交流映后摇摆舞会": {
+   "title": "「成都路演」 向死而舞：一群华裔女性的生命之书《女人世界》制片人：徐筱到场交流+映后摇摆舞会",
+   "url": "https://mp.weixin.qq.com/s/TzvCOKvPKLbJSAVhPDwDdw",
+   "date": ""
+  },
+  "2024-08-05-2024戛纳入围短片影展戛纳一日CannesFramewaves感受光影世界的思想律动": {
+   "title": "「2024戛纳入围短片影展」《戛纳一日 Cannes Framewaves》感受光影世界的思想律动",
+   "url": "https://mp.weixin.qq.com/s/QdVIuv_1EcrXTQG7fGPM8w",
+   "date": ""
+  },
+  "2024-11-13-新片专场完美的日子木漏れ日生活世界的意义在此刻澄明而涌现": {
+   "title": "「新片专场」《完美的日子》“木漏れ日”：生活世界的意义在此刻澄明而涌现",
+   "url": "https://mp.weixin.qq.com/s/T6Bp9YcuoP-2ainr3gwmrA",
+   "date": ""
+  },
+  "2024-04-20-新片专场金的音像店致敬电影精神": {
+   "title": "「新片专场」《金的音像店》致敬电影精神",
+   "url": "https://mp.weixin.qq.com/s/Az89z3KVsClRbBaXgmKKig",
+   "date": ""
+  },
+  "2024-11-15-成都路演俱往矣不回头风流一代贾樟柯到场交流": {
+   "title": "「成都路演」 俱往矣，不回头《风流一代》贾樟柯到场交流",
+   "url": "https://mp.weixin.qq.com/s/eG4_sZkPZSCTecCkFxzTiw",
+   "date": ""
+  },
+  "2024-10-23-新片专场蓦然回首刻在彼此生命里的青春成长物语": {
+   "title": "「新片专场」《蓦然回首》刻在彼此生命里的青春成长物语",
+   "url": "https://mp.weixin.qq.com/s/BakKthPWSt4MU7adSEhhzg",
+   "date": ""
+  },
+  "2024-05-13-正式报名FIRST主动放映成都24帧站真实之镜非虚构与想象力折叠": {
+   "title": "正式报名｜FIRST主动放映·成都24帧站「真实之镜：非虚构与想象力折叠」",
+   "url": "https://mp.weixin.qq.com/s/HNAVIX6-O8jc9ZqV1CE6Qg",
+   "date": ""
+  },
+  "2024-07-17-新片点映地球脉动极境生存不比暑期档那些个剧情片有意思": {
+   "title": "「新片点映」《地球脉动：极境生存》不比暑期档那些个剧情片有意思",
+   "url": "https://mp.weixin.qq.com/s/NbwFojdmQwDczD8orMx9xg",
+   "date": ""
+  },
+  "2024-11-03-映后回顾24帧观影团amp四川传媒学院归省与人海同游情感与创作的深度对话": {
+   "title": "「映后回顾」24帧观影团&四川传媒学院《归省》与《人海同游》：情感与创作的深度对话",
+   "url": "https://mp.weixin.qq.com/s/YtFopHHwXl9NWD_qYtkghQ",
+   "date": ""
+  },
+  "2024-02-22-放映本周六首尔之春": {
+   "title": "「放映」本周六 ·《首尔之春》",
+   "url": "https://mp.weixin.qq.com/s/L5LqwZdABM_l3iLX9Dfz-g",
+   "date": ""
+  },
+  "2024-06-13-两周年独立放映大象席地而坐满洲里的大象我很想去看看它": {
+   "title": "「两周年独立放映」《大象席地而坐》满洲里的大象，我很想去看看它",
+   "url": "https://mp.weixin.qq.com/s/41ohj-TM-sgmxjnaOwuy_A",
+   "date": ""
+  },
+  "2024-10-29-新片专场光的孩子不是孤儿光之子映后连线导演卡先加": {
+   "title": "「新片专场」光的孩子不是孤儿《光之子》映后连线导演卡先加",
+   "url": "https://mp.weixin.qq.com/s/2Ka32FozrP0lkWyV5fwihQ",
+   "date": ""
+  },
+  "2024-05-01-24帧高校逆流计划": {
+   "title": "24帧·高校逆流计划",
+   "url": "https://mp.weixin.qq.com/s/1ueIWTLgofSPYTq3SXnA9g",
+   "date": ""
+  },
+  "2024-12-03-放映LIVE皇后乐队蒙特利尔现场演唱会传奇永不落幕": {
+   "title": "「放映LIVE」《皇后乐队蒙特利尔现场演唱会》：传奇永不落幕！",
+   "url": "https://mp.weixin.qq.com/s/CTaGt9xXvYsgIV1XiX61Yw",
+   "date": ""
+  },
+  "2024-10-09-哈利波特系列魔法回忆录": {
+   "title": "「哈利波特系列」《魔法回忆录》",
+   "url": "https://mp.weixin.qq.com/s/dcmJNf7QqwgqH4LMpT5H6Q",
+   "date": ""
+  },
+  "2024-12-30-生于浪涌成都站香港浸会大学第19届MFA青年电影展映": {
+   "title": "生于浪涌｜成都站！香港浸会大学第19届MFA青年电影展映",
+   "url": "https://mp.weixin.qq.com/s/SIDpDcQZspMDVaZOkdz1Ng",
+   "date": ""
+  },
+  "2024-12-04-24帧专场如父如子何为亲子何为家人何为家": {
+   "title": "「24帧专场」《如父如子》：“何为亲子”、“何为家人”、“何为家”？",
+   "url": "https://mp.weixin.qq.com/s/wzlnrUwRKuqrgOiuhoq3HA",
+   "date": ""
+  },
+  "2024-08-11-放映现场夏日终曲请以你的名字呼唤我SoundwithDjNick": {
+   "title": "[放映现场」夏日终曲《请以你的名字呼唤我》Sound with Dj:Nick",
+   "url": "https://mp.weixin.qq.com/s/-qsJAsq4PeFSSFX0EkKD4Q",
+   "date": ""
+  },
+  "2025-05-22-三周年独立放映无法隐藏的秘密如何安葬心迷宫十周年重映制片人映后连线交流": {
+   "title": "「三周年独立放映」无法隐藏的秘密如何安葬《心迷宫》十周年重映+制片人映后连线交流",
+   "url": "https://mp.weixin.qq.com/s/rXQMw2AU1_65yQgtbUuUGw",
+   "date": ""
+  },
+  "2025-03-14-展映介绍24帧短片展家的千万种解法裂缝里种玫瑰窗格里观窗来": {
+   "title": "展映介绍 | 24帧短片展   · 「家」的千万种解法：裂缝里种玫瑰，窗格里观窗来",
+   "url": "https://mp.weixin.qq.com/s/kE2bBJxxNtjZg3gosdW_WA",
+   "date": ""
+  },
+  "2025-06-17-成都路演邀你共赴一场关于家的深度对话但愿人长久导演秦天现场交流": {
+   "title": "「成都路演」邀你共赴一场关于“家”的深度对话​《但愿人长久》导演秦天现场交流",
+   "url": "https://mp.weixin.qq.com/s/q9yPJUrYBB5bEybUmI0JBw",
+   "date": ""
+  },
+  "2025-02-19-成都点映NOISNO初步举证法庭风云间洞察女性力量": {
+   "title": "「成都点映」NO IS NO——《初步举证》法庭风云间洞察女性力量",
+   "url": "https://mp.weixin.qq.com/s/o8fIj91IpEItMg4IaW38pg",
+   "date": ""
+  },
+  "2025-03-06-24帧专场猫猫的奇幻漂流这次我们让电影与公益梦幻联动": {
+   "title": "「24帧专场」《猫猫的奇幻漂流》这次我们让电影与公益梦幻联动",
+   "url": "https://mp.weixin.qq.com/s/i7uoRNpyo9sM2GckIes7kQ",
+   "date": ""
+  },
+  "2025-05-06-24帧专场押井守与士郎正宗攻壳机动队它诞生于预言却比预言更锋利": {
+   "title": "「24帧专场」押井守与士郎正宗《攻壳机动队》：它诞生于预言，却比预言更锋利​",
+   "url": "https://mp.weixin.qq.com/s/XGD8_oP0EAkqYkJmYtEvrg",
+   "date": ""
+  },
+  "2025-04-27-五四青年特别展映FIRST主动放映成都24帧站": {
+   "title": "五四青年·特别展映 | FIRST主动放映·成都24帧站",
+   "url": "https://mp.weixin.qq.com/s/Dwz78gIWDz_4OpgpxLf4nA",
+   "date": ""
+  },
+  "2025-12-11-成都路演金鸡奖提名佳作岁岁平安一场拯救与自我救赎的现代寓言主创见面会": {
+   "title": "「成都路演」金鸡奖提名佳作《岁岁平安》一场拯救与自我救赎的现代寓言+主创见面会",
+   "url": "https://mp.weixin.qq.com/s/m6rVqkp6VVflkN96MQoNjg",
+   "date": ""
+  },
+  "2025-07-14-回顾24帧但愿人长久路演主创交流实录": {
+   "title": "回顾 | 24帧《但愿人长久》路演主创交流实录​​",
+   "url": "https://mp.weixin.qq.com/s/k0UsjIwcU_GgC6qEEgDeog",
+   "date": ""
+  },
+  "2025-04-07-24帧点映新片专场三宅唱新作黎明的一切专治周一丧周五瘫深夜网抑云": {
+   "title": "「24帧点映+新片专场」三宅唱新作《黎明的一切》专治周一丧、周五瘫、深夜网抑云",
+   "url": "https://mp.weixin.qq.com/s/KCM9mJa0kx6j5vOiehwKkg",
+   "date": ""
+  },
+  "2025-04-24-正式报名FIRST主动放映成都24帧站衔尾蛇": {
+   "title": "正式报名|FIRST主动放映·成都24帧站 衔尾蛇",
+   "url": "https://mp.weixin.qq.com/s/Kz7JZN74GXFZDcA-o5xT-w",
+   "date": ""
+  },
+  "2025-07-17-719丨24帧罗小黑战记2专场时隔6年再次热血": {
+   "title": "7.19丨24帧《罗小黑战记2》专场：时隔6年，再次热血！",
+   "url": "https://mp.weixin.qq.com/s/W7s5Q-FtBBf9QRPrxPylWg",
+   "date": ""
+  },
+  "2025-10-21-成都路演愿每个充满不确定性的夜晚都有光照亮陪你到清晨导演田艳现场交流": {
+   "title": "「成都路演」愿每个充满不确定性的夜晚，都有光照亮《陪你到清晨》导演田艳现场交流",
+   "url": "https://mp.weixin.qq.com/s/vSrv5X_rpmkO1ZCm4GlCPw",
+   "date": ""
+  },
+  "2025-12-25-24帧有点时髦新年影像创作计划": {
+   "title": "24帧×有点时髦「新年影像创作计划」",
+   "url": "https://mp.weixin.qq.com/s/LLV_8Jai5Upgt5aTAITnEw",
+   "date": ""
+  },
+  "2025-12-31-为什么我们不再叫24帧观影团": {
+   "title": "为什么我们不再叫24帧观影团",
+   "url": "https://mp.weixin.qq.com/s/aoVEFzFx1fwkqIW7nk9Kkw",
+   "date": ""
+  },
+  "2025-06-29-成都路演电影节口碑佳作风起前的蒲公英公益观影专场主创交流": {
+   "title": "「成都路演」电影节口碑佳作《风起前的蒲公英》公益观影专场+主创交流",
+   "url": "https://mp.weixin.qq.com/s/dRsZCNJxbrvBukvvfNS9Jw",
+   "date": ""
+  },
+  "2025-04-08-24帧短片展窗影朝夕特别环节隔空对话": {
+   "title": "24 帧短片展：窗影朝夕特别环节-隔空对话",
+   "url": "https://mp.weixin.qq.com/s/07x6kC41NEjKtUNMJLznSg",
+   "date": ""
+  },
+  "2025-05-01-24帧返场幽灵公主4K修复超量周边": {
+   "title": "「24帧返场」《幽灵公主》4K修复+超量周边",
+   "url": "https://mp.weixin.qq.com/s/0mVVr_VlMlv-9V90zTWUyA",
+   "date": ""
+  },
+  "2025-09-23-成都场主创连线悬疑与惊悚家庭简史揭开中国家庭餐桌上的沉默真相": {
+   "title": "「成都场主创连线」悬疑与惊悚《家庭简史》揭开“中国家庭餐桌上”的沉默真相",
+   "url": "https://mp.weixin.qq.com/s/Yhc-LHBT9CqCrP8D6OqwYQ",
+   "date": ""
+  },
+  "2025-11-24-成都返场放映2025戛纳短片11部2场导演映后连线": {
+   "title": "成都返场放映｜2025戛纳短片11部+2场导演映后连线",
+   "url": "https://mp.weixin.qq.com/s/BBwBnD3IVGV950gQ90GHcw",
+   "date": ""
+  },
+  "2025-01-15-24帧专场狗的审判做只猫做只狗也麻烦做个人": {
+   "title": "「24帧专场」《狗的审判》“做只猫做只狗，也麻烦做个人”",
+   "url": "https://mp.weixin.qq.com/s/JBzk1IgYMbMWifQOXu2eqw",
+   "date": ""
+  },
+  "2025-03-13-24帧花样年华316告别场旗袍与光影交错的最后一夜": {
+   "title": "24帧《花样年华》3.16告别场 | 旗袍与光影交错的最后一夜",
+   "url": "https://mp.weixin.qq.com/s/IO8XeVTkF0ceUXxoLbpaUw",
+   "date": ""
+  },
+  "2025-06-27-2025柏林入围短片影展柏林一日BerlinaleFramewaves观察现实的光影之旅": {
+   "title": "「2025柏林入围短片影展」《柏林一日 Berlinale Framewaves》观察现实的光影之旅",
+   "url": "https://mp.weixin.qq.com/s/WyCZXGda-yj06-mUubxEgg",
+   "date": ""
+  },
+  "2025-04-25-24帧专场宫崎骏经典幽灵公主暗藏千年的自然史诗": {
+   "title": "「24帧专场」宫崎骏经典《幽灵公主》：暗藏千年的自然史诗",
+   "url": "https://mp.weixin.qq.com/s/4C76jpdifeoPGuxk_wT-5A",
+   "date": ""
+  },
+  "2025-05-08-活动预告24帧三周年特别放映情书化雪的时刻": {
+   "title": "活动预告 | 24帧三周年特别放映《情书：化雪的时刻》",
+   "url": "https://mp.weixin.qq.com/s/yfITl7PpY3KsBQqx_8xfcg",
+   "date": ""
+  },
+  "2025-01-08-木圭青年电影展遇见广西逐影山海青春如桂": {
+   "title": "「木圭青年电影展」遇见广西｜逐影山海，青春如桂",
+   "url": "https://mp.weixin.qq.com/s/6OHDqVLKA-j5DjpXNPVN9A",
+   "date": ""
+  },
+  "2025-10-27-成都路演乐观与爱是生活的解药阳光俱乐部黄晓明现场交流": {
+   "title": "「成都路演」乐观与爱是生活的解药《阳光俱乐部》黄晓明现场交流",
+   "url": "https://mp.weixin.qq.com/s/TPuZHe-38rTvtL7rZT-xDQ",
+   "date": ""
+  },
+  "2025-11-28-24帧紧急入口丨特别呈现游于戏中引擎电影前卫的遗产主题短片展映": {
+   "title": "24帧×紧急入口丨特别呈现「游于戏中」引擎电影：前卫的遗产主题短片展映",
+   "url": "https://mp.weixin.qq.com/s/TbAxf_Q06pI-IejrKsmBIA",
+   "date": ""
+  },
+  "2025-09-29-成都路演天命所归非我莫属三国的星空第一部主创映后见面会": {
+   "title": "「成都路演」天命所归，非我莫属《三国的星空第一部》主创映后见面会",
+   "url": "https://mp.weixin.qq.com/s/aujOrOYTWB5BBS2_XgSLtg",
+   "date": ""
+  },
+  "2025-02-28-成都路演郭柯宇主演作品以细腻的女性视角为现实和生活之苦覆上一层柔纱苍山导演张帆映后现场交流": {
+   "title": "「成都路演」郭柯宇主演作品：以细腻的女性视角为现实和生活之苦覆上一层柔纱《苍山》导演张帆映后现场交流",
+   "url": "https://mp.weixin.qq.com/s/rCD3AGT0QM74O7rpBQFanA",
+   "date": ""
+  },
+  "2025-03-19-成都路演在生活的褶皱里寻找光的形状追幸福的人主创团队全阵容映后交流": {
+   "title": "「成都路演」在生活的褶皱里，寻找光的形状：《追幸福的人》主创团队全阵容映后交流",
+   "url": "https://mp.weixin.qq.com/s/RV3bvvpqhF0A2Frjxd0UPg",
+   "date": ""
+  },
+  "2025-12-15-共创征集24帧年终聚会期待和你一起搞事参与赢福利": {
+   "title": "共创征集｜24帧年终聚会期待和你一起“搞事”（参与赢福利）",
+   "url": "https://mp.weixin.qq.com/s/cF5IDoveoXDZkaUOfLci1Q",
+   "date": ""
+  },
+  "2025-02-14-24帧专场爱与不能的情绪陷阱花样年华25周年导演特别版": {
+   "title": "「24帧专场」爱与不能的情绪陷阱《花样年华》25周年导演特别版",
+   "url": "https://mp.weixin.qq.com/s/6NCxZ_DaCt7y2R_u_jBVzA",
+   "date": ""
+  },
+  "2025-08-08-成都816戛纳威尼斯柏林短片精选集": {
+   "title": "成都（8.16）｜戛纳·威尼斯·柏林短片精选集",
+   "url": "https://mp.weixin.qq.com/s/V6BKXuF_9m-pEjnPHugnmQ",
+   "date": ""
+  },
+  "2025-12-29-24帧年终聚会FUNPALACE乐趣宫殿": {
+   "title": "24帧年终聚会—FUN PALACE 乐趣宫殿",
+   "url": "https://mp.weixin.qq.com/s/HpuyiQPpf0E9K_E3amJa6A",
+   "date": ""
+  },
+  "2025-04-30-现场预告FIRST主动放映成都24帧站衔尾蛇欢迎光临这边请": {
+   "title": "现场预告 ｜ FIRST主动放映·成都24帧站 衔尾蛇：欢迎光临～这边请",
+   "url": "https://mp.weixin.qq.com/s/IVSVw5R_nLsBgBDiLT82Wg",
+   "date": ""
+  },
+  "2025-11-20-24帧专场亚洲首位UFC世界冠军张伟丽纪录电影永无止境拳力以赴人生之战许慧晶导演VCR交流": {
+   "title": "「24帧专场」亚洲首位UFC世界冠军张伟丽纪录电影《永无止境》“拳”力以赴人生之战+许慧晶导演VCR交流",
+   "url": "https://mp.weixin.qq.com/s/6owGKl5qo7uEhd9BDX8kew",
+   "date": ""
+  },
+  "2025-10-29-24帧导演连线专场上影节最佳纪录片胡阿姨的花园在时代洪流中守护一座花园就是守护一个世界": {
+   "title": "「24帧导演连线专场」上影节最佳纪录片《胡阿姨的花园》在时代洪流中，守护一座花园，就是守护一个世界",
+   "url": "https://mp.weixin.qq.com/s/OsaXP4QZTRGS_zFXteB1KA",
+   "date": ""
+  },
+  "2025-04-21-FIRST主动放映成都24帧站衔尾蛇Ouroboros": {
+   "title": "FIRST主动放映·成都24帧站 ｜衔尾蛇 Ouroboros",
+   "url": "https://mp.weixin.qq.com/s/_m0dpghBM_inR7Ewd-1jZA",
+   "date": ""
+  },
+  "2025-10-16-2025戛纳短片在成都潜入创作的深邃世界11部入围短片亚洲中国首映": {
+   "title": "「2025戛纳短片在成都」潜入创作的深邃世界：11 部入围短片亚洲/中国首映",
+   "url": "https://mp.weixin.qq.com/s/gXVlQQD__UgNeqwG3WS7qQ",
+   "date": ""
+  },
+  "2025-08-19-成都路演被现实碾压却未曾屈服如果悲伤可以解释主创团队现场交流": {
+   "title": "「成都路演」被现实碾压却未曾屈服​《如果悲伤可以解释》主创团队现场交流",
+   "url": "https://mp.weixin.qq.com/s/hXQmaSRc1gNhORB8bl-UDw",
+   "date": ""
+  },
+  "2025-03-21-2025威尼斯入围短片影展威尼斯一日VeniceFramewaves追逐银幕上的光影闪烁": {
+   "title": "「2025威尼斯入围短片影展」《威尼斯一日 Venice Framewaves》追逐银幕上的光影闪烁",
+   "url": "https://mp.weixin.qq.com/s/LsagVkJCESFRGlELXloTtA",
+   "date": ""
+  },
+  "2025-04-10-2025FIRST主动放映成都24帧站志愿者招募": {
+   "title": "「2025 FIRST主动放映·成都24帧站 」志愿者招募",
+   "url": "https://mp.weixin.qq.com/s/3pDOaLStAvhZdZty6-qwzg",
+   "date": ""
+  },
+  "2025-03-11-24帧专场过春天奔跑入场": {
+   "title": "「24帧专场」《过春天》，奔跑入场！",
+   "url": "https://mp.weixin.qq.com/s/zlAV1iO0bj-giRbn3JHtHg",
+   "date": ""
+  },
+  "2025-02-27-24帧专场阿隆索帕拉西奥斯执导厨房后厨里聚集人间百态的微缩世界": {
+   "title": "「24帧专场」阿隆索·帕拉西奥斯执导《厨房》：后厨里聚集人间百态的微缩世界",
+   "url": "https://mp.weixin.qq.com/s/xxSZilxGR-Vmei_Uxfb45A",
+   "date": ""
+  },
+  "2025-11-21-24帧超前点映一次颠覆感官的美学实验死钻倒影邀你沉浸钻石切割般的视觉万花筒": {
+   "title": "「24帧超前点映」一次颠覆感官的美学实验《死钻倒影》邀你沉浸钻石切割般的视觉万花筒",
+   "url": "https://mp.weixin.qq.com/s/kQukKB1Y6LrspGZJz0XVSg",
+   "date": ""
+  },
+  "2025-10-28-24帧策展人招募计划光暗下来的时候还有银幕会亮": {
+   "title": "「24帧策展人招募计划」光暗下来的时候，还有银幕会亮",
+   "url": "https://mp.weixin.qq.com/s/DiwvZYlDMANPb7UfJUfW5g",
+   "date": ""
+  },
+  "2025-03-05-24帧专场想飞的女孩文晏再次在柏林起飞": {
+   "title": "「24帧专场」《想飞的女孩》：文晏，再次在柏林起飞",
+   "url": "https://mp.weixin.qq.com/s/_NE4bznQOhGLvLnhmEClgg",
+   "date": ""
+  },
+  "2025-04-11-24帧导演连线专场不正经神作东四十条专治你的精神内耗": {
+   "title": "「24帧导演连线专场」“不正经神作”：《东四十条》专治你的精神内耗！",
+   "url": "https://mp.weixin.qq.com/s/bdSc4qYHd_ykQ0w85UPbow",
+   "date": ""
+  },
+  "2025-03-17-短片推荐24帧短片展家的千万种解法裂缝里种玫瑰窗格里观窗来": {
+   "title": "短片推荐 | 24帧短片展   · 「家」的千万种解法：裂缝里种玫瑰，窗格里观窗来",
+   "url": "https://mp.weixin.qq.com/s/5RL4oXP-uFdSOteQS6uJUg",
+   "date": ""
+  },
+  "2025-12-03-2025戛纳短片在成都咩Bleat罗因斯Loynes导演映后连线交流": {
+   "title": "「2025戛纳短片在成都」《咩! Bleat!》《罗因斯 Loynes》导演映后连线交流",
+   "url": "https://mp.weixin.qq.com/s/BbVTzE1x_mhWsTmgJJ8cSA",
+   "date": ""
+  },
+  "2025-03-04-24帧专场编号17帕丁森的多重人生奉俊昊的克隆寓言": {
+   "title": "「24帧专场」《编号17》：帕丁森的多重人生，奉俊昊的克隆寓言",
+   "url": "https://mp.weixin.qq.com/s/Sm3Au54UzePuWNCFKlRXyA",
+   "date": ""
+  },
+  "2025-12-01-成都路演上影节金爵奖最佳艺术贡献奖国内首部AI题材电影比如父子导演仇晟现场交流": {
+   "title": "「成都路演」上影节金爵奖最佳艺术贡献奖+国内首部AI题材电影《比如父子》导演仇晟现场交流",
+   "url": "https://mp.weixin.qq.com/s/tOW7WWs0z_vZwIW_1PrkLg",
+   "date": ""
+  },
+  "2025-08-20-成都路演全员鄂人再见坏蛋见证嘴狠心善的武汉精神找回被城市遗忘的邻里深情": {
+   "title": "「成都路演」全员鄂人​《再见，坏蛋》见证“嘴狠心善”的武汉精神，找回被城市遗忘的邻里深情！",
+   "url": "https://mp.weixin.qq.com/s/JuUUxNbIHAqjKPv8H8CJIA",
+   "date": ""
+  },
+  "2025-10-31-24帧专场赴一场与青春告别的终极之约天鹰战士最后的冲击再见所有的福音战士": {
+   "title": "「24帧专场」赴一场与青春告别的终极之约《天鹰战士：最后的冲击》再见，所有的福音战士",
+   "url": "https://mp.weixin.qq.com/s/BRBPc5j7ToR8JAY5rixtwg",
+   "date": ""
+  },
+  "2025-05-13-回顾2025FIRST主动放映成都24帧站衔尾蛇": {
+   "title": "回顾 | 2025FIRST主动放映·成都24帧站:衔尾蛇",
+   "url": "https://mp.weixin.qq.com/s/7PVRVFBXy0N3qLOX6Kgsug",
+   "date": ""
+  },
+  "2025-08-27-24帧专场徐克式奇幻美学鉴赏青蛇跨越三十二年的另一场梦": {
+   "title": "「24帧专场」徐克式奇幻美学鉴赏《青蛇》：跨越三十二年的另一场梦",
+   "url": "https://mp.weixin.qq.com/s/SGW3vfO5972uDb4H8GMR9w",
+   "date": ""
+  },
+  "2025-04-29-一手路透FIRST主动放映成都24帧站衔尾蛇含路线指引": {
+   "title": "一手路透 ｜ FIRST主动放映·成都24帧站 衔尾蛇（含路线指引）",
+   "url": "https://mp.weixin.qq.com/s/AURM0S92cg_9qBCQlarT_Q",
+   "date": ""
+  },
+  "2025-05-12-正式报名24帧三周年特别放映情书化雪的时刻院线重映专场": {
+   "title": "正式报名 | 24帧三周年特别放映《情书：化雪的时刻》+ 院线重映专场",
+   "url": "https://mp.weixin.qq.com/s/j74nFNWIp2c7OwLcuCVQSQ",
+   "date": ""
+  },
+  "2025-05-21-回顾24帧三周年特别放映情书化雪的时刻": {
+   "title": "回顾 | 24帧三周年特别放映《情书：化雪的时刻》",
+   "url": "https://mp.weixin.qq.com/s/Euc9BWauq_C7EGqQ9QmKbQ",
+   "date": ""
+  },
+  "2025-02-26-独立放映FIRST主竞赛入围作品洗头记借童趣审视成人世界的隐藏视角": {
+   "title": "「独立放映」FIRST主竞赛入围作品《洗头记》：借童趣审视成人世界的隐藏视角",
+   "url": "https://mp.weixin.qq.com/s/irGRhkeks1uQdo2ot3x30A",
+   "date": ""
+  },
+  "2025-03-03-24帧她看见专场还有明天女性的觉醒永远在此时此刻": {
+   "title": "「24帧 · 她看见专场」《还有明天》女性的觉醒永远在此时此刻",
+   "url": "https://mp.weixin.qq.com/s/0GKcsJP_qgHY7JLqVkZ6Kg",
+   "date": ""
+  },
+  "2025-12-26-海影节回顾电影中最安全": {
+   "title": "海影节回顾：电影中最安全",
+   "url": "https://mp.weixin.qq.com/s/UABUD2lrxBXmPsGAQFb49w",
+   "date": ""
+  },
+  "2025-04-03-成都路演告别场带着诚意和温暖回到成都苍山导演张帆映后亲临周边升级映后送苍山文旅套装纪念品": {
+   "title": "「成都路演+告别场」带着诚意和温暖回到成都《苍山》导演张帆映后亲临+周边升级+映后送苍山文旅套装纪念品",
+   "url": "https://mp.weixin.qq.com/s/n9vt31pebOPX-nTP01_-KA",
+   "date": ""
+  },
+  "2025-03-12-窗影朝夕24帧短片展一屏一幕百态一窗一圈几桌": {
+   "title": "「窗影朝夕」24帧短片展 · 一屏一幕百态，一窗一圈几桌",
+   "url": "https://mp.weixin.qq.com/s/MmVbyha-EY9JMg4O7gbgNw",
+   "date": ""
+  },
+  "2025-08-01-24帧超前点映丨跨越山海之约玛丽和麦克斯我选择你即使我和别人不一样": {
+   "title": "24帧超前点映丨跨越山海之约《玛丽和麦克斯》：我选择你，即使我和别人不一样",
+   "url": "https://mp.weixin.qq.com/s/b_EihdqCPjo3PgY4FR5sow",
+   "date": ""
+  },
+  "2026-04-07-像素之外24帧短片展2026在像素之外在囚笼之上归于无声又重新升起": {
+   "title": "「像素之外」24帧短片展2026 ·在像素之外，在囚笼之上，归于无声，又重新升起",
+   "url": "https://mp.weixin.qq.com/s/3dh-1j_T27-KlIqxmArmcA",
+   "date": ""
+  },
+  "2026-04-24-FIRST主动放映24帧站Freakyboom直到长出毛边": {
+   "title": "FIRST主动放映-24帧站「Freaky boom——直到长出毛边」",
+   "url": "https://mp.weixin.qq.com/s/m4MRAp9sFJXqJe2xsk49zA",
+   "date": ""
+  },
+  "2026-08-12-24帧×方所特别放映迟来的人杨一欣短片智齿飞天大王放映映后谈创作者交流": {
+   "title": "「24帧 × 方所特别放映」迟来的人 · 杨一欣短片《智齿》《飞天大王》放映 & 映后谈 & 创作者交流",
+   "url": "https://mp.weixin.qq.com/s/veLvL5kD37y34eAQRymjlw",
+   "date": ""
+  },
+  "2026-01-18-年会回顾在下一帧开始之前我们这样相聚": {
+   "title": "年会回顾 | 在下一帧开始之前，我们这样相聚",
+   "url": "https://mp.weixin.qq.com/s/Vkyvq8v_ia3Dtutxnsj-2A",
+   "date": ""
+  },
+  "2026-08-19-当我们谈论牛来时我们究竟在谈论什么": {
+   "title": "当我们谈论《牛来》时，我们究竟在谈论什么？",
+   "url": "https://mp.weixin.qq.com/s/ytGD8n_FIsOlEBH7sYTMWA",
+   "date": ""
+  },
+  "2026-01-29-乙巳蛇年封箱放映花与长枪爱国少女杀死紫罗兰成都首映导演南雅琅张钰连线交流": {
+   "title": "「乙巳蛇年封箱放映」花与长枪《爱国少女》《杀死紫罗兰》成都首映+导演南雅琅、张钰连线交流",
+   "url": "https://mp.weixin.qq.com/s/jvIiRT_P8T1--hRICdUW5g",
+   "date": ""
+  },
+  "2026-03-25-宇编三周年重映现代西游一部献给理想主义者的荒诞诗篇": {
+   "title": "「宇编三周年重映」现代西游：一部献给理想主义者的荒诞诗篇",
+   "url": "https://mp.weixin.qq.com/s/Gz6NgKHwTbI_dq4HzkHkoA",
+   "date": ""
+  },
+  "2026-10-23-专场1101生日快乐站在幸福之外": {
+   "title": "「专场」11.01《生日快乐》站在幸福之外",
+   "url": "https://mp.weixin.qq.com/s/SEBYINQ2o4jzlSYGVJh_5A",
+   "date": ""
+  },
+  "2026-03-11-超前点映在你好爱美丽的水彩梦境里重拾儿时的纯粹": {
+   "title": "「超前点映」在《你好，爱美丽》的水彩梦境里，重拾儿时的纯粹",
+   "url": "https://mp.weixin.qq.com/s/ccD91rxYzsL5VzWN5z2RQA",
+   "date": ""
+  },
+  "2026-05-18-在九襄的两天我们重新理解了陪伴": {
+   "title": "在九襄的两天，我们重新理解了陪伴",
+   "url": "https://mp.weixin.qq.com/s/tfRvPb5NEVn4r6hAloI-SQ",
+   "date": ""
+  },
+  "2026-10-16-成都1024戛纳一日2026亚洲首映": {
+   "title": "成都10.24｜戛纳一日 2026 亚洲首映",
+   "url": "https://mp.weixin.qq.com/s/KakTmNgRioj3-_f8H24vWw",
+   "date": ""
+  },
+  "2026-02-02-在南宁我们闯入了一场野生电影的桃花源": {
+   "title": "在南宁，我们闯入了一场野生电影的“桃花源”",
+   "url": "https://mp.weixin.qq.com/s/8vwdyRauMFx0IXmdg9LHsw",
+   "date": ""
+  },
+  "2026-03-21-成都路演重逢不是为了答案是为了好好告别时间旅馆导演翟义祥现场交流": {
+   "title": "「成都路演」重逢不是为了答案，是为了好好告别《时间旅馆》导演翟义祥现场交流",
+   "url": "https://mp.weixin.qq.com/s/oBU6lS2zoqQEHc5cHEtaDg",
+   "date": ""
+  },
+  "2026-07-24-24帧联合制片晚上十点收工每周休息一天": {
+   "title": "24帧联合制片！晚上十点收工，每周休息一天",
+   "url": "https://mp.weixin.qq.com/s/yrEjMqgl5w7XcfJ8MmFkYA",
+   "date": ""
+  },
+  "2026-04-04-2026FIRST主动放映24帧站志愿者招募": {
+   "title": "「2026 FIRST主动放映·24帧站 」志愿者招募",
+   "url": "https://mp.weixin.qq.com/s/wJ9iLkzfjAJRrHFWhj8tzQ",
+   "date": ""
+  },
+  "2026-04-12-路演0412植物学家主创现场映后": {
+   "title": "「路演」04.12《植物学家》主创现场映后",
+   "url": "https://mp.weixin.qq.com/s/WPzoF9QYIg6D5FKXd2txjg",
+   "date": ""
+  },
+  "2026-03-10-加场放映法官席上的母亲非穷尽列举中那些无法切割的身份困局": {
+   "title": "「加场放映」法官席上的母亲：《非穷尽列举》中，那些无法切割的身份困局",
+   "url": "https://mp.weixin.qq.com/s/TVnpA0QEvkeIa5MNG8hhlg",
+   "date": ""
+  },
+  "2026-09-07-川渝院线电影浮生若丽计划9月16日开机": {
+   "title": "川渝院线电影《浮生若丽》计划9月16日开机",
+   "url": "https://mp.weixin.qq.com/s/ZTk0VCyb96bFkjKqBWH12A",
+   "date": ""
+  },
+  "2026-08-02-西宁之后我们选择再次相信电影": {
+   "title": "西宁之后，我们选择再次相信电影",
+   "url": "https://mp.weixin.qq.com/s/u3utZLt35HHt2gNdMErU5w",
+   "date": ""
+  },
+  "2026-02-25-马年第一跳凌空腾起瑰丽绝伦SOARINGANDGORGEOUS爱乐之城Letsdance": {
+   "title": "「马年第一跳」凌空腾起，瑰丽绝伦SOARING AND GORGEOUS《爱乐之城》Let’s dance",
+   "url": "https://mp.weixin.qq.com/s/W12mQzjLwUefTyHdyM8xBA",
+   "date": ""
+  },
+  "2026-06-12-路演0613火遮眼谢苗到场交流": {
+   "title": "「路演」06.13《火遮眼》谢苗到场交流",
+   "url": "https://mp.weixin.qq.com/s/N0K3CUhO3VOjadCaeG85xw",
+   "date": ""
+  },
+  "2026-06-21-这走向对头不开放麦招募": {
+   "title": "“这走向对头不？”开放麦招募",
+   "url": "https://mp.weixin.qq.com/s/TebbHSWxLOhvr6Z1YyUeUQ",
+   "date": ""
+  },
+  "2026-07-30-FIRST评审会大奖地下美人导演夏昊专访在禁忌的边缘拍出华语片罕见的孤独与欲望": {
+   "title": "FIRST评审会大奖《地下美人》导演夏昊专访｜在禁忌的边缘，拍出华语片罕见的孤独与欲望",
+   "url": "https://mp.weixin.qq.com/s/2UjrzgiFHSR7y2CiDEs2sQ",
+   "date": ""
+  },
+  "2026-02-08-关于我们为什么选择24小时退票": {
+   "title": "关于我们为什么选择24小时退票",
+   "url": "https://mp.weixin.qq.com/s/sscPQvDfvE95y2Hl65HVdw",
+   "date": ""
+  },
+  "2026-10-17-成都路演藏地不是远方一个夜晚与三个夏天导演岗珍现场交流": {
+   "title": "「成都路演」藏地不是远方《一个夜晚与三个夏天》导演岗珍现场交流",
+   "url": "https://mp.weixin.qq.com/s/KkUj9PiFfkySHZXx_GBCIw",
+   "date": ""
+  },
+  "2026-04-28-FIRST主动放映24帧站片单与映后嘉宾介绍": {
+   "title": "FIRST主动放映·24帧站｜片单与映后嘉宾介绍",
+   "url": "https://mp.weixin.qq.com/s/tI5oadhYw1MuqagSDJRnNQ",
+   "date": ""
+  },
+  "2026-08-10-成都路演流河无边远人有岸冬旅人导演鲁丹现场交流": {
+   "title": "「成都路演」流河无边，远人有岸《冬旅人》导演鲁丹现场交流",
+   "url": "https://mp.weixin.qq.com/s/WoJ109_wcEf2V_gpNW0Q4A",
+   "date": ""
+  },
+  "2026-01-16-成都路演一场跨越半生的友情对话我的朋友安德烈导演董子健现场交流": {
+   "title": "「成都路演」一场跨越半生的友情对话《我的朋友安德烈》导演董子健现场交流",
+   "url": "https://mp.weixin.qq.com/s/BLC3j8ztuO1-OU2zPphmIQ",
+   "date": ""
+  },
+  "2026-03-09-你还记得大象席地而坐吗": {
+   "title": "你还记得「大象席地而坐」吗？",
+   "url": "https://mp.weixin.qq.com/s/0lCPudmXAGzOS6TXpD7v1g",
+   "date": ""
+  },
+  "2026-07-10-被爱吞噬为什么成了Z世代最深的恐惧": {
+   "title": "「被爱吞噬」为什么成了Z世代最深的恐惧？",
+   "url": "https://mp.weixin.qq.com/s/G7nIg75EgEC7vfCeu6TGyw",
+   "date": ""
+  },
+  "2026-04-13-像素之外24帧短片展2026影片介绍": {
+   "title": "「像素之外」24帧短片展2026·影片介绍",
+   "url": "https://mp.weixin.qq.com/s/CInHHEdiluD_mRmAnAeT_g",
+   "date": ""
+  },
+  "2026-04-03-24帧组讯我们要拍短片了": {
+   "title": "24帧组讯！🎬 我们要拍短片了",
+   "url": "https://mp.weixin.qq.com/s/OWM_gvUZlc-4DIpn0jRS-Q",
+   "date": ""
+  },
+  "2026-05-15-四周年独立放映中国底层的跨性别悲歌纪录片二毛导演贾玉川连线交流": {
+   "title": "「四周年独立放映」中国底层的跨性别悲歌｜纪录片《二毛》导演贾玉川连线交流",
+   "url": "https://mp.weixin.qq.com/s/kesth-GoY-pEr527o6X0ZQ",
+   "date": ""
+  },
+  "2026-07-08-独立放映海影节最佳华语贡献奖不久前的夏天成都首映导演叶镇朋到场交流": {
+   "title": "「独立放映」海影节最佳华语贡献奖《不久前的夏天》成都首映+导演叶镇朋到场交流",
+   "url": "https://mp.weixin.qq.com/s/i0Qfh4xQlaoQTh80b80oEA",
+   "date": ""
+  },
+  "2026-01-19-24帧专场排片仅01但这部国产片不该被埋没再团圆导演高临阳连线交流": {
+   "title": "「24帧专场」排片仅0.1%，但这部国产片不该被埋没《再团圆》导演高临阳连线交流",
+   "url": "https://mp.weixin.qq.com/s/dl-s25bxcv9u8MwIcM3tqg",
+   "date": ""
+  },
+  "2026-10-14-成都路演在爱与生活之间夫妻一场导演秦潇越现场交流": {
+   "title": "「成都路演」在爱与生活之间《夫妻一场》导演秦潇越现场交流",
+   "url": "https://mp.weixin.qq.com/s/fXjfjRlpCsFRVS9MZLynvQ",
+   "date": ""
+  },
+  "2026-01-12-成都路演半城湖水半城家翠湖在昆明的波光里看见家的千万种模样": {
+   "title": "「成都路演」半城湖水半城家《翠湖》在昆明的波光里，看见家的千万种模样",
+   "url": "https://mp.weixin.qq.com/s/1zGu22Bi7WuxGUfWbgxExA",
+   "date": ""
+  },
+  "2026-03-06-她秩序与混沌非穷尽列举暗黑新娘": {
+   "title": "「她：秩序与混沌」《非穷尽列举》《暗黑新娘！》",
+   "url": "https://mp.weixin.qq.com/s/PTmShovvDdMUyk5phtyBnQ",
+   "date": ""
+  },
+  "2026-07-17-影迷福利快收下这份超优惠的饭映计划美食地图": {
+   "title": "影迷福利｜快收下这份超优惠的《饭映计划》美食地图！",
+   "url": "https://mp.weixin.qq.com/s/ly__IyVIuD1A7DKi63L1BQ",
+   "date": ""
+  },
+  "2026-01-20-成都路演万玛才旦监制藏地新浪潮月光里的男孩导演达杰丁增现场交流": {
+   "title": "「成都路演」万玛才旦监制+藏地新浪潮《月光里的男孩》导演达杰丁增现场交流",
+   "url": "https://mp.weixin.qq.com/s/ManMorc0oE4ZmbN52uuEVg",
+   "date": ""
+  },
+  "2026-04-18-告别场0418翠湖卞灼导演线上交流": {
+   "title": "「告别场」04.18《翠湖》卞灼导演线上交流",
+   "url": "https://mp.weixin.qq.com/s/5X9a9SZ1nhLIJCA6gMKX0Q",
+   "date": ""
+  },
+  "2026-03-28-24帧成都路演0328长夜将尽主创现场映后交流": {
+   "title": "「24帧成都路演」03.28 |《长夜将尽》主创现场映后交流",
+   "url": "https://mp.weixin.qq.com/s/hSDQBsSjRG5nvaHoX_6xOg",
+   "date": ""
+  },
+  "2026-10-04-成都路演河水东流岁月回响水东游导演胡兆祥现场交流": {
+   "title": "「成都路演」河水东流，岁月回响《水东游》导演胡兆祥现场交流",
+   "url": "https://mp.weixin.qq.com/s/L1uT-SP0_3vyQUxHBT_WHw",
+   "date": ""
+  },
+  "2026-05-09-回顾2026FIRST主动放映成都24帧站直到出边": {
+   "title": "回顾 | 2026FIRST主动放映·成都24帧站:直到⻓出⽑边",
+   "url": "https://mp.weixin.qq.com/s/2EAzXDO-YJFzylwQ6k8jbw",
+   "date": ""
+  },
+  "2026-10-26-专场1030笑傲江湖2东方不败": {
+   "title": "「专场」10.30《笑傲江湖2：东方不败》",
+   "url": "https://mp.weixin.qq.com/s/oc0gWXrel8lEAKteGUtXmg",
+   "date": ""
+  },
+  "2026-09-28-成都路演离开旋涡的中心需要很大的勇气和毅力我是001号导演许世悦现场交流": {
+   "title": "「成都路演」离开旋涡的中心，需要很大的勇气和毅力《我是001号》导演许世悦现场交流",
+   "url": "https://mp.weixin.qq.com/s/0hppDrNT5FjMiheC38FpTw",
+   "date": ""
+  },
+  "2026-04-04-联合放映我许可阳光女子合唱团": {
+   "title": "联合放映 |《我，许可》《阳光女子合唱团》",
+   "url": "https://mp.weixin.qq.com/s/1psJ_RiHzwxj7Lfv5GKnbg",
+   "date": ""
+  },
+  "2026-06-19-24帧组讯院线电影浮生若丽演员招募": {
+   "title": "24帧组讯！院线电影《浮生若丽》演员招募",
+   "url": "https://mp.weixin.qq.com/s/E0rwfommGS-NLApaQRrDmw",
+   "date": ""
+  },
+  "2026-04-13-路演0413如父如母导演现场交流": {
+   "title": "「路演」04.13《如父如母》导演现场交流",
+   "url": "https://mp.weixin.qq.com/s/nq-eG1r22OFprdmZjbSJZQ",
+   "date": ""
+  },
+  "2026-04-22-路演0422燃比娃主创现场映后交流": {
+   "title": "「路演」04.22《燃比娃》主创现场映后交流",
+   "url": "https://mp.weixin.qq.com/s/vD_kgep70Mw-y66ZRnK3Dw",
+   "date": ""
+  },
+  "2026-07-08-四年银幕遥望二十四帧即将赴约西宁为你带来第20届FIRST影展全景指南": {
+   "title": "四年银幕遥望，二十四帧即将赴约西宁，为你带来第20届FIRST影展全景指南",
+   "url": "https://mp.weixin.qq.com/s/Dx_i54An-jw9WnFrMfDt8Q",
+   "date": ""
+  },
+  "2026-05-29-24帧组讯第二部剧情短片弄死一条过": {
+   "title": "24帧组讯！第二部，剧情短片《弄死一条过》",
+   "url": "https://mp.weixin.qq.com/s/zy6qCLB2WQIIr2AvK7vByg",
+   "date": ""
+  },
+  "2026-01-06-沙龙嘉宾一场关于电影的灵魂拷问听听创作者们怎么说": {
+   "title": "沙龙嘉宾｜一场关于电影的灵魂拷问：听听创作者们怎么说",
+   "url": "https://mp.weixin.qq.com/s/AGEBTC4Zp80QZjWoTvYfsA",
+   "date": ""
+  },
+  "2022-12-06-放映本周六苦月亮牛市口": {
+   "title": "放映本周六苦月亮牛市口",
+   "url": "https://mp.weixin.qq.com/s/uEOsc0uM9pjvzfo28GkiOQ",
+   "date": "2022-12-06"
+  },
+  "2023-02-03-放映本周六时空恋旅人暗房里": {
+   "title": "放映本周六时空恋旅人暗房里",
+   "url": "https://mp.weixin.qq.com/s/TsCF975pduq-_MIrTcdKVg",
+   "date": "2023-02-03"
+  }
+ }
+}

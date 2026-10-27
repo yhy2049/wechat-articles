@@ -2,6 +2,8 @@
 
 #  「2024戛纳入围短片影展」《戛纳一日 Cannes Framewaves》精选首映
 
+> 公众号原文：<https://mp.weixin.qq.com/s/x3Bkp1cxy9Thv9A7dOuI5g>
+
 ![](https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIn6H8DaMNF9pN2Ta8JdYzta9MZuwsfCxHoQIdCjTJAVo7MmZRm1hZgTvgy1LIxEpia1Ab3cu4Utqw/640?wx_fmt=png&from=appmsg)
 
 今年8月起，“戛纳一日 Cannes

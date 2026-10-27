@@ -2,6 +2,8 @@
 
 #  回顾 | 2024戛纳一日Cannes Framewaves:灵动、碰撞、回响 
 
+> 公众号原文：<https://mp.weixin.qq.com/s/xABdndHG2wQNCPaFGvoQ0Q>
+
 **写在前面**  
 2024/8/10 12:00-21:30  【2024戛纳入围短片影展】  
 《戛纳一日Cannes

@@ -2,6 +2,8 @@
 
 #  周日加场「2024戛纳入围短片影展」《戛纳一日 Cannes Framewaves》精选
 
+> 公众号原文：<https://mp.weixin.qq.com/s/V_QkaVYjyxN1CYKwYVR1BQ>
+
 ![](https://mmbiz.qpic.cn/mmbiz_png/yFvXg41XKCpk3rBrfdGRowWj4hR8oxkSskrs7RVIHUwiahiaeLqSMSA9mJno0wemtsJsM7khfXArpJPL5eLYKdtA/640?wx_fmt=png)
 
 “戛纳一日·精选”放映已在多城开启，**成都**将在**2024年12月22日（星期日）加场**

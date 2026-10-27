@@ -93,6 +93,11 @@ const tplSuffix = template.slice(closeIdx);
 function renderArticle(a) {
   let body = marked.parse(a.text, { headerIds: false, mangle: false });
   body = body.replace(/<img\s/g, '<img referrerpolicy="no-referrer" ');
+  // 存档里的原文链接块改成单行样式，避免两端对齐拉大字距
+  body = body.replace(
+    /<blockquote>\s*<p>公众号原文：<a href="([^"]+)">[^<]*<\/a><\/p>\s*<\/blockquote>/,
+    (m, url) => `<p class="article-source" style="text-align:left;font-size:0.9em;color:#8a8a8a;margin:18px 0;word-break:break-all;">公众号原文：<a href="${url}" target="_blank" rel="noopener">查看原文 ↗</a></p>`
+  );
   const p = tplPrefix
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(a.title)} - 24帧公众号存档</title>`)
     .replace(/<div class="article-date">.*?<\/div>/, `<div class="article-date">📅 ${a.date}</div>`)

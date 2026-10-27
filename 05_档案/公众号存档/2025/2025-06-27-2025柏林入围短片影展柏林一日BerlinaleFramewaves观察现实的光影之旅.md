@@ -2,6 +2,8 @@
 
 #  「2025柏林入围短片影展」《柏林一日 Berlinale Framewaves》观察现实的光影之旅
 
+> 公众号原文：<https://mp.weixin.qq.com/s/WyCZXGda-yj06-mUubxEgg>
+
 ![](https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIK9UibTDRnph7TgLickxMblibPguwDvCRV0Sfhiav9KhqhPbvKtTtjxBZIemibiaickvPQD2iaXNJnfeSumA/640?wx_fmt=png&from=appmsg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIK9UibTDRnph7TgLickxMblibB2adG5Vd6Caa8t94iaAowT5YAIAvKiaJmC4ylULroibPfiakziaRXT6VPDg/640?wx_fmt=png&from=appmsg)

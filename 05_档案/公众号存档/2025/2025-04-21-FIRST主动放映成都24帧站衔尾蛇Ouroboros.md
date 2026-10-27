@@ -2,6 +2,8 @@
 
 #  FIRST主动放映·成都24帧站 ｜衔尾蛇 Ouroboros
 
+> 公众号原文：<https://mp.weixin.qq.com/s/_m0dpghBM_inR7Ewd-1jZA>
+
 ![](https://mmbiz.qpic.cn/mmbiz_png/E8dLbmPckyIibCgaic5GRmBx0wSR9XxyCR9GiczCQU1HJjiaodyesD1zyOSXvFBB0dzgWRynvRtKDj42LawSOO5H6w/640?wx_fmt=png&from=appmsg)
 
 衔尾蛇Ouroboros是一个古老的象征符号，衔尾成环即永恒的螺旋叙事：自我吞噬与生命繁衍。
