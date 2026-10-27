@@ -15,6 +15,7 @@ const YEARS = fs.readdirSync(ROOT)
   .sort();
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const norm = s => s.replace(/[\s「」『』【】《》〈〉（）()\[\]·—–―…、，。！!？?：:;；,.|\\/<>:*"'‘’“”~`#@$%^&=_+\-｜／＼－　]/g, '');
 const now = new Date();
 const cst = new Date(now.getTime() + 8 * 3600 * 1000);
 const stamp = cst.toISOString().slice(0, 16).replace('T', ' ');
@@ -22,8 +23,22 @@ const iso = now.toISOString();
 
 function parseArticle(file) {
   const base = path.basename(file, '.md');
-  const text = fs.readFileSync(file, 'utf8');
-  return { id: base, title: base.slice(11), date: base.slice(0, 10), year: base.slice(0, 4), file, text };
+  const raw = fs.readFileSync(file, 'utf8');
+  let text = raw;
+  const fallback = base.slice(11);
+  let title = fallback;
+  // 正文自带与文件名同名的 H1 时，用它作正式标题（保留书名号等），并从正文移除
+  const lines = text.split('\n');
+  for (let i = 0; i < Math.min(lines.length, 10); i++) {
+    const m = lines[i].match(/^#\s+(.+?)\s*$/);
+    if (m && norm(m[1]) === norm(fallback)) {
+      title = m[1];
+      lines.splice(i, 1);
+      text = lines.join('\n');
+      break;
+    }
+  }
+  return { id: base, title, date: base.slice(0, 10), year: base.slice(0, 4), file, text, rawLength: raw.length };
 }
 
 const articles = [];
@@ -130,7 +145,7 @@ const toEntry = a => ({
 });
 const yearStats = {};
 let totalChars = 0;
-for (const a of articles) totalChars += a.text.length;
+for (const a of articles) totalChars += a.rawLength;
 for (const y of YEARS) {
   const list = articles.filter(a => a.year === y);
   yearStats[y] = list.length;
