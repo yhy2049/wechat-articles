@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演离开旋涡的中心需要很大的勇气和毅力我是001号导演许世悦现场交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-09-28</div>
+      <h1 class="article-title">成都路演离开旋涡的中心需要很大的勇气和毅力我是001号导演许世悦现场交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <h1>「成都路演」离开旋涡的中心，需要很大的勇气和毅力《我是001号》导演许世悦现场交流</h1>
+<p>写在前面</p>
+<p>抑郁障碍（也称抑郁症）是一种常见的精神障碍，涉及长时间情绪低落或失去快乐或对活动的兴趣。根据2025年世界卫生组织（WHO）最新发布的《世界精神卫生报告》显示，全球约有9.7亿人患有精神疾病，相当于每8人中就有1人正经历不同程度的心理困扰。《2025年国民抑郁症蓝皮书》显示，我国青少年抑郁患者已超2850万，其中家庭与父母期望是影响孩子心理健康的重要因素。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQHVrI9JlqKaB8Cx9dIloWMdwEd7OXrbtN4iaVnErKibyqIjLUO5jiaQVdtvVgpKDSBIuJnh3ib1NUCZALWz9iaeODIriaRkXVwkO94Og/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>《我是001号》正是从这里出发。</p>
+<p>孟晨**，1988年出生于北京。16岁成为故宫志愿者“001号”，此后连续8年无偿服务。30岁时，他因为严重的抑郁、强迫和躯体症状，逐渐失去正常生活的能力，被困在北京二环的一套三室一厅里。</p>
+<p>导演许世悦**跟随孟晨一家近距离拍摄，试图寻找的，不只是“抑郁症从何而来”，而是一个人的命运，如何在家庭、期待、奉献与顺从中逐渐形成。她也开始意识到，那些被视作“症状”的强迫行为，也许是一种无声的抵抗，是身体对无法承受之物的回应。</p>
+<p>放映员说</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQFDEbaEj5FXu6iauMCLfAibvVHDichK8SyWvUYb2YZXR2OiagGFMB9Mz8Pwiadr7MtqZ8perMoia6lrlbibSHO6Ow1ibMpic3Rp6yDte5Wc/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>《我是001号》**计划在2026年10月10日于优酷和爱奇艺上线，赶在上线前，我们和导演还是觉得应该和观众先见一次面，线下和大家聊一聊这部纪录电影的背后故事。</p>
+<p>值得一提的是，这部电影是它没有把主角孟晨只拍成一个“抑郁症患者”。导演曾提到，她看到的孟晨首先是一个鲜活的人——他曾经青春过，有自己的兴趣和喜好。于是，影片没有停留在“症状”的展示，而是不断回到他的生活，寻找一个人如何逐渐走到今天。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQFWjVLYI2TEzzfZPq621IWKEicyoQMEMZbXrRgiaCB9nd06a8RZPprGVouroO1uLajR1asqRHIeSCrkgyNjFhu6sSUCftY3uMW6g/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>爷爷、父亲、孟晨，三代人与故宫之间有着紧密的联系。父亲希望儿子延续自己的轨迹，母亲则长期承担照顾与陪伴。导演由此进一步看到家庭内部的期待、传承与顺从。</p>
+<p>在导演看来，当集体主义的奉献精神演化成个体的顺从，一个人的生命能量也可能被不断压缩。</p>
+<p>所以，故宫在影片中不只是一个空间。它更像一个象征——一个看不见、摸不着，却始终存在的“巨物”。真正困住人的，也许从来不只是一座建筑，而是那些我们从小习以为常的期待、规则与身份。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQEdoa5bNn7uqessrk23LYicEvNbvK5F2wHWdClv6k8QyZOpWpC5L6dBlMbuR14VpDYSTSib0axvMV3MIR0reibq9uyAvBz6kViaficw/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>从这里回头再看孟晨，我们或许会发现：一个“有问题的人”并不是突然出现的，而他的命运，有迹可循。</p>
+<p>导演介绍</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQG9y4V95qyHfxjRB1zxtnIypGHLoqJOFWJ7XK9N2K6j1tlrZico3bdcHia6Hy7YLdibRygcKLfD03ChJEqvjST7qUxDXQZO1bTWcs/640?wx_fmt=jpeg" alt=""></p>
+<p>许世悦，研究生毕业于美国查普曼大学纪录片系。 指导拍摄过过多部剧情片、纪录片、广告片。其中音乐短片 《小星星变奏曲**》获得第54届休斯顿国际电影节雷米奖、美国木兰国际电影节最佳叙事短片奖、NOHO国际电影节最佳短片奖、美国赛多纳国际电影节最观众最佳选择奖、托马斯国际电影节导演选择奖、法戈国际电影节最佳短⽚奖等多个国际奖项。儿童电影《圆圆**》获得第55届休斯顿国际电影节雷米奖、洛杉矶女性电影节最佳短片奖、美国红花石国际电影节最佳导演奖、⾦蜜蜂国际电影节最佳儿童影片、等多个国际电影节提名入围。担任中美电影节委员会委员、Reel Sisters女性电影节初选评委。指导参与的影片在全球40+电影院播放展映。 个⼈影⽚风格温暖明亮，致力于关注儿童、女性、特殊人群等社会议题。</p>
+<p>主持嘉宾：徐筱</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHkeaKyozKskKYumDGLd0nH0mias14JDDu1t1GWIwWTibkzuYRr2wve7wfCIPiaQibAvsKZsZhUcGje9Lnib3kxQy0nadohyT1zpxz8/640?wx_fmt=jpeg" alt=""></p>
+<p>自由制片人，纪录片女性从业者互助社群“我们纪录WOMEN DOCU”发起人。毕业自西南大学，交换学习于台湾、美国。曾就职于 CNEX 。近些年参与多部国内外获奖纪录片的制片及发行工作，其中包括《塑料王国》《旷野歌声》《“炼”爱》等。担任制片人的最新作品包括《女人世界》《最后的，最初的》《一些会被忘记的事》等。2022年担任FIRST青年电影展纪录长片组评审，2023年入选FIRST惊喜影展制片人实验室。</p>
+<p>时间</p>
+<p>2026年10月7日（周三）</p>
+<p>14:45-15:00 签到</p>
+<p>15:00-16:21 放映</p>
+<p>16:21-17:00 映后</p>
+<p>导演许世悦现场交流、嘉宾徐筱主持</p>
+<p>地址</p>
+<p>保利万和国际影城(招商花园城店)</p>
+<p>7/8号地铁：</p>
+<p>理工大学站</p>
+<p>免费参与</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHZPfOzURw6PR1HP8QVGw8Iicib9ADhfdcHmMoZL6j54F5iaAxz075q5icNK4rh63TafDpiczvDX9vdbkHhDfSCDwSeOq1RRzpvNsRA/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>添加小助手微信了解更多信息</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHXAicdmn1TbwV2oeUfwYcHEiasgxBwtLP0CQlnCeJTGueibpupeLJT5yFAjz0MgUNOazt0ibjJTamKqA8gbnYWV0s3r7dXk4YiaZuQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>▪︎现场签到领取周边。选座场次对号入座，非选座场次先到先得。</p>
+<p>▪︎保持文明观影，请勿屏摄、饮食、聊天。</p>
+<p>▪︎请于片尾结束后再离场。</p>
+<p>▪︎电影开场时停止检票，迟到的观众请至影院前台出示购票页面入场，周边将在活动结束后统一发放。</p>
+<p>▪︎活动将会拍摄照片及视频用于宣传推广。</p>
+<p>▪︎影片可能会引发强烈情绪，请酌情参与。</p>
+<p>报名即默认您已知悉并同意以上注意事项，感谢您的理解和支持！</p>
+
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

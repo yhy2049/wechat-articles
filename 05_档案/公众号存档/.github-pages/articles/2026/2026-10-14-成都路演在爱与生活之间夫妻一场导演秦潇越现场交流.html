@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成都路演在爱与生活之间夫妻一场导演秦潇越现场交流 - 24帧公众号存档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text: #2c3e50;
+      --text-light: #666;
+      --bg: #fefefe;
+      --card: #fff;
+      --border: #e0e0e0;
+      --code-bg: #f5f5f5;
+    }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .nav-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background: var(--highlight);
+      color: white;
+    }
+    .header .site-name {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-meta {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--border);
+    }
+    .article-date {
+      font-size: 0.9em;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+    .article-content {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05em;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-content h1 {
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      color: var(--primary);
+    }
+    .article-content h2 {
+      font-size: 1.5em;
+      margin: 35px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+    }
+    .article-content h3 {
+      font-size: 1.3em;
+      margin: 30px 0 15px;
+      color: var(--accent);
+    }
+    .article-content h4 {
+      font-size: 1.15em;
+      margin: 25px 0 12px;
+      color: var(--highlight);
+    }
+    .article-content p {
+      margin: 20px 0;
+      text-align: justify;
+    }
+    .article-content a {
+      color: var(--highlight);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--highlight);
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-image {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .article-image figcaption {
+      font-size: 0.85em;
+      color: var(--text-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--highlight);
+      padding: 15px 25px;
+      margin: 25px 0;
+      background: rgba(233,69,96,0.05);
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .article-content blockquote p {
+      margin: 5px 0;
+    }
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    .article-content li {
+      margin: 10px 0;
+    }
+    .article-content code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--highlight);
+    }
+    .article-content pre {
+      background: #1a1a2e;
+      color: #63e6be;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .article-content pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .article-content th, .article-content td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    .article-content th {
+      background: var(--code-bg);
+      font-weight: 700;
+    }
+    .article-content strong {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .article-content em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.8em; }
+      .article-content { font-size: 1em; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="nav-left">
+        <a href="../../index.html">← 首页</a>
+        <a href="../../2026.html">← 2026年</a>
+      </div>
+      <span class="site-name">🎬 24帧公众号存档</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="article-meta">
+      <div class="article-date">📅 2026-10-14</div>
+      <h1 class="article-title">成都路演在爱与生活之间夫妻一场导演秦潇越现场交流</h1>
+    </div>
+    
+    <div class="article-content">
+      <h1>「成都路演」在爱与生活之间《夫妻一场》导演秦潇越现场交流</h1>
+<p>写在前面</p>
+<p>《</p>
+<p>夫妻一场》</p>
+<p>入围</p>
+<p>FIRST</p>
+<p>主竞赛单元。记录了一对有些特别的夫妻：曾经深陷抑郁的女演员李欣冉，与还俗的和尚朴原博。他们相爱、生育孩子，带着积蓄生活，也曾向往远离世俗的山居乌托邦。但当创业受挫、经济危机和育儿压力接踵而至，曾经的浪漫逐渐被日常争执磨损，他们最终被困在深山里，面对生活，也面对彼此。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHGUpRVYSicg9gDGyETKlKIvhysEDzElHT306uRAVKmJZtBnwUuQ2ZshO6a5HRUAzJib1IBrHOexicjcMDsM5ONjEI5JIPbZvjztY/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>导演秦潇越最初被吸引的，是</p>
+<p>李欣冉</p>
+<p>身处婚姻、想离开却无法离开的困境。但随着两年的拍摄，她看到的并不只是一个女性如何被婚姻困住，还有激烈争吵之后的拥抱、眼泪和笑声。婚姻的围城，既有无可奈何，也有一次次心甘情</p>
+<p>愿。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/yh6Qk8JWwV7UibOsHCt3bXOklrqE91ullBAbN3zYibicj4O1ibnwrzYTcJWQjE2OlGmiaOuUG9ppO7GDdicO5TrEibQ1R2JBNZqicc488ibF5ttibOdTU/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>镜头可以停留，可以等待，也可以容纳彼此矛盾的情绪。</p>
+<p>观众</p>
+<p>看到的是两个具体的人，如何在爱与疲惫、自由与责任、理想与生存之间反复摇摆。</p>
+<p><strong>导演的话</strong></p>
+<hr>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQF6DqJsq9RaEMoBv2RtbNN5zec7cN0m48DxdqJVYl1yNXFX4ATE4HZ1IVvW5MAqcV6zo5asyyq4m6AuUqkK5kTGxQV2p4ic8xcs/640?wx_fmt=jpeg" alt=""></p>
+<hr>
+<p>这是一次极度疲惫又极度刺激的拍摄之旅。2019 年 11 月，我们第一次来到宜兴试拍。那天早晨，李欣冉刚刚离家出走。当我们要回上海的时候，她走得很慢。老公推着孩子走在前面。她靠近我，说了一声：我好想和你们一起回上海。顿时，那种被困在婚姻中想走却走不了的困境深深的吸引了我。但在拍摄 2 年之后，另一种情绪深深地笼罩着我。仿佛我们总是默认女性是婚姻关系中的牺牲者，但当我们有了一次近距离观察婚姻关系的时候，就会看到婚姻的围城是由一次次心甘情愿和无可奈何筑造起来的。我们时常拍到，两个人激烈的吵架过后，又彼此拥抱，又哭又笑。这场婚姻的赌注里，没有谁输谁赢。希望这样一部真实记录婚姻生活的影片，能够让身处情感困境的男男女女们更加理解彼此，也更能找回自己。</p>
+<p>放映员说</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQFVKoTU9DFIr3cWZ99qUnfGSWEwiaAPw5dr6ZYhryiaE1dH4Jyjt7CcPSc8F9vSLrYOleFxBxbrmzhy9ek4OQJylI7CBgOoEZXWs/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>《夫妻一场》作为纪录片独特魅力，是让我们**有机会看见，一段关系如何在漫长的共同生活中不断变化。**镜头不只是为了证明某个预先设定的观点，也可以通过长时间的观察，让人物慢慢显现，让最初的判断变得不再那么确定。那些矛盾、反复、争吵后的拥抱，以及无法被简单解释的情绪，共同构成了真实生活的质地。</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQHetDIiabicmvicfYBldVsd8yVF3BktGuo5JbQdvyUOgmktqHVrJiaxQicZ2yeZyNfSUDfW7JmkibOxxJMibqHnCzS0vvPrAUibkj4nu5s/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>我们或许会在片中看到熟悉的关系困境，也可能对人物的选择感到不解。我们一同跟随导演的镜头进入两个人的生活，看见关系中那些难以归类、无法一言以蔽之的时刻。但比起寻找一个正确答案，本片更愿意留下一些思考：当爱、疲惫、责任与个人愿望同时存在时，两个人究竟如何继续生活？而当我们真正走近一段关系，又是否还能轻易地判断它？</p>
+<p>导演介绍</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQEfg1yAw2bddsam173M9Wib7icvhRSKEyeZ3Ccia8cIED5OW06AuAoaxSW5AO6f7wnblbQz1VKQJ8LLFcoIO9Zicm3yuen7r00wBIs/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>秦潇越**，上海独立纪录片导演。首部纪录长片《巢》在2017广州纪录片节提案入围。2023年入围平遥电影节WIP单元，并于第⼗七届FIRST⻘年影展最佳纪录⻓⽚，获得第⼗三届纪录⽚学院奖提名。</p>
+<p>系列纪录片《去哪安家**》⼊围2023年苏州新鲜提案、获得⼴州纪录⽚⼤会⼗佳⽅案；2024年获得首届中国（吉林）真实影像大会优秀提案奖，长片版创投2026FIRST”菁彩成帧”奖</p>
+<p>《夫妻一场》2025FIRST主竞赛入围，2026年华获得语纪录电影大会社会纪实类推荐作品、被“国家影像典藏工程”永久收藏，将于2026年11月13日全国公映。</p>
+<p>时间</p>
+<p>2026年11月8日（周日）</p>
+<p>13:45-14:00 签到</p>
+<p>14:00-15:41 放映</p>
+<p>15:41-16:11 映后</p>
+<p>导演秦潇越现场交流</p>
+<p>地址</p>
+<p>保利万和国际影城(招商花园城店)</p>
+<p>7/8号地铁：</p>
+<p>理工大学站</p>
+<p>票价及周边</p>
+<p>￥35</p>
+<p>官方A3海报*1</p>
+<p>官方票根*1</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQGBibHPYEbf10du3YLFGb8kEEVNGiaRa4G3p7VibQYwpqYgpia8sYianGWFRvCqbrF6UrCbTTdf3icpicVHIYcVxvU4DxLQibiaKcKe5164/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<p>报名方式</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHKQGrewqNMwiaTyX5ohhIkEKt3pfu12xqOmbgHicuibyylZrjSia8S2gJzg2be6SNcOTbwiakVmWAiaPKCsSFXuNyGR8zriblXYmEInU/640?wx_fmt=png" alt=""></p>
+<p>添加小助手微信了解更多信息</p>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQHXAicdmn1TbwV2oeUfwYcHEiasgxBwtLP0CQlnCeJTGueibpupeLJT5yFAjz0MgUNOazt0ibjJTamKqA8gbnYWV0s3r7dXk4YiaZuQ/640?wx_fmt=jpeg&amp;from=appmsg" alt=""></p>
+<h1>联合宣传</h1>
+<p><img referrerpolicy="no-referrer" src="https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQFTdGFmsVhicsmImibaWhfulMVl0ZpDia1f1DtVXuVERbHJOlwJ6ktAnDzaB9e27ReaIWxWoDBHhr5ibS8T9ibKUmPQtW1v7TjL3IRs/640?wx_fmt=jpeg" alt=""></p>
+<p>来树下书酒馆</p>
+<p>，一家开在成都市中心的女性主义书店、性别友好文化空间。店主燊燊执着于挑选女性题材书籍，与读者一起在性别友好的氛围中学习、思考与成长。2023年8月27日开业，计划2028年4月倒闭。</p>
+<p>▪︎现场签到领取周边。选座场次对号入座，非选座场次先到先得。</p>
+<p>▪︎保持文明观影，请勿屏摄、饮食、聊天。</p>
+<p>▪︎请于片尾结束后再离场。</p>
+<p>▪︎电影开场时停止检票，迟到的观众请至影院前台出示购票页面入场，周边将在活动结束后统一发放。</p>
+<p>▪︎活动将会拍摄照片及视频用于宣传推广。</p>
+<p>▪︎影片可能会引发强烈情绪，请酌情参与。</p>
+<p>报名即默认您已知悉并同意以上注意事项，感谢您的理解和支持！</p>
+
+
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="../../index.html">首页</a> · 
+        <a href="../../2026.html">2026年文章</a> · 
+        <a href="https://yhy2049.github.io/wechat-articles/api.html">API 文档</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
