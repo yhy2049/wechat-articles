@@ -2,7 +2,7 @@
 
 独立放映组织「24帧」公众号文章全库，共 302 篇，时间跨度 2022-04 至 2026-10。
 
-本地保存在 vault 的 `05_档案/公众号存档/`；GitHub 仓库根目录自 2026-10-28 起直接对应本目录内容（不再套层级）。
+本地保存在 vault 的 `05_档案/公众号存档/`；GitHub 仓库根目录自 2026-10-28 起直接对应本目录内容（不再套层级）。`05_档案/` 下的会议存档等其他内容仍保留在仓库里，不在本目录内。
 
 每篇开头保留公众号封面图（301/302；《取消放映通知》原页面无封面），正文顶部保留「公众号原文」链接（301/302；《无名》待补），映射表见 `_meta/source-links.json`。
 
@@ -47,14 +47,11 @@ python3 00_系统/agent/wxmp-audit.py
 # 3. 重建站点
 node _skill/scripts/generate-site.js
 
-# 4. 发布存档到 GitHub（仓库根目录 = 本目录内容）
-git fetch origin main
-TREE=$(git rev-parse 'main:05_档案/公众号存档')
-COMMIT=$(git commit-tree "$TREE" -p origin/main -m "更新公众号存档")
-git push origin "$COMMIT:main"
+# 4. 发布存档到 GitHub（根目录 = 本目录内容，05_档案 其他内容自动保留）
+bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
-> 第 4 步用一个基于 `origin/main` 的镜像提交，把本地存档树直接作为仓库根目录推送；不用切换分支，也不会把 vault 其他目录带上 GitHub。
+> 脚本用镜像提交把本地存档树作为仓库根目录推送，并保留 `05_档案/` 下的会议存档等其他内容；不用切换分支，也不会把 vault 其他目录带上 GitHub。
 
 ## 仓库
 
