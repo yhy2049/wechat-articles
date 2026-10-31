@@ -4,26 +4,21 @@ set -euo pipefail
 
 VAULT=$(git rev-parse --show-toplevel)
 MSG="${1:-更新公众号存档}"
-ARCHIVE="$VAULT/05_档案/公众号存档"
 cd "$VAULT"
 git fetch origin main
 
-TMP=$(mktemp -d /tmp/archive-push.XXXXXX)
-git worktree add --detach "$TMP" origin/main >/dev/null
+ARCHIVE_TREE=$(git rev-parse 'main:05_档案/公众号存档')
 
-(
-  cd "$TMP"
-  shopt -s dotglob nullglob
-  for p in ./*; do
-    [ "$p" = "./.git" ] && continue
-    [ "$p" = "./05_档案" ] && continue
-    rm -rf -- "$p"
-  done
-  rsync -a "$ARCHIVE/" "$TMP/"
-  git add -A
-)
-TREE=$(git -C "$TMP" write-tree)
-git worktree remove --force "$TMP"
+if git cat-file -e 'origin/main:05_档案' 2>/dev/null; then
+  OTHER_TREE=$(git rev-parse 'origin/main:05_档案')
+  IDX=$(mktemp -u /tmp/archive-index.XXXXXX)
+  GIT_INDEX_FILE=$IDX git read-tree "$ARCHIVE_TREE"
+  GIT_INDEX_FILE=$IDX git read-tree --prefix=05_档案/ "$OTHER_TREE"
+  TREE=$(GIT_INDEX_FILE=$IDX git write-tree)
+  rm -f "$IDX"
+else
+  TREE=$ARCHIVE_TREE
+fi
 
 COMMIT=$(git commit-tree "$TREE" -p origin/main -m "$MSG")
 git push origin "$COMMIT:main"
