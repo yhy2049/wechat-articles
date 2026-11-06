@@ -35,6 +35,8 @@ README.md
 
 ## 更新方式
 
+换机器或换 agent 先跑 `bash _skill/setup.sh` 自检依赖（缺则 `bash _skill/setup.sh install`）。
+
 ```bash
 cd 05_档案/公众号存档
 

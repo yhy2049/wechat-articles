@@ -21,8 +21,12 @@ import json, os, re, sys, argparse
 from pathlib import Path
 from collections import defaultdict
 
-ARCH = "/Users/haishangyinghuo/Documents/24帧运营库/05_档案/公众号存档"
-DEFAULT_ARTS = os.path.expanduser(os.environ.get("WXMP_ARTICLES", "~/Library/Caches/wxmp/articles.json"))
+ARCH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # 存档根目录
+CACHE = os.environ.get("WXMP_HOME") or (
+    os.path.expanduser("~/Library/Caches/wxmp") if sys.platform == "darwin"
+    else os.path.expanduser("~/.cache/wxmp"))
+
+DEFAULT_ARTS = os.environ.get("WXMP_ARTICLES") or os.path.join(CACHE, "articles.json")
 
 def safe_title(t):
     """清理标题中的特殊字符，用于文件名匹配"""

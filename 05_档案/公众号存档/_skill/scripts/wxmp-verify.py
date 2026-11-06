@@ -25,9 +25,13 @@ from playwright.sync_api import sync_playwright
 
 UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
       "AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.38")
-ARCH = "/Users/haishangyinghuo/Documents/24帧运营库/05_档案/公众号存档"
+ARCH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # 存档根目录
+CACHE = os.environ.get("WXMP_HOME") or (
+    os.path.expanduser("~/Library/Caches/wxmp") if sys.platform == "darwin"
+    else os.path.expanduser("~/.cache/wxmp"))
+
 # articles.json 由公众号后台 appmsgpublish 接口生成（需扫码登录），不入库
-DEFAULT_ARTS = os.environ.get("WXMP_ARTICLES", os.path.expanduser("~/Library/Caches/wxmp/articles.json"))
+DEFAULT_ARTS = os.environ.get("WXMP_ARTICLES") or os.path.join(CACHE, "articles.json")
 NOISE = ("pic_blank.gif", "video_player_tmpl", "blank.gif", "qrcode", "wx_qrcode")
 # 频控/风控时微信返降级页：标题还在、正文被抽空，极易漏判
 BLOCKED = ("环境异常", "去验证", "安全验证", "请在微信客户端打开")
