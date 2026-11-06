@@ -45,8 +45,12 @@ PREFIX="$(python3 -c "import os;print(os.path.relpath('$ARCHIVE','$TOPLEVEL'))")
 
 git_try "fetch" -C "$TOPLEVEL" fetch "$REMOTE" "$BRANCH" || { echo "❌ 拉取 $REMOTE/$BRANCH 失败"; exit 1; }
 
-ARCHIVE_TREE="$(git -C "$TOPLEVEL" rev-parse "HEAD:$PREFIX.")" || {
-  echo "❌ 本地 HEAD 里没有存档目录（先提交改动）"; exit 1; }
+if [ -n "$PREFIX" ]; then
+  ARCHIVE_TREE="$(git -C "$TOPLEVEL" rev-parse "HEAD:$PREFIX" 2>/dev/null || true)"
+else
+  ARCHIVE_TREE="$(git -C "$TOPLEVEL" rev-parse "HEAD^{tree}" 2>/dev/null || true)"
+fi
+[ -z "$ARCHIVE_TREE" ] && { echo "❌ 本地 HEAD 里没有存档目录（先提交改动）"; exit 1; }
 echo "存档目录: $ARCHIVE"
 echo "仓库前缀: ${PREFIX:-（存档即仓库根目录）}"
 echo "存档树:   $ARCHIVE_TREE"
