@@ -184,6 +184,8 @@ def main():
             uniq.append(x)
     uniq.sort(key=lambda x: (x.get("create_time") or 0, x["date"]), reverse=True)
     json.dump(uniq, open(a.out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    with open(os.path.join(os.path.dirname(a.out), "fetched_at.txt"), "w", encoding="utf-8") as fh:
+        fh.write(time.strftime("%Y-%m-%d %H:%M"))
 
     print(f"\n✅ type={used}，展开多图文后共 {len(uniq)} 篇 → {a.out}")
     for x in uniq[:12]:
