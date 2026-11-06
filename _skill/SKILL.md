@@ -33,7 +33,8 @@ bash _skill/setup.sh install   # 缺什么装什么（pip 依赖 + chromium + np
 │   │   ├── wxmp-list.py           # 后台全量列表（持久化登录）
 │   │   ├── wxmp-fetch.py          # 抓正文 → 年份目录（含封面 + 原文链接）
 │   │   ├── wxmp-audit.py          # 后台 vs 存档完整性审核
-│   │   ├── update-data.py         # 用后台列表刷新 _数据/ 排行榜与快照
+│   │   ├── update-data.py         # 刷新 _数据/ 排行榜、快照并重建看板
+│   │   ├── build-dashboard.py     # 生成单文件数据看板（纯 SVG，无外部依赖）
 │   │   ├── wxmp-verify.py         # 线上 DOM vs 归档 MD 校验
 │   │   ├── wxmp-probe.py          # 页面结构诊断
 │   │   ├── generate-site.js       # 由年份目录重建 .github-pages
@@ -61,8 +62,8 @@ python3 _skill/scripts/wxmp-fetch.py --date 2026-11-05 URL   # 贴图类页面�
 # 4. 补原文链接映射（新文章写进 md 后重建映射表）
 #    产物：_meta/source-links.json
 
-# 4.5 刷新 _数据/（阅读量排行榜 + 当日快照，按标题去重取最大阅读量）
-python3 _skill/scripts/update-data.py
+# 4.5 刷新 _数据/（排行榜 + 当日快照 + 数据看板，按标题去重取最大阅读量）
+python3 _skill/scripts/update-data.py   # 内部会调用 build-dashboard.py
 
 # 5. 校对
 python3 _skill/scripts/wxmp-audit.py
