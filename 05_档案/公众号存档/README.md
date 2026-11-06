@@ -1,10 +1,10 @@
 # 24帧公众号文章存档
 
-独立放映组织「24帧」公众号文章全库，共 302 篇，时间跨度 2022-04 至 2026-10。
+独立放映组织「24帧」公众号文章全库，共 325 篇，时间跨度 2022-04 至 2026-11。
 
 本地保存在 vault 的 `05_档案/公众号存档/`；GitHub 仓库根目录自 2026-10-28 起直接对应本目录内容（不再套层级）。`05_档案/` 下的会议存档等其他内容仍保留在仓库里，不在本目录内。
 
-每篇开头保留公众号封面图（301/302；《取消放映通知》原页面无封面），正文顶部保留「公众号原文」链接（301/302；《无名》待补），映射表见 `_meta/source-links.json`。
+每篇开头保留公众号封面图（324/325；《取消放映通知》原页面无封面），正文顶部保留「公众号原文」链接（325/325，含此前缺失的《无名》《关于莉莉周的一切》），映射表见 `_meta/source-links.json`。
 
 ## 网站
 
@@ -36,22 +36,20 @@ README.md
 ## 更新方式
 
 ```bash
-# 1. 抓取新文章（扫码登录，工具在 vault 的 00_系统/agent/）
-python3 00_系统/agent/wxmp-list.py                 # → /tmp/wxmp-articles.json
-python3 00_系统/agent/wxmp-fetch.py URL [URL...]   # → YYYY/YYYY-MM-DD-标题.md
-python3 00_系统/agent/wxmp-fetch.py --date 2026-10-26 URL   # 贴图类无页面时间时手动指定
+cd 05_档案/公众号存档
 
-# 2. 审核
-python3 00_系统/agent/wxmp-audit.py
+# 1. 拉后台全量列表（登录态失效才弹窗扫码）
+python3 _skill/scripts/wxmp-list.py
 
-# 3. 重建站点
-node _skill/scripts/generate-site.js
+# 2. 抓新文章（自动写封面图 + 公众号原文链接）
+python3 _skill/scripts/wxmp-fetch.py URL [URL...]
+python3 _skill/scripts/wxmp-fetch.py --date 2026-11-05 URL   # 贴图类页面取不到日期时
 
-# 4. 发布存档到 GitHub（根目录 = 本目录内容，05_档案 其他内容自动保留）
+# 3. 发布存档到 GitHub（根目录 = 本目录内容，05_档案 其他内容自动保留）
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
-> 脚本用镜像提交把本地存档树作为仓库根目录推送，并保留 `05_档案/` 下的会议存档等其他内容；不用切换分支，也不会把 vault 其他目录带上 GitHub。
+> 静态站点已随 gh-pages 下线，日常更新不必重建；需要时用 `node _skill/scripts/generate-site.js` 重建 `.github-pages/`。
 
 ## 仓库
 
