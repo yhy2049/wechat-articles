@@ -49,7 +49,10 @@ python3 _skill/scripts/wxmp-list.py
 python3 _skill/scripts/wxmp-fetch.py URL [URL...]
 python3 _skill/scripts/wxmp-fetch.py --date 2026-11-05 URL   # 贴图类页面取不到日期时
 
-# 3. 发布存档到 GitHub（仓库根目录 = 本目录内容，只上传存档本身）
+# 3. 刷新 _数据/（阅读量排行榜 + 当日快照）
+python3 _skill/scripts/update-data.py
+
+# 4. 发布存档到 GitHub（仓库根目录 = 本目录内容，只上传存档本身）
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
