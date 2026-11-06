@@ -532,7 +532,159 @@ def main():
     os.makedirs(DATA, exist_ok=True)
     out = os.path.join(DATA, "数据看板.html")
     open(out, "w", encoding="utf-8").write(html_out)
+
+    # ---- Obsidian / GitHub 可读的 Markdown 看板（图表截成 PNG 内嵌）----
+    shots = {
+        "月度节奏：发文量 vs 篇均阅读": "monthly.png",
+        "分类表现（中位阅读）": "category-median.png",
+        "选题象限：产量 × 中位阅读": "category-quadrant.png",
+        "分类分享率（分享/阅读）": "share-rate.png",
+        "TOP 20 单篇": "top20.png",
+        "年度 × 月份篇均阅读热力": "heatmap.png",
+        "阅读分布（长尾）": "distribution.png",
+        "帕累托：头部集中度": "pareto.png",
+        "标题特征 vs 篇均阅读": "title-features.png",
+        "星期分布（篇均阅读）": "weekday.png",
+        "系列/IP 篇均阅读": "series.png",
+        "片名复现（≥2 篇）": "films.png",
+        "阅读 × 分享象限": "quadrant-engagement.png",
+        "正文长度 vs 阅读量": "length.png",
+    }
+    imgdir = os.path.join(DATA, "图表")
+    os.makedirs(imgdir, exist_ok=True)
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as pw:
+            b = pw.chromium.launch()
+            pg = b.new_page(viewport={"width": 1240, "height": 1000}, device_scale_factor=1.5)
+            pg.goto("file://" + out)
+            pg.wait_for_timeout(500)
+            for card_el in pg.locator("section.card").all():
+                h2 = card_el.locator("h2").inner_text().strip()
+                if h2 in shots:
+                    card_el.screenshot(path=os.path.join(imgdir, shots[h2]))
+            b.close()
+        print(f"   图表截图：{len(shots)} 张 → {imgdir}")
+    except Exception as e:
+        print(f"   ⚠ 图表截图失败（Markdown 看板可能缺图）：{str(e)[:80]}")
+
+    kpi_md = "\n".join(f"| {k} | {v} | {s} |" for k, v, s in kpis)
+    _md = lambda x: x.replace("<b>", "**").replace("</b>", "**")
+    insight_md = "\n".join(f"- {_md(x)}" for x in insights)
+    decision_md = "\n".join(f"- {_md(x)}" for x in decisions)
+    year_md = "\n".join(f"| {x['y']} | {x['n']} | {x['total']:,} | {x['avg']:.0f} | {x['median']:,.0f} | {x['share']:.1f}% | {x['gap']:.0f} |" for x in year_stats)
+    cat_md = "\n".join(f"| {c} | {v['n']} | {v['median']:,.0f} | {v['mean']:.0f} | {v['share_rate']:.1f}% |" for c, v in sorted(cat_stat.items(), key=lambda x: -x[1]["median"]))
+    top_md = "\n".join(f"| {i} | {r['title'].replace('|','｜')[:40]} | {r['read']:,} | {r['date'] or '—'} | {r['cat']} |" for i, r in enumerate(top[:20], 1))
+    sy_md = "\n".join(f"| {x['series']} | {x['year']} | {x['n']} | {x['avg']:.0f} | {x['max']:,} |" for x in series_year)
+    recent_md = "\n".join(f"| {r['date']} | {r['title'].replace('|','｜')[:36]} | {r['read']:,} | {r['cat']} |" for r in recent[-20:])
+
+    md = f"""---
+title: 公众号数据看板
+updated: {today}
+tags: [公众号, 数据, 看板]
+---
+
+# 公众号数据看板
+
+> 数据抓取：{fetched or today} ｜ 文章 {len(rows)} 篇（后台 {len(json.load(open(SRC, encoding="utf-8")))} 条去重）｜ 累计阅读 {total_reads:,}
+> 交互版：[数据看板.html](数据看板.html)（浏览器打开，可悬停看数值）
+
+## 核心指标
+
+| 指标 | 数值 | 说明 |
+|---|---|---|
+{kpi_md}
+
+## 自动洞察
+
+{insight_md}
+
+## 决策清单
+
+{decision_md}
+
+## 月度节奏
+
+![](图表/monthly.png)
+
+## 分类表现
+
+| 类别 | 篇数 | 中位阅读 | 篇均阅读 | 分享率 |
+|---|---|---|---|---|
+{cat_md}
+
+![](图表/category-median.png)
+
+## 选题象限
+
+![](图表/category-quadrant.png)
+
+## 年度汇总
+
+| 年份 | 篇数 | 总阅读 | 篇均 | 中位 | 分享率 | 篇均间隔(天) |
+|---|---|---|---|---|---|---|
+{year_md}
+
+> 2024 年前分享率异常偏低，可能是后台统计口径变化，不宜跨年直接对比。
+
+![](图表/share-rate.png)
+
+## TOP 20
+
+| 排名 | 文章 | 阅读量 | 日期 | 类别 |
+|---|---|---|---|---|
+{top_md}
+
+![](图表/top20.png)
+
+## 年度 × 月份篇均阅读
+
+![](图表/heatmap.png)
+
+## 长尾与头部集中度
+
+![](图表/distribution.png)
+
+![](图表/pareto.png)
+
+## 标题特征与发布星期
+
+![](图表/title-features.png)
+
+![](图表/weekday.png)
+
+## 系列 / IP 与片名
+
+![](图表/series.png)
+
+![](图表/films.png)
+
+## 系列逐年表现
+
+| 系列 | 年份 | 篇数 | 篇均 | 最高 |
+|---|---|---|---|---|
+{sy_md}
+
+## 阅读 × 分享象限
+
+![](图表/quadrant-engagement.png)
+
+## 正文长度 vs 阅读量
+
+![](图表/length.png)
+
+## 近 90 天文章（最近 20 条）
+
+| 日期 | 文章 | 阅读量 | 类别 |
+|---|---|---|---|
+{recent_md}
+
+> 口径：阅读/分享为后台累计值；9 条未入档（6 条 tempkey 失效 + 3 条按规则移除）不计入图表。
+"""
+    md_path = os.path.join(DATA, "数据看板.md")
+    open(md_path, "w", encoding="utf-8").write(md)
     print(f"✅ 看板已生成：{out}（{len(html_out)/1024:.0f} KB，{len(rows)} 篇）")
+    print(f"✅ Obsidian/GitHub 版：{md_path}")
     print("   洞察：")
     for x in insights:
         print("   -", re.sub("<[^>]+>", "", x))
