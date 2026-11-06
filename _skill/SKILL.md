@@ -3,6 +3,23 @@
 > 公众号 → 本地存档 → 校对 → GitHub 同步（仓库根目录即存档内容）
 > 工具链全部在本目录 `_skill/scripts/`，不依赖 vault 其他目录。
 
+## 换机器 / 换 agent 先跑这个
+
+```bash
+bash _skill/setup.sh           # 自检：python3、playwright、requests、Pillow、PyMuPDF、chromium、git
+bash _skill/setup.sh install   # 缺什么装什么（pip 依赖 + chromium + npm marked）
+```
+
+脚本一律按自身位置定位存档目录，clone 到任何路径都能跑。可用环境变量覆盖：
+
+| 变量 | 作用 | 默认 |
+|---|---|---|
+| `WXMP_HOME` | 列表 JSON 目录 | macOS `~/Library/Caches/wxmp`，其他系统 `~/.cache/wxmp` |
+| `WXMP_PROFILE` | 登录态浏览器目录 | `~/.wechat-automation/browser-profile` |
+| `WXMP_ARTICLES` | 列表 JSON 文件 | `$WXMP_HOME/articles.json` |
+| `WXMP_GIT_RESOLVE` | 推送绕行 IP 列表 | `140.82.112.3 140.82.113.3 140.82.114.3` |
+| `GIT_REMOTE` / `GIT_BRANCH` | 推送目标 | `origin` / `main` |
+
 ## 目录结构
 
 ```
@@ -51,7 +68,7 @@ python3 _skill/scripts/wxmp-audit.py
 # 7.（可选）重建静态站点
 node _skill/scripts/generate-site.js
 
-### 提交并推送 GitHub
+# 8. 提交并推送 GitHub
 git add 05_档案/公众号存档 && git commit -m "更新公众号存档"
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
@@ -91,7 +108,7 @@ bash _skill/scripts/push-archive.sh "更新公众号存档"
 
 - 仓库：https://github.com/yhy2049/wechat-articles （公开）
 - `main` 根目录 = 本目录内容；仓库内只有公众号存档（2026-11-06 起已删除 `05_档案` 下的会议存档等）
-- `push-archive.sh` 用镜像提交推送：取本地存档树作为仓库根树，parent 为 `origin/main`；若远端仍有 `05_档案/` 会自动合并保留。不要用 `git push origin main`（会把 vault 其他目录带上去）
+- `push-archive.sh` 用镜像提交推送：取本地存档树作为仓库根树，parent 为 `origin/main`；若远端仍有 `05_档案/` 会自动合并保留。先 `bash _skill/scripts/push-archive.sh --dry-run` 可只看算出来的树，不推送。不要用 `git push origin main`（会把 vault 其他目录带上去）
 - `gh-pages` 自 2026-10-28 起为下线占位页；恢复站点时把 `.github-pages/` 内容推到 `gh-pages`
 - 本机直连 `github.com:443` 常超时，可用：
   `git -c http.curloptResolve=github.com:443:140.82.112.3 -c http.version=HTTP/1.1 …`

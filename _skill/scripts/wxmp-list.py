@@ -20,8 +20,10 @@
 import argparse, json, os, re, sys, time
 from playwright.sync_api import sync_playwright
 
-PROFILE = os.path.expanduser("~/.wechat-automation/browser-profile")
-OUTDIR = os.path.expanduser("~/Library/Caches/wxmp")
+PROFILE = os.environ.get("WXMP_PROFILE", os.path.expanduser("~/.wechat-automation/browser-profile"))
+OUTDIR = os.environ.get("WXMP_HOME") or (
+    os.path.expanduser("~/Library/Caches/wxmp") if sys.platform == "darwin"
+    else os.path.expanduser("~/.cache/wxmp"))
 OUT = os.path.join(OUTDIR, "articles.json")
 UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
       "AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40")
@@ -143,6 +145,7 @@ def main():
     ap.add_argument("--out", default=OUT)
     a = ap.parse_args()
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
+    os.makedirs(PROFILE, exist_ok=True)
 
     with sync_playwright() as p:
         headless = not a.force_ui

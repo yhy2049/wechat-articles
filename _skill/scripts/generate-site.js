@@ -5,7 +5,18 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { marked } = require('marked');
+
+let marked;
+try {
+  ({ marked } = require('marked'));
+} catch (e) {
+  try {
+    ({ marked } = require(path.join(__dirname, '..', 'node_modules', 'marked')));
+  } catch (e2) {
+    console.error('❌ 缺少 marked 依赖。执行：cd _skill && npm install（或 bash _skill/setup.sh install）');
+    process.exit(1);
+  }
+}
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SITE = path.join(ROOT, '.github-pages');
