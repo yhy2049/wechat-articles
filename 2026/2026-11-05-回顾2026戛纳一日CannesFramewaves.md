@@ -1,0 +1,167 @@
+![cover_image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQETkxe6m83cichTedhM4VkQUHtHmTlfURTvcPXoTM2D398lH8WIOWmffKya86sqroDzMSFGw57ScPaQpiagicDmNz0QR4P64BFoWs/0?wx_fmt=jpeg)
+
+#  回顾｜2026戛纳一日Cannes Framewaves
+
+> 公众号原文：<https://mp.weixin.qq.com/s/Z7GcgrmS09joxx8rsUyZeQ>
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQEO0iaYBFb9YZS4NxpVN2xLws66fD3Il4fTZvxmjrN8uXewZWCS9MCN6nicy9ne8K2WbEiczNRDS3v3HolncAZ4aBCNtmemByjOkE/640?wx_fmt=jpeg)
+
+# 写在前面
+
+熟悉的戛纳一日，今年我们再一次聚集在一次与光影进行思维的互动。展映的10部影片中的7部影片《游乐场》《赛壬之浴》**《井口》《致对手》《细筒靴》《艾莉》《河畔琐事》为亚洲首映。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQF1xwfoH9g6MbsfY9LWyu7pZ9nu1Z5YUPkmJ93IrAXicL5DTDbicD6rrsSXV4q1xc48zCYyTYMJSp66D2iaF5SibcXXYxWNlp8kDNs/640?wx_fmt=jpeg)
+
+本次展映我们邀请到了，Hishort 短片展创始人：王小曼，以及投奖创始人：李爱鑫，作为映后嘉宾来与我们一起探讨一些展映影片的幕后故事以及电影行业的未知与可能。
+
+在本次的回顾之中，你可以感受观众思维的碰撞以及嘉宾分享的一些幕后故事，欢迎你稍微慢下来，去感受这场交流盛宴。
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQEpZFgXsRbWgRuU8zgZggszH7kwlkBy6n8POicVtRCSjJib5jFxQyEK5Y1uEqeSMc75MMOwIqLibicC7STQLoUUrflD35vXA5XrVSc/640?wx_fmt=jpeg)
+
+依照惯例，我们给每部影片都设置了打分以及影评的渠道，根据收集到的数据，本次展映的分数前三名分别为《赛壬之浴》8.5/10，《河畔琐事》7.7/10，《细筒靴》**7.2/10。而均分体现不全观众对《赛壬之浴》的喜爱。
+
+# 最佳选择
+
+《赛壬之浴》获得了四位观众的满分评价，是所有展映片子当中最多的。
+
+“观看体验非常好，视听语言表现力很强，喜欢这种美术风格，尤其是色彩…感觉是表现形式很有力的作品” --到明天
+
+“姐妹俩的肤色随着天色变化。在粉红色小轿车布满长方形光晕的后座，中间留出了妈妈的座位” --Echo
+
+"上半场最喜欢的一部，感觉是女导演。两姐妹的感情前后变化，虽然最开始我会真的嫌弃你的没素质，但你也有你好的、特别的地方。动画里人物真的表演得太自然啦！而经常闪烁的星星像是妈妈一起陪伴着两姐妹。从一开始坐斜对角、到要牵不牵的手、到抱着一起坐小车、再到水下两个人对视。好美好哦！喜欢摸头发。很灵动，新时代创作的气质" -- MI
+
+“今天最最最喜欢的一部！！！超级喜欢坐在车后座姐姐其实有点想和妹妹牵手或者碰碰妹妹，但又不好意思。伸出的手犹犹豫豫。妹妹发现了也是小心翼翼的和姐姐一样。看的我特别想哭。姐妹俩的性格也是很不同。还是在整理整理再发出来吧！！！！！关于这部片子有好多好多想说的。。。色彩画面也特别特别喜欢 ” --11
+
+![](https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQFoOBUEWBkib9UxkzuZd80Eia5FqpMtia9mQIQaokXTy5HNpNMw19GicXYfPYUCvEK3SyZTLnktk1vDv3FWIrvwguaicnPgNkO7XEJw/640?wx_fmt=png)
+
+《赛壬之浴》以极其细腻灵动的视听语言，精准捕捉了姐妹间微妙的情感转变。车后座欲言又止的触碰、变幻的光影，以及为母亲留出的空位与闪烁的繁星，将温馨、伤感与女性羁绊展现得淋漓尽致，确实值得观众的选择。
+
+# 最具争议的一部
+
+在收集大家的数据时，我们发现了一组非常有趣的数字。在《今天还会下雨吗》的收集当中，有一位观众给该影片打了收集中的最低分，与此同时，另一位观众则给该影片打了满分。
+
+“本来是8.5，但加1分给mla，加0.5分给本泽马和萨拉赫”--Echo (10/10)
+
+"加深刻板印象，挺不直的腰，扑面而来的阴湿感源自莫名其妙的自我人格矮化，有什么好唯唯诺诺的。还以为是50年代过去打黑工的（我大众点评都没打过1.5分）"--June(1.5/10)
+
+这或许就是戛纳短片的魅力所在，它不追求最大公约数的悦耳，而是将表达掷向银幕，任由观众在理解与困惑之间，完成属于自己的审美抉择。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQGPWf443OpAKl2CxfiaPFwjkXGibshv04X3KPXHmjWl6RCfYl1ZibicDtBdKBAyiaU6QIUxP6cMQnIXMsm7NuzZZeuB3s5WmNr6R7IQ/640?wx_fmt=jpeg)
+
+# 这部真的不好看吗？
+
+与《今天还会下雨吗》的争议性不同，《游乐场》**的评分都大致聚焦在一个区间，综合下来仅仅只有5.1分。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQGYHltuqSE6HJsw5Kuriaiba0J92CAsvTknY1CHWmdlzDCxY7LBibGTMoxsibLQqvOhrlSaiaVnp7wDWiaiaHP73A3mcex8ZEc2UCFibibc/640?wx_fmt=png)
+
+有的观众直接提到：
+
+“感情太私人，表达上有瑕疵，已睡不欠……“--Mystery(6/10)
+
+“有想法，但拍摄没完全表现出来，而且镜头晃得头昏”--June(5/10)
+
+《游乐场》是一部情绪浓烈、充满个人表达欲的作品。创作者试图将私人情感注入镜头，探讨复杂的亲子关系，但过于意识流的处理与频繁晃动的镜头，容易让普通观众产生审美疲劳与距离感。虽有想法与灵光闪现，但在个人表达与叙事结构的权衡上确实仍留有遗憾。
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQGVuTDmTiamQ7YBQgiaAaz0IAc1nXuVYgTOoQbL4ebgrR0uKZaUBppGKialmkkOYgTl46MLlIibdG6AEFnCqNkFlMtU3vQa7aUJ9HE/640?wx_fmt=jpeg)
+
+# 一部被拒绝20次的戛纳入围作品
+
+嘉宾李爱鑫给我们分享了一些鲜少有人知道，关于展映片子《今天还会下雨吗》的背景故事
+
+“第一次看成片，我就觉得这个片子肯定可以去到一个非常好的电影节，但当时我不确定它是不是可以去到像戛纳这样的电影节，但他可以去到非常好的电影节，这是我当时非常肯定，但是他在戛纳入围之前，其实已经被20个电影节拒绝了”
+
+被拒绝 20 次后最终登陆戛纳，这部作品不仅让现场观众产生了巨大的思考差异，也让我们看到了一部影片在探索边界时的无限可能。这或许，就是拍电影、看电影最大的乐趣之一。
+
+# 私人表达与公共叙事
+
+感情太私人一直是艺术电影老生常谈的一个问题，当创作者没能权衡好个人情感表达与公共叙事结构时，很容易造成普通观众的观感断层。前文提到的《游乐场》便是一个案例，而对于这个问题，两位嘉宾都提出了自己的看法。
+
+嘉宾李爱鑫提到，倾斜于个体表达或者叙事，其实都有对应的舞台。
+
+“对于电影节而言，他们是要选出人，而不是选择最后做什么？所以他会关注这个人是不是有他特别想要表达的东西及他特别的事情或者表现的方案，所以对他们来讲是最关键的，他要去发掘人才”
+
+“如果你做这种强叙事的东西，你可能就不适合做电影节发行的这个方向。你可能直接适合上流媒体，或者是说你可能有一些别的空间里面去直接完成自己的作品，面对更多的观众”
+
+而嘉宾王小曼则聊到：
+
+“一个很好的创作者，他其实是有他能够产出一套不一样的境界。视听语言审美和意境的这种能力的在当，但凡你有这样的东西的时候，其实你无论是商业片还是艺术片，它都能够有一套很好的语言”
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQE1R6R23U9P0Ih0FTSpJf6NG4R3N8kUgu5DIXutyzhRFGdg3Ms69WpZ1yeJ6xO6Jvca2yliaaOibrmxdxYbaK6Fmjyt3G9zialD2Y/640?wx_fmt=jpeg)
+
+回到这部片子，这部片子的特色，如一些光影的镜头，构图以及场景调度，所展现的个人性可能更会被电影节的评专业委所捕捉到。但在另一方面，对于观众而言，展现的可能就是私人性与叙事之间的失衡。
+
+# 对亚洲文化的偏爱
+
+在映后交流当中，有观众问到关于《细筒靴》这部片子有没有什么可以分享的，嘉宾李爱鑫提到了一个如今的一个趋势。
+
+“北美其实有很多类似于对有一部分群体，对亚洲有这种文化的崇拜的，我觉得这个是有的”
+
+亚洲的电影人相较与以前数量更多，也更有活力。我们也看到了不少亚洲作品在三大电影节及奥斯卡崭露头角
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQHqFPclrG5y5AJIvPo1Jt8BOJf161Dia77H7p6KKicLTTUwrEO61AQruEFmWJf9VuFwoicMu3MuFnk3etkgmwtDJ27O2iciboDcIJKs/640?wx_fmt=png)
+
+具体到中国，优秀的创作者也越来越多，但或许是受限各种个样的因素，他们似乎没能将自己的才华最大化，希望他们未来能在亚洲文化崇拜的一定趋势当中占据一席之地。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/M6CIWSB7VQFmzAeSMcLdV10PYXsZCy9btHgqfwKQ12OQT14mf2qyLVvyb3Yze6qRICDrVdnxlFEcVEicIsRPvA7EqP4QMAyGG6x1wVm23Xibo/640?wx_fmt=jpeg)
+
+那么，抛开宏观的讨论，本次展映的 10 部作品各自呈现了怎样的艺术面貌？我们结合收集的评价以及自身对片子的理解整理了以下推荐序。
+
+*注:推荐序均由24帧观众影评加工后整理出。
+
+# 游乐场
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQE7WHKHA4zLzV1oIfcgOl3tPzeHIwgAncia8TQI6ROroS4W8aZLicfBqrdvdqvbiaajU2f3iaibNJ2FOxdx9z4E3SG0TUQniauJdicdho/640?wx_fmt=png)
+
+看这部片子，很容易让人心里堵得慌。它把大人和小孩之间那种说不清道不明的僵局拉到了最大：一边是吵闹浮躁的游乐场，另一边是冰冷漆黑的大长廊。镜头一直在拍爸爸带着女儿那种疏离和别扭感，大人总是觉得自己做啥都是为了孩子好，还动不动就摆出一副“我是你爹”的姿态吼人，但孩子早就看透了。
+
+# 新发型
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQHeqiaxahnwo1tsjcNbiclibAcHfAcLHDfDdiaWFqhQoiacZ2MibkmGmm3cdwSIwflIdkic6WLlBdUurBCzNcU1PVyh0tXZoMP4h2Gc1Q/640?wx_fmt=png)
+
+故事发生在某个经济不太好的小镇上，主角是个整天神神叨叨、显得特别焦虑的理发店老板。整部片子拍得特别有烟火气，没什么狗血的大起大落，全都是大家日常闲聊、扯皮的琐碎瞬间。店里的年轻理发师想支棱起来去大城市，老板心里其实挺舍不得，但又死要面子硬撑着。那种小人物在生活困境里的迟疑、落空和无能为力，被拍得非常真实。最后老板那个眼神一出来，真有点说不出的酸楚，看完让人心里空落落的。
+
+# 赛壬之浴
+
+![](https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHl8sORhWOS1KMJDZLgeiaao7qEE4qkjcZ8fZ0cGyqc8icyOjKZIxCUA2J2S8nxe2pMibpwJTmnUkI17Kgo9FqW2HBhQI1Ar0gzl0/640?wx_fmt=png)
+
+这绝对是全场大家最爱、看得很舒服的一部动画短片！画风超级温柔漂亮，配上有点微醺感的爵士乐，把姐妹俩的公路之旅拍得又甜又带点小伤感。姐姐嘴上嫌弃妹妹没素质、瞎折腾，但其实心里挂念得不行；后座上那一只想牵又不敢伸出去的手，把女孩子们那种扭捏又真挚的感情写活了。车里空着的位置、闪烁的星星，就像过世的妈妈一直在陪着她们一样。看完整个人心里暖洋洋的，嘴角忍不住会上扬。
+
+# 井口
+
+![](https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQFichiaic41N1zFyCN289eia0HQ4BctOMhoVEGUeoJZ9BT5OPFF7J5VichWa2u3w4mDwRDwBQWGxyqwqL8VkmVMDic5X49huHicMDsxd8/640?wx_fmt=png)
+
+这片子绝对是全场最“怪”也最吸睛的一部，艺术感拉满！整部片子的画面就像会动的复古油画一样，灰蒙蒙又很有质感。最绝的是里面居然用黑金属摇滚的核嗓来模拟企鹅的叫声，听起来又魔性又有点好笑。讲的故事比较抽象先锋，在安静惬意的酒吧里，有人发疯、有人旁观、有人跟着泥泞跳舞，就像在看一场迷幻的梦。如果你喜欢大卫·林奇**那种超现实的怪诞风，或者想看点不一样的视觉实验，这部绝对能勾起你的好奇心。
+
+# 致对手
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQFp2c1ufJXfvV38klgEEr30L8m9gIj82cAvg1mvYINfajX8mBm7gxDbD4PRtpNxymXS0o0uAXYEjbQRGG2FslDC7dZAEwdPsgo/640?wx_fmt=png)
+
+不愧是拿了戛纳金棕榈的短片！它最厉害的地方在于，完全不按套路出牌——别的拳击片都拍赢家怎么牛逼，它偏偏把镜头全对准了输掉的那一方。片子的长镜头和剪辑顺滑得像没剪过一样，镜头跟着那个打输了的少年，看他擦血迹、看他发呆、看他眼神里的茫然和挫败。没有一句多余的煽情，光靠细节和氛围就把竞技体育背后那种最真实的残酷与温情挤压到了你面前。看的时候真的人都不敢大声呼吸，代入感太强了。
+
+# 细筒靴
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQEg5BgspxxAQnXLFuQUCw1iaW9NXhrOJHicEfrWTyCuj78c9Vy8DxB26e53YAAZwG28WUoqNicQyzFOWzYPz0DaccqjyqywVsyF0M/640?wx_fmt=png)
+
+这绝对是全场节奏最轻快、笑点最多的一部！整部片子透着一股复古美剧的黑幽默风。主角有点像陈冠希，自称“啥都能搞定”的小偷，带着他那个有点呆萌的小表弟在糟糕的生活里瞎折腾。兄弟俩一路相互吐槽、拥抱又下跪，各种反转笑料不断，顺便还打破了大家对华人形象的刻板印象。虽然生活一团糟，但他们那种死皮赖脸硬撑下去的活泛劲儿特别感染人。
+
+# 艾莉
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/M6CIWSB7VQGq6GiaAHJaBzia4VpWY1ApzSOCNqOiaNA1b5HQf8BcgqWMlYaHzNSd3st9VgfmpjLNLoicDNEnGd7diciaztzRAcMQcWkm6qftxlku0/640?wx_fmt=png)
+
+一部带着浓浓日系邪典和扭曲风味的视觉狂想曲！画风极度大胆，那些五彩斑斓但又让人看得有点晕眩的线条，把一个拉拉女孩爱上直女之后的执念、绝望和痛苦表现得太到位了。里面的情感非常激烈甚至带点变态的疯狂，从初恋的甜到爱而不得的扭曲，再到最后震撼的意象，画面冲击力强到让人过目不忘。虽然故事有点云里雾里，但这种极致的视觉和情感宣泄，懂的人绝对会爱到不行。
+
+# 河畔琐事
+
+![](https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHYp4ia8WIwaU8qf2FoN1rr65x7KZMsvMP46tO9vkwrebL28TnGnn9Z4ISFNf1UniaoqSQfmichrPrRFnt3QGrXdHgctpG7OIKrLo/640?wx_fmt=png)
+
+这部短片把荒诞和冷幽默玩明白了，现场观众笑声最多！故事从河边发现一具尸体开始，但这具尸体就像个背景板，划开了河边各种奇奇怪怪小人物的日常：有人在假装死人，有人戴着头盔在河边泡澡，有人爬到树上跟老婆吵架……大家好像都只关心自己的烦恼，对身边的死亡熟视无睹，只有纯真的小孩在认真观察这个世界。用一种极其轻松荒诞的方式，把生活的冷酷与真实撕开给你看，非常耐人寻味。
+
+# 《今天还会下雨吗》
+
+![](https://mmbiz.qpic.cn/mmbiz_png/M6CIWSB7VQHAJicNVktOq47SYq0eNXtDbnvJicvvbDX07QvPGxOkjY1LKhlZS1Jf5BRoPJVyPhqPicDSJibTltnoibm61MQ6c62dmjABRorNDBDs/640?wx_fmt=png)
+
+一部特别适合当代年轻人看的脱力系轻喜剧。片子拍得特别日常真诚，讲的是异乡人在国外生活时面临的那些文化磕碰、身份认同和孤单感。没有什么宏大的叙事，全靠角色之间那些自然、稍微带点冷幽默的对话在撑着。主角那种有点唯唯诺诺、又有点脱力的状态特别传神，冷不丁抛出来的笑点总能让人会心一笑。虽然生活有点丧，但那些微小的温情和连接，淡淡地抚平了我们在异地拼搏时的那份落寞。
+
+文字整理：邮件
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/M6CIWSB7VQH3BSjPSGVHoUPFtkvRBYMscyb6qpSp8lhL44Mq4Scmjk1F7xONPnJFkmPot2ficsT0mRt1XBwciaKsoqGbXRj4uxHRQLyruC9EQ/640?wx_fmt=jpeg)

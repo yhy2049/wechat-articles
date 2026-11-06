@@ -1,15 +1,18 @@
 {
- "generated_at": "2026-10-28",
- "total_articles": 302,
- "linked": 301,
- "missing": [
-  "2023-01-24-影评无名程耳在路上"
- ],
+ "generated_at": "2026-11-06",
+ "total_articles": 325,
+ "linked": 325,
+ "missing": [],
  "links": {
   "2022-07-12-披着韩片外衣仍旧是枝裕和": {
    "title": "披着韩片外衣，仍旧是枝裕和",
    "url": "https://mp.weixin.qq.com/s/j8L398vseUpQ14b2Dles7Q",
    "date": ""
+  },
+  "2022-12-21-卡罗尔": {
+   "title": "卡 罗 尔",
+   "url": "https://mp.weixin.qq.com/s/X_4dugAREpMLqFeYkZiDKA",
+   "date": "2022-12-21"
   },
   "2022-08-16-放映本周六薄荷糖锦城湖": {
    "title": "「放映」本周六 ·《薄荷糖》· 锦城湖",
@@ -46,6 +49,11 @@
    "url": "https://mp.weixin.qq.com/s/Uy6usVFCIjEyL3nG4JKwUA",
    "date": ""
   },
+  "2022-12-05-红辣椒": {
+   "title": "红 辣 椒",
+   "url": "https://mp.weixin.qq.com/s/SW7ImuYPUewVi7yreBAwUQ",
+   "date": "2022-12-05"
+  },
   "2022-12-02-放映本周六火山挚恋大源": {
    "title": "「放映」本周六 ·《火山挚恋》· 大源",
    "url": "https://mp.weixin.qq.com/s/fRL0Eh1XphlZastOphyMDg",
@@ -54,6 +62,11 @@
   "2022-06-14-放映本周六爱在黎明前HOME空间": {
    "title": "「放映」本周六 ·《爱在黎明前》· HOME空间",
    "url": "https://mp.weixin.qq.com/s/ee6PC3SpD2B9JVmP4qSbdg",
+   "date": ""
+  },
+  "2022-12-06-放映本周六苦月亮牛市口": {
+   "title": "「放映」本周六 ·《苦月亮》· 牛市口",
+   "url": "https://mp.weixin.qq.com/s/peKXJoYxCLQ7NcWRYroOeQ",
    "date": ""
   },
   "2022-05-02-主流语境下的伪颠覆性叙事": {
@@ -111,20 +124,40 @@
    "url": "https://mp.weixin.qq.com/s/6ilhl4d7Y-t5XfbkDmsIQQ",
    "date": ""
   },
+  "2022-12-01-火山挚恋": {
+   "title": "火 山 挚 恋",
+   "url": "https://mp.weixin.qq.com/s/i8K0tm63JquKuXyH3BsOuQ",
+   "date": "2022-12-01"
+  },
   "2022-12-29-放映本周日大鱼大源": {
    "title": "「放映」本周日 ·《大鱼》· 大源",
    "url": "https://mp.weixin.qq.com/s/K1jIB2G08mmnSTPGqJJXFw",
    "date": ""
+  },
+  "2022-12-07-苦月亮": {
+   "title": "苦 月 亮",
+   "url": "https://mp.weixin.qq.com/s/uEOsc0uM9pjvzfo28GkiOQ",
+   "date": "2022-12-07"
   },
   "2022-08-13-24帧观影团今晚招募": {
    "title": "24帧观影团，今晚招募！",
    "url": "https://mp.weixin.qq.com/s/bS8_s7DccSHTeCE95odOAg",
    "date": ""
   },
+  "2022-11-16-风柜来的人": {
+   "title": "风 柜 来 的 人",
+   "url": "https://mp.weixin.qq.com/s/rlWyTzfaaPZvUlChTmW7gw",
+   "date": "2022-11-16"
+  },
   "2022-08-10-放映本周六日分手的决心锦城湖大源": {
    "title": "「放映」本周六日 ·《分手的决心》· 锦城湖×大源",
    "url": "https://mp.weixin.qq.com/s/aYJORwCD3P3dVmDPYcbCsw",
    "date": ""
+  },
+  "2022-12-13-悲情三角": {
+   "title": "悲 情 三 角",
+   "url": "https://mp.weixin.qq.com/s/ZIRc3EgRX13eAhUBc05MsA",
+   "date": "2022-12-13"
   },
   "2022-10-10-专场本周六过期的船票川大望江": {
    "title": "「专场」本周六 ·《过期的船票》· 川大望江",
@@ -201,6 +234,11 @@
    "url": "https://mp.weixin.qq.com/s/21gtOTwmtFJqaFGXyZMDIA",
    "date": ""
   },
+  "2022-11-07-燃烧女子的肖像": {
+   "title": "燃 烧 女 子 的 肖 像",
+   "url": "https://mp.weixin.qq.com/s/__VHpvZnmH_BbO9GRLO0sQ",
+   "date": "2022-11-07"
+  },
   "2022-04-22-每个人的童年都会结束每个人的飞船都会离开": {
    "title": "每个人的童年都会结束, 每个人的飞船都会离开",
    "url": "https://mp.weixin.qq.com/s/0v4OE2WaIWq3sq6E-AGu6Q",
@@ -226,6 +264,11 @@
    "url": "https://mp.weixin.qq.com/s/1SSAN9E3MzcikccumB1VMw",
    "date": ""
   },
+  "2022-12-28-时空恋旅人": {
+   "title": "时 空 恋 旅 人",
+   "url": "https://mp.weixin.qq.com/s/TsCF975pduq-_MIrTcdKVg",
+   "date": "2022-12-28"
+  },
   "2022-12-31-随机放映不确定性与可能性": {
    "title": "「随机放映」不确定性与可能性",
    "url": "https://mp.weixin.qq.com/s/rm8gWAU1T788t0Y7YSCEbg",
@@ -235,6 +278,11 @@
    "title": "电影是什么？他们有话说",
    "url": "https://mp.weixin.qq.com/s/GbNEGubsva8P20Fbsc8CyQ",
    "date": ""
+  },
+  "2022-11-24-东京教父": {
+   "title": "东 京 教 父",
+   "url": "https://mp.weixin.qq.com/s/gsMfNpeYYF9BOjXwYZgo4g",
+   "date": "2022-11-24"
   },
   "2022-09-28-导演映后本周六方舟锦城湖": {
    "title": "「导演映后」本周六 ·《方舟》· 锦城湖",
@@ -301,6 +349,11 @@
    "url": "https://mp.weixin.qq.com/s/keqUxTwra5ODflnnRlga9Q",
    "date": ""
   },
+  "2023-02-16-廊桥遗梦": {
+   "title": "廊 桥 遗 梦",
+   "url": "https://mp.weixin.qq.com/s/bdp2vTqCItnKy6iyFifq6A",
+   "date": "2023-02-17"
+  },
   "2023-02-23-随机放映20": {
    "title": "「随机放映」2.0",
    "url": "https://mp.weixin.qq.com/s/BEGF6KF_aqeF7jQRcQgC_Q",
@@ -325,6 +378,11 @@
    "title": "「影评」《满江红》：若此诗非岳飞所作，那秦桧就能赢了",
    "url": "https://mp.weixin.qq.com/s/stNzjrxzTE9tVv1yaHhSuw",
    "date": ""
+  },
+  "2023-03-22-鲸": {
+   "title": "鲸",
+   "url": "https://mp.weixin.qq.com/s/nZZ97ZzNlpSdWyLFshYS2g",
+   "date": "2023-03-22"
   },
   "2023-12-22-重映本周六爱乐之城杜比厅": {
    "title": "「重映」本周六 ·《爱乐之城》· 杜比厅",
@@ -380,6 +438,11 @@
    "title": "FIRST主动放映·成都24帧站 | 附近的消逝",
    "url": "https://mp.weixin.qq.com/s/oOtBmLwR7zy9JyNC8GQ8Aw",
    "date": ""
+  },
+  "2023-02-16-小说家的电影": {
+   "title": "小说家的电影",
+   "url": "https://mp.weixin.qq.com/s/TjdNZWuqZ_n9N3e2o3Kj9w",
+   "date": "2023-02-17"
   },
   "2023-03-14-放映本周六时时刻刻大源": {
    "title": "「放映」本周六 ·《时时刻刻》· 大源",
@@ -461,6 +524,21 @@
    "url": "https://mp.weixin.qq.com/s/F1fdGT1wqAa_K0GDT-y6TQ",
    "date": ""
   },
+  "2023-01-06-放映本周日关于莉莉周的一切市二医院": {
+   "title": "「放映」本周日 ·《关于莉莉周的一切》· 市二医院",
+   "url": "https://mp.weixin.qq.com/s/oeJyOo_MMmI7TCVlaf84IA",
+   "date": ""
+  },
+  "2023-02-03-放映本周六时空恋旅人暗房里": {
+   "title": "「放映」本周六 ·《时空恋旅人》· 暗房里",
+   "url": "https://mp.weixin.qq.com/s/Y6F0SAnNtmGeYjtwVkLWFQ",
+   "date": ""
+  },
+  "2023-01-03-兹山鱼谱": {
+   "title": "兹 山 鱼 谱",
+   "url": "https://mp.weixin.qq.com/s/rUWc74QLm_hE2TMounFcvw",
+   "date": "2023-01-03"
+  },
   "2023-10-18-新片专场本周六河边的错误双店路": {
    "title": "「新片专场」本周六 ·《河边的错误》· 双店路",
    "url": "https://mp.weixin.qq.com/s/jU5YGGIhhjonXKLU4yTsrg",
@@ -471,14 +549,34 @@
    "url": "https://mp.weixin.qq.com/s/BtFb8sq_gIVrKwUQn8pVbw",
    "date": ""
   },
+  "2023-03-01-妇女参政论者": {
+   "title": "妇 女 参 政 论 者",
+   "url": "https://mp.weixin.qq.com/s/JYp23zVUH_fAAxfLy74-xA",
+   "date": "2023-03-01"
+  },
+  "2023-03-08-完美的世界": {
+   "title": "完 美 的 世 界",
+   "url": "https://mp.weixin.qq.com/s/E_SxOxyMXqPNMJqw_XHIkw",
+   "date": "2023-03-09"
+  },
   "2023-03-13-侯麦系列本周六春天的故事世纪城": {
    "title": "「侯麦系列」本周六 ·《春天的故事》· 世纪城",
    "url": "https://mp.weixin.qq.com/s/UZPZBI8mv18tN2FPTHrzYQ",
    "date": ""
   },
+  "2023-03-13-时时刻刻": {
+   "title": "时 时 刻 刻",
+   "url": "https://mp.weixin.qq.com/s/XNnS2zwTBLgTaffyEOfAww",
+   "date": "2023-03-13"
+  },
   "2023-04-06-侯麦系列本周六秋天的故事金科北路": {
    "title": "「侯麦系列」本周六 ·《秋天的故事》· 金科北路",
    "url": "https://mp.weixin.qq.com/s/OFkn83hNeCXNFQ4_8fPjZA",
+   "date": ""
+  },
+  "2023-01-24-影评无名程耳在路上": {
+   "title": "「影评」《无名》：程耳，在路上",
+   "url": "https://mp.weixin.qq.com/s/veChsmnM44dowfmqQr-ZhA",
    "date": ""
   },
   "2023-08-17-新片专场本周五火山挚恋双店路": {
@@ -511,6 +609,11 @@
    "url": "https://mp.weixin.qq.com/s/Ou2X1eIef46OOgrcBiffLg",
    "date": ""
   },
+  "2023-01-11-午夜巴黎": {
+   "title": "午 夜 巴 黎",
+   "url": "https://mp.weixin.qq.com/s/WupIAeW1Xi3-XXX_g9Chrg",
+   "date": "2023-01-11"
+  },
   "2023-02-13-点映本周三拨浪鼓咚咚响太平洋影院金沙": {
    "title": "「点映」本周三 ·《拨浪鼓咚咚响》· 太平洋影院金沙",
    "url": "https://mp.weixin.qq.com/s/ri-pYVf0gBMBJIIjuDndtw",
@@ -520,6 +623,11 @@
    "title": "「新浪潮月」《电影是二十四格的真理》· 大源",
    "url": "https://mp.weixin.qq.com/s/5vHV_lvSa1GmeVLDG9Kmjw",
    "date": ""
+  },
+  "2023-02-08-孤味": {
+   "title": "孤 味",
+   "url": "https://mp.weixin.qq.com/s/sHBHZUMEv2-F69O5NFHmOg",
+   "date": "2023-02-08"
   },
   "2023-02-08-侯麦系列本周六夏天的故事世纪城": {
    "title": "「侯麦系列」本周六 ·《夏天的故事》· 世纪城",
@@ -1256,6 +1364,11 @@
    "url": "https://mp.weixin.qq.com/s/ytGD8n_FIsOlEBH7sYTMWA",
    "date": ""
   },
+  "2026-11-02-让影像长河多一种奔涌的方向让一朵花同时落入千百片湖": {
+   "title": "让影像长河多一种奔涌的方向，让一朵花同时落入千百片湖",
+   "url": "https://mp.weixin.qq.com/s/MOh-qZdyCdyZPbIBfyYCLA",
+   "date": ""
+  },
   "2026-01-29-乙巳蛇年封箱放映花与长枪爱国少女杀死紫罗兰成都首映导演南雅琅张钰连线交流": {
    "title": "「乙巳蛇年封箱放映」花与长枪《爱国少女》《杀死紫罗兰》成都首映+导演南雅琅、张钰连线交流",
    "url": "https://mp.weixin.qq.com/s/jvIiRT_P8T1--hRICdUW5g",
@@ -1324,6 +1437,11 @@
   "2026-08-02-西宁之后我们选择再次相信电影": {
    "title": "西宁之后，我们选择再次相信电影",
    "url": "https://mp.weixin.qq.com/s/u3utZLt35HHt2gNdMErU5w",
+   "date": ""
+  },
+  "2026-11-05-回顾2026戛纳一日CannesFramewaves": {
+   "title": "回顾｜2026戛纳一日Cannes Framewaves",
+   "url": "https://mp.weixin.qq.com/s/Z7GcgrmS09joxx8rsUyZeQ",
    "date": ""
   },
   "2026-02-25-马年第一跳凌空腾起瑰丽绝伦SOARINGANDGORGEOUS爱乐之城Letsdance": {
@@ -1406,6 +1524,11 @@
    "url": "https://mp.weixin.qq.com/s/dl-s25bxcv9u8MwIcM3tqg",
    "date": ""
   },
+  "2026-11-03-在一座失败的城市里重新认识自己": {
+   "title": "在一座失败的城市里，重新认识自己",
+   "url": "https://mp.weixin.qq.com/s/kwGxKdb-abj251MQcndISg",
+   "date": ""
+  },
   "2026-10-14-成都路演在爱与生活之间夫妻一场导演秦潇越现场交流": {
    "title": "「成都路演」在爱与生活之间《夫妻一场》导演秦潇越现场交流",
    "url": "https://mp.weixin.qq.com/s/fXjfjRlpCsFRVS9MZLynvQ",
@@ -1434,6 +1557,11 @@
   "2026-04-18-告别场0418翠湖卞灼导演线上交流": {
    "title": "「告别场」04.18《翠湖》卞灼导演线上交流",
    "url": "https://mp.weixin.qq.com/s/5X9a9SZ1nhLIJCA6gMKX0Q",
+   "date": ""
+  },
+  "2026-11-05-专场1111海上钢琴师超前点映": {
+   "title": "「专场」11.11《海上钢琴师》超前点映",
+   "url": "https://mp.weixin.qq.com/s/183oP2k-s9ssdyz8unVjHg",
    "date": ""
   },
   "2026-03-28-24帧成都路演0328长夜将尽主创现场映后交流": {
@@ -1471,6 +1599,11 @@
    "url": "https://mp.weixin.qq.com/s/E0rwfommGS-NLApaQRrDmw",
    "date": ""
   },
+  "2026-11-05-成都组讯剧情短片普通朋友": {
+   "title": "成都组讯！剧情短片《普通朋友》",
+   "url": "https://mp.weixin.qq.com/s/ePkP_wAckcmJn8XSnmU1UA",
+   "date": ""
+  },
   "2026-04-13-路演0413如父如母导演现场交流": {
    "title": "「路演」04.13《如父如母》导演现场交流",
    "url": "https://mp.weixin.qq.com/s/nq-eG1r22OFprdmZjbSJZQ",
@@ -1495,21 +1628,6 @@
    "title": "沙龙嘉宾｜一场关于电影的灵魂拷问：听听创作者们怎么说",
    "url": "https://mp.weixin.qq.com/s/AGEBTC4Zp80QZjWoTvYfsA",
    "date": ""
-  },
-  "2022-12-06-放映本周六苦月亮牛市口": {
-   "title": "放映本周六苦月亮牛市口",
-   "url": "https://mp.weixin.qq.com/s/uEOsc0uM9pjvzfo28GkiOQ",
-   "date": "2022-12-06"
-  },
-  "2023-02-03-放映本周六时空恋旅人暗房里": {
-   "title": "放映本周六时空恋旅人暗房里",
-   "url": "https://mp.weixin.qq.com/s/TsCF975pduq-_MIrTcdKVg",
-   "date": "2023-02-03"
-  },
-  "2023-01-06-放映本周日关于莉莉周的一切市二医院": {
-   "title": "「放映」本周日 ·《关于莉莉周的一切》· 市二医院",
-   "url": "https://mp.weixin.qq.com/s/oeJyOo_MMmI7TCVlaf84IA",
-   "date": "2023-01-06"
   }
  }
 }

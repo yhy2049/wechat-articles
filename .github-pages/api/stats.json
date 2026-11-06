@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-27T19:33:26.917Z",
-  "total_articles": 302,
-  "total_characters": 932177,
-  "average_characters": 3087,
+  "generated_at": "2026-11-06T16:39:38.923Z",
+  "total_articles": 325,
+  "total_characters": 980291,
+  "average_characters": 3016,
   "years": {
-    "2022": 48,
-    "2023": 63,
+    "2022": 57,
+    "2023": 72,
     "2024": 72,
     "2025": 66,
-    "2026": 53
+    "2026": 58
   },
   "year_range": {
     "first": "2022-04-14",
-    "last": "2026-10-26"
+    "last": "2026-11-05"
   }
 }

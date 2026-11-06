@@ -1,292 +1,104 @@
 # 公众号文章存档 Skill
 
-> 完整流程：公众号 → 本地存档 → 校对验证 → GitHub 同步 → 网站生成
+> 公众号 → 本地存档 → 校对 → GitHub 同步（仓库根目录即存档内容）
+> 工具链全部在本目录 `_skill/scripts/`，不依赖 vault 其他目录。
 
 ## 目录结构
 
 ```
-wechat-articles/
-├── articles/          # 文章存档（按年份）
-│   ├── 2022/
-│   ├── 2023/
-│   ├── 2024/
-│   ├── 2025/
-│   └── 2026/
-├── _skill/            # 自动化脚本
-│   ├── SKILL.md       # 主文档
-│   ├── README.md      # 使用说明
-│   ├── package.json   # npm 脚本
+公众号存档/
+├── 2022/ … 2026/          # 文章 Markdown（YYYY-MM-DD-标题.md）
+├── .github-pages/         # 静态站点源码（可选，Pages 已下线）
+├── _meta/                 # corpus-overview.md / removals.md / source-links.json
+├── _skill/
+│   ├── SKILL.md           # 本文档
 │   ├── scripts/
-│   │   ├── fetch-articles.js         # 抓取文章
-│   │   ├── verify-articles.js        # 校对验证
-│   │   ├── update-meta.js            # 生成统计报告
-│   │   ├── sync-to-github.sh         # 同步到 GitHub
-│   │   ├── generate-site.js          # 生成网站页面
-│   │   └── generate-article-html.js  # 生成文章 HTML
-│   └── docs/
-│       ├── workflow.md               # 详细文档
-│       └── python-fetching.md        # Python 工具链（wxmp-list/fetch/audit/verify/probe）
+│   │   ├── wxmp-list.py           # 后台全量列表（持久化登录）
+│   │   ├── wxmp-fetch.py          # 抓正文 → 年份目录（含封面 + 原文链接）
+│   │   ├── wxmp-audit.py          # 后台 vs 存档完整性审核
+│   │   ├── wxmp-verify.py         # 线上 DOM vs 归档 MD 校验
+│   │   ├── wxmp-probe.py          # 页面结构诊断
+│   │   ├── generate-site.js       # 由年份目录重建 .github-pages
+│   │   └── push-archive.sh        # 镜像提交推送到 GitHub main
+│   └── docs/python-fetching.md
 └── README.md
 ```
 
-> **Python 工具链**：`00_系统/agent/wxmp-*.py`，基于 Playwright，见 `docs/python-fetching.md`。
-> 核心优势：短链无需 chksm，抓取更稳定，支持命令行批量调用。
-> 审核机制：`wxmp-audit.py` 对比后台 vs 存档，检测数量/重复/缺失。
-
-## 快速开始
-
-### 前置要求
-
-1. **Node.js** >= 18
-2. **Playwright**（用于抓取）
-3. **GitHub CLI**（用于同步）
-4. **微信登录**（首次需要扫码）
+## 标准更新流程
 
 ```bash
-# 安装依赖
-npm install -g playwright
-npx playwright install chromium
+cd 05_档案/公众号存档
 
-# 安装 GitHub CLI
-brew install gh
-gh auth login
+# 1. 拉后台全量列表（登录态有效则 headless 直接跑，失效才弹窗扫码）
+python3 _skill/scripts/wxmp-list.py
+#    → ~/Library/Caches/wxmp/articles.json
+
+# 2. 与年份目录比对，找出未入档文章（标题去标点后归一化匹配）
+#    注意：一次推送可含多条图文，必须遍历 appmsg_info 全部条目
+
+# 3. 抓正文（自动写封面图 + 公众号原文链接）
+python3 _skill/scripts/wxmp-fetch.py URL [URL...]
+python3 _skill/scripts/wxmp-fetch.py --date 2026-11-05 URL   # 贴图类页面取不到日期时
+
+# 4. 补原文链接映射（新文章写进 md 后重建映射表）
+#    产物：_meta/source-links.json
+
+# 5. 校对
+python3 _skill/scripts/wxmp-audit.py
+
+# 6. 更新 README 与 _meta/corpus-overview.md 的篇数、年度分布、字符数
+
+# 7.（可选）重建静态站点
+node _skill/scripts/generate-site.js
+
+# 8. 提交并推送 GitHub
+git add 05_档案/公众号存档 && git commit -m "更新公众号存档"
+bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
-### 完整流程
+## 抓取要点（实测，别再改回去）
 
-```bash
-# 1. 抓取最新文章
-node scripts/fetch-articles.js
+1. **列表接口**：`appmsgpublish?sub=list&begin=N&count=20&type=101_1_102_103`，
+   返回的 `publish_page` 是 JSON 字符串，里面的 `publish_info` 还是字符串，要二次 `json.loads`。
+2. **多图文**：`appmsg_info` 是数组。只取第 0 条会漏文章——2026-11 实测：取第一条 329 篇，遍历全部 344 篇。
+3. **翻页**：偶发空页要重试（连续 3 次空才停），直接 break 会少一整页。
+4. **短链**：`/s/XXXXX` 抓正文不需要 chksm，也不需要登录；`tempkey` 长链会过期，过期后无法补抓。
+5. **贴图类文章**（`item_show_type=8`）页面没有 `create_time`，日期要从页面可见文本（如「11月5日」）取，或用 `--date` 指定。
+6. **标题重复**：正文首行可能自带与标题同名的 H1，`wxmp-fetch.py` 会去掉，避免存档里两行标题。
+7. **封面图**：取 `og:image` / `var msg_cdn_url`，写成首行 `![cover_image](...)`。
+8. **图片去重**：同一张图有多个 URL 变体，按 `?` 前的 mmbiz 图片 ID 去重；排除 `pic_blank.gif`、`video_player_tmpl`、二维码。
+9. **登录态**：`~/.wechat-automation/browser-profile`，扫码一次后 headless 复用；`--force-ui` 强制弹窗。
 
-# 2. 校对验证
-node scripts/verify-articles.js
-
-# 3. 同步到 GitHub
-./scripts/sync-to-github.sh
-
-# 4. 生成网站（首页、年份、API）
-node scripts/generate-site.js
-
-# 5. 生成文章 HTML（渲染 Markdown）
-node scripts/generate-article-html.js
-
-# 6. 推送到 GitHub Pages
-cd .github-pages
-git add -A
-git commit -m "更新网站"
-git push origin gh-pages
-```
-
-## 核心流程
-
-### 1. 抓取文章（公众号 → 本地）
-
-**脚本：** `scripts/fetch-articles.js`
-
-**功能：**
-- 自动打开微信公众号后台
-- 遍历历史消息列表
-- 下载文章正文（Markdown 格式）
-- 下载封面图（screenshots 目录）
-- 保存元数据（标题、作者、日期、阅读量）
-
-**输出：**
-```
-~/Documents/async-communication/wechat-data/
-├── articles/          # Markdown 文章
-├── screenshots/       # 封面图截图
-├── meta.json          # 元数据索引
-└── auto.log           # 运行日志
-```
-
-**使用方法：**
-```bash
-# 首次运行（需要扫码登录）
-node scripts/fetch-articles.js --login
-
-# 后续运行（自动登录）
-node scripts/fetch-articles.js
-```
-
-### 2. 校对验证（本地检查）
-
-**脚本：** `scripts/verify-articles.js`
-
-**检查项：**
-
-| 检查项 | 说明 | 通过标准 |
-|--------|------|----------|
-| 封面图重复 | 检查 screenshots 目录是否有重复图片 | 0 重复 |
-| 文章数量 | 与公众号后台数量对比 | 差异 < 5% |
-| 文件完整性 | 检查所有 .md 文件是否有内容 | 100% 有内容 |
-| 文件名规范 | 检查文件名是否符合 `YYYY-MM-DD-标题.md` | 100% 规范 |
-| 元数据完整性 | 检查 meta.json 是否完整 | 100% 匹配 |
-
-**输出：**
-```json
-{
-  "summary": {
-    "total_articles": 298,
-    "total_screenshots": 298,
-    "duplicate_screenshots": 0,
-    "missing_metadata": 0
-  },
-  "checks": {
-    "cover_duplicates": "✅ PASS",
-    "article_count": "✅ PASS (298/298)",
-    "file_integrity": "✅ PASS",
-    "filename_format": "✅ PASS",
-    "metadata_completeness": "✅ PASS"
-  }
-}
-```
-
-**使用方法：**
-```bash
-# 完整校对
-node scripts/verify-articles.js
-
-# 只检查封面图重复
-node scripts/verify-articles.js --check covers
-
-# 输出 JSON 报告
-node scripts/verify-articles.js --json
-```
-
-### 3. 同步到 GitHub（本地 → GitHub）
-
-**脚本：** `scripts/sync-to-github.sh`
-
-**功能：**
-- 检测已上传文件（跳过重复）
-- 显示实时进度
-- 失败重试机制
-- 生成同步报告
-
-**使用方法：**
-```bash
-# 完整同步
-./scripts/sync-to-github.sh
-
-# 只同步新文件
-./scripts/sync-to-github.sh --new-only
-
-# 指定仓库
-./scripts/sync-to-github.sh --repo yhy2049/wechat-articles
-```
-
-### 4. 生成网站（GitHub Pages）
-
-**脚本：** `scripts/generate-site.js` + `scripts/generate-article-html.js`
-
-**功能：**
-- 生成首页（index.html）
-- 生成年份页面（2022.html ~ 2026.html）
-- 生成 API 文档（api.html）
-- 为每篇文章生成渲染后的 HTML（类 Obsidian 风格）
-- 生成 JSON API（index.json, stats.json, 按年份）
-- 自动处理微信图片热链保护（referrerpolicy="no-referrer"）
-
-**使用方法：**
-```bash
-# 生成网站页面（首页、年份、API）
-node scripts/generate-site.js
-
-# 生成文章 HTML（渲染 Markdown）
-node scripts/generate-article-html.js
-
-# 或直接运行两个脚本
-node scripts/generate-site.js && node scripts/generate-article-html.js
-
-# 然后推送到 gh-pages 分支
-cd .github-pages
-git add -A
-git commit -m "更新网站"
-git push origin gh-pages
-```
-
-**网站地址：** https://yhy2049.github.io/wechat-articles/
-
-**JSON API：**
-| 接口 | 说明 |
-|------|------|
-| `/api/stats.json` | 统计信息 |
-| `/api/index.json` | 所有文章列表 |
-| `/api/2026.json` | 按年份获取 |
-
-**图片热链保护：**
-微信图片有 Referer 检查，外部网站访问会显示"未经允许"。
-解决：`<img>` 标签添加 `referrerpolicy="no-referrer"`，不发送 Referer。
-
-## 数据格式
-
-### 文章文件（Markdown）
+## 存档格式
 
 ```markdown
-# 文章标题
+![cover_image](https://mmbiz.qpic.cn/...)
 
-**作者**: 作者名  
-**日期**: 2024-01-15  
-**阅读量**: 1234  
-**分享数**: 56
+#  「专场」11.11《海上钢琴师》超前点映
 
----
+> 公众号原文：<https://mp.weixin.qq.com/s/xxxx>
 
-![封面图](https://mmbiz.qpic.cn/...)
-
-正文内容...
+正文…
 ```
 
-### 元数据索引（meta.json）
+## 移除规则（见 `_meta/removals.md`）
 
-```json
-{
-  "last_updated": "2024-01-15T10:00:00Z",
-  "total_articles": 298,
-  "articles": [
-    {
-      "id": "2024-01-15-标题",
-      "title": "文章标题",
-      "author": "作者名",
-      "date": "2024-01-15",
-      "file": "2024-01-15-标题.md",
-      "cover": "screenshots/2024-01-15-标题.jpg",
-      "views": 1234,
-      "shares": 56
-    }
-  ]
-}
-```
+- 授权转载、转自等转载文
+- 24帧未参与的活动（HiShorts、Nowhere 短片展等）
+- 同一文章多位置重复时保留年份目录版本
+
+## GitHub
+
+- 仓库：https://github.com/yhy2049/wechat-articles （公开）
+- `main` 根目录 = 本目录内容；`05_档案/` 下的会议存档等其他内容一并保留
+- `push-archive.sh` 用镜像提交（`git read-tree --prefix=05_档案/`）推送，不要用 `git push origin main`（会把 vault 其他目录带上去）
+- `gh-pages` 自 2026-10-28 起为下线占位页；恢复站点时把 `.github-pages/` 内容推到 `gh-pages`
+- 本机直连 `github.com:443` 常超时，可用：
+  `git -c http.curloptResolve=github.com:443:140.82.112.3 -c http.version=HTTP/1.1 …`
 
 ## 常见问题
 
-### Q: 抓取失败怎么办？
-A: 检查网络、重新扫码登录、查看 `auto.log` 日志
-
-### Q: 如何检查数量是否一致？
-A: 运行 `node scripts/verify-articles.js`，对比本地和后台数量
-
-### Q: 同步失败如何重试？
-A: 重新运行同步脚本，已上传的文件会自动跳过
-
-### Q: 如何添加新的公众号？
-A: 修改 `fetch-articles.js` 中的 `ACCOUNT_NAME` 配置
-
-### Q: 图片显示"未经允许不可引用"怎么办？
-A: 这是微信热链保护。生成文章 HTML 时已自动添加 `referrerpolicy="no-referrer"`，重新生成即可。
-
-### Q: 如何更新网站？
-A: 运行 `node scripts/generate-site.js && node scripts/generate-article-html.js`，然后推送到 `gh-pages` 分支。
-
-### Q: 其他 AI/Agent 如何访问数据？
-A: 访问 JSON API：`https://yhy2049.github.io/wechat-articles/api/index.json` 或读取 `.md` 文件。
-
-## 维护说明
-
-- 每月运行一次完整校对
-- 每季度清理重复截图
-- 同步后检查 GitHub 仓库文件数
-
-## 许可证
-
-MIT License
+- **数量不一致**：先确认是否漏了多图文的第二条，再看 tempkey 过期项（无法补抓）。
+- **抓取失败/降级页**：脚本会自动退避重试 3 次；仍失败多为 tempkey 长链失效。
+- **站点数字不对**：`node _skill/scripts/generate-site.js` 重建后核对 `api/stats.json`。
+- **给 AI 当语料**：`_skill/scripts/` 之外的 PDF 图文合集生成脚本在会话工作目录，纯文本可由年份目录 md 直接汇总。

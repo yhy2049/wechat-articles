@@ -1,11 +1,11 @@
 # Python 抓取工具链（2026-10-05 新增）
 
-> 与 Node.js 脚本（`scripts/`）并行的 Python 方案，基于 Playwright。
+> 主工具链，基于 Playwright。Node.js 侧只剩站点生成脚本 `generate-site.js`。
 > 核心优势：短链无需 chksm，抓取更稳定；支持批量命令行调用。
 
 ## 脚本清单
 
-所有脚本在 `00_系统/agent/`（vault 根目录）：
+所有脚本在 `_skill/scripts/`：
 
 | 脚本 | 用途 | 依赖 |
 |------|------|------|
@@ -18,13 +18,13 @@
 ### wxmp-list.py
 
 ```bash
-python3 00_系统/agent/wxmp-list.py
+python3 _skill/scripts/wxmp-list.py
 ```
 
-1. 弹出 Chromium 窗口 → 扫码登录公众号后台
+1. 先用持久化 profile 试 headless；失效才弹窗扫码
 2. 自动翻页遍历 `appmsgpublish`（`type=101_1_102_103`，每页 20 条）
 3. 解析两层嵌套 JSON，提取 `content_url`（短链）+ 标题 + 日期
-4. 输出到 `/tmp/wxmp-articles.json`
+4. 输出到 `~/Library/Caches/wxmp/articles.json`
 
 **注意**：`content_url` 是短链格式 `/s/XXXXX`，不需要 chksm。日期从 `publish_info.create_time` 取（unix timestamp，加 8 小时转 CST）。
 
@@ -32,13 +32,13 @@ python3 00_系统/agent/wxmp-list.py
 
 ```bash
 # 单篇
-python3 00_系统/agent/wxmp-fetch.py "https://mp.weixin.qq.com/s/XXXXX"
+python3 _skill/scripts/wxmp-fetch.py "https://mp.weixin.qq.com/s/XXXXX"
 
 # 批量
-python3 00_系统/agent/wxmp-fetch.py URL1 URL2 URL3
+python3 _skill/scripts/wxmp-fetch.py URL1 URL2 URL3
 
 # 指定日期（页面取不到时用）
-python3 00_系统/agent/wxmp-fetch.py --date 2026-09-20 URL
+python3 _skill/scripts/wxmp-fetch.py --date 2026-09-20 URL
 ```
 
 **输出格式**：`ARCH/YYYY/YYYY-MM-DD-safe_title.md`
@@ -48,8 +48,8 @@ python3 00_系统/agent/wxmp-fetch.py --date 2026-09-20 URL
 ### wxmp-audit.py
 
 ```bash
-python3 00_系统/agent/wxmp-audit.py                    # 用 /tmp/wxmp-articles.json
-python3 00_系统/agent/wxmp-audit.py -v                  # 显示明细
+python3 _skill/scripts/wxmp-audit.py                    # 用 ~/Library/Caches/wxmp/articles.json
+python3 _skill/scripts/wxmp-audit.py -v                  # 显示明细
 ```
 
 审核项：
@@ -161,7 +161,7 @@ python3 00_系统/agent/wxmp-audit.py -v                  # 显示明细
 ```
 1. 拉列表          wxmp-list.py（扫码）
    ↓
-   /tmp/wxmp-articles.json（324 篇，含短链）
+   ~/Library/Caches/wxmp/articles.json（全量，含短链）
 
 2. 审核            wxmp-audit.py
    ↓
@@ -223,7 +223,7 @@ find .github-pages/articles -name "*.html" -o -name "*.md"
 ```
 Playwright (Python)
   - 路径: ~/Python/3.9/lib/python/site-packages/playwright
-  - 浏览器: ~/Library/Caches/ms-playwright/chromium-1200
+  - 浏览器: ~/Library/Caches/ms-playwright/chromium-*
   - iPhone WeChat UA:
     "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X)
      AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.40"
