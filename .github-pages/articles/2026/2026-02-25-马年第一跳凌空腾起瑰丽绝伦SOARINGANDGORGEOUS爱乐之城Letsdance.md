@@ -2,6 +2,8 @@
 
 #  「马年第一跳」凌空腾起，瑰丽绝伦SOARING AND GORGEOUS《爱乐之城》Let’s dance
 
+> 公众号原文：<https://mp.weixin.qq.com/s/W12mQzjLwUefTyHdyM8xBA>
+
 **前言**  
 对于迷影来说，最动人的是片尾极致be美学「蒙太奇」：多年后某个夜晚，Mia和Seb在Seb's含泪对视，往事如潮涌放映。  
 40年前的「瑟堡的雨伞」，朱莉和奇也是在这样一个普通的雪夜加油站，时过境迁遥望无言。  

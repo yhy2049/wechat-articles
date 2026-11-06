@@ -2,6 +2,8 @@
 
 #  FIRST主动放映-24帧站「Freaky boom——直到长出毛边」
 
+> 公众号原文：<https://mp.weixin.qq.com/s/m4MRAp9sFJXqJe2xsk49zA>
+
 G
 
 R

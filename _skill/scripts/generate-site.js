@@ -79,7 +79,10 @@ for (const a of articles) {
   const dir = path.join(SITE, 'articles', a.year);
   fs.mkdirSync(dir, { recursive: true });
   const dest = path.join(dir, a.id + '.md');
-  if (!fs.existsSync(dest)) { fs.copyFileSync(a.file, dest); copied++; }
+  const stale = !fs.existsSync(dest) ||
+    fs.statSync(dest).size !== fs.statSync(a.file).size ||
+    !fs.readFileSync(dest).equals(fs.readFileSync(a.file));
+  if (stale) { fs.copyFileSync(a.file, dest); copied++; }
 }
 
 // 3. 生成文章 HTML（取最新的现有页面当模板）
