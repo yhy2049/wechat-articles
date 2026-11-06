@@ -220,6 +220,36 @@ def bubble_chart(items, w=560, h=320):
     s.append("</svg>")
     return "".join(s)
 
+
+def quadrant_chart(points, med_read, med_share, w=1080, h=360):
+    """points: [(read, share_rate, label, cat)]"""
+    pad = {"l": 56, "r": 24, "t": 20, "b": 42}
+    iw, ih = w - pad["l"] - pad["r"], h - pad["t"] - pad["b"]
+    xmax = max([p[0] for p in points] or [1]) * 1.05
+    ymax = max([p[1] for p in points] or [1]) * 1.1
+    colors = {c: col for c, col in zip(["路演/主创", "影展/展映", "放映/专场", "原创/回顾", "招募/组讯", "转载"],
+                                       [PAL["accent"], PAL["accent2"], PAL["warm"], PAL["cool"], "#8e6bb0", "#999"])}
+    s = [svg_open(w, h)]
+    for k in range(5):
+        y = pad["t"] + ih - ih * k / 4
+        s.append(f'<line x1="{pad["l"]}" x2="{w-pad["r"]}" y1="{y:.1f}" y2="{y:.1f}" stroke="{PAL["line"]}"/>')
+        s.append(f'<text x="{pad["l"]-6}" y="{y+4:.1f}" text-anchor="end" font-size="9.5" fill="{PAL["muted"]}">{ymax*k/4:.1f}%</text>')
+        x = pad["l"] + iw * k / 4
+        s.append(f'<text x="{x:.1f}" y="{h-20}" text-anchor="middle" font-size="9.5" fill="{PAL["muted"]}">{int(xmax*k/4):,}</text>')
+    mx = pad["l"] + iw * med_read / xmax
+    my = pad["t"] + ih - ih * med_share / ymax
+    s.append(f'<line x1="{mx:.1f}" x2="{mx:.1f}" y1="{pad["t"]}" y2="{pad["t"]+ih}" stroke="{PAL["muted"]}" stroke-dasharray="4,4" opacity="0.6"/>')
+    s.append(f'<line x1="{pad["l"]}" x2="{w-pad["r"]}" y1="{my:.1f}" y2="{my:.1f}" stroke="{PAL["muted"]}" stroke-dasharray="4,4" opacity="0.6"/>')
+    for read, sr, label, cat in points:
+        cx = pad["l"] + iw * read / xmax
+        cy = pad["t"] + ih - ih * sr / ymax
+        s.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="3.4" fill="{colors.get(cat, "#888")}" opacity="0.7"><title>{esc(label)}：{read:,} 阅读，分享率 {sr:.1f}%</title></circle>')
+    s.append(f'<text x="{pad["l"]+iw*0.78:.0f}" y="{pad["t"]+14}" font-size="10" fill="{PAL["muted"]}">高阅读 · 高分享（破圈）</text>')
+    s.append(f'<text x="{pad["l"]+iw*0.02:.0f}" y="{pad["t"]+14}" font-size="10" fill="{PAL["muted"]}">低阅读 · 高分享（小众共鸣）</text>')
+    s.append(f'<text x="{pad["l"]+iw/2:.0f}" y="{h-4}" text-anchor="middle" font-size="9.5" fill="{PAL["muted"]}">阅读量 →</text>')
+    s.append("</svg>")
+    return "".join(s)
+
 def pareto_chart(reads, w=1080, h=280):
     pad = {"l": 52, "r": 46, "t": 18, "b": 34}
     iw, ih = w - pad["l"] - pad["r"], h - pad["t"] - pad["b"]
@@ -338,6 +368,19 @@ def main():
             series_items.append((name, statistics.mean(v), f"{name}：{len(v)} 篇，篇均 {statistics.mean(v):.0f}"))
     series_items.sort(key=lambda x: -x[1])
 
+    # 分享象限
+    qpoints = [(r["read"], pct(r["share"], r["read"]), r["title"], r["cat"]) for r in rows if r["read"] and r["share"] > 0]
+    med_read = statistics.median([q[0] for q in qpoints]) if qpoints else 0
+    med_share = statistics.median([q[1] for q in qpoints]) if qpoints else 0
+
+    # 系列逐年
+    series_year = []
+    for name, pat in (("FIRST 主动放映", r"FIRST"), ("戛纳短片/一日", r"戛纳")):
+        for y in years:
+            v = [r["read"] for r in dated if r["date"][:4] == y and re.search(pat, r["title"])]
+            if v:
+                series_year.append({"series": name, "year": y, "n": len(v), "avg": sum(v)/len(v), "max": max(v)})
+
     # 年度汇总
     year_stats = []
     for y in years:
@@ -383,6 +426,16 @@ def main():
     if cat_stat.get("招募/组讯"):
         insights.append(f"招募/组讯类共 {cat_stat['招募/组讯']['n']} 篇，篇均 {cat_stat['招募/组讯']['mean']:.0f}，业务信息同样能带来稳定阅读。")
 
+    decisions = []
+    if cat_stat.get("路演/主创") and cat_stat.get("放映/专场"):
+        decisions.append(f"排期：把路演/主创作为月度主推（中位 {cat_stat['路演/主创']['median']:.0f}，是日常放映 {cat_stat['放映/专场']['median']:.0f} 的 {cat_stat['路演/主创']['median']/max(cat_stat['放映/专场']['median'],1):.1f} 倍）。")
+    if cat_stat.get("招募/组讯"):
+        decisions.append(f"业务信息：招募/组讯篇均 {cat_stat['招募/组讯']['mean']:.0f}，建议固定每月 1 篇，兼顾招募与阅读。")
+    if reads_sorted:
+        decisions.append(f"选题结构：前 10% 文章占 {top10:.0f}% 阅读，每月至少安排 1 个头部事件（路演/影展/FIRST），其余内容围绕它做预热与回顾。")
+    if wd_items:
+        decisions.append(f"发布节奏：周四篇均最高（{max(wd_items, key=lambda x: x[1])[1]:.0f}），重点推文优先排周四；篇均间隔中位约 {year_stats[-1]['gap']:.0f} 天，保持稳定节奏。")
+    decision_html = "".join(f"<li>{x}</li>" for x in decisions)
     # 组装 HTML
     kpis = [
         ("文章总数", f"{len(rows)}", "去重后"),
@@ -414,6 +467,12 @@ def main():
                     card("星期分布（篇均阅读）", hbar(wd_items, w=560, label_w=70), "按发布日期统计，仅含有日期的文章。") + '</div>')
     sections.append(f'<div class="grid2">' + card("系列/IP 篇均阅读", hbar(series_items[:10], w=560, label_w=130), "系列标签按标题关键词匹配，可横向比较不同 IP 的带量能力。") +
                     card("片名复现（≥2 篇）", hbar(film_items[:10], w=560, label_w=150, value_fmt=lambda v: f"{v:,.0f}"), "同一部片被多次写到时，篇均阅读可反映观众关注度与疲劳度。") + '</div>')
+    sections.append(card("阅读 × 分享象限", quadrant_chart(qpoints, med_read, med_share),
+                         "右上=高阅读高分享（破圈）；左上=低阅读高分享（小众共鸣）；右下=高阅读低分享（信息型，可优化转发理由）。"))
+    sy_rows = ''.join(f'<tr><td>{x["series"]}</td><td>{x["year"]}</td><td class="num">{x["n"]}</td><td class="num">{x["avg"]:.0f}</td><td class="num">{x["max"]:,}</td></tr>' for x in series_year)
+    sections.append(card("系列逐年表现", f'<table><thead><tr><th>系列</th><th>年份</th><th class="num">篇数</th><th class="num">篇均</th><th class="num">最高</th></tr></thead><tbody>{sy_rows}</tbody></table>',
+                         "看系列的生命周期：篇均下滑通常意味着观众疲劳或选题重复，需要换角度。"))
+    sections.append(card("决策清单（自动生成）", f'<ul class="insights">{decision_html}</ul>'))
     sections.append(card("正文长度 vs 阅读量", scatter([(r["len"], r["read"], r["title"], r["cat"]) for r in dated if r["len"]]),
                          "点越靠右越长，越靠上阅读越高；用来判断「长文是否值得」。"))
 
