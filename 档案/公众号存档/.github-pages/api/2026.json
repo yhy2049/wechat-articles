@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD:档案/公众号存档/.github-pages/api/2026.json
+<<<<<<< HEAD:档案/公众号存档/.github-pages/api/2026.json
   "generated_at": "2026-11-17T17:54:12.806Z",
   "year": "2026",
   "total": 64,
@@ -49,6 +50,9 @@
     {
 =======
   "generated_at": "2026-11-06T16:39:38.923Z",
+=======
+  "generated_at": "2026-11-06T17:20:59.637Z",
+>>>>>>> 816f682 (修: 站点 md 副本随年份目录同步；清理无用依赖与杂项):05_档案/公众号存档/.github-pages/api/2026.json
   "year": "2026",
   "total": 58,
   "articles": [
