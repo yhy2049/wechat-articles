@@ -127,6 +127,10 @@ def main():
 
     print(f"✅ 排行榜与快照已更新：{len(rows)} 篇（后台 {len(arts)} 条），累计阅读 {total:,}")
     print(f"   TOP3: " + " / ".join(f"{r[2][:16]} {r[0]:,}" for r in rows[:3]))
+    # 同步重建可视化看板
+    import subprocess
+    dash = os.path.join(os.path.dirname(os.path.abspath(__file__)), "build-dashboard.py")
+    subprocess.run([sys.executable, dash], check=False)
     return 0
 
 
