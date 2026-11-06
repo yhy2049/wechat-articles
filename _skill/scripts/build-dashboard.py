@@ -511,7 +511,7 @@ def main():
   .card {{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px 12px; margin-bottom:16px; }}
   .card h2 {{ font-size:14px; margin:0 0 10px; font-weight:600; letter-spacing:.02em; }}
   .note {{ font-size:11.5px; color:var(--muted); margin:8px 0 2px; }}
-  .grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }}
+  .grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }}
   .insights {{ margin:4px 0 6px; padding-left:20px; font-size:13.5px; }}
   .insights li {{ margin:5px 0; }}
   table {{ width:100%; border-collapse:collapse; font-size:12.5px; }}
@@ -556,7 +556,7 @@ def main():
         from playwright.sync_api import sync_playwright
         with sync_playwright() as pw:
             b = pw.chromium.launch()
-            pg = b.new_page(viewport={"width": 1240, "height": 1000}, device_scale_factor=1.5)
+            pg = b.new_page(viewport={"width": 1240, "height": 1000}, device_scale_factor=2)
             pg.goto("file://" + out)
             pg.wait_for_timeout(500)
             for card_el in pg.locator("section.card").all():
@@ -578,13 +578,7 @@ def main():
     sy_md = "\n".join(f"| {x['series']} | {x['year']} | {x['n']} | {x['avg']:.0f} | {x['max']:,} |" for x in series_year)
     recent_md = "\n".join(f"| {r['date']} | {r['title'].replace('|','｜')[:36]} | {r['read']:,} | {r['cat']} |" for r in recent[-20:])
 
-    md = f"""---
-title: 公众号数据看板
-updated: {today}
-tags: [公众号, 数据, 看板]
----
-
-# 公众号数据看板
+    md = f"""# 公众号数据看板
 
 > 数据抓取：{fetched or today} ｜ 文章 {len(rows)} 篇（后台 {len(json.load(open(SRC, encoding="utf-8")))} 条去重）｜ 累计阅读 {total_reads:,}
 > 交互版：[数据看板.html](数据看板.html)（浏览器打开，可悬停看数值）
