@@ -10,27 +10,12 @@
 
 正文图片统一使用微信外链（`mmbiz.qpic.cn`，`referrerpolicy="no-referrer"` 防盗链），**不做本地镜像**（2026-11-06 决定）。
 
-## 网站
-
-GitHub Pages 站点已于 2026-10-28 下线（`gh-pages` 分支清空为占位页）。站点源码仍完整保留在 `.github-pages/`，需要恢复时推送该目录到 `gh-pages` 即可。
-
-## 静态站点（.github-pages/）
-
-| 路径 | 说明 |
-|------|------|
-| `api/stats.json` | 统计信息（总数、年度分布、字符数） |
-| `api/index.json` | 所有文章列表（标题、日期、URL） |
-| `api/YYYY.json` | 按年份获取文章列表 |
-| `articles/YYYY/YYYY-MM-DD-标题.md` | 文章 Markdown 原文 |
-| `articles/YYYY/YYYY-MM-DD-标题.html` | 文章渲染后 HTML |
-
 ## 目录结构
 
 仓库根目录 = 本目录（GitHub 上无 `05_档案/公众号存档` 层级）：
 
 ```
 2022/ … 2026/            # 文章 Markdown，按年份
-.github-pages/           # 静态站点源码（文章 md/html、年份页、API）
 _meta/                   # 语料统计、移除记录、原文链接映射
 _skill/                  # SKILL.md、generate-site.js、抓取说明
 _数据/                   # 阅读量等运营数据
@@ -58,7 +43,7 @@ python3 _skill/scripts/update-data.py
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
-> 静态站点已随 gh-pages 下线，日常更新不必重建；需要时用 `node _skill/scripts/generate-site.js` 重建 `.github-pages/`。
+> 站点已下线，`.github-pages/` 不再入库；如需恢复网页，本地运行 `node _skill/scripts/generate-site.js` 重建后另行推送到 `gh-pages`。
 
 ## 仓库
 

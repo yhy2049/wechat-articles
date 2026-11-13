@@ -25,7 +25,6 @@ bash _skill/setup.sh install   # 缺什么装什么（pip 依赖 + chromium + np
 ```
 公众号存档/
 ├── 2022/ … 2026/          # 文章 Markdown（YYYY-MM-DD-标题.md）
-├── .github-pages/         # 静态站点源码（可选，Pages 已下线）
 ├── _meta/                 # corpus-overview.md / removals.md / source-links.json
 ├── _skill/
 │   ├── SKILL.md           # 本文档
@@ -37,7 +36,7 @@ bash _skill/setup.sh install   # 缺什么装什么（pip 依赖 + chromium + np
 │   │   ├── build-dashboard.py     # 生成数据看板：_数据/数据看板.md + 图表/*.png + .html
 │   │   ├── wxmp-verify.py         # 线上 DOM vs 归档 MD 校验
 │   │   ├── wxmp-probe.py          # 页面结构诊断
-│   │   ├── generate-site.js       # 由年份目录重建 .github-pages
+│   │   ├── generate-site.js       # 可选：本地重建已下线的静态站点（不入库）
 │   │   └── push-archive.sh        # 镜像提交推送到 GitHub main
 │   └── docs/python-fetching.md
 └── README.md
@@ -70,7 +69,7 @@ python3 _skill/scripts/wxmp-audit.py
 
 # 6. 更新 README 与 _meta/corpus-overview.md 的篇数、年度分布、字符数
 
-# 7.（可选）重建静态站点
+# 7.（可选）本地重建已下线的静态站点（.github-pages 不入库）
 node _skill/scripts/generate-site.js
 
 # 8. 提交并推送 GitHub
