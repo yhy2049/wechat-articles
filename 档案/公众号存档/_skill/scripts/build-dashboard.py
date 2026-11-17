@@ -452,12 +452,8 @@ def main():
     sections = []
     sections.append(card("月度节奏：发文量 vs 篇均阅读", bar_line_chart(months, mcount, mavg),
                          "柱越高说明当月发得越多；线越高说明单篇越能打。两条线背离时，通常是「发得多但不精」。"))
-    sections.append(f'<div class="grid2">' +
-                    card("分类表现（中位阅读）", hbar(cat_items, w=560),
-                         "中位数比平均值更抗爆款干扰，适合判断一类内容的「基本盘」。") +
-                    card("选题象限：产量 × 中位阅读", bubble_chart([(c, s["n"], s["median"], s["total"]) for c, s in cat_stat.items()]),
-                         "气泡大小=总阅读。右上角是主力品类，左上角是低频高回报，右下角多发但单篇弱，需压缩。") +
-                    '</div>')
+    sections.append(card("选题象限：产量 × 中位阅读", bubble_chart([(c, s["n"], s["median"], s["total"]) for c, s in cat_stat.items()]),
+                         "气泡大小=总阅读。右上角是主力品类，左上角是低频高回报，右下角多发但单篇弱，需压缩。"))
     sections.append(card("TOP 20 单篇", hbar([(r["title"], r["read"], f"{r['date']}｜{r['read']:,} 阅读｜{r['cat']}") for r in top], w=1080, rowh=24, label_w=330, maxchars=22),
                          "头部集中在路演、影展与 FIRST；这些是复盘选题时最值得复用的模板。"))
     sections.append(card("年度 × 月份篇均阅读热力", heatmap(years, matrix, counts),
@@ -467,14 +463,13 @@ def main():
     sections.append(f'<div class="grid2">' + card("标题特征 vs 篇均阅读", hbar([(n, m, f"{n}：{c} 篇，篇均 {m:.0f}") for n, m, c, _, _ in feat_rows], w=560, label_w=130, value_fmt=lambda v: f"{v:.0f}"),
                          "相关性不等于因果，但能提示哪种标题结构更常出现在高阅读文章里。") +
                     card("星期分布（篇均阅读）", hbar(wd_items, w=560, label_w=70), "按发布日期统计，仅含有日期的文章。") + '</div>')
-    sections.append(f'<div class="grid2">' + card("系列/IP 篇均阅读", hbar(series_items[:10], w=560, label_w=130), "系列标签按标题关键词匹配，可横向比较不同 IP 的带量能力。") +
-                    card("片名复现（≥2 篇）", hbar(film_items[:10], w=560, label_w=150, value_fmt=lambda v: f"{v:,.0f}"), "同一部片被多次写到时，篇均阅读可反映观众关注度与疲劳度。") + '</div>')
+    sections.append(card("片名复现（≥2 篇）", hbar(film_items[:12], w=1080, rowh=24, label_w=180, value_fmt=lambda v: f"{v:,.0f}"), "同一部片被多次写到时，篇均阅读可反映观众关注度与疲劳度。"))
     sections.append(card("阅读 × 分享象限", quadrant_chart(qpoints, med_read, med_share),
                          "右上=高阅读高分享（破圈）；左上=低阅读高分享（小众共鸣）；右下=高阅读低分享（信息型，可优化转发理由）。"))
     sy_rows = ''.join(f'<tr><td>{x["series"]}</td><td>{x["year"]}</td><td class="num">{x["n"]}</td><td class="num">{x["avg"]:.0f}</td><td class="num">{x["max"]:,}</td></tr>' for x in series_year)
     sections.append(card("系列逐年表现", f'<table><thead><tr><th>系列</th><th>年份</th><th class="num">篇数</th><th class="num">篇均</th><th class="num">最高</th></tr></thead><tbody>{sy_rows}</tbody></table>',
                          "看系列的生命周期：篇均下滑通常意味着观众疲劳或选题重复，需要换角度。"))
-    sections.append(card("决策清单（自动生成）", f'<ul class="insights">{decision_html}</ul>'))
+
     sections.append(card("正文长度 vs 阅读量", scatter([(r["len"], r["read"], r["title"], r["cat"]) for r in dated if r["len"]]),
                          "点越靠右越长，越靠上阅读越高；用来判断「长文是否值得」。"))
 
@@ -489,9 +484,21 @@ def main():
                     card("分类分享率（分享/阅读）", hbar([(c, s["share_rate"], f"{c}：分享率 {s['share_rate']:.1f}%") for c, s in sorted(cat_stat.items(), key=lambda x: -x[1]["share_rate"])], w=560, label_w=120, value_fmt=lambda v: f"{v:.1f}%"), "分享率反映「值得转给别人」的程度，与阅读量不完全同步。") + '</div>')
 
     sec_recent = ''.join(f'<tr><td>{r["date"]}</td><td><a href="{esc(r["link"])}" target="_blank" rel="noopener">{esc(r["title"][:38])}</a></td><td class="num">{r["read"]:,}</td><td>{esc(r["cat"])}</td></tr>' for r in recent)
+    dup_groups = []
+    _raw = json.load(open(SRC, encoding="utf-8"))
+    _g = {}
+    for a in _raw:
+        k = norm(a["title"]).replace("amp", "")
+        _g.setdefault(k, []).append(a)
+    for k, v in _g.items():
+        if len(v) > 1:
+            dup_groups.append((v[0]["title"], len(v), max(x.get("read_num") or 0 for x in v)))
+    dup_rows = "".join(f'<tr><td>{esc(t[:34])}</td><td class="num">{n}</td><td class="num">{r:,}</td></tr>' for t, n, r in dup_groups)
+    sections.append(card("数据去重明细", f'<table><thead><tr><th>文章</th><th class="num">后台条数</th><th class="num">取最大阅读</th></tr></thead><tbody>{dup_rows}</tbody></table>',
+                         f"后台 {len(_raw)} 条图文，按标题归一化去重后 {len(_g)} 篇；同一篇的短链/tempkey 多份只计一次。存档正文零重复。"))
     sections.append(card("近 90 天文章", f'<table><thead><tr><th>日期</th><th>文章</th><th class="num">阅读</th><th>类别</th></tr></thead><tbody>{sec_recent}</tbody></table>'))
     insight_html = "".join(f"<li>{x}</li>" for x in insights)
-    sections.insert(0, card("自动洞察", f'<ul class="insights">{insight_html}</ul>'))
+    sections.insert(0, card("发现与建议", f'<ul class="insights">{insight_html}</ul>'))
 
     html_out = f'''<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -540,7 +547,6 @@ def main():
     # ---- Obsidian / GitHub 可读的 Markdown 看板（图表截成 PNG 内嵌）----
     shots = {
         "月度节奏：发文量 vs 篇均阅读": "monthly.png",
-        "分类表现（中位阅读）": "category-median.png",
         "选题象限：产量 × 中位阅读": "category-quadrant.png",
         "分类分享率（分享/阅读）": "share-rate.png",
         "TOP 20 单篇": "top20.png",
@@ -549,7 +555,6 @@ def main():
         "帕累托：头部集中度": "pareto.png",
         "标题特征 vs 篇均阅读": "title-features.png",
         "星期分布（篇均阅读）": "weekday.png",
-        "系列/IP 篇均阅读": "series.png",
         "片名复现（≥2 篇）": "films.png",
         "阅读 × 分享象限": "quadrant-engagement.png",
         "正文长度 vs 阅读量": "length.png",
@@ -574,8 +579,8 @@ def main():
 
     kpi_md = "\n".join(f"| {k} | {v} | {s} |" for k, v, s in kpis)
     _md = lambda x: x.replace("<b>", "**").replace("</b>", "**")
-    insight_md = "\n".join(f"- {_md(x)}" for x in insights)
-    decision_md = "\n".join(f"- {_md(x)}" for x in decisions)
+    advice_md = "\n".join(f"- {_md(x)}" for x in insights)
+    dup_md = "\n".join(f"| {t.replace('|','｜')[:38]} | {n} | {r:,} |" for t, n, r in dup_groups)
     year_md = "\n".join(f"| {x['y']} | {x['n']} | {x['total']:,} | {x['avg']:.0f} | {x['median']:,.0f} | {x['share']:.1f}% | {x['gap']:.0f} |" for x in year_stats)
     cat_md = "\n".join(f"| {c} | {v['n']} | {v['median']:,.0f} | {v['mean']:.0f} | {v['share_rate']:.1f}% |" for c, v in sorted(cat_stat.items(), key=lambda x: -x[1]["median"]))
     top_md = "\n".join(f"| {i} | {r['title'].replace('|','｜')[:40]} | {r['read']:,} | {r['date'] or '—'} | {r['cat']} |" for i, r in enumerate(top[:20], 1))
@@ -593,13 +598,9 @@ def main():
 |---|---|---|
 {kpi_md}
 
-## 自动洞察
+## 发现与建议
 
-{insight_md}
-
-## 决策清单
-
-{decision_md}
+{advice_md}
 
 ## 月度节奏
 
@@ -610,8 +611,6 @@ def main():
 | 类别 | 篇数 | 中位阅读 | 篇均阅读 | 分享率 |
 |---|---|---|---|---|
 {cat_md}
-
-![](图表/category-median.png)
 
 ## 选题象限
 
@@ -651,9 +650,7 @@ def main():
 
 ![](图表/weekday.png)
 
-## 系列 / IP 与片名
-
-![](图表/series.png)
+## 片名复现
 
 ![](图表/films.png)
 
@@ -670,6 +667,14 @@ def main():
 ## 正文长度 vs 阅读量
 
 ![](图表/length.png)
+
+## 数据去重明细
+
+| 文章 | 后台条数 | 取最大阅读 |
+|---|---|---|
+{dup_md}
+
+> 后台 {len(json.load(open(SRC, encoding="utf-8")))} 条图文，按标题归一化去重后 {len(rows)} 篇；同一篇的短链/tempkey 多份只计一次。存档正文零重复。
 
 ## 近 90 天文章（最近 20 条）
 
