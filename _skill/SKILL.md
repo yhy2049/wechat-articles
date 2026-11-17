@@ -8,7 +8,7 @@
 cd 档案/公众号存档
 python3 _skill/scripts/wxmp-list.py          # 后台全量列表（持久登录，失效才扫码）
 python3 _skill/scripts/wxmp-fetch.py URL...   # 抓新文章（贴图取不到日期时加 --date）
-python3 _skill/scripts/update-data.py         # 排行榜 + 快照 + 数据看板（md/png/html）
+python3 _skill/scripts/update-data.py         # 数据看板（md + png，唯一出口）
 bash    _skill/scripts/push-archive.sh "说明"  # 镜像存档树到远端根目录
 ```
 
@@ -29,7 +29,7 @@ bash    _skill/scripts/push-archive.sh "说明"  # 镜像存档树到远端根�
 |---|---|
 | `scripts/wxmp-list.py` | 后台全量列表 → `~/Library/Caches/wxmp/articles.json` |
 | `scripts/wxmp-fetch.py` | 正文 → 年份目录（封面、原文链接、去重） |
-| `scripts/update-data.py` | 排行榜、日快照、调用看板生成 |
+| `scripts/update-data.py` | 校验列表并调用看板生成 |
 | `scripts/build-dashboard.py` | 单文件看板（SVG + PNG + Markdown） |
 | `scripts/push-archive.sh` | 镜像推送到 GitHub |
 | `scripts/wxmp-audit.py` | 后台 vs 存档对账 |

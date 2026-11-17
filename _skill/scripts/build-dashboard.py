@@ -541,7 +541,7 @@ def main():
 <footer>口径：阅读/分享为后台累计值；日期优先后台时间，缺失时按存档文件名补；未入档的 9 条（6 条 tempkey 失效 + 3 条按规则移除）不计入图表。图表为静态 SVG，鼠标悬停可看数值。</footer>
 </div></body></html>'''
     os.makedirs(DATA, exist_ok=True)
-    out = os.path.join(DATA, "数据看板.html")
+    out = os.path.join(CACHE, "dashboard.html")
     open(out, "w", encoding="utf-8").write(html_out)
 
     # ---- Obsidian / GitHub 可读的 Markdown 看板（图表截成 PNG 内嵌）----
@@ -585,12 +585,11 @@ def main():
     cat_md = "\n".join(f"| {c} | {v['n']} | {v['median']:,.0f} | {v['mean']:.0f} | {v['share_rate']:.1f}% |" for c, v in sorted(cat_stat.items(), key=lambda x: -x[1]["median"]))
     top_md = "\n".join(f"| {i} | {r['title'].replace('|','｜')[:40]} | {r['read']:,} | {r['date'] or '—'} | {r['cat']} |" for i, r in enumerate(top[:20], 1))
     sy_md = "\n".join(f"| {x['series']} | {x['year']} | {x['n']} | {x['avg']:.0f} | {x['max']:,} |" for x in series_year)
-    recent_md = "\n".join(f"| {r['date']} | {r['title'].replace('|','｜')[:36]} | {r['read']:,} | {r['cat']} |" for r in recent[-20:])
+    recent_md = "\n".join(f"| {r['date']} | {r['title'].replace('|','｜')[:36]} | {r['read']:,} | {r['cat']} |" for r in recent[-12:])
 
     md = f"""# 公众号数据看板
 
-> 数据抓取：{fetched or today} ｜ 文章 {len(rows)} 篇（后台 {len(json.load(open(SRC, encoding="utf-8")))} 条去重）｜ 累计阅读 {total_reads:,}
-> 交互版：[数据看板.html](数据看板.html)（浏览器打开，可悬停看数值）
+> 数据抓取：{fetched or today} ｜ 后台 {len(json.load(open(SRC, encoding="utf-8")))} 条去重后 {len(rows)} 篇 ｜ 累计阅读 {total_reads:,}
 
 ## 核心指标
 
@@ -627,10 +626,6 @@ def main():
 ![](图表/share-rate.png)
 
 ## TOP 20
-
-| 排名 | 文章 | 阅读量 | 日期 | 类别 |
-|---|---|---|---|---|
-{top_md}
 
 ![](图表/top20.png)
 
@@ -676,7 +671,7 @@ def main():
 
 > 后台 {len(json.load(open(SRC, encoding="utf-8")))} 条图文，按标题归一化去重后 {len(rows)} 篇；同一篇的短链/tempkey 多份只计一次。存档正文零重复。
 
-## 近 90 天文章（最近 20 条）
+## 近 90 天文章（最近 12 条）
 
 | 日期 | 文章 | 阅读量 | 类别 |
 |---|---|---|---|
