@@ -45,7 +45,7 @@ bash _skill/setup.sh install   # 缺什么装什么（pip 依赖 + chromium + np
 ## 标准更新流程
 
 ```bash
-cd 05_档案/公众号存档
+cd 档案/公众号存档
 
 # 1. 拉后台全量列表（登录态有效则 headless 直接跑，失效才弹窗扫码）
 python3 _skill/scripts/wxmp-list.py
@@ -73,7 +73,7 @@ python3 _skill/scripts/wxmp-audit.py
 node _skill/scripts/generate-site.js
 
 # 8. 提交并推送 GitHub
-git add 05_档案/公众号存档 && git commit -m "更新公众号存档"
+git add 档案/公众号存档 && git commit -m "更新公众号存档"
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
