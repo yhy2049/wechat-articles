@@ -228,7 +228,8 @@ def main():
             kind = "贴图" if meta.get("type") == "8" else "文章"
             with open(fp, "w", encoding="utf-8") as f:
                 cover = meta.get("cover", "")
-                prefix = f"![cover_image]({cover})\n\n" if cover.startswith("http") else ""
+                is_photo = meta.get("type") == "8"   # 贴图类：首图即封面，不再单独存
+                prefix = f"![cover_image]({cover})\n\n" if cover.startswith("http") and not is_photo else ""
                 f.write(prefix + f"#  {title}\n\n> 公众号原文：<{url}>\n\n{md_body.strip()}\n")
 
             print(f"✅ {date} [{kind}] {title[:34]}\n   {len(md_body):,} 字 / {n_img} 图\n"
