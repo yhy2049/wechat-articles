@@ -1,0 +1,6 @@
+# 抓取工具链依赖（Python）
+# 安装：bash _skill/setup.sh   或   python3 -m pip install -r _skill/requirements.txt
+playwright>=1.40
+requests>=2.28
+Pillow>=9.0
+PyMuPDF>=1.23

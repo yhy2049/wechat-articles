@@ -1,0 +1,12 @@
+{
+  "name": "wechat-archive-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "24帧公众号存档：站点生成依赖",
+  "scripts": {
+    "site": "node scripts/generate-site.js"
+  },
+  "dependencies": {
+    "marked": "^12.0.0"
+  }
+}

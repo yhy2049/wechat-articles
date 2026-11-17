@@ -1,0 +1,9 @@
+# 临时文件
+auto.log
+.DS_Store
+
+# npm 依赖
+node_modules/
+
+# 已下线的静态站点（本地可重建，不入库）
+.github-pages/
