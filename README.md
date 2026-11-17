@@ -17,7 +17,7 @@
 ```
 2022/ … 2026/            # 文章 Markdown，按年份
 _meta/                   # 语料统计、移除记录、原文链接映射
-_skill/                  # SKILL.md、generate-site.js、抓取说明
+_skill/                  # SKILL.md、抓取/数据/推送脚本
 _数据/                   # 阅读量等运营数据
 README.md
 ```
@@ -43,7 +43,7 @@ python3 _skill/scripts/update-data.py
 bash _skill/scripts/push-archive.sh "更新公众号存档"
 ```
 
-> 站点已下线，`.github-pages/` 不再入库；如需恢复网页，本地运行 `node _skill/scripts/generate-site.js` 重建后另行推送到 `gh-pages`。
+> 站点已下线并从仓库移除；文章以 Markdown 为准。
 
 ## 仓库
 
