@@ -174,7 +174,9 @@ def dedupe_images(md):
             return ""
         seen.add(iid)
         return m.group(0)
-    return re.sub(r"!\[[^\]]*\]\((https?://[^)]+)\)", repl, md)
+    md = re.sub(r"!\[[^\]]*\]\((https?://[^)]+)\)", repl, md)
+    md = re.sub(r"^#\s*24FRAMES PROJECT\s*$", "", md, flags=re.M)
+    return re.sub(r"\n{3,}", "\n\n", md)
 
 def strip_dup_h1(md, title):
     """正文开头 H1 与页面标题重复时删掉，避免存档出现两行标题。"""

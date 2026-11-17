@@ -19,7 +19,7 @@ bash    _skill/scripts/push-archive.sh "说明"  # 镜像存档树到远端根�
 - **多图文**：`appmsg_info` 是数组，必须遍历；只取第一条会漏档。翻页遇空页要重试。
 - **贴图（`item_show_type=8`）**：首图即封面，不写 `cover_image`；普通文章写封面。
 - **图片**：同一文章按 mmbiz 图片 ID 去重（微信 DOM 会重复节点）；只存微信外链，不本地镜像。
-- **标题**：正文自带同名 H1 或 `24FRAMES PROJECT` 品牌行要去掉；贴图首图放在标题/原文链接之后。
+- **标题**：正文自带的 `24FRAMES PROJECT` 是微信模板装饰，一律删除；贴图补真实标题 H1，首图放在标题/原文链接之后。
 - **数据口径**：分享数 2024 年前异常偏低，不跨年对比；tempkey 长链过期无法补抓，记入 `_meta/removals.md`。
 - **推送**：仓库根目录 = 存档内容，只推存档树；直连失败用 `-c http.curloptResolve=github.com:443:140.82.112.3 -c http.version=HTTP/1.1`。
 
