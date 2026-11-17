@@ -87,6 +87,7 @@ bash _skill/scripts/push-archive.sh "更新公众号存档"
 5. **贴图类文章**（`item_show_type=8`）页面没有 `create_time`，日期要从页面可见文本（如「11月5日」）取，或用 `--date` 指定。
 6. **标题重复**：正文首行可能自带与标题同名的 H1，`wxmp-fetch.py` 会去掉，避免存档里两行标题。
 7. **封面图**：取 `og:image` / `var msg_cdn_url`，写成首行 `![cover_image](...)`。
+   贴图类（`item_show_type=8`）首图即封面，**不写** `cover_image`，否则页面会重复一张图。
 8. **图片去重**：同一张图有多个 URL 变体，按 `?` 前的 mmbiz 图片 ID 去重；排除 `pic_blank.gif`、`video_player_tmpl`、二维码。
 9. **登录态**：`~/.wechat-automation/browser-profile`，扫码一次后 headless 复用；`--force-ui` 强制弹窗。
 
