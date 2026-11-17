@@ -164,6 +164,18 @@ def _norm_title(s):
     return "".join(c for c in (s or "") if c not in BAD_CHARS and not c.isspace())
 
 
+
+def dedupe_images(md):
+    """同一篇文章里同一张图（按 mmbiz 图片 ID）只保留第一次出现"""
+    seen = set()
+    def repl(m):
+        iid = m.group(1).split("?")[0].rsplit("/", 2)[-2]
+        if iid in seen:
+            return ""
+        seen.add(iid)
+        return m.group(0)
+    return re.sub(r"!\[[^\]]*\]\((https?://[^)]+)\)", repl, md)
+
 def strip_dup_h1(md, title):
     """正文开头 H1 与页面标题重复时删掉，避免存档出现两行标题。"""
     lines = md.split("\n")
@@ -209,6 +221,7 @@ def main():
 
             md_body = pg.evaluate(JS_TO_MD)
             md_body = strip_dup_h1(md_body, title)
+            md_body = dedupe_images(md_body)
             n_img = len(re.findall(r"!\[\]\(https?://", md_body))
 
             if not title:
