@@ -27,8 +27,7 @@ python3 _skill/scripts/wxmp-fetch.py --date 2026-11-05 URL
 python3 _skill/scripts/update-data.py
 ```
 读取 articles.json + 年份目录，按标题去重（同篇短链/tempkey 只算一次），生成：
-`_数据/阅读量排行榜.md`、`_数据/YYYY-MM-DD-数据快照.md`、`_数据/数据看板.md`、
-`_数据/图表/*.png`、`_数据/数据看板.html`。
+`_数据/数据看板.md` 与 `_数据/图表/*.png`（唯一数据出口，不再生成排行榜/日报快照/HTML）。
 
 ## wxmp-audit.py
 
