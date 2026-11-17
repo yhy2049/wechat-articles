@@ -48,6 +48,11 @@ function parseArticle(file) {
       text = lines.join('\n');
       break;
     }
+    if (m && m[1].trim() === '24FRAMES PROJECT') {
+      lines.splice(i, 1);
+      text = lines.join('\n');
+      break;
+    }
   }
   return { id: base, title, date: base.slice(0, 10), year: base.slice(0, 4), file, text, rawLength: raw.length };
 }
