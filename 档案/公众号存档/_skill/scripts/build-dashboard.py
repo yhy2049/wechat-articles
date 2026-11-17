@@ -437,13 +437,15 @@ def main():
         decisions.append(f"发布节奏：周四篇均最高（{max(wd_items, key=lambda x: x[1])[1]:.0f}），重点推文优先排周四；篇均间隔中位约 {year_stats[-1]['gap']:.0f} 天，保持稳定节奏。")
     decision_html = "".join(f"<li>{x}</li>" for x in decisions)
     # 组装 HTML
+    n_archived = sum(1 for y in os.listdir(ROOT) if re.fullmatch(r"\d{4}", y)
+                     for f in os.listdir(os.path.join(ROOT, y)) if f.endswith(".md"))
     kpis = [
-        ("文章总数", f"{len(rows)}", "去重后"),
+        ("存档篇数", f"{n_archived}", "年份目录实际文件"),
+        ("后台篇数", f"{len(rows)}", "短链/tempkey 去重后"),
         ("累计阅读", f"{total_reads:,}", f"{len([r for r in rows if r['read']])} 篇有数据"),
         ("篇均阅读", f"{total_reads/len(rows):.0f}" if rows else "0", f"中位 {med:,}"),
         ("P90 阅读", f"{p90:,}", "头部线"),
         ("分享率", f"{pct(total_share, total_reads):.1f}%", f"分享 {total_share:,}"),
-        ("时间跨度", f"{dated[0]['date'][:7]} → {dated[-1]['date'][:7]}" if dated else "—", f"{len(dated)} 篇有日期"),
     ]
     kpi_html = "".join(f'<div class="kpi"><div class="k">{esc(k)}</div><div class="v{" small" if k == "时间跨度" else ""}">{esc(v)}</div><div class="s">{esc(s)}</div></div>' for k, v, s in kpis)
 
@@ -495,33 +497,35 @@ def main():
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>24帧公众号数据看板</title>
 <style>
-  :root {{ --bg:{PAL["bg"]}; --card:{PAL["card"]}; --ink:{PAL["ink"]}; --muted:{PAL["muted"]}; --line:{PAL["line"]}; --accent:{PAL["accent"]}; }}
+  :root {{ --u:8px; --bg:{PAL["bg"]}; --card:{PAL["card"]}; --ink:{PAL["ink"]}; --muted:{PAL["muted"]}; --line:{PAL["line"]}; --accent:{PAL["accent"]}; }}
   * {{ box-sizing:border-box; }}
-  body {{ margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.6; }}
-  .wrap {{ max-width:1180px; margin:0 auto; padding:28px 20px 60px; }}
-  header {{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:22px; }}
+  body {{ margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }}
+  .wrap {{ max-width:1200px; margin:0 auto; padding:calc(var(--u)*4) calc(var(--u)*4) calc(var(--u)*8); }}
+  header {{ display:flex; align-items:flex-end; justify-content:space-between; gap:calc(var(--u)*2); flex-wrap:wrap; margin-bottom:calc(var(--u)*3); }}
   h1 {{ font-size:26px; margin:0; letter-spacing:.02em; }}
   .sub {{ color:var(--muted); font-size:12.5px; }}
-  .kpis {{ display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-bottom:18px; }}
-  .kpi {{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; }}
-  .kpi .k {{ font-size:11.5px; color:var(--muted); }}
-  .kpi .v {{ font-size:22px; font-weight:700; margin-top:2px; }}
+  .kpis {{ display:grid; grid-template-columns:repeat(6,1fr); gap:calc(var(--u)*2); margin-bottom:calc(var(--u)*3); }}
+  .kpi {{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:calc(var(--u)*2); min-height:calc(var(--u)*14); display:flex; flex-direction:column; }}
+  .kpi .k {{ font-size:11.5px; color:var(--muted); text-align:left; }}
+  .kpi .v {{ font-size:22px; font-weight:700; margin-top:auto; font-variant-numeric:tabular-nums; text-align:left; }}
   .kpi .v.small {{ font-size:14px; line-height:1.5; }}
-  .kpi .s {{ font-size:10.5px; color:var(--muted); }}
-  .card {{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px 12px; margin-bottom:16px; }}
-  .card h2 {{ font-size:14px; margin:0 0 10px; font-weight:600; letter-spacing:.02em; }}
-  .note {{ font-size:11.5px; color:var(--muted); margin:8px 0 2px; }}
-  .grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }}
-  .insights {{ margin:4px 0 6px; padding-left:20px; font-size:13.5px; }}
-  .insights li {{ margin:5px 0; }}
-  table {{ width:100%; border-collapse:collapse; font-size:12.5px; }}
-  th,td {{ text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }}
+  .kpi .s {{ font-size:10.5px; color:var(--muted); text-align:left; }}
+  .card {{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:calc(var(--u)*3); margin-bottom:calc(var(--u)*3); }}
+  .card h2 {{ font-size:14px; margin:0 0 calc(var(--u)*1.5); font-weight:600; letter-spacing:.02em; text-align:left; }}
+  .note {{ font-size:11.5px; color:var(--muted); margin:calc(var(--u)*1.5) 0 0; text-align:left; }}
+  .grid2 {{ display:grid; grid-template-columns:1fr 1fr; gap:calc(var(--u)*3); align-items:start; }}
+  .insights {{ margin:calc(var(--u)*0.5) 0 0; padding-left:calc(var(--u)*2.5); font-size:13.5px; text-align:left; }}
+  .insights li {{ margin:calc(var(--u)*0.75) 0; }}
+  table {{ width:100%; border-collapse:collapse; font-size:12.5px; table-layout:auto; }}
+  th,td {{ text-align:left; padding:calc(var(--u)*1) calc(var(--u)*1.5); border-bottom:1px solid var(--line); vertical-align:top; }}
   th {{ color:var(--muted); font-weight:500; font-size:11.5px; }}
-  td.num {{ text-align:right; font-variant-numeric:tabular-nums; }}
+  th.num,td.num {{ text-align:right; font-variant-numeric:tabular-nums; }}
+  th:first-child,td:first-child {{ padding-left:0; }}
+  th:last-child,td:last-child {{ padding-right:0; }}
   a {{ color:var(--accent); text-decoration:none; }}
   a:hover {{ text-decoration:underline; }}
-  footer {{ color:var(--muted); font-size:11.5px; margin-top:18px; }}
-  @media (max-width:900px) {{ .kpis {{ grid-template-columns:repeat(3,1fr); }} .grid2 {{ grid-template-columns:1fr; }} }}
+  footer {{ color:var(--muted); font-size:11.5px; margin-top:calc(var(--u)*3); text-align:left; }}
+  @media (max-width:900px) {{ .wrap {{ padding:calc(var(--u)*3) calc(var(--u)*2) calc(var(--u)*6); }} .kpis {{ grid-template-columns:repeat(3,1fr); }} .grid2 {{ grid-template-columns:1fr; }} }}
 </style></head><body><div class="wrap">
 <header><div><h1>24帧公众号数据看板</h1><div class="sub">文章 {len(rows)} 篇（后台 {len(json.load(open(SRC,encoding="utf-8")))} 条去重）· 阅读 {total_reads:,} · 数据抓取 {esc(fetched or today)}</div></div>
 <div class="sub">生成 {today}</div></header>
