@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Obsidian
+.obsidian/
+
+# Agent configs (not part of 公众号 archive)
+.agents/
+.claude/
+
+# Non-公众号 content
+人物/
+会议存档/
+档案/合作资源库/
+档案/媒体/
+档案/放映数据/
+
+# Temporary
+*.tmp
+*.swp
+.tmp/
