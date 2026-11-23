@@ -18,7 +18,7 @@ bash    _skill/scripts/push-archive.sh "说明"  # 镜像存档树到远端根�
 
 - **自动排版修复**：微信 HTML 里 `<span>` 标签导致每字/词被拆成独立段落，`wxmp-fetch.py` 现在会自动合并成完整段落
 - **转载过滤**：自动检测并跳过转载内容（影展征片、电影资讯等），只保留 24帧 原创内容
-- **批量修复历史文章**：如有历史文章需要修复排版，运行 `_skill/scripts/fix-all-formatting.py`
+- **批量修复历史文章**：历史文章排版修复已集成到 `wxmp-fetch.py`，新文章自动处理
 
 ## 不可违背的规则
 
@@ -49,6 +49,3 @@ bash    _skill/scripts/push-archive.sh "说明"  # 镜像存档树到远端根�
 | `scripts/build-dashboard.py` | 单文件看板（SVG + PNG + Markdown） |
 | `scripts/push-archive.sh` | 镜像推送到 GitHub |
 | `scripts/wxmp-audit.py` | 后台 vs 存档对账 |
-| `scripts/fix-all-formatting.py` | 批量修复历史文章排版（如需要） |
-
-详细参数见 `docs/python-fetching.md`。
