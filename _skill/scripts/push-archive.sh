@@ -10,7 +10,7 @@
 set -uo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ARCHIVE="$(cd "$HERE/../.." && pwd)"          # 存档根目录
+ARCHIVE="$(cd "$HERE/../.." && pwd)"          # 存档根目录（本地路径）
 REMOTE="${GIT_REMOTE:-origin}"
 BRANCH="${GIT_BRANCH:-main}"
 DRY=0
